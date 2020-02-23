@@ -1,0 +1,49 @@
+/* @import url(https://fonts.googleapis.com/css?family=Nunito); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Nunito;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header,
+.footer {
+  padding: 12px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.middle-section {
+  padding: 12px;
+  background-color: #f0f0f0;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.middle-section p {
+  font-size: 18px;
+  line-height: 180%;
+}
+
+.invoice-items {
+  padding: 12px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footer {
+  border-top: 1px solid black;
+  align-items: center;
+  font-size: 12px;
+}
+
+.text-align-right {
+  text-align: right;
+}

@@ -1,0 +1,63 @@
+.datos {
+   margin-top: 30px;
+   overflow: hidden;
+}
+
+.datos .columna-izq {
+   float: left;
+   width: 50%;
+   margin-right: 30px;
+}
+
+.datos .columna-izq div {
+   width: 100%;
+   padding-top: 100%;
+   border: 1px solid #a0a060;
+   background-position: center center;
+   background-size: cover;
+}
+
+.datos .columna-der {
+   float: left;
+   width: calc(50% - 30px);
+}
+
+.datos .columna-der h3 {
+   margin-bottom: 15px;
+}
+
+.datos .columna-der p {
+   font-size: 14px;
+   text-transform: uppercase;
+}
+
+.columna-full {
+   margin: 40px auto;
+}
+
+.columna-full img {
+   width: 120px;
+   vertical-align: middle;
+}
+
+.columna-full span {
+   font-size: 30px;
+}
+
+.container .btn-link {
+   display: inline-block;
+   margin-top: 30px;
+   padding: 8px 20px;
+   font-size: 20px;
+   border: none;
+   border-radius: 6px;
+   background-color: #c00000;
+   color: white;
+   text-transform: uppercase;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.container .btn-link:hover {
+   background-color: #a00000;
+}

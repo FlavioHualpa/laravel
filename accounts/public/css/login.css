@@ -1,0 +1,148 @@
+.brand-start {
+   color: #55ff5a;
+   /* font-size: 28px; */
+}
+
+.brand-end {
+   color: #ffdd38;
+   /* font-size: 28px; */
+}
+
+.big-logo {
+   text-align: center;
+   font-size: 48px;
+   margin-top: 50px;
+}
+
+.login-box {
+   width: 600px;
+   background-color: #9ccde4;
+   border-radius: 4px;
+   margin: 80px auto;
+   overflow: hidden;
+}
+
+.login-header {
+   background-color: #40c0ed;
+   border-top-left-radius: 4px;
+   border-top-right-radius: 4px;
+   display: flex;
+   justify-content: space-between;
+   padding: 8px 20px;
+}
+
+.login-header div {
+   color: #f4f4f4;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+i.fa-question {
+   font-size: 32px;
+   margin-top: 6px;
+   margin-right: 8px;
+   float: left;
+}
+
+.login-footer-caption {
+   color: #404040;
+   line-height: 1.5;
+   font-size: 15px;
+}
+
+.login-footer-caption a {
+   color: #206090;
+   text-decoration: none;
+}
+
+.login-footer-caption a:hover {
+   color: #d00000;
+}
+
+.fs-20 {
+   font-size: 20px;
+}
+
+form {
+   width: 64%;
+   margin: 50px auto 25px;
+}
+
+.form-group {
+   margin-bottom: 10px;
+}
+
+.form-control {
+   display: block;
+   width: 100%;
+   font-size: 20px;
+   color: #495057;
+   outline: none;
+}
+
+.form-control-input {
+   padding: 0.375rem 0.75rem;
+   line-height: 1.6em;
+   background-color: #acd7de;
+   border: none;
+   border-bottom: 1px solid #42e6ff;
+}
+
+.form-control-label {
+   margin-bottom: 3px;
+   font-size: 16px;
+   color: #2d80c0;
+}
+
+.form-control-check {
+   margin-right: 4px;
+}
+
+.mt-1 {
+   margin-top: 18px;
+}
+
+.mt-2 {
+   margin-top: 26px;
+}
+
+.mt-3 {
+   margin-top: 34px;
+}
+
+.btn {
+   font-size: 18px;
+   padding: 6px 15px;
+   border: none;
+   border-radius: 0.25rem;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.btn-primary {
+   color: #f4f4f4;
+   background-color: #206090;
+   transition: 0.2s;
+}
+
+.btn-primary:hover {
+   background-color: #2d80c0;
+}
+
+.btn-link {
+   color: #206090;
+   transition: 0.2s;
+}
+
+.btn-link:hover {
+   color: #d00000;
+}
+
+.is-invalid {
+   border-bottom: 1px solid #d00000;
+}
+
+.invalid-feedback {
+   font-size: 14px;
+   color: #d00000;
+}

@@ -1,0 +1,66 @@
+h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+dl {
+  font-size: 20px;
+}
+
+dl dt {
+  display: inline-block;
+  width: 28%;
+  font-family: Lato;
+  font-weight: bold;
+  vertical-align: top;
+  margin-right: 0;
+}
+
+dl dd {
+  display: inline-block;
+  width: 66%;
+  font-family: Lato;
+  font-weight: normal;
+  margin-left: 0;
+}
+
+dl div {
+  margin: 10px 0;
+}
+
+.curric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.curric-header img {
+  display: none;
+}
+
+.curric-section {
+  margin-top: 30px;
+}
+
+.curric-section li {
+  font-family: Lato;
+  font-size: 26px;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+.curric-link {
+  font-size: 18px;
+  font-family: Lato;
+  text-align: center;
+}
+
+.curric-link a {
+  text-decoration: none;
+}
+
+.curric-link a:hover {
+  color: darkgreen;
+}

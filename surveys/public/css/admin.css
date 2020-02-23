@@ -1,0 +1,34 @@
+.sign {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   width: 100%;
+   height: 300px;
+   background-color: #f8f8dc;
+   border-radius: 6px;
+   box-shadow: 0 0 6px;
+   margin: 40px auto;
+}
+
+.sign-icon {
+   width: 128px;
+   margin: 0 15px 0 40px;
+}
+
+.list-user {
+   font-size: 18px;
+}
+
+.list-user i {
+   color: #0000d0;
+   margin-right: 10px;
+}
+
+.list-user a {
+   text-decoration: none;
+   color: #0000d0;
+}
+
+.list-user a:hover {
+   color: #d00000;
+}

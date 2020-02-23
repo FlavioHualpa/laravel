@@ -1,0 +1,216 @@
+[
+  {
+    "id": 21,
+    "title_key": "sculpt.21.title",
+    "features_key": "sculpt.21.features",
+    "urls": [
+      "img/esculturas/desdeadentro1.jpg",
+      "img/esculturas/desdeadentro2.jpg",
+      "img/esculturas/desdeadentro3.jpg"
+    ]
+  },
+  {
+    "id": 22,
+    "title_key": "sculpt.22.title",
+    "features_key": "sculpt.22.features",
+    "urls": [
+      "img/esculturas/reinventarse2.jpg"
+    ]
+  },
+  {
+    "id": 20,
+    "title_key": "sculpt.20.title",
+    "features_key": "sculpt.20.features",
+    "urls": [
+      "img/esculturas/reinventarse1.jpg"
+    ]
+  },
+  {
+    "id": 23,
+    "title_key": "sculpt.23.title",
+    "features_key": "sculpt.23.features",
+    "urls": [
+      "img/esculturas/abrazo1.jpg",
+      "img/esculturas/abrazo2.jpg"
+    ]
+  },
+  {
+    "id": 24,
+    "title_key": "sculpt.24.title",
+    "features_key": "sculpt.24.features",
+    "urls": [
+      "img/esculturas/confuerza1.jpeg",
+      "img/esculturas/confuerza2.jpeg",
+      "img/esculturas/confuerza3.jpg"
+    ]
+  },
+  {
+    "id": 17,
+    "title_key": "sculpt.17.title",
+    "features_key": "sculpt.17.features",
+    "urls": [
+      "img/esculturas/saltando1.jpg",
+      "img/esculturas/saltando2.jpg"
+    ]
+  },
+  {
+    "id": 18,
+    "title_key": "sculpt.18.title",
+    "features_key": "sculpt.18.features",
+    "urls": [
+      "img/esculturas/encuentro1.jpg",
+      "img/esculturas/encuentro2.jpg"
+    ]
+  },
+  {
+    "id": 19,
+    "title_key": "sculpt.19.title",
+    "features_key": "sculpt.19.features",
+    "urls": [
+      "img/esculturas/vientos1.jpg",
+      "img/esculturas/vientos2.jpg"
+    ]
+  },
+  {
+    "id": 1,
+    "title_key": "sculpt.1.title",
+    "features_key": "sculpt.1.features",
+    "urls" : [
+      "img/esculturas/apto3.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "title_key": "sculpt.5.title",
+    "features_key": "sculpt.5.features",
+    "urls": [
+      "img/esculturas/renacer1.png",
+      "img/esculturas/renacer2.png"
+    ]
+  },
+  {
+    "id": 15,
+    "title_key": "sculpt.15.title",
+    "features_key": "sculpt.15.features",
+    "urls": [
+      "img/esculturas/dialogo1.png",
+      "img/esculturas/dialogo2.png"
+    ]
+  },
+  {
+    "id": 16,
+    "title_key": "sculpt.16.title",
+    "features_key": "sculpt.16.features",
+    "urls": [
+      "img/esculturas/desenredando.png"
+    ]
+  },
+  {
+    "id": 6,
+    "title_key": "sculpt.6.title",
+    "features_key": "sculpt.6.features",
+    "urls": [
+      "img/esculturas/elnacimiento.png"
+    ]
+  },
+  {
+    "id": 3,
+    "title_key": "sculpt.3.title",
+    "features_key": "sculpt.3.features",
+    "urls": [
+      "img/esculturas/apesar.png"
+    ]
+  },
+  {
+    "id": 14,
+    "title_key": "sculpt.14.title",
+    "features_key": "sculpt.14.features",
+    "urls": [
+      "img/esculturas/atravesando.jpeg"
+    ]
+  },
+  {
+    "id": 4,
+    "title_key": "sculpt.4.title",
+    "features_key": "sculpt.4.features",
+    "urls": [
+      "img/esculturas/efecto1.png",
+      "img/esculturas/efecto2.png"
+    ]
+  },
+  {
+    "id": 12,
+    "title_key": "sculpt.12.title",
+    "features_key": "sculpt.12.features",
+    "urls": [
+      "img/esculturas/idayvuelta.png"
+    ]
+  },
+  {
+    "id": 9,
+    "title_key": "sculpt.9.title",
+    "features_key": "sculpt.9.features",
+    "urls": [
+      "img/esculturas/convertibilidad1.png",
+      "img/esculturas/convertibilidad2.png"
+    ]
+  },
+  {
+    "id": 11,
+    "title_key": "sculpt.11.title",
+    "features_key": "sculpt.11.features",
+    "urls": [
+      "img/esculturas/desocupado.png"
+    ]
+  },
+  {
+    "id": 8,
+    "title_key": "sculpt.8.title",
+    "features_key": "sculpt.8.features",
+    "urls": [
+      "img/esculturas/lossuenos.png"
+    ]
+  },
+  {
+    "id": 25,
+    "title_key": "sculpt.25.title",
+    "features_key": "sculpt.25.features",
+    "urls": [
+      "img/esculturas/noceder3.jpg",
+      "img/esculturas/noceder4.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title_key": "sculpt.2.title",
+    "features_key": "sculpt.2.features",
+    "urls": [
+      "img/esculturas/elvuelo.png"
+    ]
+  },
+  {
+    "id": 10,
+    "title_key": "sculpt.10.title",
+    "features_key": "sculpt.10.features",
+    "urls": [
+      "img/esculturas/pareja.png"
+    ]
+  },
+  {
+    "id": 13,
+    "title_key": "sculpt.13.title",
+    "features_key": "sculpt.13.features",
+    "urls": [
+      "img/esculturas/mujersentada.png"
+    ]
+  },
+  {
+    "id": 7,
+    "title_key": "sculpt.7.title",
+    "features_key": "sculpt.7.features",
+    "urls": [
+      "img/esculturas/desamparado1.jpg",
+      "img/esculturas/desamparado2b.jpg"
+    ]
+  }
+]

@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- <meta charset="utf-8" /> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Néstor Zadoff</title>
+    <link href="style_00.css" rel="stylesheet" type="text/css">
+    <link href="style_01.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <script>
+        function CambiarPagina(nombre) {
+            boton_curric.className = boton_curric.id == 'boton_' + nombre ? 'div_selector_on' : 'div_selector_off';
+            boton_transc.className = boton_transc.id == 'boton_' + nombre ? 'div_selector_on' : 'div_selector_off';
+            boton_arreglos.className = boton_arreglos.id == 'boton_' + nombre ? 'div_selector_on' : 'div_selector_off';
+            boton_contacto.className = boton_contacto.id == 'boton_' + nombre ? 'div_selector_on' : 'div_selector_off';
+
+            pagina_curric.style.display = pagina_curric.id == 'pagina_' + nombre ? '' : 'none';
+            pagina_transc.style.display = pagina_transc.id == 'pagina_' + nombre ? '' : 'none';
+            pagina_arreglos.style.display = pagina_arreglos.id == 'pagina_' + nombre ? '' : 'none';
+            pagina_contacto.style.display = pagina_contacto.id == 'pagina_' + nombre ? '' : 'none';
+        }
+
+        function AlternarCarpeta(nombre) {
+            var elemento;
+            var lista;
+            elemento = document.getElementById('carpeta_' + nombre);
+            lista = document.getElementById('obras_' + nombre);
+
+            if (elemento.src.endsWith('img/carpeta.png')) {
+                elemento.src = 'img/carpeta_abierta.png';
+                lista.style.display = '';
+            }
+            else {
+                elemento.src = 'img/carpeta.png'
+                lista.style.display = 'none';
+            }
+        }
+    </script>
+
+    <div id="div_hd">
+        <div id="div_hd_title">
+            <div id="div_hd_title_mail"><a href="mailto:info@nestorzadoff.com.ar" target="_blank"><img src="./img/hd_title_mail.jpg" alt="Mail" border="0"></a></div>
+        </div>
+        <!-- <div id="div_hd_logo">&nbsp;</div> -->
+    </div>
+
+    <table style="width: 97%; border: 0px; border-spacing: 0px;">
+        <tr>
+            <td style="width: 300px;">
+                <div id="panel_izq">
+                    <br />
+                    <div id="boton_curric" class="div_selector_on" onclick="CambiarPagina('curric')">CURRICULUM</div>
+                    <div id="boton_transc" class="div_selector_off" onclick="CambiarPagina('transc')">TRANSCRIPCIONES</div>
+                    <div id="boton_arreglos" class="div_selector_off" onclick="CambiarPagina('arreglos')">ARREGLOS CORALES</div>
+                    <div id="boton_contacto" class="div_selector_off" onclick="CambiarPagina('contacto')">CONTACTO</div>
+                    <br />
+                    <br />
+                    <img src="img/band_fra.png" alt="français" height="20" class="selector_lang" /><span class="texto_panel" style="cursor: pointer"><a href="index_fra.html">Français</a></span><br />
+                    <img src="img/band_ing.png" alt="english" height="20" class="selector_lang" /><span class="texto_panel" style="cursor: pointer"><a href="index_eng.html">English</a></span><br />
+                </div>
+            </td>
+            <td>
+                <div id="pagina_curric" class="div_der">
+                    <br />
+                    <p class="titulo_panel"><u>NÉSTOR ZADOFF</u></p><br />
+
+                    <!--
+        <div style="background-color: wheat; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); float: left; margin-right: 25px; border-radius: 8px;">
+            <img src="img/retrato.jpg" width="267" height="387" alt="Néstor Zadoff" style="border-radius: 8px;" />
+            <div style="text-align: center;">
+                <p style="font-family: arial; font-size: 12pt; color: maroon; margin: 4px;">1998</p>
+            </div>
+        </div>
+        -->
+                    <div style="background-color: wheat; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); float: left; margin-right: 25px; border-radius: 8px;">
+                        <img src="img/retrato2018.jpg" width="267" height="387" alt="Néstor Zadoff" style="border-radius: 8px;" />
+                        <!--
+            <div style="text-align: center;">
+                <p style="font-family: arial; font-size: 12pt; color: maroon; margin: 4px;">2018</p>
+            </div>
+            -->
+                    </div>
+
+                    <p class="texto_panel">Nació en Buenos Aires, Argentina, en 1952.</p><br />
+                    <p class="texto_panel">Es Profesor Nacional de Música egresado del Conservatorio Nacional y</p>
+                    <p class="texto_panel"><strong>Licenciado en Artes Musicales</strong> (UNA-DAMUS, www.artesmusicales.org).</p>
+                    <p class="texto_panel">Estudió Armonía con Erwin Leuchter y Dirección Coral con Antonio Russo</p>
+                    <p class="texto_panel">en el Conservatrio J.J.Castro (La Lucila). Entre 1976-1979 fue becado por el Gobierno Francés.</p>
+                    <p class="texto_panel">Estudió con Jean-Michel Vaccaro, y obtuvo en 1979 el título de <strong>Doctor en Musicología</strong></p>
+                    <p class="texto_panel">en la Université François Rabelais de Tours. Regresó ese año a Argentina, y se reinsertó</p>
+                    <p class="texto_panel">en el medio musical al frente de coros y conjuntos de cámara.</p><br />
+                    <p class="texto_panel">Desde 1981 es director del <strong>Grupo Coral Divertimento</strong> (coro sinfónico) con el que ha ofrecido oratorios del Barroco a nuestros días.</p>
+                    <p class="texto_panel">Fundador del <strong>Coro Nacional de Jovenes</strong> y su titular entre 1985-2015, con quien obtuvo 24 premios</p>
+                    <p class="texto_panel">en concursos corales internacionales (entre ellos el GP del Florilège Vocal de Tours en 1998,</p>
+                    <p class="texto_panel">1er Premio en Porto Alegre 1995, Lindenholzhausen 1999, Spittal 2003).</p><br />
+                    <p class="texto_panel">Fue Profesor de Dirección Coral en el Conservatorio J.J.Castro (1980-2009)</p>
+                    <p class="texto_panel">y en la Univ. Nacional de Rosario (2000-2010). Es actualmente Profesor Titular</p>
+                    <p class="texto_panel">en UNA-Damus (desde 2003) de Dirección Coral, Morfología Coral y de Arreglos Corales.</p><br />
+                    <p class="texto_panel">Conduce frecuentemente cursos y talleres de dirección coral en Argentina, Chile, Brasil y Europa,</p>
+                    <p class="texto_panel">y es asimismo convocado frecuentemente como director invitado.</p><br /><br />
+                    <p class="texto_panel">Es autor de más de 100 arreglos corales, de los que 11 han sido premiados en diversos concursos.</p>
+                    <p class="texto_panel">En 1998 fue nombrado miembro honorario del Consejo Argentino de la Música;</p>
+                    <p class="texto_panel">en 1999 le fue otorgado el Diploma Konex a la Revelación en Dirección Coral de la década 1989-98.</p>
+                    <p class="texto_panel">En 2009 recibió el <strong>Premio Konex</strong> en la categoría Director de Coro de la década 1999-2008.</p>
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+                </div>
+
+                <div id="pagina_transc" class="div_der" style="display: none">
+                    <br />
+                    <p class="titulo_panel"><u>TRANSCRIPCIONES GRATUITAS DE OBRAS CORALES DEL SIGLO XVI</u></p><br /><br />
+                    <p class="texto_panel">En los últimos años he vuelto a mi actividad de investigador especialista en Música Antigua.</p>
+                    <p class="texto_panel">En una época en la que la industria editorial está en grave crisis a nivel mundial</p>
+                    <p class="texto_panel">decidí ofrecer de manera gratuita mi trabajo a través de esta plataforma</p>
+                    <p class="texto_panel">a quienes se interesen en obras vocales poco o nada conocidas del período Renacentista,</p>
+                    <p class="texto_panel">y que estimo no han sido impresas con anterioridad.</p>
+                    <p class="texto_panel">Habrá aquí transcripciones a notación moderna y con criterio musicológico actualizado</p>
+                    <p class="texto_panel">de <em>chansons</em> francesas, <em>villanesche</em> italianas y <em>madrigales</em> españoles</p>
+                    <p class="texto_panel">compuestas durante el XVI y comienzos del XVII.</p>
+                    <p class="texto_panel">Es mi deseo que estos aportes permitan el renacimiento de estas obras a través</p>
+                    <p class="texto_panel">de grupos de cámara y coros de cualquier nacionalidad.</p><br /><br />
+                    <p class="titulo_panel"><u>PRINCIPIOS DE TRANSCRIPCIÓN</u></p><br /><br />
+                    <p class="texto_panel">• Los valores rítmicos fueron reducidos a la mitad de su valor visual.</p>
+                    <p class="texto_panel" style="margin-top: 5px;">• Las indicaciones de métrica utilizadas desde ca. 1530 fueron:</p>
+                    <p class="texto_panel" style="margin-top: 5px;">&nbsp;&nbsp;a) <img src="img/tactus minima.png" alt="tactus" height="21" style="vertical-align: middle;" /> (tactus -unidad de medida- a la mínima con subdivisión binaria)</p>
+                    <p class="texto_panel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;para obras de ritmo ágil (villanesche, villanelle, moresche, mascherate);</p>
+                    <p class="texto_panel">&nbsp;&nbsp;b) <img src="img/tactus semibreve.png" alt="tactus" height="32" style="vertical-align: middle;" /> (tactus a la semibreve con subdivisión binaria) en obras serias</p>
+                    <p class="texto_panel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(madrigales italianos y españoles, chansons francesas) cuyo movimiento ritmíco es más calmo, y</p>
+                    <p class="texto_panel">&nbsp;&nbsp;c) <img src="img/tactus ternario.png" alt="tactus" height="20" style="vertical-align: middle;" /> (tactus con subdivisión ternaria).</p>
+                    <p class="texto_panel" style="margin-top: 5px;">• En caso de aparecer en diferentes pasajes de la misma obra las indicaciones métricas</p>
+                    <p class="texto_panel">&nbsp;&nbsp;de tactus binario y ternario, la relación métrica entre ellos debe resolverse manteniendo la unidad</p>
+                    <p class="texto_panel">&nbsp;&nbsp;de medida invariable; ello significará que en los pasajes ternarios las subdivisiones serán más rápidas</p>
+                    <p class="texto_panel">&nbsp;&nbsp;que en el binario, con una relación 3 a 2. Tenemos un ejemplo clarificador en <em><u>Chaggio perduto</u></em></p>
+                    <p class="texto_panel">&nbsp;&nbsp;de Severin Cornet. Asimismo, las 3 indicaciones métricas están presentes en el tardío madrigal español</p>
+                    <p class="texto_panel">&nbsp;&nbsp;<em><u>Entre dos mansos arroyos</u></em>, de Mateo Romero (Mathieu Romarin, 1575-1647), que sugiero observar con detenimiento.</p>
+                    <p class="texto_panel" style="margin-top: 5px;">• Las sensibilizaciones editoriales están sugeridas sobre la nota en cuestión a la que solamente se refieren.</p>
+                    <p class="texto_panel" style="margin-top: 5px;">• Los pasajes en los que el texto es confuso en el original estarán entre [ ] indicando que son sugerencia editorial.</p>
+                    <p class="texto_panel">&nbsp;&nbsp;Las obras tempranas (Josquin, Nola) presentan varias situaciones de ese tipo, en cambio en las más tardías</p>
+                    <p class="texto_panel">&nbsp;&nbsp;(Cornet, Lassus) la ubicación del texto en los originales es muy precisa.</p>
+                    <p class="texto_panel" style="margin-top: 5px;">• En ese período no se usaban barras de compás. Para facilitar la lectura</p>
+                    <p class="texto_panel">&nbsp;&nbsp;propongo barras individuales en cada voz que están ubicadas de acuerdo</p>
+                    <p class="texto_panel">&nbsp;&nbsp;a su propio fraseo, respetando la acentuación natural de las palabras.</p>
+                    <p class="texto_panel" style="margin-top: 5px;">• Es obvio que en pasajes verticales las barras serán coincidentes entre todas las voces,</p>
+                    <p class="texto_panel">&nbsp;&nbsp;pero en otros imitativos (muy presentes en las obras de autores franco-flamencos)</p>
+                    <p class="texto_panel">&nbsp;&nbsp;cada voz tendrá su fraseo específico.</p>
+                    <p class="texto_panel" style="margin-top: 5px;">• Hay aquí algunas transcripciones que he transpuesto a <em>otro tono</em>, para así adecuarlas</p>
+                    <p class="texto_panel">&nbsp;&nbsp;a tesituras de coros mixtos actuales. En esos casos he indicado la tonalidad original</p>
+                    <p class="texto_panel">&nbsp;&nbsp;(<em>La morre est jeu, Ventz hardis</em>)</p>
+                    <p class="texto_panel" style="margin-top: 5px;">• Asimismo, en algunas obras hice una propuesta integral de indicaciones de interpretación,</p>
+                    <p class="texto_panel">&nbsp;&nbsp;las que, por supuesto, no son originales. Está indicado claramente en cada caso.</p>
+                    <br /><br />
+
+                    <p class="titulo_panel">SEVERIN CORNET (ca. 1530-1582)&nbsp;&nbsp;<img id="carpeta_cornet" src="img/carpeta.png" alt="carpeta" height="24" style="vertical-align: middle; cursor: pointer;" onclick="AlternarCarpeta('cornet')" /></p><br />
+                    <ul id="obras_cornet" style="display: none;">
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Severin Cornet.pdf">Biografía</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\portada_cornet.png">Portada original del manuscrito</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Signora Mia.pdf">Signora Mia</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Sio fosse certo.pdf">Sio fosse certo</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Hor va canzona.pdf">Hor va canzona</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Tu marrobasti.pdf">Tu m'arrobasti</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Parmi di star.pdf">Parmi di star</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Se per sentir.pdf">Se per sentir</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Chaggio perduto.pdf">Chaggio perduto</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Che giova saettar.pdf">Che giova saettar</a></li>
+                    </ul>
+                    <br /><br />
+
+                    <p class="titulo_panel">GIOVANNI DA NOLA (ca. 1510-1592)&nbsp;&nbsp;<img id="carpeta_danola" src="img/carpeta.png" alt="carpeta" height="24" style="vertical-align: middle; cursor: pointer;" onclick="AlternarCarpeta('danola')" /></p><br />
+                    <ul id="obras_danola" style="display: none;">
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Giovanni Domenico.pdf">Biografía y comentarios</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\portada_nola.png">Portada original del manuscrito</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Medici nui siam.pdf">Medici nui siam</a> - <em>Canzon villanesca (ed. 1541)</em></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Oyme dolente.pdf">Oyme dolente</a> - <em>Canzon villanesca (ed. 1541)</em></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\O dolce vita.pdf">O dolce vita mia</a> - <em>Canzon villanesca (ed. 1541)</em></li>
+                    </ul>
+                    <br /><br />
+
+                    <p class="titulo_panel">ORLANDE DE LASSUS (1530-1594)&nbsp;&nbsp;<img id="carpeta_lassus" src="img/carpeta.png" alt="carpeta" height="24" style="vertical-align: middle; cursor: pointer;" onclick="AlternarCarpeta('lassus')" /></p><br />
+                    <ul id="obras_lassus" style="display: none;">
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Dessus le marche.pdf">Dessus le marche</a> - <em>Continuation du Mellange d'Orlande de Lassus (Le Roy & Ballard, 1584, París)</em></li>
+                    </ul>
+                    <br /><br />
+
+                    <p class="titulo_panel">JOSQUIN DES PRES (ca. 1440-1521)&nbsp;&nbsp;<img id="carpeta_despres" src="img/carpeta.png" alt="carpeta" height="24" style="vertical-align: middle; cursor: pointer;" onclick="AlternarCarpeta('despres')" /></p><br />
+                    <ul id="obras_despres" style="display: none;">
+                        <!--
+            <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; vertical-align: middle" /><a href="pdfs\Signora Mia.pdf">Signora Mia</a></li>
+            -->
+                    </ul>
+                    <br /><br />
+
+                    <p class="titulo_panel">ARTÍCULOS MUSICOLÓGICOS&nbsp;&nbsp;<img id="carpeta_artmus" src="img/carpeta.png" alt="carpeta" height="24" style="vertical-align: middle; cursor: pointer;" onclick="AlternarCarpeta('artmus')" /></p><br />
+                    <ul id="obras_artmus" style="display: none;">
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; vertical-align: middle" /><a href="pdfs\Damus Nro 433.pdf">Entre dos mansos arroyos, madrigal español de comienzos del XVII</a></li>
+                    </ul>
+                    <br /><br />
+                </div>
+
+                <div id="pagina_arreglos" class="div_der" style="display: none">
+                    <br />
+                    <p class="titulo_panel"><u>ARREGLOS CORALES DE MÚSICA POPULAR</u></p><br /><br />
+                    <p class="texto_panel">He decidido incorporar a esta plataforma varios de mis arreglos corales <strong>nunca editados.</strong></p>
+                    <p class="texto_panel">Empecé a escribir arreglos para coro desde muy joven en 1972, casi siempre para ser cantados</p>
+                    <p class="texto_panel">por los coros que dirigí en más de 45 años en la actividad.</p><br />
+                    <p class="texto_panel">Muchos de mis arreglos corales han sido editados desde hace años en Argentina</p>
+                    <p class="texto_panel">(Ediciones GCC), Francia (Editions A Coeur Joie) y Estados Unidos (Kjos),</p>
+                    <p class="texto_panel">y deben consultar a las editoriales para conseguirlos.</p><br />
+                    <p class="texto_panel">Más adelante voy a detallar el listado completo de mis arreglos (son más de 100),</p>
+                    <p class="texto_panel">así como el orgánico coral para el que han sido escritos.</p><br />
+                    <p class="texto_panel">Aquí encontrarán arreglos corales de obras de Astor Piazzolla, María Elena Walsh,</p>
+                    <p class="texto_panel">Beatles, negro spirituals, y de varios autores argentinos y latinoamericanos.</p>
+                    <p class="texto_panel">Pueden descargarse desde aquí de manera gratuita.</p><br />
+                    <p class="texto_panel">De todos mis arreglos corales, 11 han sido premiados en concursos en Argentina.</p>
+                    <p class="texto_panel">Los indicados con * están aquí disponibles:</p><br />
+                    <p class="texto_panel">• Canción del Jardinero (SA) I Premio categoría voces iguales (Nacional 1985)</p>
+                    <p class="texto_panel">• Jacinto Chiclana (SATB) III Premio Tango-Milonga (Nacional 1985)</p>
+                    <p class="texto_panel">• Adiós nonino (SATB) IV Premio Tango-Milonga (Nacional 1985)</p>
+                    <p class="texto_panel">• Serenata para la tierra de uno (SATB) III Premio Canción (Nacional 1985)</p>
+                    <p class="texto_panel">• El árbol ya fue plantado (SATB) IV Premio Canción (Nacional 1985)</p>
+                    <p class="texto_panel">• Cuatro estrofas (SATB) I Premio (Municipal 1986) *</p>
+                    <p class="texto_panel">• Zamba del nuevo día (SATB) I Premio (Esiteddfod 1992) *</p>
+                    <p class="texto_panel">• Tonada de La Quiaca (SAB) I Mención (Fondo de las Artes 2007)</p>
+                    <p class="texto_panel">• Guanuqueando (SAB) II Mención (Fondo de las Artes 2007)</p>
+                    <p class="texto_panel">• Exaudiat (obra original) (SATB) Mención (Ars Nova de Rosario 2012) *</p>
+                    <p class="texto_panel">• Canción del Jardinero (SATB) Mención (AAMCANT 2015) *</p><br />
+
+                    <ul>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Años de soledad.pdf">Años de soledad SATB (Astor Piazzolla, 2012)</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Coral.png">Coral SATB (Astor Piazzolla, 2000)</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Verano porteño.pdf">Verano porteño SATB (Astor Piazzolla, 1974)</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\BsAs hora cero.pdf">Buenos Aires hora cero TTBB (Astor Piazzolla, 2014)</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Canción del estornudo.pdf">Canción del estornudo (el otro Mambrú) SATB (M.E. Walsh, 1983)</a> *</li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\El Brujito de Gulubú.pdf">Canción de la vacuna (el brujito de Gulubú) SATB (M.E. Walsh, 1982)</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Zamba para Pepe.pdf">Zamba para Pepe SATB (M.E. Walsh, 1996)</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Cuatro estrofas.pdf">Cuatro estrofas SATB (A. Lerner, 1986)</a> *</li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Zamba del nuevo día.pdf">Zamba del nuevo día SATB (O. Cardozo Ocampo, 1992)</a> *</li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Sobredosis de chamamé.pdf">Sobredosis de chamamé SATB (A. Balestra, 2007)</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Guanuqueando.pdf">Guanuqueando SAB (R. Vilca, 2007)</a> *</li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Cuando partí.pdf">Cuando partí SSAA (M. Alemán Mónico, 2001)</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Exaudiat te Dominus.pdf">Exaudiat te Dominus SATB (N. Zadoff, obra original, 2009)</a> *</li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Juana y José.pdf">Juana y José SATB (Cruz F. Iriarte, Venezuela, 1986)</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Beatles - Yesterday.pdf">Yesterday SATB (P. Mc Cartney, 2005)</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Beatles - I will.pdf">I will SATB (P. Mc Cartney, 2005)</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Sangena.pdf">Sangena (Canto nupcial africano, 2012)</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Love of my life.pdf">Love of my life SATB y orquesta (F. Mercury, 2006)</a></li>
+                    </ul>
+                    <br /><br />
+                </div>
+
+                <div id="pagina_contacto" class="div_der" style="display: none">
+                    <div>
+                        <br />
+                        <p class="titulo_panel">ENVIAME TU CONSULTA</p><br /><br />
+                        <form action="index.php" method="post">
+                            <p id="par_01">NOMBRE</p><input type="text" name="nombre" size="78" style="background:#c1c27c; color:#404033; font-family:Arial, Helvetica, sans-serif; font-size:12px; height:25px; width:450px;">
+                            <br>
+                            <p id="par_01">EMAIL</p><input type="text" name="email" size="78" style="background:#c1c27c; color:#404033; font-family:Arial, Helvetica, sans-serif; font-size:12px; height:25px;width:450px;">
+                            <br>
+                            <p id="par_01">CONSULTA</p><textarea name="coment" cols="75" rows="4" style="background:#c1c27c; color:#404033; font-family:Arial, Helvetica, sans-serif; font-size:12px;height:125px;width:450px;"></textarea>
+                            <br><br>
+                            <input type="submit" value="Enviar">
+                        </form>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

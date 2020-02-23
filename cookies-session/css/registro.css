@@ -1,0 +1,19 @@
+form {
+   width: 700px;
+   margin: 60px auto;
+   overflow: hidden;
+}
+
+form div {
+   margin-top: 20px;
+   float: left;
+   width: 50%;
+}
+
+form div:nth-child(odd) {
+   clear: both;
+}
+
+.valor-invalido {
+   background-color: #ffc0c0;
+}

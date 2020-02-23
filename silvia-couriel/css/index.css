@@ -1,0 +1,153 @@
+@font-face {
+   font-family: 'Sanford Book';
+   font-style: normal;
+   font-weight: normal;
+   src: local('Sanford Book'), url('../fonts/SANFW___.woff') format('woff');
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   /* font-family: Merienda; */
+   font-family: 'Sanford Book';
+}
+
+body {
+	background-image: url("../img/PlasterWall.jpg");
+	background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
+}
+
+main {
+   height: calc(100% - 80px);
+}
+
+.container {
+   margin: 0 auto;
+   padding: 20px 0px;
+   width: 95%;
+   height: calc(100% - 102px);
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: stretch;
+}
+
+header {
+   background-color: olive;
+   box-shadow: 0 0 4px;
+}
+
+header h1 {
+   text-align: center;
+   padding: 10px 0 0 0;
+   font-size: 40px;
+}
+
+header p {
+   text-align: center;
+   padding: 0 0 10px 0;
+   margin-top: -8px;
+   font-size: 30px;
+}
+
+.panel-izq {
+   width: 60%;
+   height: 100%;
+}
+
+.panel-der {
+   width: 40%;
+   height: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+.container .gallery {
+   margin: 0 auto;
+   width: 100%;
+   height: 100%;
+   /* padding: 3px; */
+   /* background-color: rgba(255, 255, 255, 0.3); */
+   /* border: 1px solid #a0a080; */
+}
+
+.container .gallery .frame {
+   position: relative;
+   height: 100%;
+}
+
+.container .gallery .frame img {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   max-width: 100%;
+   height: 100%;
+   box-shadow: 3px 3px 6px;
+   transition: 1s;
+}
+
+.container .language .lang-col {
+   margin-top: 30px;
+   text-align: center;
+}
+
+.container .language .lang-col img {
+   width: 48px;
+   margin-top: -8px;
+   vertical-align: middle;
+}
+
+.container .language .lang-col a {
+   font-size: 22px;
+   font-weight: bold;
+}
+
+.container .contact {
+   text-align: center;
+   font-size: 22px;
+   font-weight: bold;
+}
+
+.container a {
+   text-decoration: none;
+   color: black;
+}
+
+.container a:hover {
+   color: rgb(255, 255, 255);
+}
+
+@media (orientation: portrait)
+{
+   .container {
+      height: calc(100% - 260px);
+   }
+
+   .container .language {
+      text-align: center;
+   }
+
+   .container .language .lang-col {
+      display: inline-block;
+   }
+
+   .container .language .lang-col:first-child {
+      margin-right: 30px;
+   }
+
+   .panel-izq {
+      width: 100%;
+   }
+
+   .panel-der {
+      width: 100%;
+      height: 160px;
+   }
+}

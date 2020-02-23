@@ -1,0 +1,86 @@
+#header {
+   width: 100%;
+   height: 100px;
+   position: fixed;
+   top: 0;
+   box-shadow: 0 0 4px #808080;
+   padding: 12px;
+   background-color: #ffea00;
+}
+
+#header div {
+   overflow: hidden;
+}
+
+#header div img {
+   float: left;
+   height: 80px;
+   margin-right: 30px;
+}
+
+#header div p {
+   float: left;
+   font-size: 3rem;
+   padding-top: 0.5rem;
+   color: #007000;
+}
+
+#userControls {
+   float: right;
+   padding-top: 1.2rem;
+}
+
+#userControls .avatar {
+   border: 2px solid #f0f0f0;
+   border-radius: 8px;
+   width: 60px;
+   height: 60px;
+   margin-top: -9px;
+   margin-right: 10px;
+}
+
+#userControls span {
+   font-size: 1.2rem;
+   text-transform: uppercase;
+   margin-top: 9px;
+   margin-right: 10px;
+   display: inline-block;
+}
+
+.btn {
+   border: none;
+   border-radius: 6px;
+   padding: 8px 20px;
+   margin-right: 10px;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.btn-main {
+   background-color: #007000;
+   border: 2px solid #007000;
+   color: white;
+   text-transform: uppercase;
+   font-weight: bold;
+}
+
+.btn-main:hover {
+   background-color: #009000;
+   border: 2px solid #009000;
+}
+
+.btn-secondary {
+   color: #007000;
+   border: 2px solid #007000;
+   text-transform: uppercase;
+   font-weight: bold;
+}
+
+.btn-secondary:hover {
+   color: #009000;
+   border: 2px solid #009000;
+}
+
+.d-inline-block {
+   display: inline-block;
+}

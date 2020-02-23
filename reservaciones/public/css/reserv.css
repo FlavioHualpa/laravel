@@ -1,0 +1,27 @@
+.chart-frame {
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.bar {
+  display: inline-block;
+  height: 75%;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+.hover:hover {
+  opacity: 0.6;
+}
+
+div.list {
+  padding-top: 10px;
+}
+
+div.list:nth-child(odd) {
+  background-color: #f4f4f4;
+}

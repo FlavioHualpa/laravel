@@ -1,0 +1,61 @@
+header {
+   padding-top: 40px;
+}
+
+header nav {
+   overflow: hidden;
+}
+
+.seccion-izq,
+.seccion-der {
+   width: 30%;
+   float: left;
+   padding-top: 16px;
+}
+
+.seccion-cen {
+   width: 40%;
+   float: left;
+   border: 5px solid black;
+   padding: 10px 0;
+   font-size: 30px;
+   font-weight: bold;
+   text-align: center;
+   letter-spacing: 10px;
+}
+
+.seccion-der {
+   text-align: right;
+}
+
+.seccion-der a {
+   color: black;
+}
+
+.seccion-der a:hover {
+   color: red;
+}
+
+.seccion-der a i {
+   font-size: 20px;
+   margin-left: 12px;
+}
+
+.menu {
+   overflow: hidden;
+   list-style-type: none;
+}
+
+.menu li {
+   float: left;
+   margin-right: 20px;
+}
+
+.menu li a {
+   color: #606060;
+   text-transform: uppercase;
+}
+
+.menu li a:hover {
+   color: #a0a0a0;
+}

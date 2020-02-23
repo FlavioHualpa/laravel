@@ -1,0 +1,77 @@
+h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+}
+
+form .form-field {
+  width: 100%;
+  padding: 6px 12px;
+}
+
+form .margin-top {
+  margin-top: 20px;
+}
+
+form .form-field label {
+  display: block;
+  width: 100%;
+  font-family: Lato;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+form .form-field input,
+form .form-field textarea {
+  display: block;
+  width: 100%;
+  font-family: Lato;
+  font-size: 20px;
+  padding: 6px 12px;
+  outline: none;
+  background-color: #f0f0f0;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+}
+
+form .form-field p.form-error {
+  font-family: Lato;
+  font-size: 18px;
+  color: #c00000;
+}
+
+form .form-field input.form-error,
+form .form-field textarea.form-error {
+  border: 2px solid #c00000;
+}
+
+form .form-field button,
+.back-button {
+  font-family: Lato;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: olive;
+  color: #f0f0f0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+form .form-field button:hover,
+.back-button:hover {
+  background-color: darkgreen;
+}
+
+.w-50 {
+  width: 50%;
+}

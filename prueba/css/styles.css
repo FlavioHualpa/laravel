@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#encabezado > div > div,
+#encabezado > div > nav {
+  margin: 0 12%;
+  padding: 15px 0;
+  overflow: hidden;
+}
+
+#encabezado > div:nth-child(1) {
+  background-color: #ecf0ec;
+}
+
+#encabezado > div:nth-child(2) {
+  background-color: white;
+}
+
+#encabezado div #contacto-izq {
+  float: left;
+}
+
+#encabezado div #contacto-der,
+#encabezado nav #menu {
+  float: right;
+}
+
+#encabezado div #contacto-izq i,
+#encabezado div #contacto-der i {
+  color: #00c000;
+}
+
+#encabezado nav #logo {
+  float: left;
+  overflow: hidden;
+}
+
+#encabezado nav #logo div {
+  float: left;
+}
+
+#encabezado nav #logo div i {
+  color: #a000a0;
+  font-size: 32px;
+  margin-right: 12px;
+  margin-top: 10px;
+}
+
+#encabezado nav #logo div span:nth-child(1) {
+  color: #a000a0;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+#encabezado nav #logo div span:nth-child(2) {
+  color: #00c000;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+#encabezado nav #logo div span:nth-child(4) {
+  color: #606060;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#encabezado nav #menu ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+#encabezado nav #menu ul li {
+  float: left;
+  margin: 20px 60px 20px 0;
+  position: relative;
+}
+
+#encabezado nav #menu ul li:last-child {
+  margin: 20px 0px 20px 0;
+}
+
+#encabezado nav #menu ul li a {
+  color: #606060;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+#encabezado nav #menu ul li a:hover {
+  color: #a000a0;
+}
+
+#encabezado nav #menu ul li .submenu {
+  position: absolute;
+  top: 35px;
+  overflow: visible;
+  border: 1px solid #c0c0c0;
+}
+
+#encabezado nav #menu ul li .submenu ul {
+  list-style-type: none;
+  x-position: absolute;
+  overflow: visible;
+  bottom: 0;
+}
+
+#encabezado nav #menu ul li .submenu ul li {
+  padding: 5px 20px;
+  margin: 0;
+  width: 100%;
+}
+
+#encabezado nav #menu ul li .submenu ul li:hover {
+  background-color: #00c000;
+}
+
+#encabezado nav #menu ul li .submenu ul li a {
+  text-decoration: none;
+  color: #c0c0c0;
+}
+
+#encabezado nav #menu ul li .submenu ul li:hover a {
+  color: #f0f0f0;
+}
+
+#departamentos {
+  height: 800px;
+  background-image: url("https://static.wixstatic.com/media/3b1f25_d6aeb137f2ce4a4fb5af06fbba6a47b5.jpg/v1/fill/w_1246,h_830,al_c,q_85,usm_0.66_1.00_0.01/3b1f25_d6aeb137f2ce4a4fb5af06fbba6a47b5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

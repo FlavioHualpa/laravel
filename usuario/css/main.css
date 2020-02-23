@@ -1,0 +1,17 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Lato', sans-serif;
+}
+
+.container {
+   color: #c00000;
+   width: 600px;
+   margin: 160px auto;
+   padding: 40px;
+   background-color: #ececec;
+   border-radius: 8px;
+   box-shadow: 0 0 6px #808080;
+   position: relative;
+}

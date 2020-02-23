@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- <meta charset="utf-8" /> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Néstor Zadoff</title>
+    <link href="style_00.css" rel="stylesheet" type="text/css">
+    <link href="style_01.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <script>
+        function CambiarPagina(nombre) {
+            boton_curric.className = boton_curric.id == 'boton_' + nombre ? 'div_selector_on' : 'div_selector_off';
+            boton_transc.className = boton_transc.id == 'boton_' + nombre ? 'div_selector_on' : 'div_selector_off';
+            boton_contacto.className = boton_contacto.id == 'boton_' + nombre ? 'div_selector_on' : 'div_selector_off';
+
+            pagina_curric.style.display = pagina_curric.id == 'pagina_' + nombre ? '' : 'none';
+            pagina_transc.style.display = pagina_transc.id == 'pagina_' + nombre ? '' : 'none';
+            pagina_contacto.style.display = pagina_contacto.id == 'pagina_' + nombre ? '' : 'none';
+        }
+
+        function AlternarCarpeta(nombre) {
+            var elemento;
+            var lista;
+            elemento = document.getElementById('carpeta_' + nombre);
+            lista = document.getElementById('obras_' + nombre);
+
+            if (elemento.src.endsWith('img/carpeta.png')) {
+                elemento.src = 'img/carpeta_abierta.png';
+                lista.style.display = '';
+            }
+            else {
+                elemento.src = 'img/carpeta.png'
+                lista.style.display = 'none';
+            }
+        }
+    </script>
+
+    <div id="div_hd">
+        <div id="div_hd_title">
+            <div id="div_hd_title_mail"><a href="mailto:info@nestorzadoff.com.ar" target="_blank"><img src="./img/hd_title_mail.jpg" alt="Mail" border="0"></a></div>
+        </div>
+        <!-- <div id="div_hd_logo">&nbsp;</div> -->
+    </div>
+
+    <table style="width: 97%; border: 0px; border-spacing: 0px;">
+        <tr>
+            <td style="width: 300px;">
+                <div id="panel_izq">
+                    <br />
+                    <div id="boton_curric" class="div_selector_on" onclick="CambiarPagina('curric')">CURRICULUM</div>
+                    <div id="boton_transc" class="div_selector_off" onclick="CambiarPagina('transc')">TRANSCRIPTIONS</div>
+                    <div id="boton_contacto" class="div_selector_off" onclick="CambiarPagina('contacto')">CONTACT</div>
+                    <br />
+                    <br />
+                    <img src="img/band_esp.png" alt="español" height="20" class="selector_lang" /><span class="texto_panel" style="cursor: pointer"><a href="index.html">Español</a></span><br />
+                    <img src="img/band_fra.png" alt="français" height="20" class="selector_lang" /><span class="texto_panel" style="cursor: pointer"><a href="index_fra.html">Français</a></span><br />
+                </div>
+            </td>
+            <td>
+                <div id="pagina_curric" class="div_der">
+                    <br />
+                    <p class="titulo_panel"><u>NÉSTOR ZADOFF</u></p><br />
+
+                    <!--
+                    <div style="background-color: wheat; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); float: left; margin-right: 25px; border-radius: 8px;">
+                        <img src="img/retrato.jpg" width="267" height="387" alt="Néstor Zadoff" style="border-radius: 8px;" />
+                        <div style="text-align: center;">
+                            <p style="font-family: arial; font-size: 12pt; color: maroon; margin: 4px;">1998</p>
+                        </div>
+                    </div>
+                    -->
+                    <div style="background-color: wheat; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); float: left; margin-right: 25px; border-radius: 8px;">
+                        <img src="img/retrato2018.jpg" width="267" height="387" alt="Néstor Zadoff" style="border-radius: 8px;" />
+                        <!--
+                        <div style="text-align: center;">
+                            <p style="font-family: arial; font-size: 12pt; color: maroon; margin: 4px;">2018</p>
+                        </div>
+                        -->
+                    </div>
+
+                    <p class="texto_panel">Born in Buenos Aires, Argentina, in 1952.</p><br />
+                    <p class="texto_panel">National Music Professor graduated from the National Conservatory in 1973 and Musical Arts graduate (UNA).</p>
+                    <p class="texto_panel">He studied Harmony with Erwin Leuchter and Choral Conduction with Antonio Russo at the Juan José Castro Conservatory.</p>
+                    <p class="texto_panel">He obtained a scholarship from the French government, to specialize himself in Renaissance Choral Music between 1976 and 1979.</p>
+                    <p class="texto_panel">He studied with Jean-Michel Vaccaro and under his guidance he obtained the degree of Doctor in Musicology at the Francois Rabelais University of Tours in 1979.</p>
+                    <p class="texto_panel">He returned that year to Argentina and reinserted himself in the musical environment of Buenos Aires, conducting choirs and chamber ensembles.</p><br />
+                    <p class="texto_panel">He has been for 30 years conductor of the <strong>Coro Nacional de Jóvenes</strong> (24 Prizes in different international choir contests,</p>
+                    <p class="texto_panel">GP of Florilège Vocal de Tours, 1st Prizes at Porto Alegre, Spittal, Lindenholzhausen) and currently conductor of <strong>Grupo Coral Divertimento</strong></p>
+                    <p class="texto_panel">(GCD, symphonic, www.gcdivertimento.com.ar).</p><br />
+                    <p class="texto_panel">He is Senior Lecturer for Choir Conduction, Choral Stylistics and Choral Arrangements Compositions at the UNA</p>
+                    <p class="texto_panel">(Arts National University, Music Department DAMUS, www.artesmusicales.org).</p>
+                    <p class="texto_panel">He conducts courses and choral workshops on a regular basis and is also frequently invited</p>
+                    <p class="texto_panel">to conduct choirs in Argentina and abroad, specially in France, Spain, Brazil and Chile.</p><br />
+                    <p class="texto_panel">He is author of more than 100 choral arrangements, 11 of which have been awarded in diverse contests:</p>
+                    <p class="texto_panel">Nacional 1985, Municipal 1987, Eistedfood 1993, Ars Nova de Rosario 2000, Fondo Nacional de las Artes 2007 and AAMCANT 2011.</p>
+                    <p class="texto_panel">His musicological research and arrangements have been published by GCC Editions in Argentina,</p>
+                    <p class="texto_panel">Editions A Coeur Joie in France and Kjos in USA.</p>
+                    <p class="texto_panel">He is in charge of the Ancient Music Department in GCC Editions.</p><br />
+                    <p class="texto_panel">He was named Honorary Membership to CAMU, Consejo Argentino de la Música (Music Council of Argentina),</p>
+                    <p class="texto_panel">in 1998 and in 1999 he won the "New Talents of the 1989-1998 Decade" Konex Award in Choir Conduction.</p><br />
+                    <p class="texto_panel">He was given the Choir Conductor of the 1999-2008 decade <strong>Konex Award in 2009.</strong></p><br /><br />
+                    <br /><br /><br /><br /><br /><br /><br />
+                </div>
+
+                <div id="pagina_transc" class="div_der" style="display: none">
+                    <br />
+                    <p class="titulo_panel"><u>FREE TRANSCRIPTIONS OF CHORAL WORKS FROM THE XVI CENTURY</u></p><br /><br />
+					<p class="texto_panel">Over the last several years, I have returned to my work as a researcher specializing in Early Music.</p>
+					<p class="texto_panel">In times when the music publishing industry is going through a deep crisis of global dimensions,</p>
+					<p class="texto_panel">I decided to offer my work free of charge through this platform to whoever would be interested</p>
+					<p class="texto_panel">in rare vocal repertoire of the Renaissance period, which, I expect, is not currently available in print.</p>
+					<p class="texto_panel">You will find transcriptions to modern notation and with updated musicological criteria of</p>
+					<p class="texto_panel">French <em>chansons</em>, Italian <em>villanesche</em>, and Spanish <em>madrigals</em> written during the 16th century</p>
+					<p class="texto_panel">and beginning of the 17th century. I hope these humble contributions will allow a <em>renaissance</em></p>
+					<p class="texto_panel">of these works through chamber groups and choirs of any nationality.</p>
+					<br /><br />
+                    <p class="titulo_panel"><u>(Musicological) PRINCIPLES USED IN TRANSCRIPTIONS</u></p><br /><br />
+                    <p class="texto_panel">• Rhythmic values were halved.</p>
+					<p class="texto_panel">• Editorial accidentals are suggested only for the specific pitches in question.</p>
+					<p class="texto_panel">• Passages in which the text is confusing in the original score will be expressed</p>
+					<p class="texto_panel">&nbsp;&nbsp;between [ ] indicating that they are editorial suggestions.</p>
+                    <p class="texto_panel">&nbsp;&nbsp;This happens specially in earlier works as from Josquin and Nola.</p>
+                    <p class="texto_panel">&nbsp;&nbsp;In later works (Cornet, Lassus) the composers and editors were very precise.</p>
+                    <p class="texto_panel">• Bar-lines were not used in that historical period. To facilitate reading,</p>
+					<p class="texto_panel">&nbsp;&nbsp;my proposal includes individual bar-lines in each voice part</p>
+					<p class="texto_panel">&nbsp;&nbsp;which are placed according to each line’s phrasing,</p>
+					<p class="texto_panel">&nbsp;&nbsp;always considering the natural accentuation of the words.</p>
+					<p class="texto_panel">• In homophonic passages, bar-lines will most likely coincide in all parts,</p>
+					<p class="texto_panel">&nbsp;&nbsp;but in imitative sections (very common in works of Franco-Flemish composers)</p>
+					<p class="texto_panel">&nbsp;&nbsp;each voice part will have its specific phrasing.</p>
+					<br /><br />
+
+                    <p class="titulo_panel">SEVERIN CORNET (ca. 1530-1582)&nbsp;&nbsp;<img id="carpeta_cornet" src="img/carpeta.png" alt="carpeta" height="24" style="vertical-align: middle; cursor: pointer;" onclick="AlternarCarpeta('cornet')" /></p><br />
+                    <ul id="obras_cornet" style="display: none;">
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Severin Cornet (english).pdf">Biography</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\portada_cornet.png">Manuscript original cover</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Signora Mia.pdf">Signora Mia</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Sio fosse certo.pdf">Sio fosse certo</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Hor va canzona.pdf">Hor va canzona</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Tu marrobasti.pdf">Tu m'arrobasti</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Parmi di star.pdf">Parmi di star</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Se per sentir.pdf">Se per sentir</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Chaggio perduto.pdf">Chaggio perduto</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Che giova saettar.pdf">Che giova saettar</a></li>
+                    </ul>
+                    <br /><br />
+
+                    <p class="titulo_panel">GIOVANNI DA NOLA (ca. 1510-1592)&nbsp;&nbsp;<img id="carpeta_danola" src="img/carpeta.png" alt="carpeta" height="24" style="vertical-align: middle; cursor: pointer;" onclick="AlternarCarpeta('danola')" /></p><br />
+                    <ul id="obras_danola" style="display: none;">
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Giovanni Domenico (english).pdf">Biography and commentaries</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\portada_nola.png">Manuscript original cover</a></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Medici nui siam.pdf">Medici nui siam</a> - <em>Canzon villanesca (ed. 1541)</em></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Oyme dolente.pdf">Oyme dolente</a> - <em>Canzon villanesca (ed. 1541)</em></li>
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\O dolce vita.pdf">O dolce vita mia</a> - <em>Canzon villanesca (ed. 1541)</em></li>
+                    </ul>
+                    <br /><br />
+
+                    <p class="titulo_panel">ORLANDE DE LASSUS (1530-1594)&nbsp;&nbsp;<img id="carpeta_lassus" src="img/carpeta.png" alt="carpeta" height="24" style="vertical-align: middle; cursor: pointer;" onclick="AlternarCarpeta('lassus')" /></p><br />
+                    <ul id="obras_lassus" style="display: none;">
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle" /><a href="pdfs\Dessus le marche.pdf">Dessus le marche</a> - <em>Continuation du Mellange d'Orlande de Lassus (Le Roy & Ballard, 1584, París)</em></li>
+                    </ul>
+                    <br /><br />
+
+                    <p class="titulo_panel">JOSQUIN DES PRES (ca. 1440-1521)&nbsp;&nbsp;<img id="carpeta_despres" src="img/carpeta.png" alt="carpeta" height="24" style="vertical-align: middle; cursor: pointer;" onclick="AlternarCarpeta('despres')" /></p><br />
+                    <ul id="obras_despres" style="display: none;">
+                        <!--
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; vertical-align: middle" /><a href="pdfs\Signora Mia.pdf">Signora Mia</a></li>
+                        -->
+                    </ul>
+                    <br /><br />
+
+                    <p class="titulo_panel">MUSICOLOGICAL ARTICLES&nbsp;&nbsp;<img id="carpeta_artmus" src="img/carpeta.png" alt="carpeta" height="24" style="vertical-align: middle; cursor: pointer;" onclick="AlternarCarpeta('artmus')" /></p><br />
+                    <ul id="obras_artmus" style="display: none;">
+                        <li class="link_panel"><img src="img/acrobat_icon.png" width="24" height="24" style="margin-left: 30px; margin-right: 10px; vertical-align: middle" /><a href="pdfs\Damus Nro 433.pdf">Entre dos mansos arroyos, spanish madrigal from the beginnings of XVII century</a></li>
+                    </ul>
+                    <br /><br />
+                </div>
+
+                <div id="pagina_contacto" class="div_der" style="display: none">
+                    <div>
+                        <br />
+                        <p class="titulo_panel">SEND ME YOUR QUERY</p><br /><br />
+                        <form action="index.php" method="post">
+                            <p id="par_01">NAME</p><input type="text" name="nombre" size="78" style="background:#c1c27c; color:#404033; font-family:Arial, Helvetica, sans-serif; font-size:12px; height:25px; width:450px;">
+                            <br>
+                            <p id="par_01">EMAIL</p><input type="text" name="email" size="78" style="background:#c1c27c; color:#404033; font-family:Arial, Helvetica, sans-serif; font-size:12px; height:25px;width:450px;">
+                            <br>
+                            <p id="par_01">QUERY</p><textarea name="coment" cols="75" rows="4" style="background:#c1c27c; color:#404033; font-family:Arial, Helvetica, sans-serif; font-size:12px;height:125px;width:450px;"></textarea>
+                            <br><br>
+                            <input type="submit" value="Send">
+                        </form>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

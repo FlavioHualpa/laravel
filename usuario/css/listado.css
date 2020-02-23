@@ -1,0 +1,26 @@
+.container ul {
+   list-style-type: none;
+   margin-top: 30px;
+}
+
+.container ul li {
+   height: 25px;
+}
+
+.container .btn-link {
+   display: inline-block;
+   margin-top: 30px;
+   padding: 8px 20px;
+   font-size: 20px;
+   border: none;
+   border-radius: 6px;
+   background-color: #c00000;
+   color: white;
+   text-transform: uppercase;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.container .btn-link:hover {
+   background-color: #a00000;
+}

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato;
+}
+
+.container {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px 20px;
+  background-color: #006090;
+  color: white;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: #0090d0;
+}
+
+.v-space {
+  margin: 30px 0;
+}
+
+.small {
+  font-size: 13px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+#table-header tr {
+  border-bottom: 2px solid #808080;
+}
+
+#table-body tr {
+  border-bottom: 1px solid #808080;
+}
+
+#table-body tr td:nth-child(1),
+#table-header tr th:nth-child(1) {
+  width: 60px;
+  height: 37px;
+  text-align: center;
+}
+
+#table-body tr td:nth-child(2),
+#table-header tr th:nth-child(2) {
+  width: 300px;
+  text-align: left;
+}
+
+#table-body tr td:nth-child(3),
+#table-header tr th:nth-child(3) {
+  width: 150px;
+  text-align: right;
+}
+
+#table-body tr td:nth-child(4),
+#table-header tr th:nth-child(4) {
+  width: 120px;
+  text-align: center;
+}

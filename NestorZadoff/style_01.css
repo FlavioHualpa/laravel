@@ -1,0 +1,97 @@
+body {background-color:#e5e5b8;}
+
+#div_hd{ background:url(./img/hd_bkg.jpg); background-repeat:repeat-x; height:246px; width:100%;}
+#div_hd_title{ background:url(./img/hd_front.jpg); background-position:top left; height:120px; width:450px; float:left;}
+#div_hd_title_mail{ background:url(./img/hd_front.jpg); background-position:bottom left; height:120px; width:450px; margin-top:123px}
+#div_hd_logo{ background:url(./img/hd_front.jpg); background-position:right; height:246px; width:450px; float:right;}
+
+#div_bd{margin-left:25px;}
+#div_bd_form_titles{width:200px;}
+#div_bd_form_titles_nombre{width:200px; height:25px; background: transparent url(./img/bd_form_titles.jpg) repeat scroll 0 -55px;}
+#div_bd_form_titles_mail{width:200px; height:25px; background: transparent url(./img/bd_form_titles.jpg) repeat scroll 0 -90px; margin-top:10px;}
+#div_bd_form_titles_mensaje{width:200px; height:25px; background: transparent url(./img/bd_form_titles.jpg) repeat scroll 0 -125px; margin-top:10px;}
+#div_bd_form_fields{margin-left:200px;}
+
+#par_01{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold;color:#663300; margin-top:10px;}
+
+.div_selector_on { margin: 0px; padding: 10px; font-family: Arial; font-weight: 100; font-size: 16pt; background-color: khaki; color: maroon; cursor: pointer }
+.div_selector_off { margin: 0px; padding: 10px; font-family: Arial; font-weight: 100; font-size: 16pt; cursor: pointer }
+.div_izq { float: left; height: 500px; }
+.div_der { background-color: khaki; height: 100%; width: 100%; padding-left: 20px; }
+.selector_lang { margin-bottom: 8px; margin-right: 10px; margin-left: 10px; vertical-align: middle; }
+.titulo_panel { font-family: Arial; font-size: 16pt; color: maroon; }
+.texto_panel { font-family: Arial; font-size: 12pt; color: maroon; line-height: 120%; }
+.texto_panel a:link { color: maroon; text-decoration: none; }
+.texto_panel a:visited { color: maroon; text-decoration: none; }
+.texto_lista_panel { font-family: Arial; font-size: 12pt; color: maroon; line-height: 140%; }
+.texto_pie { font-family: Arial; font-size: 8pt; color: maroon; }
+.link_panel { font-family: Arial; font-size: 12pt; }
+.esp_lista { font-family: Arial; font-size: 12pt; margin-left: 30px; margin-bottom: 8px; padding: 2px 5px; color: maroon; background-color: rgba(0, 0, 0, 0.1); border-radius: 4px; display: inline-block; }
+.etiqueta_nuevo { font-family: arial; font-size: 9pt; font-weight: bold; padding: 2px 6px 0px 6px; color: maroon; background-color: rgba(0, 0, 0, 0.25); border-radius: 4px; margin-left: 8px; }
+.icono-premio { height: 24px; width: 24px; vertical-align: middle; }
+.icono-pdf { width: 24px; height: 24px; margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle; }
+.lista_arreglos { font-family: Arial; font-size: 12pt; color: maroon; line-height: 130%; }
+
+.perf_thumb {
+  width: 200px;
+  height: 150px;
+  padding: 10px;
+  margin: 0 10px 10px 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: inline-block;
+}
+
+.perf_thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.perf_thumb img {
+  width: 100%;
+  height: 100%;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.modal-bg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal-box {
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 100px);
+  padding: 15px;
+  background-color: #eee;
+  border-radius: 6px;
+  animation: popup 0.5s forwards;
+  display: none;
+}
+
+.modal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes popup
+{
+  to {
+    width: 800px;
+    height: 600px;
+    top: calc(50vh - 300px);
+    left: calc(50vw - 400px);
+  }
+}
