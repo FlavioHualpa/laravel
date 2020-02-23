@@ -107,10 +107,11 @@
       <div class="form-row">
          <div class="col-3">
             <div class="row">
-               <div class="col-2">
-                  <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold" value="1">
+               <div class="col-3 pr-0" style="position: relative;">
+                  <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" value="1">
+                  <div class="inv-item-delete"><i class="fas fa-trash-alt"></i></div>
                </div>
-               <div class="col-10">
+               <div class="col-9 pl-0">
                   <input type="text" class="form-control form-control-lg font-weight-bold @error('prod_code') is-invalid @enderror" id="prod_code" name="prod_code" value="{{ old('prod_code') }}" list="codes_list">
                   @error('prod_code')
                   <p class="text-danger">{{ $message }}</p>
