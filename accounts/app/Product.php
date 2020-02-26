@@ -35,13 +35,25 @@ class Product extends Model
 
    public function price_lists()
    {
-      return $this->belongsToMany(PriceList::class);
+      return $this->belongsToMany(PriceList::class)
+                  ->withPivot([ 'price' ])
+                  ->withTimeStamps()
+                  ->as('product');
    }
 
    public function invoices()
    {
       return $this->belongsToMany(Invoice::class)
-                  ->withPivot([ 'description', 'quantity', 'price' ]);
+                  ->withPivot([ 'description', 'quantity', 'price' ])
+                  ->withTimeStamps()
+                  ->as('item');
+   }
+
+   public function priceInList($price_list_id)
+   {
+      $list = $this->price_lists->find($price_list_id);
+      
+      return $list ? $list->product->price : 0.0;
    }
 
    public static function withFilters($filter, $show)

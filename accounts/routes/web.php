@@ -31,6 +31,7 @@ Route::get('/products/create', 'ProductController@create')->name('products.creat
 Route::post('/products/store', 'ProductController@store')->name('products.store');
 Route::get('/products/edit/{product}', 'ProductController@edit')->name('products.edit');
 Route::patch('/products/update/{product}', 'ProductController@update')->name('products.update');
+Route::get('/products/get-data', 'ProductController@get_data');
 
 
 /*  ----------------------  */

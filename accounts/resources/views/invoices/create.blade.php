@@ -1,9 +1,9 @@
 @extends('layouts.fnapp')
 
 @push('styles')
+<script src="https://kit.fontawesome.com/487b4db8ef.js"></script>
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-<script src="https://kit.fontawesome.com/487b4db8ef.js"></script>
 @endpush
 
 @section('navbar')
@@ -98,49 +98,82 @@
 
       <hr class="my-4">
 
+      <div class="form-row mt-2">
+         <div class="col-3">
+            <div class="row">
+               <div class="col-3 pr-0">
+                  #
+               </div>
+               <div class="col-9 pl-0">
+                  Código
+               </div>
+            </div>
+         </div>
+
+         <div class="col-5">
+            Descripción
+         </div>
+
+         <div class="col-2">
+            Cantidad
+         </div>
+
+         <div class="col-2">
+            Precio
+         </div>
+      </div>
+
       <datalist id="codes_list">
       @foreach ($products as $product)
          <option value="{{ $product->code }}"></option>
       @endforeach
       </datalist>
 
-      <div class="form-row">
-         <div class="col-3">
-            <div class="row">
-               <div class="col-3 pr-0" style="position: relative;">
-                  <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" value="1">
-                  <div class="inv-item-delete"><i class="fas fa-trash-alt"></i></div>
-               </div>
-               <div class="col-9 pl-0">
-                  <input type="text" class="form-control form-control-lg font-weight-bold @error('prod_code') is-invalid @enderror" id="prod_code" name="prod_code" value="{{ old('prod_code') }}" list="codes_list">
-                  @error('prod_code')
-                  <p class="text-danger">{{ $message }}</p>
-                  @enderror
+      <section id="item-rows">
+
+      </section>
+
+      <template id="item-row-template">
+         <div class="form-row mt-2">
+            <div class="col-3">
+               <div class="row">
+                  <div class="col-3 pr-0 inv-row-buttons">
+                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" value="##">
+                     <i class="fas fa-trash-alt inv-item-delete"></i>
+                  </div>
+                  <div class="col-9 pl-0">
+                     <input type="text" class="form-control form-control-lg font-weight-bold @error('prod_code') is-invalid @enderror" id="prod_code" name="prod_code" value="{{ old('prod_code') }}" list="codes_list">
+                     @error('prod_code')
+                     <p class="text-danger">{{ $message }}</p>
+                     @enderror
+                  </div>
                </div>
             </div>
-         </div>
 
-         <div class="col-5">
-            <input type="text" class="form-control form-control-lg font-weight-bold @error('item.description') is-invalid @enderror" id="item.description" name="item[description]" value="{{ old('item.description') }}">
-            @error('item.description')
-            <p class="text-danger">{{ $message }}</p>
-            @enderror
-         </div>
+            <input type="hidden" id="item_id" name="item[id]">
+            
+            <div class="col-5">
+               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.description') is-invalid @enderror" id="item_description" name="item[description]" value="{{ old('item.description') }}">
+               @error('item.description')
+               <p class="text-danger">{{ $message }}</p>
+               @enderror
+            </div>
 
-         <div class="col-2">
-            <input type="text" class="form-control form-control-lg font-weight-bold @error('item.quantity') is-invalid @enderror" id="item.quantity" name="item[quantity]" value="{{ old('item.quantity') }}">
-            @error('item.quantity')
-            <p class="text-danger">{{ $message }}</p>
-            @enderror
-         </div>
+            <div class="col-2">
+               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.quantity') is-invalid @enderror" id="item_quantity" name="item[quantity]" value="{{ old('item.quantity') }}">
+               @error('item.quantity')
+               <p class="text-danger">{{ $message }}</p>
+               @enderror
+            </div>
 
-         <div class="col-2">
-            <input type="text" class="form-control form-control-lg font-weight-bold @error('item.price') is-invalid @enderror" id="item.price" name="item[price]" value="{{ old('item.price') }}">
-            @error('item.price')
-            <p class="text-danger">{{ $message }}</p>
-            @enderror
+            <div class="col-2">
+               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.price') is-invalid @enderror" id="item_price" name="item[price]" value="{{ old('item.price') }}">
+               @error('item.price')
+               <p class="text-danger">{{ $message }}</p>
+               @enderror
+            </div>
          </div>
-      </div>
+      </template>
 
       <div class="form-row mt-5">
          <div class="col">

@@ -17,12 +17,14 @@ class CreateInvoicesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('company_id');
             $table->unsignedBigInteger('customer_id');
+            $table->unsignedBigInteger('invoice_type_id');
             $table->unsignedBigInteger('transport_id');
             $table->unsignedBigInteger('price_list_id');
             $table->unsignedBigInteger('number');
             $table->timestamps();
             $table->foreign('company_id')->references('id')->on('companies');
             $table->foreign('customer_id')->references('id')->on('customers');
+            $table->foreign('invoice_type_id')->references('id')->on('invoice_types');
             $table->foreign('transport_id')->references('id')->on('transports');
             $table->foreign('price_list_id')->references('id')->on('price_lists');
         });

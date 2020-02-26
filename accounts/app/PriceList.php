@@ -19,7 +19,10 @@ class PriceList extends Model
 
    public function products()
    {
-      return $this->belongsToMany(Product::class);
+      return $this->belongsToMany(Product::class)
+                  ->withPivot([ 'price' ])
+                  ->withTimeStamps()
+                  ->as('price_list');
    }
 
    public function scopeOrderedByName($query)
@@ -28,5 +31,12 @@ class PriceList extends Model
       {
          return $query->orderBy('name')->where('company_id', $company_id);
       }
+   }
+
+   public function priceOfProduct($product_id)
+   {
+      $product = $this->products->find($product_id);
+      
+      return $product ? $product->price_list->price : 0.0;
    }
 }

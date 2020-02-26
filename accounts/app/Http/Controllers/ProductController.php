@@ -7,6 +7,7 @@ use App\OrderQuery;
 use App\Http\Requests\CreateProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
@@ -140,5 +141,53 @@ class ProductController extends Controller
    public function destroy(Product $product)
    {
       //
+   }
+
+   public function get_data(Request $request)
+   {
+      if ($request->has('code'))
+      {
+         $product = $this->get_product($request->code);
+         
+         if ($product)
+         {
+            $price = $product->priceInList($request->price_list_id);
+            
+            return [
+               'id' => $product->id,
+               'description' => $product->description,
+               'price' => $price
+            ];
+         }
+         else
+         {
+            return [
+               'id' => null,
+               'description' => '',
+               'price' => 0.0
+            ];
+         }
+      }
+
+      return [
+         'id' => null,
+         'description' => '',
+         'price' => 0.0
+      ];
+   }
+
+   private function get_product($code)
+   {
+      if (session('active_company'))
+      {
+         $company_id = session('active_company')->id;
+         $product = Product::where('code', 'like', $code)
+                           ->where('company_id', $company_id)
+                           ->first();
+         
+         return $product ?? null;
+      }
+
+      return null;
    }
 }

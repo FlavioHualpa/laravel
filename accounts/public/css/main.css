@@ -245,9 +245,9 @@ main {
    background-color: rgba(32, 0, 0, 0.4);
 }
 
-.inv-item-num {
+.inv-row-buttons {
+   position: relative;
    cursor: pointer;
-   z-index: 2;
 }
 
 .inv-item-delete {
@@ -257,15 +257,14 @@ main {
    top: 14px;
    cursor: pointer;
    display: none;
-   z-index: 1;
 }
 
-.inv-item-num:hover {
+.inv-row-buttons:hover .inv-item-num {
    display: none;
 }
 
-.inv-item-num:hover .inv-item-delete {
-   display: block;
+.inv-row-buttons:hover .inv-item-delete {
+   display: inline-block;
 }
 
 .inv-item-delete:hover {

@@ -9,8 +9,8 @@ class Invoice extends Model
    protected $fillable = [
       'company_id',
       'customer_id',
+      'invoice_type_id',
       'transport_id',
-      'price_list_id',
       'price_list_id',
       'number',
    ];
@@ -18,15 +18,19 @@ class Invoice extends Model
    public function __construct($invoice_type_id)
    {
       $last_number = self::max('number')
-                              ->where(
-                                 'company_id',
-                                 session('active_company')->id
-                              )->where(
-                                 'invoice_type',
-                                 $invoice_type_id
-                              )-get();
+                           ->where(
+                              'company_id',
+                              session('active_company')->id
+                           )
+                           ->where(
+                              'invoice_type_id',
+                              $invoice_type_id
+                           )
+                           ->get();
       
-      $last_number = $last_number ? $last_number + 1 : 1;
+      $next_number = $last_number ? $last_number + 1 : 1;
+      $this->number = $next_number;
+      $this->invoice_type_id = $invoice_type_id;
    }
 
    public function company()
@@ -37,6 +41,11 @@ class Invoice extends Model
    public function customer()
    {
       return $this->belongsTo(Customer::class);
+   }
+
+   public function invoice_type()
+   {
+      return $this->belongsTo(InvoiceType::class);
    }
 
    public function transport()
@@ -52,6 +61,8 @@ class Invoice extends Model
    public function products()
    {
       return $this->belongsToMany(Product::class)
-                  ->withPivot([ 'description', 'quantity', 'price' ]);
+                  ->withPivot([ 'description', 'quantity', 'price' ])
+                  ->withTimeStamps()
+                  ->as('item');
    }
 }
