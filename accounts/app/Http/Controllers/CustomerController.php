@@ -31,11 +31,10 @@ class CustomerController extends Controller
       $filter = request()->query('q');
       $show = request()->query('show');
       [ $order, $dir ] = OrderQuery::fromQueryString([
-         'code', 'name', 'street', 'fiscal_id', 'status'
+         'code', 'name', 'address.street', 'fiscal_id', 'status'
       ]);
       
-      $customers = Customer::withFilters($filter, $show)
-                           ->orderBy($order, $dir)
+      $customers = Customer::filteredAndSorted($filter, $show, $order, $dir)
                            ->get();
       
       return view('customers.search')->with('customers', $customers);
@@ -132,5 +131,24 @@ class CustomerController extends Controller
    public function destroy(Customer $customer)
    {
       //
+   }
+
+   public function getFinalTax()
+   {
+      if (request('customer_id'))
+      {
+         $customer = Customer::find(request('customer_id'));
+
+         if ($customer)
+         {
+            return [
+               'final_tax' => $customer->condition->final_tax
+            ];
+         }
+      }
+
+      return [
+         'final_tax' => 0.0
+      ];
    }
 }

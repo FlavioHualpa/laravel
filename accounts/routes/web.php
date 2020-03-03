@@ -97,4 +97,6 @@ Route::patch('/accounts/transports/update/{transport}', 'TransportController@upd
 
 Route::get('/invoices/create', 'InvoiceController@create')->name('invoices.create');
 Route::post('/invoices/store', 'InvoiceController@store')->name('invoices.store');
+Route::get('/invoices/show/{invoice}', 'InvoiceController@show')->name('invoices.show');
 Route::get('/invoice_types/get/{customer}', 'InvoiceTypeController@getList');
+Route::get('/conditions/get-final-tax', 'CustomerController@getFinalTax');

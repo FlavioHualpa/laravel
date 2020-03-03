@@ -56,7 +56,7 @@ class Product extends Model
       return $list ? $list->product->price : 0.0;
    }
 
-   public static function withFilters($filter, $show)
+   public static function filteredAndSorted($filter, $show, $order, $dir)
    {
       $statusValues = [ self::STATUS_ACTIVE ];
       $company_id = session()->get('active_company')->id;
@@ -70,20 +70,33 @@ class Product extends Model
             $statusValues[] = self::STATUS_DISCONTINUED;
       }
 
-      return self::when($filter, function($query, $filter) {
-         
+      $query = self::when($filter, function($query, $filter) {
          return $query->where('code', 'like', "%$filter%")
                      ->orWhere('description', 'like', "%$filter%");
-         
       })->whereIn('status', $statusValues)
-         ->where('company_id', $company_id);
+         ->where('company_id', $company_id)
+         ->when(strpos($order, "."),
+            function($query) use ($order, $dir) {
+               $col = explode(".", $order);
+               return $query->orderByRaw(
+                  "json_extract($col[0], \"$.$col[1]\") $dir"
+               );
+            },
+            function($query) use ($order, $dir) {
+               return $query->orderBy($order, $dir);
+            }
+         );
+
+      return $query;
    }
 
    public function scopeOrderedByCode($query)
    {
       if ($company_id = session()->get('active_company')->id)
       {
-         return $query->orderBy('code')->where('company_id', $company_id);
+         return $query->orderBy('code')
+                     ->where('company_id', $company_id)
+                     ->where('status', self::STATUS_ACTIVE);
       }
    }
 }

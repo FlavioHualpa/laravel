@@ -67,7 +67,7 @@ class Customer extends Model
       return $full_address;
    }
 
-   public static function withFilters($filter, $show)
+   public static function filteredAndSorted($filter, $show, $order, $dir)
    {
       $statusValues = [ self::STATUS_ACTIVE ];
       $company_id = session()->get('active_company')->id;
@@ -81,20 +81,33 @@ class Customer extends Model
             $statusValues[] = self::STATUS_DISCONTINUED;
       }
 
-      return self::when($filter, function($query, $filter) {
-         
+      $query = self::when($filter, function($query, $filter) {
          return $query->where('code', 'like', "%$filter%")
                      ->orWhere('name', 'like', "%$filter%");
-         
       })->whereIn('status', $statusValues)
-         ->where('company_id', $company_id);
+         ->where('company_id', $company_id)
+         ->when(strpos($order, "."),
+            function($query) use ($order, $dir) {
+               $col = explode(".", $order);
+               return $query->orderByRaw(
+                  "json_extract($col[0], \"$.$col[1]\") $dir"
+               );
+            },
+            function($query) use ($order, $dir) {
+               return $query->orderBy($order, $dir);
+            }
+         );
+
+      return $query;
    }
 
    public function scopeOrderedByName($query)
    {
       if ($company_id = session()->get('active_company')->id)
       {
-         return $query->orderBy('name')->where('company_id', $company_id);
+         return $query->orderBy('name')
+                     ->where('company_id', $company_id)
+                     ->where('status', self::STATUS_ACTIVE);
       }
    }
 }

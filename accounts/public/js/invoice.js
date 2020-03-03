@@ -1,4 +1,5 @@
 var nextItemNum = 1
+var finalTax
 
 window.addEventListener(
    'load',
@@ -10,12 +11,20 @@ window.addEventListener(
          'change',
          function () {
             fillInvoiceTypesList()
+            getFinalTax()
          }
       )
 
-      addItemRow()
-      addItemRow()
-      addItemRow()
+      var addRowBtn = document.querySelector('#add-btn')
+      addRowBtn.addEventListener(
+         'click',
+         function () {
+            event.preventDefault()
+            addItemRow()
+         }
+      )
+
+      getFinalTax()
       addItemRow()
       addItemRow()
    }
@@ -75,7 +84,7 @@ function setRowAttributeValues(row)
    let node = row.querySelector('input[readonly]')
    node.setAttribute('value', nextItemNum)
 
-   node = row.querySelector('#prod_code')
+   node = row.querySelector('[id^=prod_code]')
    node.setAttribute('id', `prod_code.${nextItemNum}`)
    node.setAttribute('name', `prod_code[${nextItemNum}]`)
    node.addEventListener('change', getProductData)
@@ -83,21 +92,29 @@ function setRowAttributeValues(row)
    node = row.querySelector('i')
    node.addEventListener('click', deleteItemRow)
 
-   node = row.querySelector('#item_id')
+   node = row.querySelector('[id$=id]')
    node.setAttribute('id', `item.${nextItemNum}.id`)
    node.setAttribute('name', `item[${nextItemNum}][id]`)
 
-   node = row.querySelector('#item_description')
+   node = row.querySelector('[id$=description]')
    node.setAttribute('id', `item.${nextItemNum}.description`)
    node.setAttribute('name', `item[${nextItemNum}][description]`)
 
-   node = row.querySelector('#item_quantity')
+   node = row.querySelector('[id$=quantity]')
    node.setAttribute('id', `item.${nextItemNum}.quantity`)
    node.setAttribute('name', `item[${nextItemNum}][quantity]`)
+   node.addEventListener('change', function () {
+      checkFloat()
+      computeInvoiceTotal()
+   })
 
-   node = row.querySelector('#item_price')
+   node = row.querySelector('[id$=price]')
    node.setAttribute('id', `item.${nextItemNum}.price`)
    node.setAttribute('name', `item[${nextItemNum}][price]`)
+   node.addEventListener('change', function () {
+      checkFloat()
+      computeInvoiceTotal()
+   })
 }
 
 function deleteItemRow()
@@ -112,6 +129,7 @@ function deleteItemRow()
 
    node.remove()
    renumberItemRows()
+   computeInvoiceTotal()
 }
 
 function renumberItemRows()
@@ -123,10 +141,42 @@ function renumberItemRows()
 
    for (row of rowsSection.children)
    {
-      node = row.querySelector('input[readonly]')
-      node.setAttribute('value', nextItemNum)
-      nextItemNum++;
+      setRowAttributeValues(row)
+      nextItemNum++
    }
+}
+
+function checkFloat()
+{
+   const field = event.target
+   const num = Number.parseFloat(field.value)
+   
+   field.value = (isNaN(num) || num < 0.0) ? 0.0 : num
+}
+
+function computeInvoiceTotal()
+{
+   let rowsSection = document.querySelector('#item-rows')
+   let subtotal = 0.0
+
+   for (row of rowsSection.children) {
+      subtotal += row.querySelector('[id$=quantity]').value * row.querySelector('[id$=price]').value
+   }
+
+   let subtotalField = document.querySelector('#subtotal')
+   let taxField = document.querySelector('#tax')
+   let totalField = document.querySelector('#total')
+
+   subtotalField.innerText = toCurrencyString(subtotal)
+   taxField.innerText = toCurrencyString(subtotal * finalTax)
+   totalField.innerText = toCurrencyString(subtotal * (1.0 + finalTax))
+}
+
+function toCurrencyString(value)
+{
+   return '$ ' + value.toLocaleString(
+      'it', { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+   )
 }
 
 function getProductData()
@@ -136,22 +186,39 @@ function getProductData()
 
    fetch('/products/get-data' + qString)
       .then(function (response) {
-         console.log(response)
          return response.json()
       })
       .then(function (data) {
-         console.log(data)
          fillItemFields(code, data)
+         computeInvoiceTotal()
+      })
+}
+
+function getFinalTax()
+{
+   let customer_id = document.querySelector('#customer').value
+
+   fetch('/conditions/get-final-tax?customer_id=' + customer_id)
+      .then(function (response) {
+         return response.json()
+      })
+      .then(function (data) {
+         finalTax = data.final_tax
       })
 }
 
 function buildProductQueryString(productCode)
 {
    let priceList = document.querySelector('#price_list')
+   let customer = document.querySelector('#customer')
    let qString = `?code=${productCode}`
 
    if (priceList.value) {
       qString += `&price_list_id=${priceList.value}`
+   }
+
+   if (customer.value) {
+      qString += `&customer_id=${customer.value}`
    }
 
    return qString
@@ -170,7 +237,7 @@ function fillItemFields(code, data)
    node.value = data.description
 
    node = row.querySelector('[id$=quantity]')
-   node.value = 1
+   node.value = data.quantity
 
    node = row.querySelector('[id$=price]')
    node.value = data.price

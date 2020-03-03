@@ -133,6 +133,54 @@
 
       </section>
 
+      <div class="form-row mt-3">
+         <div class="col-3">
+         </div>
+
+         <div class="col-5">
+         </div>
+
+         <div class="col-2">
+            Subtotal
+         </div>
+
+         <div class="col-2" id="subtotal">
+            $ 0,00
+         </div>
+      </div>
+
+      <div class="form-row mt-1">
+         <div class="col-3">
+         </div>
+
+         <div class="col-5">
+         </div>
+
+         <div class="col-2">
+            IVA
+         </div>
+
+         <div class="col-2" id="tax">
+            $ 0,00
+         </div>
+      </div>
+
+      <div class="form-row mt-1">
+         <div class="col-3">
+         </div>
+
+         <div class="col-5">
+         </div>
+
+         <div class="col-2 lead font-weight-bold">
+            Total
+         </div>
+
+         <div class="col-2 lead font-weight-bold" id="total">
+            $ 0,00
+         </div>
+      </div>
+
       <template id="item-row-template">
          <div class="form-row mt-2">
             <div class="col-3">
@@ -142,7 +190,7 @@
                      <i class="fas fa-trash-alt inv-item-delete"></i>
                   </div>
                   <div class="col-9 pl-0">
-                     <input type="text" class="form-control form-control-lg font-weight-bold @error('prod_code') is-invalid @enderror" id="prod_code" name="prod_code" value="{{ old('prod_code') }}" list="codes_list">
+                     <input type="text" class="form-control form-control-lg font-weight-bold @error('prod_code') is-invalid @enderror" id="prod_code" name="prod_code"{{-- value="old('prod_code')"  --}} list="codes_list">
                      @error('prod_code')
                      <p class="text-danger">{{ $message }}</p>
                      @enderror
@@ -153,21 +201,21 @@
             <input type="hidden" id="item_id" name="item[id]">
             
             <div class="col-5">
-               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.description') is-invalid @enderror" id="item_description" name="item[description]" value="{{ old('item.description') }}">
+               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.description') is-invalid @enderror" id="item_description" name="item[description]"{{-- value="old('item.description')" --}}>
                @error('item.description')
                <p class="text-danger">{{ $message }}</p>
                @enderror
             </div>
 
             <div class="col-2">
-               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.quantity') is-invalid @enderror" id="item_quantity" name="item[quantity]" value="{{ old('item.quantity') }}">
+               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.quantity') is-invalid @enderror" id="item_quantity" name="item[quantity]"{{-- value="old('item.quantity')" --}}>
                @error('item.quantity')
                <p class="text-danger">{{ $message }}</p>
                @enderror
             </div>
 
             <div class="col-2">
-               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.price') is-invalid @enderror" id="item_price" name="item[price]" value="{{ old('item.price') }}">
+               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.price') is-invalid @enderror" id="item_price" name="item[price]"{{-- value="old('item.price')" --}}>
                @error('item.price')
                <p class="text-danger">{{ $message }}</p>
                @enderror
@@ -177,9 +225,14 @@
 
       <div class="form-row mt-5">
          <div class="col">
-            <button type="submit" class="btn btn-primary">Generar Comprobante</button>
+            <button type="submit" class="btn btn-primary">
+               Generar Comprobante
+            </button>
             <a href="{{ route('home') }}" class="btn btn-dark">
                Cancelar
+            </a>
+            <a href="#" class="btn btn-secondary align-self-end" id="add-btn">
+               Agregar un producto
             </a>
          </div>
       </div>

@@ -31,7 +31,8 @@ class StoreConditionRequest extends FormRequest
             new ConditionCodeUniqueRule
          ],
          'name' => 'required|between:3,250',
-         'tax' => 'required|numeric|between:0,100',
+         'product_tax' => 'required|numeric|between:0,100',
+         'final_tax' => 'required|numeric|between:0,100',
       ];
    }
 
@@ -42,9 +43,12 @@ class StoreConditionRequest extends FormRequest
          'code.between' => 'El código debe tener entre :min y :max caracteres',
          'name.required' => 'La condición es obligatoria',
          'name.between' => 'La condición debe tener entre :min y :max caracteres',
-         'tax.required' => 'El IVA es obligatorio',
-         'tax.numeric' => 'El IVA debe ser un valor decimal',
-         'tax.between' => 'El IVA debe ser un valor decimal entre :min y :max',
+         'product_tax.required' => 'El IVA producto es obligatorio',
+         'product_tax.numeric' => 'El IVA producto debe ser un valor decimal',
+         'product_tax.between' => 'El IVA producto debe ser un valor decimal entre :min y :max',
+         'final_tax.required' => 'El IVA final es obligatorio',
+         'final_tax.numeric' => 'El IVA final debe ser un valor decimal',
+         'final_tax.between' => 'El IVA final debe ser un valor decimal entre :min y :max',
       ];
    }
 }

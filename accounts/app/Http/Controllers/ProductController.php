@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
 use App\Product;
 use App\OrderQuery;
 use App\Http\Requests\CreateProductRequest;
@@ -34,9 +35,8 @@ class ProductController extends Controller
          'code', 'description', 'created_at', 'status'
       ]);
 
-      $products = Product::withFilters($filter, $show)
-         ->orderBy($order, $dir)
-         ->get();
+      $products = Product::filteredAndSorted($filter, $show, $order, $dir)
+                        ->get();
       
       return view('products.search')->with('products', $products);
    }
@@ -145,34 +145,29 @@ class ProductController extends Controller
 
    public function get_data(Request $request)
    {
-      if ($request->has('code'))
+      if ($request->code)
       {
          $product = $this->get_product($request->code);
          
          if ($product)
          {
             $price = $product->priceInList($request->price_list_id);
+            $tax = $this->get_tax($request->customer_id);
             
             return [
                'id' => $product->id,
                'description' => $product->description,
-               'price' => $price
-            ];
-         }
-         else
-         {
-            return [
-               'id' => null,
-               'description' => '',
-               'price' => 0.0
+               'quantity' => 1,
+               'price' => round($price * (1.0 + $tax), 2)
             ];
          }
       }
 
       return [
          'id' => null,
-         'description' => '',
-         'price' => 0.0
+         'description' => null,
+         'quantity' => null,
+         'price' => null
       ];
    }
 
@@ -189,5 +184,16 @@ class ProductController extends Controller
       }
 
       return null;
+   }
+
+   private function get_tax($customer_id)
+   {
+      if ($customer_id)
+      {
+         $customer = Customer::find($customer_id);
+         return $customer->condition->product_tax;
+      }
+
+      return 0.0;
    }
 }

@@ -33,7 +33,8 @@ class ConditionsController extends Controller
          'account_id' => $request->account_id,
          'code' => $request->code,
          'name' => $request->name,
-         'tax' => $request->tax / 100,
+         'product_tax' => $request->product_tax / 100.0,
+         'final_tax' => $request->final_tax / 100.0,
       ]);
 
       return redirect()->route('admin.conditions.search');
@@ -50,7 +51,8 @@ class ConditionsController extends Controller
       $condition->update([
          'code' => $request->code,
          'name' => $request->name,
-         'tax' => $request->tax / 100,
+         'product_tax' => $request->product_tax / 100.0,
+         'final_tax' => $request->final_tax / 100.0,
       ]);
 
       return redirect()->route('admin.conditions.search');

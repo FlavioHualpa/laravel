@@ -10,7 +10,8 @@ class Condition extends Model
       'account_id',
       'code',
       'name',
-      'tax',
+      'product_tax',
+      'final_tax',
    ];
 
    public function account()

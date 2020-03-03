@@ -18,7 +18,8 @@ class CreateConditionsTable extends Migration
             $table->unsignedBigInteger('account_id');
             $table->string('code');
             $table->string('name');
-            $table->float('tax');
+            $table->float('product_tax')->default(0.0);
+            $table->float('final_tax')->default(0.0);
             $table->timestamps();
             $table->foreign('account_id')->references('id')->on('accounts');
         });

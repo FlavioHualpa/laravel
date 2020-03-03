@@ -74,4 +74,23 @@ class Company extends Model
 
       return $full_address;
    }
+
+   public static function customOrderBy($order, $dir)
+   {
+      $account_id = auth('admin')->id();
+
+      if (strpos($order, "."))
+      {
+         $col = explode(".", $order);
+         $query = self::orderByRaw(
+            "json_extract($col[0], \"$.$col[1]\") $dir"
+         );
+      }
+      else
+      {
+         $query = self::orderBy($order, $dir);
+      }
+
+      return $query->where('account_id', $account_id);
+   }
 }

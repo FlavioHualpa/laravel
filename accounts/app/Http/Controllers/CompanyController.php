@@ -20,12 +20,10 @@ class CompanyController extends Controller
    public function index()
    {
       [ $order, $dir ] = OrderQuery::fromQueryString([
-         'code', 'name', 'street', 'fiscal_id', 'created_at'
+         'code', 'name', 'address.street', 'fiscal_id', 'created_at'
       ]);
 
-      $account_id = auth('admin')->id();
-      $companies = Company::orderBy($order, $dir)
-                           ->where('account_id', $account_id)
+      $companies = Company::customOrderBy($order, $dir)
                            ->get();
 
       return view('admin.companies.search')

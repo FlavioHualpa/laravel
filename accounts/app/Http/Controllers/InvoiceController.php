@@ -18,7 +18,12 @@ class InvoiceController extends Controller
       $this->middleware('auth');
    }
    
-  public function create()
+   public function show(Invoice $invoice)
+   {
+      dd($invoice);
+   }
+
+   public function create()
    {
       $customers = Customer::orderedByName()->get();
       $transports = Transport::orderedByName()->get();
@@ -34,10 +39,10 @@ class InvoiceController extends Controller
             ]);
    }
 
-   public function store(Request $request)
+   public function store(StoreInvoiceRequest $request)
    {
-      dd($request->all());
-      dd($request->input('header.invoice_type_id'));
+      // dd($request->all());
+      // dd($request->input('header.invoice_type_id'));
 
       $invoice = new Invoice($request->input('header.invoice_type_id'));
       $invoice->company_id = $request->input('company_id');
@@ -48,13 +53,18 @@ class InvoiceController extends Controller
 
       foreach ($request->input('item') as $item)
       {
-         $invoice->products()->attach(
-            $item['id'], [
-               'description' => $item['description'],
-               'quantity' => $item['quantity'],
-               'price' => $item['price'],
-            ]
-         );
+         if ($item['id'])
+         {
+            $invoice->products()->attach(
+               $item['id'], [
+                  'description' => $item['description'],
+                  'quantity' => $item['quantity'],
+                  'price' => $item['price'],
+               ]
+            );
+         }
       }
+
+      return redirect()->route('invoices.show', $invoice->id);
    }
 }

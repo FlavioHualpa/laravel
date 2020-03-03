@@ -17,8 +17,7 @@ class Invoice extends Model
 
    public function __construct($invoice_type_id)
    {
-      $last_number = self::max('number')
-                           ->where(
+      $last_number = self::where(
                               'company_id',
                               session('active_company')->id
                            )
@@ -26,7 +25,7 @@ class Invoice extends Model
                               'invoice_type_id',
                               $invoice_type_id
                            )
-                           ->get();
+                           ->max('number');
       
       $next_number = $last_number ? $last_number + 1 : 1;
       $this->number = $next_number;

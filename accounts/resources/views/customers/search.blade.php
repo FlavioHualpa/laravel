@@ -66,7 +66,7 @@
             </a>
          </th>
          <th scope="col">
-            <a href="{{ route('customers.search') . App\OrderQuery::make('street') }}">
+            <a href="{{ route('customers.search') . App\OrderQuery::make('address.street') }}">
                Domicilio
             </a>
          </th>

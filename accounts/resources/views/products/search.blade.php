@@ -86,7 +86,7 @@
             </a>
          </td>
          <td>{{ $product->description }}</td>
-         <td>{{ $product->created_at->format('d-m-Y H:i') }}</td>
+         <td>{{ $product->created_at->format('d-m-Y 🕒 H:i') }}</td>
          <td>{{ $product->status_name }}</td>
       </tr>
       @empty

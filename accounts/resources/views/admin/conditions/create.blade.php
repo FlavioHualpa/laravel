@@ -38,7 +38,7 @@
       @csrf
 
       <div class="form-row">
-         <div class="col-3">
+         <div class="col-2">
             <label for="code" class="mb-1">Código</label>
             <input type="text" class="form-control form-control-lg font-weight-bold @error('code') is-invalid @enderror" id="code" name="code" value="{{ old('code') }}">
             @error('code')
@@ -52,10 +52,17 @@
             <p class="text-danger">{{ $message }}</p>
             @enderror
          </div>
-         <div class="col-3">
-            <label for="tax" class="mb-1">IVA %</label>
-            <input type="text" class="form-control form-control-lg font-weight-bold @error('tax') is-invalid @enderror" id="tax" name="tax" value="{{ old('tax', 0) }}">
-            @error('tax')
+         <div class="col-2">
+            <label for="tax_1" class="mb-1">IVA % Producto</label>
+            <input type="text" class="form-control form-control-lg font-weight-bold @error('product_tax') is-invalid @enderror" id="tax_1" name="product_tax" value="{{ old('product_tax', 0) }}">
+            @error('product_tax')
+            <p class="text-danger">{{ $message }}</p>
+            @enderror
+         </div>
+         <div class="col-2">
+            <label for="tax_2" class="mb-1">IVA % Final</label>
+            <input type="text" class="form-control form-control-lg font-weight-bold @error('final_tax') is-invalid @enderror" id="tax_2" name="final_tax" value="{{ old('final_tax', 0) }}">
+            @error('final_tax')
             <p class="text-danger">{{ $message }}</p>
             @enderror
          </div>

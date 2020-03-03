@@ -102,6 +102,9 @@
             <div class="element-image-wrapper">
                <img src="{{ $product->image ? asset(str_replace('public', 'storage', $product->image->url)) : asset('img/noimage.png') }}" alt="{{ $product->image ? $product->description : '' }}" class="element-image">
                <div class="element-image-buttons">
+                  <a href="#">
+                     <i class="far fa-images"></i>
+                  </a>
                   <a href="{{ $product->image ? asset(str_replace('public', 'storage', $product->image->url)) : '#' }}">
                      <i class="fas fa-download"></i>
                   </a>
