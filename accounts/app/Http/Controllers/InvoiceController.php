@@ -20,7 +20,14 @@ class InvoiceController extends Controller
    
    public function show(Invoice $invoice)
    {
-      dd($invoice);
+      $invoice->load('products');
+      $invoice->load('company');
+      $invoice->load('customer');
+      $invoice->load('transport');
+      $invoice->load('invoice_type');
+      
+      return view('invoices.show')
+               ->with('invoice', $invoice);
    }
 
    public function create()
@@ -44,7 +51,8 @@ class InvoiceController extends Controller
       // dd($request->all());
       // dd($request->input('header.invoice_type_id'));
 
-      $invoice = new Invoice($request->input('header.invoice_type_id'));
+      $invoice = new Invoice;
+      $invoice->get_next_number($request->input('header.invoice_type_id'));
       $invoice->company_id = $request->input('company_id');
       $invoice->customer_id = $request->input('header.customer_id');
       $invoice->transport_id = $request->input('header.transport_id');

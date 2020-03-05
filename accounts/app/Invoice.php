@@ -15,7 +15,7 @@ class Invoice extends Model
       'number',
    ];
 
-   public function __construct($invoice_type_id)
+   public function get_next_number($invoice_type_id)
    {
       $last_number = self::where(
                               'company_id',
@@ -63,5 +63,25 @@ class Invoice extends Model
                   ->withPivot([ 'description', 'quantity', 'price' ])
                   ->withTimeStamps()
                   ->as('item');
+   }
+
+   public function final_amount()
+   {
+      return $this->products->sum(
+         function ($product) {
+            return $product->item->price * $product->item->quantity;
+         }
+      );
+   }
+
+   public function final_tax()
+   {
+      return $this->final_amount() * $this->customer->condition->final_tax;
+   }
+
+   public function final_amount_with_tax()
+   {
+      return $this->final_amount() *
+         (1.0 + $this->customer->condition->final_tax);
    }
 }

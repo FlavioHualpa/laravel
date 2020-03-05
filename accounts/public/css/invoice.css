@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Lato;
+}
+
+body {
+   background-color: #e8e8e8;
+}
+
+.container {
+   width: 21cm;
+   height: 29.7cm;
+   margin: 0 auto;
+   background-color: white;
+   padding: 0.5cm 1cm;
+}
+
+.header,
+.customer,
+.transport {
+   overflow: hidden;
+   padding-top: 15px;
+   padding-bottom: 15px;
+   border-bottom: 2px lightgray solid;
+}
+
+.header {
+   height: 3cm;
+}
+
+.customer {
+   background-color: #f2f2f2;
+   height: 3cm;
+}
+
+.transport {
+   height: 1.4cm;
+}
+
+.items {
+   height: 19cm;
+}
+
+.totals {
+   height: 2cm;
+   overflow: hidden;
+   padding-top: 15px;
+   border-top: 2px lightgray solid;
+}
+
+.header .header-left {
+   float: left;
+   width: 40%;
+}
+
+.header .header-center {
+   float: left;
+   width: 20%;
+   text-align: center;
+}
+
+.header .header-right {
+   float: left;
+   width: 40%;
+   text-align: right;
+}
+
+.header .invoice-letter {
+   border: 1px solid black;
+   padding: 3px 10px;
+   margin-bottom: 3px;
+   display: inline-block;
+}
+
+.header .invoice-type {
+   font-size: 14px;
+}
+
+.customer .customer-left {
+   float: left;
+   width: 66%;
+}
+
+.customer .customer-right {
+   float: left;
+   width: 33%;
+}
+
+.transport .transport-left {
+   float: left;
+   width: 80%;
+}
+
+.items-table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+.items-table .items-header-row {
+   background-color: #f0f0f0;
+   border-bottom: 2px solid lightgray;
+   height: 0.8cm;
+}
+
+.items-table .items-row {
+   height: 0.8cm;
+}
+
+.items-table .items-col-1 {
+   width: 4%;
+   color: gray;
+   font-size: 14px;
+}
+
+.items-table .items-col-2 {
+   width: 12%;
+   text-align: left;
+}
+
+.items-table .items-col-3 {
+   width: 40%;
+   text-align: left;
+}
+
+.items-table .items-col-4 {
+   width: 16%;
+   text-align: right;
+}
+
+.items-table .items-col-5 {
+   width: 12%;
+   text-align: right;
+}
+
+.items-table .items-col-6 {
+   width: 16%;
+   text-align: right;
+   padding-right: 10px;
+}
+
+.totals .totals-right {
+   float: right;
+   width: 60%;
+}
+
+.totals .totals-slot {
+   background-color: #f0f0f0;
+   border-bottom: 2px solid lightgray;
+   padding: 5px 10px;
+   display: inline-block;
+   width: 32%;
+}
+
+.totals .slot-caption {
+   font-size: 14px;
+}
+
+.totals .slot-amount {
+   font-size: 20px;
+}
+
+.mt-1 {
+   margin-top: 5px;
+}
+
+.mt-2 {
+   margin-top: 10px;
+}
+
+.mt-3 {
+   margin-top: 15px;
+}
+
+.mt-4 {
+   margin-top: 20px;
+}
