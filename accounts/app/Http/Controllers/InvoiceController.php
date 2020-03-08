@@ -7,6 +7,7 @@ use App\Invoice;
 use App\PriceList;
 use App\Product;
 use App\Transport;
+use App\Notifications\InvoiceNotification;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreInvoiceRequest;
 use App\Http\Requests\UpdateInvoiceRequest;
@@ -26,8 +27,11 @@ class InvoiceController extends Controller
       $invoice->load('transport');
       $invoice->load('invoice_type');
       
-      return view('invoices.show')
-               ->with('invoice', $invoice);
+      $invoice->customer->notify(new InvoiceNotification($invoice));
+
+      return redirect()
+         ->route('invoices.create')
+         ->with('status', 'Comprobante Generado!');
    }
 
    public function create()

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class Customer extends Model
 {
@@ -11,6 +12,7 @@ class Customer extends Model
    const STATUS_DISCONTINUED = 2;
 
    use StatusField;
+   use Notifiable;
    
    protected $casts = [
       'address' => 'array',

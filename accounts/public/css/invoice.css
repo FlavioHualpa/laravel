@@ -1,10 +1,91 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap'); */
+
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  /* src: local('Lato Italic'), local('Lato-Italic'), url(../fonts/Lato-Italic.ttf) format('woff2'); */
+  src: url(../fonts/Lato-Italic.ttf);
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  /* src: local('Lato Italic'), local('Lato-Italic'), url(../fonts/Lato-Italic.ttf) format('ttf'); */
+  src: url(../fonts/Lato-Italic.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  /* src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(../fonts/Lato-BoldItalic.ttf) format('woff2'); */
+  src: url(../fonts/Lato-BoldItalic.ttf);
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  /* src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(../fonts/Lato-BoldItalic.ttf) format('woff2'); */
+  src: url(../fonts/Lato-BoldItalic.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  /* src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/Lato-Regular.ttf) format('woff2'); */
+  src: url(../fonts/Lato-Regular.ttf);
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  /* src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/Lato-Regular.ttf) format('woff2'); */
+  src: url(../fonts/Lato-Regular.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  /* src: local('Lato Bold'), local('Lato-Bold'), url(../fonts/Lato-Bold.ttf) format('woff2'); */
+  src: url(../fonts/Lato-Bold.ttf);
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  /* src: local('Lato Bold'), local('Lato-Bold'), url(../fonts/Lato-Bold.ttf) format('woff2'); */
+  src: url(../fonts/Lato-Bold.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: Lato;
+   font-family: 'Lato';
 }
 
 body {
@@ -12,7 +93,7 @@ body {
 }
 
 .container {
-   width: 21cm;
+   width: 19cm;
    height: 29.7cm;
    margin: 0 auto;
    background-color: white;
@@ -23,13 +104,13 @@ body {
 .customer,
 .transport {
    overflow: hidden;
-   padding-top: 15px;
-   padding-bottom: 15px;
+   padding-top: 0.1cm;
+   padding-bottom: 0.1cm;
    border-bottom: 2px lightgray solid;
 }
 
 .header {
-   height: 3cm;
+   height: 3.5cm;
 }
 
 .customer {
@@ -38,17 +119,17 @@ body {
 }
 
 .transport {
-   height: 1.4cm;
+   height: 0.8cm;
 }
 
 .items {
-   height: 19cm;
+   height: 17.5cm;
 }
 
 .totals {
-   height: 2cm;
+   height: 1.5cm;
    overflow: hidden;
-   padding-top: 15px;
+   padding-top: 0.6cm;
    border-top: 2px lightgray solid;
 }
 
@@ -143,8 +224,8 @@ body {
 }
 
 .totals .totals-right {
-   float: right;
-   width: 60%;
+   float: left;
+   width: 70%;
 }
 
 .totals .totals-slot {

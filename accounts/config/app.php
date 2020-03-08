@@ -227,6 +227,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'LocalFormat' => App\Facades\LocalFormat::class,
+        'PDF' => App\Facades\PDF::class,
 
     ],
 

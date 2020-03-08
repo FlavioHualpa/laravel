@@ -7,7 +7,7 @@
    <title>
       {{ $invoice->invoice_type->name }} - Nro {{ $invoice->number }}
    </title>
-   <link rel="stylesheet" href="{{ asset('css/invoice.css') }}">
+   <link rel="stylesheet" href="{{ public_path('css\invoice.css') }}">
 </head>
 <body>
    <div class="container">
@@ -16,6 +16,7 @@
             <h1>{{ $invoice->company->name }}</h1>
             <h4>{{ $invoice->company->full_address }}</h4>
             <h5 class="mt-2">CUIT {{ $invoice->company->fiscal_id }}</h5>
+            <h6>{{ $invoice->company->condition->name }}</h6>
          </div>
 
          <div class="header-center">
@@ -41,6 +42,7 @@
          <div class="customer-right">
             <h4>Código: {{ $invoice->customer->code }}</h4>
             <h4 class="mt-4">CUIT: {{ $invoice->customer->fiscal_id }}</h4>
+            <h5>{{ $invoice->customer->condition->name }}</h5>
          </div>
       </section>
 
@@ -122,8 +124,8 @@
             </div>
          </div>
       </section>
+      
+      <section></section>
    </div>
-
-   {{-- LocalFormat::date($invoice->created_at) --}}
 </body>
 </html>
