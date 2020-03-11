@@ -51,7 +51,11 @@
                     <br />
                     <div id="boton_curric" class="div_selector_on" onclick="CambiarPagina('curric')">CURRICULUM</div>
                     <div id="boton_transc" class="div_selector_off" onclick="CambiarPagina('transc')">TRANSCRIPCIONES</div>
-                    <div id="boton_articulos" class="div_selector_off" onclick="CambiarPagina('articulos')">ARTÍCULOS MUSICOLÓGICOS</div>
+                    <div id="boton_articulos" class="div_selector_off green_highlight tooltip" onclick="CambiarPagina('articulos')">ARTÍCULOS MUSICOLÓGICOS
+                        <div class="tooltip-text">
+                            Nueva Publicación
+                        </div>
+                    </div>
 					<div id="boton_arreglos1" class="div_selector_off" onclick="CambiarPagina('arreglos1')">ARREGLOS CORALES GRATUITOS</div>
                     <div id="boton_arreglos2" class="div_selector_off" onclick="CambiarPagina('arreglos2')">ARREGLOS CORALES EDITADOS</div>
                     <div id="boton_conciertos" class="div_selector_off" onclick="CambiarPagina('conciertos')">PRÓXIMOS CONCIERTOS DIRIGIDOS POR NÉSTOR ZADOFF</div>
@@ -303,6 +307,7 @@
                     <br />
                     <p class="titulo_panel"><u>ARTÍCULOS MUSICOLÓGICOS</u></p><br /><br />
                     <ul id="obras_artmus">
+                        <li class="link_panel" name="pdfnz" publicado="3/11/2020"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Análisis de obras corales renacentistas por Néstor Zadoff.pdf">Análisis de obras corales renacentistas</a></li>
                         <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Josquin des Pres.pdf">Josquin Desprez - Comentario musicológico</a> (Parte I)</li>
 						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Los estilos de Josquin.pdf">Los estilos de las chansons de Josquin Desprez</a> (Parte II)</li>
                         <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Damus Nro 433.pdf">Entre dos mansos arroyos, madrigal español de comienzos del XVII</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="pdfs\Damus Nro 433.pdf">revista digital 433 del Damus-UNA, 2012</a></li>

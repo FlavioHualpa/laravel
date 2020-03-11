@@ -86,6 +86,39 @@ body {background-color:#e5e5b8;}
   object-fit: contain;
 }
 
+.green_highlight {
+  box-shadow: 0 0 10px green;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: -18px;
+  right: -64px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: darkolivegreen;
+  color: khaki;
+  font-size: 14px;
+  font-weight: bold;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+}
+
+.tooltip-text::after {
+  content: '';
+  border-top: 6px solid darkolivegreen;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  position: absolute;
+  bottom: -6px;
+  left: 30%;
+}
+
 @keyframes popup
 {
   to {
@@ -93,5 +126,12 @@ body {background-color:#e5e5b8;}
     height: 600px;
     top: calc(50vh - 300px);
     left: calc(50vw - 400px);
+  }
+}
+
+@keyframes bounce
+{
+  to {
+    top: -10px;
   }
 }
