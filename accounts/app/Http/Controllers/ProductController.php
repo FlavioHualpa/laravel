@@ -178,6 +178,7 @@ class ProductController extends Controller
          $company_id = session('active_company')->id;
          $product = Product::where('code', 'like', $code)
                            ->where('company_id', $company_id)
+                           ->where('status', Product::STATUS_ACTIVE)
                            ->first();
          
          return $product ?? null;

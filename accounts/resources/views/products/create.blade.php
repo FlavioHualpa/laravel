@@ -53,7 +53,7 @@
       </div>
 
       <div class="form-row mt-4">
-         <div class="col">
+         <div class="col-8">
             <div class="custom-file">
                <input type="file" class="custom-file-input" id="customFileLang" lang="es" name="product_image" accept=".jpg,.jpeg,.png,.bmp">
                <label class="custom-file-label" for="customFileLang">Seleccionar Imagen</label>
@@ -61,16 +61,12 @@
             @error('product_image')
             <p class="text-danger">{{ $message }}</p>
             @enderror
-         </div>
-      </div>
 
-      {{-- el campo oculto company_id necesario para crear el producto --}}
-      <input type="hidden" name="company_id"
-         value="{{ session()->get('active_company')->id }}">
+         {{-- el campo oculto company_id necesario para crear el producto --}}
+            <input type="hidden" name="company_id"
+               value="{{ session()->get('active_company')->id }}">
 
-      <div class="form-row mt-4">
-         <div class="col">
-            <div class="form-check form-check-inline">
+            <div class="form-check form-check-inline mt-4">
                <input class="form-check-input" type="radio" name="status" id="inlineRadio1" value="{{ App\Product::STATUS_ACTIVE }}" {{ old('status', 0) == App\Product::STATUS_ACTIVE ? 'checked' : '' }}>
                <label class="form-check-label" for="inlineRadio1">Activo</label>
             </div>
@@ -85,17 +81,35 @@
             @error('status')
             <p class="text-danger">{{ $message }}</p>
             @enderror
-         </div>
-      </div>
 
-      <div class="form-row mt-4">
-         <div class="col">
-            <button type="submit" class="btn btn-primary">Crear Artículo</button>
-            <a href="{{ route('products.search') }}" class="btn btn-dark">
-               Cancelar
-            </a>
+            <div class="form-group mt-5">
+               <button type="submit" class="btn btn-primary">Crear Artículo</button>
+               <a href="{{ route('products.search') }}" class="btn btn-dark">
+                  Cancelar
+               </a>
+            </div>
+         </div>
+
+         <div class="col-4">
+            <div class="element-image-wrapper">
+               <img src="{{ asset('img/noimage.png') }}" alt="El producto no tiene una imagen asociada" class="element-image">
+               <div class="element-image-buttons">
+                  <a href="#">
+                     <i class="far fa-images"></i>
+                  </a>
+                  <a href="#">
+                     <i class="fas fa-trash-alt"></i>
+                  </a>
+               </div>
+            </div>
          </div>
       </div>
    </form>
+
+   <input type="hidden" name="no_img_url" value="{{ asset('img/noimage.png') }}" id="no_img_url">
 </div>
 @endsection
+
+@push('scripts')
+   <script src="{{ asset('js/pick-image.js') }}"></script>
+@endpush

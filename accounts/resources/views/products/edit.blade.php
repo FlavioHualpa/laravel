@@ -116,5 +116,11 @@
          </div>
       </div>
    </form>
+
+   <input type="hidden" name="no_img_url" value="{{ asset('img/noimage.png') }}" id="no_img_url">
 </div>
 @endsection
+
+@push('scripts')
+   <script src="{{ asset('js/pick-image.js') }}"></script>
+@endpush

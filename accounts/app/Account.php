@@ -40,6 +40,11 @@ class Account extends Authenticatable
         return $this->hasMany(Condition::class);
     }
 
+    public function banks()
+    {
+        return $this->hasMany(Bank::class);
+    }
+
     public function getAvatarCssAttribute()
     {
         return "background-image: url('" . asset('img/admin_avatar.png') . "'); background-size: 40px 40px;";

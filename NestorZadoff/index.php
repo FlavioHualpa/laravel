@@ -51,12 +51,18 @@
                     <br />
                     <div id="boton_curric" class="div_selector_on" onclick="CambiarPagina('curric')">CURRICULUM</div>
                     <div id="boton_transc" class="div_selector_off" onclick="CambiarPagina('transc')">TRANSCRIPCIONES</div>
-                    <div id="boton_articulos" class="div_selector_off green_highlight tooltip" onclick="CambiarPagina('articulos')">ARTÍCULOS MUSICOLÓGICOS
+                    <div id="boton_articulos" class="div_selector_off green_highlight tooltip" onclick="CambiarPagina('articulos')">
+                        ARTÍCULOS MUSICOLÓGICOS
                         <div class="tooltip-text">
                             Nueva Publicación
                         </div>
                     </div>
-					<div id="boton_arreglos1" class="div_selector_off" onclick="CambiarPagina('arreglos1')">ARREGLOS CORALES GRATUITOS</div>
+					<div id="boton_arreglos1" class="div_selector_off green_highlight tooltip" onclick="CambiarPagina('arreglos1')">
+                        ARREGLOS CORALES GRATUITOS
+                        <div class="tooltip-text">
+                            Nueva Publicación
+                        </div>
+                    </div>
                     <div id="boton_arreglos2" class="div_selector_off" onclick="CambiarPagina('arreglos2')">ARREGLOS CORALES EDITADOS</div>
                     <div id="boton_conciertos" class="div_selector_off" onclick="CambiarPagina('conciertos')">PRÓXIMOS CONCIERTOS DIRIGIDOS POR NÉSTOR ZADOFF</div>
                     <div id="boton_contacto" class="div_selector_off" onclick="CambiarPagina('contacto')">CONTACTO</div>
@@ -340,7 +346,7 @@
                     <p class="texto_panel">Pueden descargarse desde aquí de manera gratuita.</p><br />
                     <p class="texto_panel">De todos mis arreglos corales, 11 han sido premiados en concursos en Argentina.</p>
                     <p class="texto_panel">Los indicados con <img src="img/award-icon.png" class="icono-premio"> están aquí disponibles:</p><br />
-                    <p class="texto_lista_panel">• Canción del Jardinero (SA) I Premio categoría voces iguales (Nacional 1985)</p>
+                    <p class="texto_lista_panel">• Canción del Jardinero (SA) I Premio categoría voces iguales (Nacional 1985) <img src="img/award-icon.png" class="icono-premio"></p>
                     <p class="texto_lista_panel">• Jacinto Chiclana (SATB) III Premio Tango-Milonga (Nacional 1985)</p>
                     <p class="texto_lista_panel">• Adiós nonino (SATB) IV Premio Tango-Milonga (Nacional 1985)</p>
                     <p class="texto_lista_panel">• Serenata para la tierra de uno (SATB) III Premio Canción (Nacional 1985) <img src="img/award-icon.png" class="icono-premio"></p>
@@ -368,6 +374,7 @@
                         <li class="link_panel" name="pdfnz" publicado="4/21/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=106">Adivina adivinador</a> - <em>SA (M. E. Walsh, 2019)</em></li>
                         <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=15">Canción de la vacuna (el brujito de Gulubú)</a> - <em>SATB (M. E. Walsh, 1982)</em> <img src="img/award-icon.png" class="icono-premio"></li>
                         <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=06">Canción del estornudo (el otro Mambrú)</a> - <em>SATB (M. E. Walsh, 1983)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="3/14/2020"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=108">Canción del jardinero</a> - <em>SA (M. E. Walsh, 1985/2020)</em> <img src="img/award-icon.png" class="icono-premio"></li>
                         <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=73">Como la cigarra</a> - <em>SATB (M. E. Walsh, 1982)</em></li>
                         <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=71">La canción del Jacarandá</a> - <em>SA / coro de niños (M. E. Walsh, 2018)</em></li>
                         <li class="link_panel" name="pdfnz" publicado="4/2/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=104">La Pájara Pinta</a> - <em>SA (M. E. Walsh, 2017)</em></li>
@@ -443,7 +450,6 @@
                         <li class="lista_arreglos">• Allá lejos y hace tiempo - <em>SATB (Ariel Ramírez, 1991)</em></li>
                         <li class="lista_arreglos">• Balada para mi muerte - <em>SATB (Astor Piazzolla, 1992)</em></li>
                         <li class="lista_arreglos">• Buenos Aires hora cero - <em>SATB (Astor Piazzolla, 2000)</em></li>
-                        <li class="lista_arreglos">• Canción del jardinero - <em>SA (M. E. Walsh, 1985)</em></li>
                         <li class="lista_arreglos">• Dos canciones tradicionales españolas - <em>SA (Anónimo, 1991)</em></li>
                         <li class="lista_arreglos">• El gordo triste - <em>SAB (Astor Piazzolla, 2000)</em></li>
                         <li class="lista_arreglos">• La muerte del ángel - <em>SATB (Astor Piazzolla, 1991)</em></li>

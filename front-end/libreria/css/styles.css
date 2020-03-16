@@ -19,12 +19,13 @@
 }
 
 .container {
-   width: 90%;
+   width: 62%;
    margin: 0 auto;
 }
 
 .account .menu {
    list-style-type: none;
+   padding: 4px 0;
 }
 
 .account .menu .menu-item {
@@ -63,6 +64,7 @@
 .functionality {
    margin-top: 40px;
    margin-bottom: 60px;
+   align-items: center;
 }
 
 .info .info-tile {
@@ -133,6 +135,68 @@
 
 .functionality .func-tile .logo {
    width: 50%;
+}
+
+.functionality .func-tile a {
+   color: #202020;
+   text-decoration: none;
+}
+
+.functionality .func-tile .search-box {
+   display: inline-block;
+   background-color: white;
+   border: 1px solid #d0d0d0;
+   border-radius: 4px;
+   padding: 16px;
+}
+
+.functionality .func-tile .search-box input {
+   border: none;
+   outline: none;
+   font-size: 16px;
+}
+
+.functionality .func-tile .search-button {
+   display: inline-block;
+   background-color: #FDD835;
+   border: none;
+   border-bottom: 3px solid #dcb232;
+   border-radius: 4px;
+   margin-left: -6px;
+   padding: 10px 14px 8px 14px;
+   cursor: pointer;
+}
+
+.functionality .func-tile .cart-button {
+   display: inline-block;
+   background-color: #E53935;
+   border-top: 1px solid #E53935;
+   border-left: 1px solid #E53935;
+   border-bottom: 3px solid #C62828;
+   border-top-left-radius: 4px;
+   border-bottom-left-radius: 4px;
+   padding: 11px 12px 9px 12px;
+}
+
+.functionality .func-tile .cart-info {
+   display: inline-block;
+   background-color: white;
+   border-top: 1px solid #d0d0d0;
+   border-right: 1px solid #d0d0d0;
+   border-bottom: 3px solid #d0d0d0;
+   border-top-right-radius: 4px;
+   border-bottom-right-radius: 4px;
+   padding: 10px;
+   width: 200px;
+}
+
+.functionality .func-tile .tile-caption {
+   font-size: 20px;
+}
+
+.functionality .func-tile .tile-subcaption {
+   font-size: 14px;
+   margin-top: -6px;
 }
 
 .center-text {

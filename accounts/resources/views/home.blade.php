@@ -42,5 +42,29 @@
             </article>
          </a>
       </div>
+      <div class="col-md-6 col-lg-4 mt-4">
+         <a href="{{ route('banks.home') }}">
+            <article class="section-tile">
+               <img src="{{ asset('img/banks-tile.png') }}" alt="Bancos" class="tile-image">
+               <h3>Bancos</h3>
+            </article>
+         </a>
+      </div>
+      <div class="col-md-6 col-lg-4 mt-4">
+         <a href="{{ route('bank-accounts.home') }}">
+            <article class="section-tile">
+               <img src="{{ asset('img/bank-accounts-tile.png') }}" alt="Cuentas Bancarias" class="tile-image">
+               <h3>Cuentas Bancarias</h3>
+            </article>
+         </a>
+      </div>
+      <div class="col-md-6 col-lg-4 mt-4">
+         <a href="{{ route('price-lists.home') }}">
+            <article class="section-tile">
+               <img src="{{ asset('img/price-lists-tile.png') }}" alt="Listas de Precios" class="tile-image">
+               <h3>Listas de Precios</h3>
+            </article>
+         </a>
+      </div>
    </div>
 @endsection

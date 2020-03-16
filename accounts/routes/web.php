@@ -100,3 +100,39 @@ Route::post('/invoices/store', 'InvoiceController@store')->name('invoices.store'
 Route::get('/invoices/show/{invoice}', 'InvoiceController@show')->name('invoices.show');
 Route::get('/invoice_types/get/{customer}', 'InvoiceTypeController@getList');
 Route::get('/conditions/get-final-tax', 'CustomerController@getFinalTax');
+
+
+/*  ----------------------  */
+/*  BANCOS
+/*  ----------------------  */
+
+Route::get('/banks/home', 'BankController@home')->name('banks.home');
+Route::get('/banks/search', 'BankController@index')->name('banks.search');
+Route::get('/banks/create', 'BankController@create')->name('banks.create');
+Route::post('/banks/store', 'BankController@store')->name('banks.store');
+Route::get('/banks/edit/{bank}', 'BankController@edit')->name('banks.edit');
+Route::patch('/banks/update/{bank}', 'BankController@update')->name('banks.update');
+
+
+/*  ----------------------  */
+/*  CUENTAS BANCARIAS
+/*  ----------------------  */
+
+Route::get('/bank-accounts/home', 'BankAccountController@home')->name('bank-accounts.home');
+Route::get('/bank-accounts/search', 'BankAccountController@index')->name('bank-accounts.search');
+Route::get('/bank-accounts/create', 'BankAccountController@create')->name('bank-accounts.create');
+Route::post('/bank-accounts/store', 'BankAccountController@store')->name('bank-accounts.store');
+Route::get('/bank-accounts/edit/{bank_account}', 'BankAccountController@edit')->name('bank-accounts.edit');
+Route::patch('/bank-accounts/update/{bank_account}', 'BankAccountController@update')->name('bank-accounts.update');
+
+
+/*  ----------------------  */
+/*  LISTAS DE PRECIOS
+/*  ----------------------  */
+
+Route::get('/price-lists/home', 'PriceListController@home')->name('price-lists.home');
+Route::get('/price-lists/search', 'PriceListController@index')->name('price-lists.search');
+Route::get('/price-lists/create', 'PriceListController@create')->name('price-lists.create');
+Route::post('/price-lists/store', 'PriceListController@store')->name('price-lists.store');
+Route::get('/price-lists/edit/{priceList}', 'PriceListController@edit')->name('price-lists.edit');
+Route::patch('/price-lists/update/{priceList}', 'PriceListController@update')->name('price-lists.update');

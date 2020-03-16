@@ -62,6 +62,11 @@ class Company extends Model
       return $this->hasMany(Invoice::class);
    }
 
+   public function bank_accounts()
+   {
+      return $this->hasMany(BankAccount::class);
+   }
+
    public function getFullAddressAttribute()
    {
       $street = $this->address['street'];

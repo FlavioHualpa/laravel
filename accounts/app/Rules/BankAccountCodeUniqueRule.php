@@ -2,21 +2,21 @@
 
 namespace App\Rules;
 
-use App\Product;
+use App\BankAccount;
 use Illuminate\Contracts\Validation\Rule;
 
-class ProductCodeUniqueRule implements Rule
+class BankAccountCodeUniqueRule implements Rule
 {
-   private $product;
+   private $bankAccount;
 
    /**
    * Create a new rule instance.
    *
    * @return void
    */
-   public function __construct(Product $product = null)
+   public function __construct(BankAccount $bankAccount = null)
    {
-      $this->product = $product;
+      $this->bankAccount = $bankAccount;
    }
    
    /**
@@ -30,12 +30,12 @@ class ProductCodeUniqueRule implements Rule
    {
       $company_id = session('active_company')->id;
 
-      return ! Product::where('code', $value)
-                        ->where('company_id', $company_id)
-                        ->when($this->product, function($query) {
-                           return $query->where('id', '!=', $this->product->id);
-                        })
-                        ->exists();
+      return ! BankAccount::where('code', $value)
+                           ->where('company_id', $company_id)
+                           ->when($this->bankAccount, function($query) {
+                              return $query->where('id', '!=', $this->bankAccount->id);
+                           })
+                           ->exists();
    }
    
    /**
