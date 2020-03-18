@@ -40,7 +40,7 @@
       <div class="form-row">
          <div class="col-4">
             <label for="code" class="mb-1">Código</label>
-            <input type="text" class="form-control form-control-lg font-weight-bold @error('code') is-invalid @enderror" id="code" name="code" value="{{ old('code') }}">
+            <input type="text" class="form-control form-control-lg font-weight-bold @error('code') is-invalid @enderror" id="code" name="code" value="{{ old('code') }}" autofocus>
             @error('code')
             <p class="text-danger">{{ $message }}</p>
             @enderror

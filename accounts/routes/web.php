@@ -134,5 +134,5 @@ Route::get('/price-lists/home', 'PriceListController@home')->name('price-lists.h
 Route::get('/price-lists/search', 'PriceListController@index')->name('price-lists.search');
 Route::get('/price-lists/create', 'PriceListController@create')->name('price-lists.create');
 Route::post('/price-lists/store', 'PriceListController@store')->name('price-lists.store');
-Route::get('/price-lists/edit/{priceList}', 'PriceListController@edit')->name('price-lists.edit');
-Route::patch('/price-lists/update/{priceList}', 'PriceListController@update')->name('price-lists.update');
+Route::get('/price-lists/edit/{price_list}', 'PriceListController@edit')->name('price-lists.edit');
+Route::patch('/price-lists/update/{price_list}', 'PriceListController@update')->name('price-lists.update');

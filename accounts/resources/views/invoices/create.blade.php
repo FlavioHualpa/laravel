@@ -42,7 +42,7 @@
          </div>
          <div class="col-8">
             <label for="customer" class="mb-1">Cliente</label>
-            <select class="custom-select custom-select-lg font-weight-bold @error('header.customer_id') is-invalid @enderror" id="customer" name="header[customer_id]">
+            <select class="custom-select custom-select-lg font-weight-bold @error('header.customer_id') is-invalid @enderror" id="customer" name="header[customer_id]" autofocus>
                @foreach ($customers as $customer)
                   <option value="{{ $customer->id }}" {{ old('header.customer_id') == $customer->id ? 'selected' : '' }}>
                      {{ $customer->code . ' - ' . $customer->name }}

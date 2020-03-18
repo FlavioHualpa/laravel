@@ -19,8 +19,8 @@
       </a>
    </span>
    <span class="bread-crumb">
-      <a href="{{ route('bank-accounts.home') }}">
-         <h4>Cuentas Bancarias</h4>
+      <a href="{{ route('price-lists.home') }}">
+         <h4>Listas de precios</h4>
       </a>
    </span>
    <span class="bread-crumb">
@@ -30,10 +30,10 @@
 
 <div class="form-box mt-5">
    <div class="form-box-header">
-      <h3>Nueva Cuenta Bancaria</h3>
+      <h3>Nueva Lista de precios</h3>
    </div>
 
-   <form action="{{ route('bank-accounts.store') }}" method="post">
+   <form action="{{ route('price-lists.store') }}" method="post">
 
       @csrf
 
@@ -45,46 +45,49 @@
             <p class="text-danger">{{ $message }}</p>
             @enderror
          </div>
-         <div class="col-4">
+         <div class="col-8">
             <label for="name" class="mb-1">Nombre</label>
             <input type="text" class="form-control form-control-lg font-weight-bold @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}">
             @error('name')
             <p class="text-danger">{{ $message }}</p>
             @enderror
          </div>
-         <div class="col-4">
-            <label for="number" class="mb-1">Número</label>
-            <input type="text" class="form-control form-control-lg font-weight-bold @error('number') is-invalid @enderror" id="number" name="number" value="{{ old('number') }}">
-            @error('number')
-            <p class="text-danger">{{ $message }}</p>
-            @enderror
+      </div>
+
+      <div class="row">
+         <div class="col">
+            <h4 class="mt-4">Productos</h4>
          </div>
       </div>
 
-      <div class="form-row mt-1">
-         <div class="col-8">
-            <label for="bank_id" class="mb-1">Banco</label>
-            <select class="custom-select custom-select-lg font-weight-bold @error('bank_id') is-invalid @enderror" id="bank_id" name="bank_id">
-               @foreach ($banks as $bank)
-                  <option value="{{ $bank->id }}" {{ old('bank_id') == $bank->id ? 'selected' : '' }}>
-                     {{ $bank->name }}
-                  </option>
-               @endforeach
-               @error('bank_id')
+      <div class="form-row">
+
+         @foreach ($products as $product)
+            <div class="col-3">
+               <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold" value="{{ $product->code }}">
+            </div>
+            <div class="col-6">
+               <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold" value="{{ $product->description }}">
+            </div>
+            <div class="col-3">
+               <input type="text" class="form-control form-control-lg font-weight-bold text-right @error('products.{{$loop->iteration}}.price') is-invalid @enderror" name="products[{{$loop->iteration}}][price]" value="{{ old('products.' . $loop->iteration . '.price', '0.00') }}">
+               @error('products.{{$loop->iteration}}.price')
                <p class="text-danger">{{ $message }}</p>
                @enderror
-            </select>
-         </div>
+            </div>
+            <input type="hidden" name="products[{{$loop->iteration}}][product_id]" value="{{ $product->id }}">
+         @endforeach
+
       </div>
-      
-      {{-- el campo oculto company_id necesario para crear la cuenta --}}
+
+      {{-- el campo oculto company_id necesario para crear la lista --}}
       <input type="hidden" name="company_id"
          value="{{ session('active_company')->id }}">
 
       <div class="form-row mt-4">
          <div class="col">
-            <button type="submit" class="btn btn-primary">Crear Cuenta Bancaria</button>
-            <a href="{{ route('bank-accounts.search') }}" class="btn btn-dark">
+            <button type="submit" class="btn btn-primary">Crear Lista</button>
+            <a href="{{ route('price-lists.search') }}" class="btn btn-dark">
                Cancelar
             </a>
          </div>

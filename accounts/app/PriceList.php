@@ -25,6 +25,19 @@ class PriceList extends Model
                   ->as('price_list');
    }
 
+   public static function filteredAndSorted($filter, $show, $order, $dir)
+   {
+      $company_id = session()->get('active_company')->id;
+
+      $query = self::when($filter, function($query, $filter) {
+         return $query->where('code', 'like', "%$filter%")
+                     ->orWhere('name', 'like', "%$filter%");
+         })->where('company_id', $company_id)
+            ->orderBy($order, $dir);
+
+      return $query;
+   }
+
    public function scopeOrderedByName($query)
    {
       if ($company_id = session()->get('active_company')->id)
