@@ -322,9 +322,11 @@
 						<li class="link_panel" name="pdfnz" publicado="12/24/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Música vocal francesa del XVI.pdf">Info musicológica de transcripciones de obras francesas de esta web</a></li>
 						<li class="link_panel" name="pdfnz" publicado="12/24/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Música vocal italiana del XVI.pdf">Info musicológica de transcripciones de obras italianas de esta web</a></li>
                         <li>&nbsp;</li>
-                        <li class="texto_panel">Próximamente:</li>
-                        <li class="texto_panel">• Ubicación del texto en obras del XVI: problemática y soluciones</li>
-                        <li class="texto_panel">• Sensibilizaciones no escritas en originales del XVI: cuáles y en qué circunstancias aplicarlas?</li>
+                        <li class="texto_panel">Referencias:</li>
+                        <li>&nbsp;</li>
+                        <li class="texto_panel"><img src="img/art-ref-icon.png" class="icono-pdf" />• Ubicación del texto en obras del XVI: problemática y soluciones<br><span class="referencia_art">Ver en <em>Análisis de obras corales renacentistas</em>, páginas 27 a 38</span></li>
+                        <li>&nbsp;</li>
+                        <li class="texto_panel"><img src="img/art-ref-icon.png" class="icono-pdf" />• Sensibilizaciones no escritas en originales del XVI: cuáles y en qué circunstancias aplicarlas?<br><span class="referencia_art">Ver en <em>Análisis de obras corales renacentistas</em>, páginas 39 a 54</span></li>
                     </ul>
                     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

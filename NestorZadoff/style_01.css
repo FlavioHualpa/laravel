@@ -32,6 +32,12 @@ body {background-color:#e5e5b8;}
 .icono-pdf { width: 24px; height: 24px; margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle; }
 .lista_arreglos { font-family: Arial; font-size: 12pt; color: maroon; line-height: 130%; }
 
+.referencia_art {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 76px;
+}
+
 .perf_thumb {
   width: 200px;
   height: 150px;

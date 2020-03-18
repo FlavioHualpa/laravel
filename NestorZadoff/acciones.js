@@ -20,7 +20,8 @@ function CambiarPagina(nombre) {
         page.style.display = (id == nombre) ? '' : 'none';
     }
 
-    document.querySelector('.tooltip-text').style.display = 'none';
+    document.querySelectorAll('.tooltip-text')
+        .forEach(el => el.style.display = 'none')
 
     /*
     boton_curric.className = boton_curric.id == 'boton_' + nombre ? 'div_selector_on' : 'div_selector_off';
