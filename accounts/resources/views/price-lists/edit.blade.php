@@ -24,30 +24,31 @@
       </a>
    </span>
    <span class="bread-crumb">
-      <h4>Ingresar</h4>
+      <h4>Modificar</h4>
    </span>
 </div>
 
 <div class="form-box mt-5">
    <div class="form-box-header">
-      <h3>Nueva Lista de precios</h3>
+      <h3>Modificar Lista de precios</h3>
    </div>
 
-   <form action="{{ route('price-lists.store') }}" method="post">
+   <form action="{{ route('price-lists.update', $price_list->id) }}" method="post">
 
       @csrf
+      @method('patch')
 
       <div class="form-row">
          <div class="col-4">
             <label for="code" class="mb-1">Código</label>
-            <input type="text" class="form-control form-control-lg font-weight-bold @error('code') is-invalid @enderror" id="code" name="code" value="{{ old('code') }}" autofocus>
+            <input type="text" class="form-control form-control-lg font-weight-bold @error('code') is-invalid @enderror" id="code" name="code" value="{{ old('code', $price_list->code) }}" autofocus>
             @error('code')
             <p class="text-danger">{{ $message }}</p>
             @enderror
          </div>
          <div class="col-8">
             <label for="name" class="mb-1">Nombre</label>
-            <input type="text" class="form-control form-control-lg font-weight-bold @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}">
+            <input type="text" class="form-control form-control-lg font-weight-bold @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name', $price_list->name) }}">
             @error('name')
             <p class="text-danger">{{ $message }}</p>
             @enderror
@@ -70,7 +71,8 @@
                <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold" value="{{ $product->description }}">
             </div>
             <div class="col-3">
-               <input type="text" class="form-control form-control-lg font-weight-bold text-right @error('products.{{$loop->iteration}}.price') is-invalid @enderror" name="products[{{$loop->iteration}}][price]" value="{{ old('products.' . $loop->iteration . '.price', '0.00') }}">
+               <input type="text" class="form-control form-control-lg font-weight-bold text-right @error('products.{{$loop->iteration}}.price') is-invalid @enderror" name="products[{{$loop->iteration}}][price]" value="{{ old('products.' . $loop->iteration . '.price', number_format($product->priceInList($price_list->id), 2)) }}">
+               
                @error('products.' . $loop->iteration . '.price')
                <p class="text-danger">{{ $message }}</p>
                @enderror
@@ -80,13 +82,15 @@
 
       </div>
 
-      {{-- el campo oculto company_id necesario para crear la lista --}}
+      {{-- el campo oculto company_id necesario para modificar la lista --}}
       <input type="hidden" name="company_id"
          value="{{ session('active_company')->id }}">
 
       <div class="form-row mt-4">
          <div class="col">
-            <button type="submit" class="btn btn-primary">Crear Lista</button>
+            <button type="submit" class="btn btn-primary">
+               Modificar Lista
+            </button>
             <a href="{{ route('price-lists.search') }}" class="btn btn-dark">
                Cancelar
             </a>
