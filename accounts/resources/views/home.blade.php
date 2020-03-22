@@ -21,7 +21,7 @@
       <div class="col-md-6 col-lg-4 mt-4">
          <a href="{{ route('products.home') }}">
             <article class="section-tile">
-               <img src="{{ asset('img/products-tile.png') }}" alt="Productos" class="tile-image">
+               <img src="{{ asset('img/products-tile.png') }}" alt="Artículos" class="tile-image">
                <h3>Artículos</h3>
             </article>
          </a>
@@ -39,6 +39,22 @@
             <article class="section-tile">
                <img src="{{ asset('img/invoices-tile.png') }}" alt="Facturación" class="tile-image">
                <h3>Facturación</h3>
+            </article>
+         </a>
+      </div>
+      <div class="col-md-6 col-lg-4 mt-4">
+         <a href="{{ route('payments.create') }}">
+            <article class="section-tile">
+               <img src="{{ asset('img/payments-tile.png') }}" alt="Pagos" class="tile-image">
+               <h3>Pagos</h3>
+            </article>
+         </a>
+      </div>
+      <div class="col-md-6 col-lg-4 mt-4">
+         <a href="{{ route('payments.create') }}">
+            <article class="section-tile">
+               <img src="{{ asset('img/applications-tile.png') }}" alt="Imputaciones" class="tile-image">
+               <h3>Imputaciones</h3>
             </article>
          </a>
       </div>

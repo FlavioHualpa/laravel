@@ -91,14 +91,14 @@
       </tr>
       @empty
       <tr>
-         <td colspan="4">No hay productos</td>
+         <td colspan="4">No hay artículos</td>
       </tr>
       @endforelse
    </tbody>
 </table>
 
 <a href="{{ route('products.create') }}" class="btn btn-primary">
-   Ingresar un producto
+   Ingresar un artículo
 </a>
 <a href="{{ route('products.home') }}" class="btn btn-dark ml-2">
    Volver

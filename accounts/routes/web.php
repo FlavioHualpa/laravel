@@ -136,3 +136,15 @@ Route::get('/price-lists/create', 'PriceListController@create')->name('price-lis
 Route::post('/price-lists/store', 'PriceListController@store')->name('price-lists.store');
 Route::get('/price-lists/edit/{price_list}', 'PriceListController@edit')->name('price-lists.edit');
 Route::patch('/price-lists/update/{price_list}', 'PriceListController@update')->name('price-lists.update');
+
+
+/*  ----------------------  */
+/*  PAGOS
+/*  ----------------------  */
+
+Route::get('/payments/home', 'PaymentController@home')->name('payments.home');
+Route::get('/payments/search', 'PaymentController@index')->name('payments.search');
+Route::get('/payments/create', 'PaymentController@create')->name('payments.create');
+Route::post('/payments/store', 'PaymentController@store')->name('payments.store');
+Route::get('/payments/edit/{payment}', 'PaymentController@edit')->name('payments.edit');
+Route::patch('/payments/update/{payment}', 'PaymentController@update')->name('payments.update');
