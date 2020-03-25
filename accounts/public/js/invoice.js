@@ -24,11 +24,88 @@ window.addEventListener(
          }
       )
 
+      setSaveButtonHandlerUp()
+
       getFinalTax()
       addItemRow()
       addItemRow()
    }
 )
+
+function setSaveButtonHandlerUp()
+{
+   const btn = document.querySelector('#saveBtn')
+   btn.addEventListener('click', performDataChecks)
+}
+
+function performDataChecks()
+{
+   event.preventDefault()
+
+   const total = computeInvoiceTotal()
+   if (total <= 0.0)
+   {
+      swal({
+         title: 'Error de validación',
+         text: 'El total del comprobante no puede ser cero',
+         icon: 'error',
+         button: 'De acuerdo'
+      })
+      return
+   }
+
+   const customerField = document.querySelector('#customer')
+   if (! customerField.value)
+   {
+      swal({
+         title: 'Error de validación',
+         text: 'Debes seleccionar un cliente',
+         icon: 'error',
+         button: 'De acuerdo'
+      })
+      .then(() => {
+         customerField.focus()
+      })
+      return
+   }
+
+   const invTypeField = document.querySelector('#invoice_type')
+   if (! invTypeField.value)
+   {
+      swal({
+         title: 'Error de validación',
+         text: 'Debes seleccionar un comprobante',
+         icon: 'error',
+         button: 'De acuerdo'
+      })
+         .then(() => {
+            invTypeField.focus()
+         })
+      return
+   }
+   
+   const form = document.querySelector('#invoice_form')
+
+   swal({
+      title: 'Ingreso de comprobantes',
+      text: 'Confirmas la generación del comprobante?',
+      icon: 'info',
+      buttons: {
+         not: {
+            text: 'No',
+            value: false
+         },
+         yes: {
+            text: 'Sí',
+            value: true
+         },
+      },
+   })
+   .then((value) => {
+      if (value)
+         form.submit()
+   })
+}
 
 function fillInvoiceTypesList()
 {
@@ -105,7 +182,7 @@ function setRowAttributeValues(row)
    node.setAttribute('name', `item[${nextItemNum}][quantity]`)
    node.addEventListener('change', function () {
       checkFloat()
-      computeInvoiceTotal()
+      updateInvoiceTotal()
    })
 
    node = row.querySelector('[id$=price]')
@@ -113,7 +190,7 @@ function setRowAttributeValues(row)
    node.setAttribute('name', `item[${nextItemNum}][price]`)
    node.addEventListener('change', function () {
       checkFloat()
-      computeInvoiceTotal()
+      updateInvoiceTotal()
    })
 }
 
@@ -129,7 +206,7 @@ function deleteItemRow()
 
    node.remove()
    renumberItemRows()
-   computeInvoiceTotal()
+   updateInvoiceTotal()
 }
 
 function renumberItemRows()
@@ -160,9 +237,17 @@ function computeInvoiceTotal()
    let subtotal = 0.0
 
    for (row of rowsSection.children) {
-      subtotal += row.querySelector('[id$=quantity]').value * row.querySelector('[id$=price]').value
+      if (row.querySelector('[id$=id]').value) {
+         subtotal += row.querySelector('[id$=quantity]').value * row.querySelector('[id$=price]').value
+      }
    }
 
+   return subtotal
+}
+
+function updateInvoiceTotal()
+{
+   let subtotal = computeInvoiceTotal()
    let subtotalField = document.querySelector('#subtotal')
    let taxField = document.querySelector('#tax')
    let totalField = document.querySelector('#total')
@@ -190,7 +275,7 @@ function getProductData()
       })
       .then(function (data) {
          fillItemFields(code, data)
-         computeInvoiceTotal()
+         updateInvoiceTotal()
       })
 }
 

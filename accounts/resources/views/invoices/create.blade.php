@@ -4,6 +4,7 @@
 <script src="https://kit.fontawesome.com/487b4db8ef.js"></script>
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+<style>.swal-footer { text-align: center; }</style>
 @endpush
 
 @section('navbar')
@@ -23,12 +24,18 @@
    </span>
 </div>
 
+@if (session('status'))
+<div class="alert alert-success">
+   {{ session('status') }}
+</div>    
+@endif
+
 <div class="form-box mt-5">
    <div class="form-box-header">
       <h3>Emitir Comprobante</h3>
    </div>
 
-   <form action="{{ route('invoices.store') }}" method="post">
+   <form action="{{ route('invoices.store') }}" method="post" id="invoice_form">
 
       @csrf
 
@@ -225,7 +232,7 @@
 
       <div class="form-row mt-5">
          <div class="col">
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn btn-primary" id="saveBtn">
                Generar Comprobante
             </button>
             <a href="{{ route('home') }}" class="btn btn-dark">
@@ -245,4 +252,5 @@
       var invoice_type_id = {{ old('header[invoice_type_id]', 'null') }}
    </script>
    <script src="{{ asset('js/invoice.js') }}"></script>
+   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endpush

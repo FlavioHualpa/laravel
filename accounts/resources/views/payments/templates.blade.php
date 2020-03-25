@@ -8,7 +8,7 @@
                      <i class="fas fa-trash-alt inv-item-delete"></i>
                   </div>
                   <div class="col-9 pl-0">
-                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="method_code" value="EFTVO">
+                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="method_code">
                   </div>
                </div>
             </div>
@@ -17,7 +17,7 @@
             <input type="hidden" id="payment_method_type_code" value="cash">
             
             <div class="col-2">
-               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.amount') is-invalid @enderror" id="item_amount" name="item[amount]">
+               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.amount') is-invalid @enderror" id="item_amount" name="item[amount]" value="0">
                @error('item.amount')
                <p class="text-danger">{{ $message }}</p>
                @enderror
@@ -42,7 +42,7 @@
                      <i class="fas fa-trash-alt inv-item-delete"></i>
                   </div>
                   <div class="col-9 pl-0">
-                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="method_code" value="CHEQ">
+                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="method_code">
                   </div>
                </div>
             </div>
@@ -51,7 +51,7 @@
             <input type="hidden" id="payment_method_type_code" value="check">
             
             <div class="col-2">
-               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.amount') is-invalid @enderror" id="item_amount" name="item[amount]">
+               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.amount') is-invalid @enderror" id="item_amount" name="item[amount]" value="0">
                @error('item.amount')
                <p class="text-danger">{{ $message }}</p>
                @enderror
@@ -100,7 +100,7 @@
                      <i class="fas fa-trash-alt inv-item-delete"></i>
                   </div>
                   <div class="col-9 pl-0">
-                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="method_code" value="TRBAN">
+                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="method_code">
                   </div>
                </div>
             </div>
@@ -109,7 +109,7 @@
             <input type="hidden" id="payment_method_type_code" value="deposit">
             
             <div class="col-2">
-               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.amount') is-invalid @enderror" id="item_amount" name="item[amount]">
+               <input type="text" class="form-control form-control-lg font-weight-bold @error('item.amount') is-invalid @enderror" id="item_amount" name="item[amount]" value="0">
                @error('item.amount')
                <p class="text-danger">{{ $message }}</p>
                @enderror

@@ -11,6 +11,11 @@ class Payment extends Model
       'number',
    ];
 
+   protected $casts = [
+      'item.details' => 'array',
+      'details' => 'array'
+   ];
+
    public function customer()
    {
       return $this->belongsTo(Customer::class);
@@ -29,9 +34,17 @@ class Payment extends Model
       if ($pm instanceof PaymentMethod)
          return $pm->item;
       
-      if ($pm instanceof integer)
+      if (is_int($pm))
          return $this->payment_methods[$pm]->item;
 
       return null;
+   }
+
+   public function total()
+   {
+      return self::join('payment_payment_method',
+                     'payment_id', 'payments.id')
+                  ->where('payments.id', $this->id)
+                  ->sum('amount');
    }
 }

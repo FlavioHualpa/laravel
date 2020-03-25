@@ -98,6 +98,7 @@ Route::patch('/accounts/transports/update/{transport}', 'TransportController@upd
 Route::get('/invoices/create', 'InvoiceController@create')->name('invoices.create');
 Route::post('/invoices/store', 'InvoiceController@store')->name('invoices.store');
 Route::get('/invoices/show/{invoice}', 'InvoiceController@show')->name('invoices.show');
+Route::get('/invoices/notify/{invoice}', 'InvoiceController@notify')->name('invoices.notify');
 Route::get('/invoice_types/get/{customer}', 'InvoiceTypeController@getList');
 Route::get('/conditions/get-final-tax', 'CustomerController@getFinalTax');
 
@@ -142,9 +143,6 @@ Route::patch('/price-lists/update/{price_list}', 'PriceListController@update')->
 /*  PAGOS
 /*  ----------------------  */
 
-Route::get('/payments/home', 'PaymentController@home')->name('payments.home');
-Route::get('/payments/search', 'PaymentController@index')->name('payments.search');
 Route::get('/payments/create', 'PaymentController@create')->name('payments.create');
 Route::post('/payments/store', 'PaymentController@store')->name('payments.store');
-Route::get('/payments/edit/{payment}', 'PaymentController@edit')->name('payments.edit');
-Route::patch('/payments/update/{payment}', 'PaymentController@update')->name('payments.update');
+Route::get('/payments/check-number', 'PaymentController@checkNumber');

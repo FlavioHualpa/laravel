@@ -49,14 +49,21 @@ class InvoiceNotification extends Notification
          $this->invoice->invoice_type->name . ' Nro ' .
          $this->invoice->number . '.pdf';
 
-      \Storage::put('public\\temp\\' . $pdfName, $pdf->output());
+      $company_id = $this->invoice->company->id;
+
+      \Storage::put(
+         "public\\invoices-company-id-$company_id\\$pdfName",
+         $pdf->output()
+      );
 
       return (new MailMessage)
          ->subject('Comprobante digital de ' . $this->invoice->company->name)
          ->greeting('Estimado cliente')
          ->line('Adjuntamos ' . $this->invoice->invoice_type->name . ' Nro ' . $this->invoice->number . ' en formato digital.')
          ->salutation('Le enviamos nuestros cordiales saludos.')
-         ->attach(public_path('storage\\temp\\' . $pdfName));
+         ->attach(public_path(
+            "storage\\invoices-company-id-$company_id\\$pdfName"
+         ));
    }
    
    /**

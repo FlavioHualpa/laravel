@@ -6,6 +6,114 @@ const depositFields = [ 'comment', 'account_id', 'number', 'due_date' ]
 window.onload = function ()
 {
    setPaymentsDropDownUp()
+   setSaveButtonHandlerUp()
+}
+
+function setSaveButtonHandlerUp()
+{
+   const btn = document.querySelector('#saveBtn')
+   btn.addEventListener('click', performDataChecks)
+}
+
+function performDataChecks()
+{
+   event.preventDefault()
+
+   const total = computePaymentTotal()
+   if (total <= 0.0)
+   {
+      swal({
+         title: 'Error de validación',
+         text: 'El total del recibo no puede ser cero',
+         icon: 'error',
+         button: 'De acuerdo'
+      })
+      return
+   }
+
+   const customerField = document.querySelector('#customer')
+   if (! customerField.value)
+   {
+      swal({
+         title: 'Error de validación',
+         text: 'Debes seleccionar un cliente',
+         icon: 'error',
+         button: 'De acuerdo'
+      })
+         .then(() => {
+            customerField.focus()
+         })
+      return
+   }
+   
+   const numberField = document.querySelector('#number')
+   if (isNaN(parseInt(numberField.value)))
+   {
+      swal({
+         title: 'Error de validación',
+         text: 'Por favor ingresa el número del recibo',
+         icon: 'error',
+         button: 'De acuerdo'
+      })
+      .then(() => {
+         numberField.focus()
+      })
+      return
+   }
+
+   const query = new XMLHttpRequest()
+
+   query.onreadystatechange = function () {
+      if (query.readyState == XMLHttpRequest.DONE && query.status == 200) {
+         const exists = JSON.parse(query.response)
+         if (exists.response) {
+            swal({
+               title: 'Error de validación',
+               text: 'Ese número de recibo ya fue ingresado',
+               icon: 'error',
+               button: 'De acuerdo',
+            })
+            .then(() => {
+               numberField.focus()
+               return
+            })
+         }
+         confirmSave()
+      }
+   }
+
+   query.open(
+      'GET',
+      '/payments/check-number?number=' + numberField.value,
+      false // false = llamado síncrono
+   )
+
+   query.send()
+
+   function confirmSave()
+   {
+      const form = document.querySelector('#payment_form')
+      
+      swal({
+         title: 'Ingreso de recibos',
+         text: 'Confirmas el ingreso del recibo?',
+         icon: 'info',
+         buttons: {
+            not: {
+               text: 'No',
+               value: false
+            },
+            yes: {
+               text: 'Sí',
+               value: true
+            },
+         },
+      })
+      .then((value) => {
+         if (value)
+            form.submit()
+      })
+   }
 }
 
 function addCheckRow()
@@ -42,22 +150,34 @@ function setRowAttributeValues(row, fields)
 
    node = row.querySelector('[id^=method_code]')
    node.setAttribute('id', `method_code.${nextItemNum}`)
-   node.setAttribute('value', event.target.getAttribute('data-method-code'))
+   if (! node.getAttribute('value'))
+      node.setAttribute(
+         'value',
+         event.target.getAttribute('data-method-code')
+      )
+
+   node = row.querySelector('[id*=method_type_code]')
+   node.setAttribute('id', `item.${nextItemNum}.method_type_code`)
+   node.setAttribute('name', `item[${nextItemNum}][method_type_code]`)
 
    node = row.querySelector('i')
    node.addEventListener('click', deleteItemRow)
 
    node = row.querySelector('[id$=id]')
-   node.setAttribute('id', `item.${nextItemNum}.id`)
-   node.setAttribute('name', `item[${nextItemNum}][id]`)
-   node.setAttribute('value', event.target.getAttribute('data-method-id'))
+   node.setAttribute('id', `item.${nextItemNum}.payment_method_id`)
+   node.setAttribute('name', `item[${nextItemNum}][payment_method_id]`)
+   if (! node.getAttribute('value'))
+      node.setAttribute(
+         'value',
+         event.target.getAttribute('data-method-id')
+      )
 
    node = row.querySelector('[id$=amount]')
    node.setAttribute('id', `item.${nextItemNum}.amount`)
    node.setAttribute('name', `item[${nextItemNum}][amount]`)
    node.addEventListener('change', function () {
       checkFloat()
-      computePaymentTotal()
+      updatePaymentTotal()
    })
 
    for (field of fields)
@@ -80,7 +200,7 @@ function deleteItemRow()
 
    node.remove()
    renumberItemRows()
-   computePaymentTotal()
+   updatePaymentTotal()
 }
 
 function renumberItemRows()
@@ -91,7 +211,7 @@ function renumberItemRows()
    nextItemNum = 1
 
    for (row of rowsSection.children) {
-      methodField = row.querySelector('#payment_method_type_code')
+      methodField = row.querySelector('[id*=method_type_code]')
       methodCode = methodField.getAttribute('value');
       setRowAttributeValues(row, getRowFields(methodCode))
       nextItemNum++
@@ -130,7 +250,13 @@ function computePaymentTotal()
       total += parseFloat(row.querySelector('[id$=amount]').value)
    }
 
+   return total
+}
+
+function updatePaymentTotal()
+{
    let totalField = document.querySelector('#total')
+   let total = computePaymentTotal()
 
    totalField.innerText = toCurrencyString(total)
 }

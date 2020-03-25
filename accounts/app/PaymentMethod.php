@@ -12,6 +12,11 @@ class PaymentMethod extends Model
       'name',
    ];
 
+   protected $casts = [
+      'item.details' => 'array',
+      'details' => 'array'
+   ];
+
    public function company()
    {
       return $this->belongsTo(Company::class);
