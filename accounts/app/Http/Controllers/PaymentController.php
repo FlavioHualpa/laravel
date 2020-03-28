@@ -40,6 +40,8 @@ class PaymentController extends Controller
       $payment = Payment::create([
          'customer_id' => $request->header['customer_id'],
          'number' => $request->header['number'],
+         'created_at' => $request->header['date'],
+         'updated_at' => $request->header['date'],
       ]);
 
       foreach ($request->item as $item)

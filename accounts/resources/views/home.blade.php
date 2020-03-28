@@ -51,7 +51,7 @@
          </a>
       </div>
       <div class="col-md-6 col-lg-4 mt-4">
-         <a href="{{ route('payments.create') }}">
+         <a href="{{ route('applications.create') }}">
             <article class="section-tile">
                <img src="{{ asset('img/applications-tile.png') }}" alt="Imputaciones" class="tile-image">
                <h3>Imputaciones</h3>

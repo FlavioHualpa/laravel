@@ -76,6 +76,8 @@ class InvoiceController extends Controller
       $invoice->customer_id = $request->input('header.customer_id');
       $invoice->transport_id = $request->input('header.transport_id');
       $invoice->price_list_id = $request->input('header.price_list_id');
+      $invoice->created_at = $request->input('header.date');
+      $invoice->updated_at = $request->input('header.date');
       $invoice->save();
 
       foreach ($request->input('item') as $item)

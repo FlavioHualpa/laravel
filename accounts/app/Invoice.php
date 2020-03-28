@@ -65,6 +65,33 @@ class Invoice extends Model
                   ->as('item');
    }
 
+   public function applied_payments()
+   {
+      return $this->morphedByMany(
+         Payment::class, 'applicant', 'invoice_payment')
+                  ->withPivot([ 'amount' ])
+                  ->withTimeStamps()
+                  ->as('applied_payment');
+   }
+
+   public function invoice_applications()
+   {
+      return $this->morphToMany(
+         Invoice::class, 'applicant', 'invoice_payment')
+                  ->withPivot([ 'amount' ])
+                  ->withTimeStamps()
+                  ->as('invoice_application');
+   }
+
+   public function applied_invoices()
+   {
+      return $this->morphedByMany(
+         Invoice::class, 'applicant', 'invoice_payment')
+                  ->withPivot([ 'amount' ])
+                  ->withTimeStamps()
+                  ->as('applied_invoice');
+   }
+
    public function final_amount()
    {
       return $this->products->sum(
@@ -83,5 +110,16 @@ class Invoice extends Model
    {
       return $this->final_amount() *
          (1.0 + $this->customer->condition->final_tax);
+   }
+
+   public function total_applied()
+   {
+      return $this->applied_payments()->sum('amount') +
+         $this->applied_invoices()->sum('amount');
+   }
+
+   public function remaining_not_applied()
+   {
+      return $this->final_amount_with_tax() - $this->total_applied();
    }
 }

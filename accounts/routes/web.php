@@ -146,3 +146,11 @@ Route::patch('/price-lists/update/{price_list}', 'PriceListController@update')->
 Route::get('/payments/create', 'PaymentController@create')->name('payments.create');
 Route::post('/payments/store', 'PaymentController@store')->name('payments.store');
 Route::get('/payments/check-number', 'PaymentController@checkNumber');
+
+
+/*  ----------------------  */
+/*  APLICACIÓN DE PAGOS
+/*  ----------------------  */
+
+Route::get('/applications/create', 'ApplicationController@create')->name('applications.create');
+Route::post('/applications/store', 'ApplicationController@store')->name('applications.store');
