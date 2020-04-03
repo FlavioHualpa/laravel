@@ -108,18 +108,40 @@ class Invoice extends Model
 
    public function final_amount_with_tax()
    {
-      return $this->final_amount() *
-         (1.0 + $this->customer->condition->final_tax);
+      $decimals = config('app.rounding');
+
+      return round(
+         $this->final_amount() * (1.0 + $this->customer->condition->final_tax),
+         $decimals
+      );
    }
 
+   // total applied es el total de todas
+   // las aplicaciones a este comprobante
    public function total_applied()
    {
       return $this->applied_payments()->sum('amount') +
          $this->applied_invoices()->sum('amount');
    }
 
+   // remaining not applied es el importe
+   // que queda por aplicar a este comprobante
    public function remaining_not_applied()
    {
       return $this->final_amount_with_tax() - $this->total_applied();
+   }
+
+   // total applications es el total
+   // aplicado a otros comprobantes
+   public function total_applications()
+   {
+      return $this->invoice_applications()->sum('amount');
+   }
+
+   // remaining not applied es el importe de este
+   // comprobante que queda para aplicar a otros
+   public function remaining_to_apply()
+   {
+      return $this->final_amount_with_tax() - $this->total_applications();
    }
 }

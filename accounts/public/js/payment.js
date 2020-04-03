@@ -75,8 +75,8 @@ function performDataChecks()
             })
             .then(() => {
                numberField.focus()
-               return
             })
+            return
          }
          confirmSave()
       }

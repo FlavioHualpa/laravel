@@ -56,6 +56,21 @@ class Customer extends Model
       return $this->hasMany(Invoice::class);
    }
 
+   // parametro $op : string
+   //   'inc' aumenta el saldo del cliente
+   //   'dec' disminuye el saldo
+   public function invoices_with_balance($op)
+   {
+      return $this->invoices()
+         ->join(
+            'invoice_types',
+            'invoice_types.id',
+            'invoices.invoice_type_id')
+         ->select('invoices.*')
+         ->where('invoice_types.balance', $op)
+         ->get();
+   }
+
    public function payments()
    {
       return $this->hasMany(Payment::class);

@@ -4,11 +4,11 @@
             <div class="col-2">
                <div class="row">
                   <div class="col-3 pr-0 inv-row-buttons">
-                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="item_num" value="##">
+                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="item_num" value="##" tabindex="-1">
                      <i class="fas fa-trash-alt inv-item-delete"></i>
                   </div>
                   <div class="col-9 pl-0">
-                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="method_code">
+                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="method_code" tabindex="-1">
                   </div>
                </div>
             </div>
@@ -38,11 +38,11 @@
             <div class="col-2">
                <div class="row">
                   <div class="col-3 pr-0 inv-row-buttons">
-                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="item_num" value="##">
+                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="item_num" value="##" tabindex="-1">
                      <i class="fas fa-trash-alt inv-item-delete"></i>
                   </div>
                   <div class="col-9 pl-0">
-                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="method_code">
+                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="method_code" tabindex="-1">
                   </div>
                </div>
             </div>
@@ -96,11 +96,11 @@
             <div class="col-2">
                <div class="row">
                   <div class="col-3 pr-0 inv-row-buttons">
-                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="item_num" value="##">
+                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="item_num" value="##" tabindex="-1">
                      <i class="fas fa-trash-alt inv-item-delete"></i>
                   </div>
                   <div class="col-9 pl-0">
-                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="method_code">
+                     <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold inv-item-num" id="method_code" tabindex="-1">
                   </div>
                </div>
             </div>

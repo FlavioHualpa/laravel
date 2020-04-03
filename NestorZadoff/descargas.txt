@@ -1,106 +1,109 @@
-106:Adivina adivinador.pdf:0
-﻿62:And so it goes.pdf:55
-01:Años de soledad.pdf:106
-72:Atacama tierra mía.pdf:30
-50:Avant laymer.pdf:41
-02:Ave mater.pdf:36
-03:Beatles - I will.pdf:81
-65:Beatles - I will - coro y orquesta.pdf:45
-04:Beatles - Yesterday.pdf:122
-66:Beatles - Yesterday - coro y orquesta.pdf:50
-105:BsAs hora cero fem.pdf:2
-05:BsAs hora cero masc.pdf:127
-06:Canción del estornudo.pdf:84
-71:Canción del Jacarandá.pdf:112
-61:Cant you live humble.pdf:52
-99:Carol of the bells.pdf:23
-07:Chaggio perduto.pdf:34
-08:Che giova saettar.pdf:40
-49:Che taggio fatto.pdf:66
-09:Chi dirra.pdf:34
-73:Como la cigarra.pdf:65
-10:Coral.pdf:115
-82:Corten espadas.pdf:47
-11:Cuando partí.pdf:72
-12:Cuatro estrofas.pdf:78
-42:Cueur langoreux.pdf:137
-53:Cueurs desolez (en sol).pdf:46
-52:Cueurs desolez.pdf:47
-64:Cueurs desolez a 5.pdf:52
-13:Damus Nro 433.pdf:1
-44:De trop aymer.pdf:43
-63:Déjame que me vaya.pdf:85
-45:Despertar de mi tierra.pdf:44
-14:Dessus le marche.pdf:66
-92:Du cors absent.pdf:13
-86:El arbol.pdf:25
-15:El brujito de Gulubú.pdf:96
-16:En espoir vis.pdf:38
-47:En non saichant.pdf:47
-46:Es tu bien.pdf:37
-17:Exaudiat te Dominus.pdf:112
-87:Fyez vous.pdf:13
-77:Gasajemonos de husia.pdf:33
-97:Gentil madonna.pdf:19
-18:Guanuqueando.pdf:137
-19:Hor va canzona.pdf:38
-74:I wanna be your man.pdf:32
-41:Ie me complains.pdf:68
-89:Ie nay point plus.pdf:11
-90:Il nest que destre.pdf:14
-48:Je ne me.pdf:46
-20:Juana y José.pdf:65
-98:La cortesia.pdf:6
-21:La morre est jeu.pdf:35
-104:La Pájara Pinta.pdf:43
-96:La piaga.pdf:6
-70:La vaca estudiosa.pdf:91
-22:Lady Madonna.pdf:58
-76:Las tristesas.pdf:35
-101:Love of my life.pdf:59
-23:Love of my life (coro y orquesta).pdf:85
-68:Manuelita la tortuga.pdf:70
-84:Mary had a baby.pdf:37
-24:Medici nui siam.pdf:41
-95:Mirate.pdf:18
-25:O dolce vita.pdf:41
-54:O Lucia 1.pdf:35
-55:O Lucia 2.pdf:24
-85:Oh yes.pdf:29
-81:Ojos garços.pdf:32
-26:Oyme dolente.pdf:34
-83:Palito de tola.pdf:39
-27:Parfons regretz.pdf:49
-28:Parmi di star.pdf:43
-94:Per pianto.pdf:7
-91:Perdre le sens.pdf:16
-69:Plus nulz regretz.pdf:38
-78:Quedate carillo adios.pdf:46
-57:Quando per mio destin.pdf:36
-56:Regretz sans fin original.pdf:51
-43:Regretz sans fin.pdf:54
-88:Rigueur me tient.pdf:11
-60:Romance de la Luna.pdf:61
-59:San Juan por mi sangre.pdf:46
-29:Sangena.pdf:59
-30:Se per sentir.pdf:35
-51:Sei tanto gratiosa.pdf:49
-102:Señora doña María.pdf:13
-67:Serenata para la tierra de uno.pdf:74
-80:Si la noche.pdf:35
-31:Signora Mia.pdf:43
-32:Sio fosse certo.pdf:39
-33:Sobredosis de chamamé.pdf:72
-100:Spirituals Ode.pdf:27
-75:Teresica hermana.pdf:43
-79:Todo mi bien.pdf:40
-103:Tonada de la Quiaca.pdf:21
-34:Tu marrobasti.pdf:56
-35:Tu traditora.pdf:44
-93:Un avocat dit.pdf:14
-58:Vecchie letrose.pdf:43
-36:Ventz Hardis.pdf:43
-37:Verano porteño.pdf:111
-38:Voulant honneur.pdf:55
-39:Zamba del nuevo día.pdf:97
-40:Zamba para Pepe.pdf:63
+﻿106:Adivina adivinador.pdf:128
+62:And so it goes.pdf:114
+01:Años de soledad.pdf:207
+72:Atacama tierra mía.pdf:67
+50:Avant laymer.pdf:70
+02:Ave mater.pdf:81
+03:Beatles - I will.pdf:159
+65:Beatles - I will - coro y orquesta.pdf:75
+04:Beatles - Yesterday.pdf:206
+66:Beatles - Yesterday - coro y orquesta.pdf:99
+105:BsAs hora cero fem.pdf:93
+05:BsAs hora cero masc.pdf:186
+06:Canción del estornudo.pdf:138
+71:Canción del Jacarandá.pdf:204
+108:Canción del jardinero.pdf:13
+109:Canción para tomar el té:0
+61:Cant you live humble.pdf:89
+99:Carol of the bells.pdf:78
+07:Chaggio perduto.pdf:62
+08:Che giova saettar.pdf:75
+49:Che taggio fatto.pdf:91
+09:Chi dirra.pdf:62
+73:Como la cigarra.pdf:154
+107:Coplas de carnaval.pdf:81
+10:Coral.pdf:203
+82:Corten espadas.pdf:90
+11:Cuando partí.pdf:122
+12:Cuatro estrofas.pdf:129
+42:Cueur langoreux.pdf:219
+53:Cueurs desolez (en sol).pdf:75
+52:Cueurs desolez.pdf:80
+64:Cueurs desolez a 5.pdf:88
+13:Damus Nro 433.pdf:2
+44:De trop aymer.pdf:69
+63:Déjame que me vaya.pdf:143
+45:Despertar de mi tierra.pdf:82
+14:Dessus le marche.pdf:91
+92:Du cors absent.pdf:34
+86:El arbol.pdf:71
+15:El brujito de Gulubú.pdf:163
+16:En espoir vis.pdf:67
+47:En non saichant.pdf:95
+46:Es tu bien.pdf:66
+17:Exaudiat te Dominus.pdf:183
+87:Fyez vous.pdf:43
+77:Gasajemonos de husia.pdf:56
+97:Gentil madonna.pdf:55
+18:Guanuqueando.pdf:236
+19:Hor va canzona.pdf:77
+74:I wanna be your man.pdf:69
+41:Ie me complains.pdf:96
+89:Ie nay point plus.pdf:36
+90:Il nest que destre.pdf:39
+48:Je ne me.pdf:74
+20:Juana y José.pdf:142
+98:La cortesia.pdf:36
+21:La morre est jeu.pdf:56
+104:La Pájara Pinta.pdf:171
+96:La piaga.pdf:37
+70:La vaca estudiosa.pdf:168
+22:Lady Madonna.pdf:93
+76:Las tristesas.pdf:64
+101:Love of my life.pdf:190
+23:Love of my life (coro y orquesta).pdf:142
+68:Manuelita la tortuga.pdf:148
+84:Mary had a baby.pdf:85
+24:Medici nui siam.pdf:69
+95:Mirate.pdf:54
+25:O dolce vita.pdf:73
+54:O Lucia 1.pdf:59
+55:O Lucia 2.pdf:57
+85:Oh yes.pdf:72
+81:Ojos garços.pdf:54
+26:Oyme dolente.pdf:67
+83:Palito de tola.pdf:74
+27:Parfons regretz.pdf:75
+28:Parmi di star.pdf:66
+94:Per pianto.pdf:53
+91:Perdre le sens.pdf:54
+69:Plus nulz regretz.pdf:63
+78:Quedate carillo adios.pdf:68
+57:Quando per mio destin.pdf:65
+56:Regretz sans fin original.pdf:76
+43:Regretz sans fin.pdf:85
+88:Rigueur me tient.pdf:46
+60:Romance de la Luna.pdf:99
+59:San Juan por mi sangre.pdf:80
+29:Sangena.pdf:101
+30:Se per sentir.pdf:64
+51:Sei tanto gratiosa.pdf:77
+102:Señora doña María.pdf:62
+67:Serenata para la tierra de uno.pdf:161
+80:Si la noche.pdf:62
+31:Signora Mia.pdf:85
+32:Sio fosse certo.pdf:61
+33:Sobredosis de chamamé.pdf:131
+100:Spirituals Ode.pdf:75
+75:Teresica hermana.pdf:75
+79:Todo mi bien.pdf:96
+103:Tonada de la Quiaca.pdf:108
+34:Tu marrobasti.pdf:78
+35:Tu traditora.pdf:71
+93:Un avocat dit.pdf:38
+58:Vecchie letrose.pdf:72
+36:Ventz Hardis.pdf:77
+37:Verano porteño.pdf:191
+38:Voulant honneur.pdf:82
+39:Zamba del nuevo día.pdf:165
+40:Zamba para Pepe.pdf:112

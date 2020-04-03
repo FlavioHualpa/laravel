@@ -65,10 +65,10 @@
 
          @foreach ($products as $product)
             <div class="col-3">
-               <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold" value="{{ $product->code }}">
+               <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold" value="{{ $product->code }}" tabindex="-1">
             </div>
             <div class="col-6">
-               <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold" value="{{ $product->description }}">
+               <input type="text" readonly class="form-control-plaintext form-control-lg font-weight-bold" value="{{ $product->description }}" tabindex="-1">
             </div>
             <div class="col-3">
                <input type="text" class="form-control form-control-lg font-weight-bold text-right @error('products.{{$loop->iteration}}.price') is-invalid @enderror" name="products[{{$loop->iteration}}][price]" value="{{ old('products.' . $loop->iteration . '.price', number_format($product->priceInList($price_list->id), 2)) }}">

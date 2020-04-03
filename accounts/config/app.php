@@ -57,6 +57,12 @@ return [
     'asset_url' => env('ASSET_URL', null),
 
     /*
+    | Parametros especiales
+    */
+
+    'rounding' => env('DECIMAL_ROUNDING', 2),
+
+    /*
     |--------------------------------------------------------------------------
     | Application Timezone
     |--------------------------------------------------------------------------

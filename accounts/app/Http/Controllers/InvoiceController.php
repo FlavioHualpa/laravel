@@ -17,6 +17,7 @@ class InvoiceController extends Controller
    public function __construct()
    {
       $this->middleware('auth');
+      $this->middleware('company');
    }
    
    private function load_relations(Invoice $invoice)

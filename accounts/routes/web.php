@@ -19,6 +19,7 @@ Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/switch-company', 'HomeController@switch')->name('switch.company');
+Route::view('/nocompany', 'nocompany')->name('no.company');
 
 
 /*  ----------------------  */

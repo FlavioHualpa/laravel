@@ -270,3 +270,12 @@ main {
 .inv-item-delete:hover {
    color: #f00000;
 }
+
+.constructor {
+   width:200px
+}
+
+.no-company-title {
+   color: #f4f4f4;
+   line-height: 150%;
+}
