@@ -155,3 +155,12 @@ Route::get('/payments/check-number', 'PaymentController@checkNumber');
 
 Route::get('/applications/create', 'ApplicationController@create')->name('applications.create');
 Route::post('/applications/store', 'ApplicationController@store')->name('applications.store');
+
+
+/*  ----------------------  */
+/*  LISTADOS DE CLIENTES
+/*  ----------------------  */
+
+Route::get('/customers/reports', 'CustomerReportController@index')->name('customers.reports.index');
+Route::get('/customers/reports/parameters/{report_id}', 'CustomerReportController@parameters')->name('customers.reports.parameters');
+Route::post('/customers/reports/show/{report_id}', 'CustomerReportController@show')->name('customers.reports.show');

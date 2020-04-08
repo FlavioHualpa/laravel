@@ -182,12 +182,13 @@ function computeApplicationTotal()
 {
    let rowsSection = document.querySelector('#item-rows')
    let total = 0.0
+   let roundUp = 100.0
 
    for (row of rowsSection.children) {
       total += parseFloat(row.querySelector('[id$=amount]').value)
    }
 
-   return total
+   return Math.round(total * roundUp) / roundUp
 }
 
 function updateApplicationTotal()

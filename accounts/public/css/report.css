@@ -1,0 +1,30 @@
+.report-title-col {
+   font-weight: bold;
+   text-decoration: underline;
+   font-size: 18px;
+   margin-bottom: 8px;
+   display: inline-block;
+}
+
+.report-data-header-col {
+   font-weight: bold;
+   font-size: 18px;
+   margin-bottom: 6px;
+}
+
+.report-data-col {
+   font-size: 18px;
+}
+
+.report-total-col {
+   font-size: 18px;
+   font-weight: bold;
+}
+
+.form-box-body {
+   margin: 30px;
+}
+
+.highlight:hover {
+   background-color: #d8d2d2;
+}

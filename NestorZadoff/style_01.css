@@ -27,7 +27,7 @@ body {background-color:#e5e5b8;}
 .texto_pie { font-family: Arial; font-size: 8pt; color: maroon; }
 .link_panel { font-family: Arial; font-size: 12pt; }
 .esp_lista { font-family: Arial; font-size: 12pt; margin-left: 30px; margin-bottom: 8px; padding: 2px 5px; color: maroon; background-color: rgba(0, 0, 0, 0.1); border-radius: 4px; display: inline-block; }
-.etiqueta_nuevo { font-family: arial; font-size: 9pt; font-weight: bold; padding: 2px 6px 0px 6px; color: maroon; background-color: rgba(0, 0, 0, 0.25); border-radius: 4px; margin-left: 8px; }
+.etiqueta_nuevo { font-family: arial; font-size: 11pt; font-weight: bold; padding: 3px 6px 2px 6px; color: maroon; background-color: rgba(0, 0, 0, 0.25); border-radius: 4px; margin-left: 8px; }
 .icono-premio { height: 24px; width: 24px; vertical-align: middle; }
 .icono-pdf { width: 24px; height: 24px; margin-left: 30px; margin-right: 10px; margin-bottom: 4px; vertical-align: middle; }
 .lista_arreglos { font-family: Arial; font-size: 12pt; color: maroon; line-height: 130%; }

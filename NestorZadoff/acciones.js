@@ -73,7 +73,7 @@ function AgregarEtiquetasNuevo(texto)
         if (pub != null)
         {
           fecha = new Date(pub.value);
-          if (new Date() - fecha <= 240*60*60*1000)
+          if (new Date() - fecha <= 30*24*60*60*1000)
             items[i].innerHTML += "<span class=\"etiqueta_nuevo\">" + texto + "</span>";
         }
     }
@@ -91,7 +91,8 @@ function showModal(imgId)
     modalImg.src = sourceImg.src;
 }
 
-function closeModal() {
+function closeModal()
+{
     var bg = document.querySelector('.modal-bg');
     var modal = document.querySelector('.modal-box');
     modal.style.display = 'none';

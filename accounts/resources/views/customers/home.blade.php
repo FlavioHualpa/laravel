@@ -40,7 +40,7 @@
          </a>
       </div>
       <div class="col-md-6 col-lg-4 mt-4">
-         <a href="#">
+         <a href="{{ route('customers.reports.index') }}">
             <article class="section-tile">
                <img src="{{ asset('img/reports-tile.png') }}" alt="Facturación" class="tile-image">
                <h3>Listados</h3>
