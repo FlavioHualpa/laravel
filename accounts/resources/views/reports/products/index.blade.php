@@ -18,32 +18,37 @@
          </a>
       </span>
       <span class="bread-crumb">
-         <h4>Artículos</h4>
+         <a href="{{ route('products.home') }}">
+            <h4>Artículos</h4>
+         </a>
+      </span>
+      <span class="bread-crumb">
+         <h4>Listados de artículos</h4>
       </span>
    </div>
 
    <div class="row">
       <div class="col-md-6 col-lg-4 mt-4">
-         <a href="{{ route('products.search') }}">
+         <a href="{{ route('products.reports.parameters', 0) }}">
             <article class="section-tile">
-               <img src="{{ asset('img/search-tile.png') }}" alt="Productos" class="tile-image">
-               <h3>Buscar</h3>
+               <img src="{{ asset('img/reports-tile.png') }}" alt="Estadística de ventas" class="tile-image">
+               <h3>Estadística de ventas</h3>
             </article>
          </a>
       </div>
       <div class="col-md-6 col-lg-4 mt-4">
-         <a href="{{ route('products.create') }}">
+         <a href="{{ route('products.reports.parameters', 1) }}">
             <article class="section-tile">
-               <img src="{{ asset('img/create-tile.png') }}" alt="Clientes" class="tile-image">
-               <h3>Ingresar</h3>
+               <img src="{{ asset('img/reports-tile.png') }}" alt="Comprobantes por artículo" class="tile-image">
+               <h3>Comprobantes por artículo</h3>
             </article>
          </a>
       </div>
       <div class="col-md-6 col-lg-4 mt-4">
-         <a href="{{ route('products.reports.index') }}">
+         <a href="{{ route('products.reports.parameters', 2) }}">
             <article class="section-tile">
-               <img src="{{ asset('img/reports-tile.png') }}" alt="Facturación" class="tile-image">
-               <h3>Listados</h3>
+               <img src="{{ asset('img/reports-tile.png') }}" alt="Ficha del artículo" class="tile-image">
+               <h3>Ficha del artículo</h3>
             </article>
          </a>
       </div>

@@ -20,28 +20,31 @@
       </a>
    </span>
    <span class="bread-crumb">
-      <a href="{{ route('customers.home') }}">
-         <h4>Clientes</h4>
+      <a href="{{ route('products.home') }}">
+         <h4>Artículos</h4>
       </a>
    </span>
    <span class="bread-crumb">
-      <a href="{{ route('customers.reports.index') }}">
-         <h4>Listados de clientes</h4>
+      <a href="{{ route('products.reports.index') }}">
+         <h4>Listados de artículos</h4>
       </a>
    </span>
    <span class="bread-crumb">
-      <h4>Operaciones por cliente</h4>
+      <h4>Estadística de ventas</h4>
    </span>
 </div>
 
 <div class="form-box mt-5">
    <div class="form-box-header">
-      <h3>Operaciones por cliente</h3>
+      <h3>Estadística de ventas</h3>
    </div>
 
    <div class="form-box-body">
       <h2>
-         {{ $customer->name }}&nbsp;&nbsp;&nbsp;[{{ $customer->code }}]
+         Desde: {{ $from_product->description }}&nbsp;&nbsp;&nbsp;[{{ $from_product->code }}]
+      </h2>
+      <h2>
+         Hasta: {{ $to_product->description }}&nbsp;&nbsp;&nbsp;[{{ $to_product->code }}]
       </h2>
       <h5>
          Desde {{ LocalFormat::date($from_date) }}
@@ -55,52 +58,56 @@
       <div class="row mt-4">
          <div class="col-2">
             <span class="report-title-col">
-               Fecha
+               Código
             </span>
          </div>
-         <div class="col-3">
+         <div class="col-4">
             <span class="report-title-col">
-               Comprobante
-            </span>
-         </div>
-         <div class="col-2 text-right">
-            <span class="report-title-col">
-               Número
+               Producto
             </span>
          </div>
          <div class="col-2 text-right">
             <span class="report-title-col">
-               Importe
+               Vendido
+            </span>
+         </div>
+         <div class="col-2 text-right">
+            <span class="report-title-col">
+               Menor precio
+            </span>
+         </div>
+         <div class="col-2 text-right">
+            <span class="report-title-col">
+               Mayor precio
             </span>
          </div>
       </div>
 
-      @foreach ($operations as $operation)
+      @foreach ($sales as $sale)
       <div class="row highlight">
          <div class="col-2">
             <span class="report-data-col">
-               {{ LocalFormat::date($operation->created_at) }}
+               {{ $sale['code'] }}
             </span>
          </div>
-         <div class="col-3">
+         <div class="col-4">
             <span class="report-data-col">
-               {{ $operation instanceOf \App\Invoice ?
-                     $operation->invoice_type->name :
-                     'Recibo' }}
-            </span>
-         </div>
-         <div class="col-2 text-right">
-            <span class="report-data-col">
-               {{ $operation->number }}
+               {{ $sale['description'] }}
             </span>
          </div>
          <div class="col-2 text-right">
             <span class="report-data-col">
-               {{ $operation instanceOf \App\Invoice ?
-                     LocalFormat::currency(
-                        $operation->final_amount_with_tax()) :
-                     LocalFormat::currency(
-                        -$operation->total()) }}
+               {{ LocalFormat::float($sale['sold']) }}
+            </span>
+         </div>
+         <div class="col-2 text-right">
+            <span class="report-data-col">
+               {{ LocalFormat::currency($sale['min_price']) }}
+            </span>
+         </div>
+         <div class="col-2 text-right">
+            <span class="report-data-col">
+               {{ LocalFormat::currency($sale['max_price']) }}
             </span>
          </div>
       </div>
@@ -109,23 +116,25 @@
       <div class="row mt-2">
          <div class="col-2">
          </div>
-         <div class="col-3">
+         <div class="col-4">
+         </div>
+         <div class="col-2">
          </div>
          <div class="col-2 text-right">
             <span class="report-total-col">
-               Total:
+               Total Vendido:
             </span>
          </div>
          <div class="col-2 text-right">
             <span class="report-total-col">
-               {{ LocalFormat::currency($total) }}
+               {{ LocalFormat::float($total) }}
             </span>
          </div>
       </div>
 
       <div class="row mt-4">
          <div class="col-3">
-            <a href="{{ route('customers.reports.parameters', 0) }}" class="btn btn-primary">
+            <a href="{{ route('products.reports.parameters', 0) }}" class="btn btn-primary">
                Otra Consulta
             </a>
          </div>

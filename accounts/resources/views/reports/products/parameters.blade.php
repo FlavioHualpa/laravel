@@ -19,13 +19,13 @@
       </a>
    </span>
    <span class="bread-crumb">
-      <a href="{{ route('customers.home') }}">
-         <h4>Clientes</h4>
+      <a href="{{ route('products.home') }}">
+         <h4>Artículos</h4>
       </a>
    </span>
    <span class="bread-crumb">
-      <a href="{{ route('customers.reports.index') }}">
-         <h4>Listados de clientes</h4>
+      <a href="{{ route('products.reports.index') }}">
+         <h4>Listados de artículos</h4>
       </a>
    </span>
    <span class="bread-crumb">
@@ -45,31 +45,31 @@
       <div class="form-row">
 
          <div class="col-6">
-            <label for="from_customer" class="mb-1">Desde Cliente</label>
-            <select class="custom-select custom-select-lg font-weight-bold @error('from_customer_id') is-invalid @enderror" id="from_customer" name="from_customer_id" autofocus>
-               @foreach ($customers as $customer)
-                  <option value="{{ $customer->id }}" {{ old('from_customer_id', Cookie::get('user_' . auth()->user()->id . '_from_customer_id')) == $customer->id ? 'selected' : '' }}>
-                     {{ $customer->code . ' - ' . $customer->name }}
+            <label for="from_product" class="mb-1">Desde Artículo</label>
+            <select class="custom-select custom-select-lg font-weight-bold @error('from_product_id') is-invalid @enderror" id="from_product" name="from_product_id" autofocus>
+               @foreach ($products as $product)
+                  <option value="{{ $product->id }}" {{ old('from_product_id', Cookie::get('user_' . auth()->user()->id . '_from_product_id')) == $product->id ? 'selected' : '' }}>
+                     {{ $product->code . ' - ' . $product->description }}
                   </option>
                @endforeach
             </select>
-            @error('from_customer_id')
+            @error('from_product_id')
             <p class="text-danger">{{ $message }}</p>
             @enderror
          </div>
 
-         @if ($parameters['show_to_customer'])
+         @if ($parameters['show_to_product'])
 
          <div class="col-6">
-            <label for="to_customer" class="mb-1">Hasta Cliente</label>
-            <select class="custom-select custom-select-lg font-weight-bold @error('to_customer_id') is-invalid @enderror" id="to_customer" name="to_customer_id">
-               @foreach ($customers as $customer)
-                  <option value="{{ $customer->id }}" {{ old('to_customer_id', Cookie::get('user_' . auth()->user()->id . '_to_customer_id')) == $customer->id ? 'selected' : '' }}>
-                     {{ $customer->code . ' - ' . $customer->name }}
+            <label for="to_product" class="mb-1">Hasta Artículo</label>
+            <select class="custom-select custom-select-lg font-weight-bold @error('to_product_id') is-invalid @enderror" id="to_product" name="to_product_id">
+               @foreach ($products as $product)
+                  <option value="{{ $product->id }}" {{ old('to_product_id', Cookie::get('user_' . auth()->user()->id . '_to_product_id')) == $product->id ? 'selected' : '' }}>
+                     {{ $product->code . ' - ' . $product->description }}
                   </option>
                @endforeach
             </select>
-            @error('to_customer_id')
+            @error('to_product_id')
             <p class="text-danger">{{ $message }}</p>
             @enderror
          </div>
@@ -111,7 +111,7 @@
             <button type="submit" class="btn btn-primary" id="showBtn">
                Ver listado
             </button>
-            <a href="{{ route('customers.reports.index') }}" class="btn btn-dark">
+            <a href="{{ route('products.reports.index') }}" class="btn btn-dark">
                Cancelar
             </a>
          </div>

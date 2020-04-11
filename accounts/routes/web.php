@@ -164,3 +164,12 @@ Route::post('/applications/store', 'ApplicationController@store')->name('applica
 Route::get('/customers/reports', 'CustomerReportController@index')->name('customers.reports.index');
 Route::get('/customers/reports/parameters/{report_id}', 'CustomerReportController@parameters')->name('customers.reports.parameters');
 Route::post('/customers/reports/show/{report_id}', 'CustomerReportController@show')->name('customers.reports.show');
+
+
+/*  ----------------------  */
+/*  LISTADOS DE ARTÍCULOS
+/*  ----------------------  */
+
+Route::get('/products/reports', 'ProductReportController@index')->name('products.reports.index');
+Route::get('/products/reports/parameters/{report_id}', 'ProductReportController@parameters')->name('products.reports.parameters');
+Route::post('/products/reports/show/{report_id}', 'ProductReportController@show')->name('products.reports.show');

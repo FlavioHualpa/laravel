@@ -8,6 +8,7 @@ use App\State;
 use App\Facades\LocalFormat;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Validator;
 
 class CustomerReportController extends Controller
@@ -56,7 +57,47 @@ class CustomerReportController extends Controller
       $validated = $validator->validate();
       $view = $this->parameters[$report_id]['show_function']($request);
 
+      $this->setCookies($request);
+
       return $view;
+   }
+
+   private function setCookies(Request $request)
+   {
+      $user_id = auth()->user()->id;
+
+      Cookie::queue(
+         'user_' . $user_id . '_from_customer_id',
+         $request->from_customer_id,
+         60*24*7
+      );
+
+      if ($request->has('to_customer_id'))
+      {
+         Cookie::queue(
+            'user_' . $user_id . '_to_customer_id',
+            $request->to_customer_id,
+            60*24*7
+         );
+      }
+
+      if ($request->has('from_date'))
+      {
+         Cookie::queue(
+            'user_' . $user_id . '_from_date',
+            $request->from_date,
+            60*24*7
+         );
+      }
+
+      if ($request->has('to_date'))
+      {
+         Cookie::queue(
+            'user_' . $user_id . '_to_date',
+            $request->to_date,
+            60*24*7
+         );
+      }
    }
 
    public function show_operations(Request $request)
