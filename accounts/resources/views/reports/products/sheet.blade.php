@@ -30,13 +30,13 @@
       </a>
    </span>
    <span class="bread-crumb">
-      <h4>Estadística de ventas</h4>
+      <h4>Ficha del artículo</h4>
    </span>
 </div>
 
 <div class="form-box mt-5">
    <div class="form-box-header">
-      <h3>Estadística de ventas</h3>
+      <h3>Ficha del artículo</h3>
    </div>
 
    <div class="form-box-body">
@@ -46,12 +46,7 @@
       <h2>
          Hasta: {{ $to_product->description }}&nbsp;&nbsp;&nbsp;[{{ $to_product->code }}]
       </h2>
-      <h5>
-         Desde {{ LocalFormat::date($from_date) }}
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         Hasta {{ LocalFormat::date($to_date) }}
-      </h5>
-      <h5 class="mt-3">
+      <h5 class="mt-3 mb-5">
          Fecha del listado: {{ LocalFormat::date(now()) }}
       </h5>
 
@@ -68,69 +63,48 @@
          </div>
          <div class="col-2 text-right">
             <span class="report-title-col">
-               Vendido
+               Última venta
             </span>
          </div>
          <div class="col-2 text-right">
             <span class="report-title-col">
-               Menor precio
-            </span>
-         </div>
-         <div class="col-2 text-right">
-            <span class="report-title-col">
-               Mayor precio
+               % de ventas
             </span>
          </div>
       </div>
 
-      @foreach ($sales as $sale)
+      @foreach ($details as $detail)
+
       <div class="row highlight">
          <div class="col-2">
             <span class="report-data-col">
-               {{ $sale['code'] }}
+               {{ $detail['code'] }}
             </span>
          </div>
          <div class="col-4">
             <span class="report-data-col">
-               {{ $sale['description'] }}
+               {{ $detail['description'] }}
             </span>
          </div>
          <div class="col-2 text-right">
             <span class="report-data-col">
-               {{ LocalFormat::float($sale['sold']) }}
+               {{ LocalFormat::date($detail['last_sale']) }}
             </span>
          </div>
          <div class="col-2 text-right">
             <span class="report-data-col">
-               {{ LocalFormat::currency($sale['min_price']) }}
-            </span>
-         </div>
-         <div class="col-2 text-right">
-            <span class="report-data-col">
-               {{ LocalFormat::currency($sale['max_price']) }}
+               {{ LocalFormat::float($detail['percent']) }}%
             </span>
          </div>
       </div>
-      @endforeach
 
-      <div class="row mt-2">
-         <div class="col-2">
-         </div>
-         <div class="col-4 text-right">
-            <span class="report-total-col">
-               Total Vendido:
-            </span>
-         </div>
-         <div class="col-2 text-right">
-            <span class="report-total-col">
-               {{ LocalFormat::float($total) }}
-            </span>
-         </div>
-      </div>
+      <hr>
+
+      @endforeach
 
       <div class="row mt-4">
          <div class="col-3">
-            <a href="{{ route('products.reports.parameters', 0) }}" class="btn btn-primary">
+            <a href="{{ route('products.reports.parameters', 2) }}" class="btn btn-primary">
                Otra Consulta
             </a>
          </div>

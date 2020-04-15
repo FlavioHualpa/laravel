@@ -57,15 +57,13 @@ class ProductReportController extends Controller
       $validated = $validator->validate();
       $view = $this->parameters[$report_id]['show_function']($request);
 
-      // $this->setCookies($request);
-      $this->setCookies($validated);
+      $this->setCookies($request);
 
       return $view;
    }
 
-   private function setCookies($request)
+   private function setCookies(Request $request)
    {
-      dd($request);
       $user_id = auth()->user()->id;
 
       Cookie::queue(
@@ -104,18 +102,10 @@ class ProductReportController extends Controller
 
    public function show_statistics(Request $request)
    {
-      $from_product = Product::findOrFail($request->from_product_id);
-      $to_product = Product::findOrFail($request->to_product_id);
-      $company_id = session('active_company')->id;
+      [ $from_product, $to_product, $products ] =
+         $this->getProductsList($request);
 
-      $products = Product::where('company_id', $company_id)
-         ->whereBetween('code', [
-            min($from_product->code, $to_product->code),
-            max($from_product->code, $to_product->code),
-         ])
-         ->orderBy('code')
-         ->get();
-      
+      $sales = [];
       $total = 0.0;
 
       foreach ($products as $product)
@@ -125,10 +115,13 @@ class ProductReportController extends Controller
                         min($request->from_date, $request->to_date),
                         max($request->from_date, $request->to_date),
                      ])
-                     ->with(['invoice_type', 'products'])
+                     ->with(['invoice_type'])
                      ->get();
 
-         $sold = $invoices->sum('item.quantity');
+         $sold = $invoices->sum(function ($invoice) {
+            $sign = $invoice->invoice_type->balance == 'inc' ? 1.0 : -1.0;
+            return $invoice->item->quantity * $sign;
+         });
 
          $sales[] = [
             'code' => $product->code,
@@ -149,5 +142,101 @@ class ProductReportController extends Controller
          'to_date' => Carbon::make($request->to_date),
          'total' => $total,
       ]);
+   }
+
+   public function show_invoices(Request $request)
+   {
+      $product = Product::findOrFail($request->from_product_id);
+      $invoices = $product->invoices()
+                  ->whereBetween('invoices.created_at', [
+                     min($request->from_date, $request->to_date),
+                     max($request->from_date, $request->to_date),
+                  ])
+                  ->with(['invoice_type'])
+                  ->latest()
+                  ->get();
+      
+      $sales = [];
+      $total = 0.0;
+
+      foreach ($invoices as $invoice)
+      {
+         $sign = $invoice->invoice_type->balance == 'inc' ? 1.0 : -1.0;
+         $sold = $invoice->item->quantity * $sign;
+
+         $sales[] = [
+            'date' => $invoice->created_at,
+            'name' => $invoice->invoice_type->name,
+            'number' => $invoice->number,
+            'sold' => $sold,
+            'customer' => $invoice->customer->name,
+         ];
+
+         $total += $sold;
+      }
+
+      return view('reports.products.invoices', [
+         'product' => $product,
+         'sales' => $sales,
+         'from_date' => Carbon::make($request->from_date),
+         'to_date' => Carbon::make($request->to_date),
+         'total' => $total,
+      ]);
+   }
+
+   public function show_sheet(Request $request)
+   {
+      [ $from_product, $to_product, $products ] =
+         $this->getProductsList($request);
+
+      $details = [];
+      $total = 0.0;
+
+      foreach ($products as $product)
+      {
+         $invoices = $product->invoices()
+                     ->with(['invoice_type'])
+                     ->get();
+
+         $sold = $invoices->sum(function ($invoice) {
+            $sign = $invoice->invoice_type->balance == 'inc' ? 1.0 : -1.0;
+            return $invoice->item->quantity * $sign;
+         });
+
+         $details[] = [
+            'code' => $product->code,
+            'description' => $product->description,
+            'sold' => $sold,
+            'percent' => 0.0,
+            'last_sale' => $invoices->max('created_at'),
+         ];
+
+         $total += $sold;
+      }
+
+      for ($i = 0; $i < count($details); $i++) {
+         $details[$i]['percent'] = 100.0 * $details[$i]['sold'] / $total;
+      }
+
+      return view('reports.products.sheet', [
+         'from_product' => $from_product,
+         'to_product' => $to_product,
+         'details' => $details,
+      ]);
+   }
+
+   private function getProductsList(Request $request)
+   {
+      $from_product = Product::findOrFail($request->from_product_id);
+      $to_product = Product::findOrFail($request->to_product_id);
+
+      $list = Product::orderedByCode()
+         ->whereBetween('code', [
+            min($from_product->code, $to_product->code),
+            max($from_product->code, $to_product->code),
+         ])
+         ->get();
+
+      return [ $from_product, $to_product, $list ];
    }
 }
