@@ -14,7 +14,7 @@ class ReactionsTableSeeder extends Seeder
       DB::table('reactions')
          ->insert([
             'name' => 'Me gusta',
-            'code' => '',
+            'emoji' => '👍🏽',
             'created_at' => now(),
             'updated_at' => now(),
          ]);
@@ -22,7 +22,7 @@ class ReactionsTableSeeder extends Seeder
       DB::table('reactions')
          ->insert([
             'name' => 'Me alegra',
-            'code' => '',
+            'emoji' => '😄',
             'created_at' => now(),
             'updated_at' => now(),
          ]);
@@ -30,7 +30,7 @@ class ReactionsTableSeeder extends Seeder
       DB::table('reactions')
          ->insert([
             'name' => 'Me emociona',
-            'code' => '',
+            'emoji' => '😢',
             'created_at' => now(),
             'updated_at' => now(),
          ]);
@@ -38,7 +38,7 @@ class ReactionsTableSeeder extends Seeder
       DB::table('reactions')
          ->insert([
             'name' => 'Me da igual',
-            'code' => '',
+            'emoji' => '😐',
             'created_at' => now(),
             'updated_at' => now(),
          ]);
@@ -46,7 +46,7 @@ class ReactionsTableSeeder extends Seeder
       DB::table('reactions')
          ->insert([
             'name' => 'Me aburre',
-            'code' => '',
+            'emoji' => '🥱',
             'created_at' => now(),
             'updated_at' => now(),
          ]);
@@ -54,7 +54,7 @@ class ReactionsTableSeeder extends Seeder
       DB::table('reactions')
          ->insert([
             'name' => 'Me entristece',
-            'code' => '',
+            'emoji' => '😩',
             'created_at' => now(),
             'updated_at' => now(),
          ]);

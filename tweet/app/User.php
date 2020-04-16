@@ -61,13 +61,52 @@ class User extends Authenticatable
       ->withTimeStamps();
    }
 
+   public function is_following(User $user)
+   {
+      return $this->follows()
+         ->where('follows_id', $user->id)
+         ->exists();
+   }
+
+   public function is_followed_by(User $user)
+   {
+      return $this->followed_by()
+         ->where('user_id', $user->id)
+         ->exists();
+   }
+
+   public function follows_status(User $user)
+   {
+      if ($this->is_following($user)) {
+         return 'Siguiendo a';
+      }
+      else if ($this->is_followed_by($user)) {
+         return 'Siendo seguido por';
+      }
+      else {
+         return 'Sin seguimientos';
+      }
+   }
+
    public function tweets()
    {
-      return $this->hasMany(Tweet::class);
+      return $this->hasMany(Tweet::class)->latest();
    }
 
    public function reactions()
    {
       return $this->hasMany(Reaction::class);
+   }
+
+   public function timeline()
+   {
+      $followers = $this->follows()
+         ->pluck('follows_id')
+         ->push($this->id);
+
+      return Tweet::whereIn('user_id', $followers)
+               ->with('reactions')
+               ->latest()
+               ->get();
    }
 }

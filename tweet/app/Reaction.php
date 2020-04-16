@@ -13,7 +13,7 @@ class Reaction extends Model
 
    public function tweets()
    {
-      return $this->morphedByMany(Tweet::class, 'reactable', 'reation_tweet')
+      return $this->morphedByMany(Tweet::class, 'reactable', 'reaction_tweet')
          ->withPivot('user_id')
          ->withTimeStamps();
    }

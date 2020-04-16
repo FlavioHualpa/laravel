@@ -22,4 +22,11 @@ class Tweet extends Model
          ->withPivot('user_id')
          ->withTimeStamps();
    }
+
+   public function grouped_reactions()
+   {
+      return $this->morphToMany(Reaction::class, 'reactable', 'reaction_tweet')
+         ->select('name', 'emoji', \DB::raw('count(name) AS count'))
+         ->groupBy('name', 'emoji', 'pivot_reactable_id', 'pivot_reactable_type', 'pivot_reaction_id');
+   }
 }
