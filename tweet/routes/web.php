@@ -14,10 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-   return view('welcome');
+   return redirect()->route('home');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/connections', 'HomeController@connections')->name('connections');
+Route::post('/follow/{user:username}', 'HomeController@follow')->name('follow');
+Route::post('/unfollow/{user:username}', 'HomeController@unfollow')->name('unfollow');
+Route::post('/invite/{user:username}', 'HomeController@invite')->name('invite');
 Route::get('/{user:username}', 'HomeController@following')->name('following');

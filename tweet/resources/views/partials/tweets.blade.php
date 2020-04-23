@@ -7,12 +7,12 @@
 
                      <div class="d-flex flex-column">
                         <h5 class="mb-0 font-weight-bold">
-                           <a href="{{ route('following', $tweet->user->username) }}">
+                           <a href="{{ route('following', $tweet->user->username) }}" class="text-dark">
                               {{ $tweet->user->name }}
                            </a>
                         </h5>
                         <small class="text-muted mb-2">
-                           🕓 {{ now()->diffForHumans($tweet->created_at) }}
+                           🕓 {{ $tweet->created_at->diffForHumans(now()) }}
                         </small>
                         
                         <p class="lead mb-1">

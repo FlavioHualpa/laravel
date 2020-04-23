@@ -8,8 +8,15 @@
             <img src="https:\\i.pravatar.cc\200?u={{ $user->email }}" alt="{{ $user->name }}" style="width: 120px;" class="rounded mr-3">
 
             <div>
-               <h5>{{ auth()->user()->follows_status($user) }}</h5>
-               <h3 class="mb-0">{{ $user->name }}</h3>
+               <h5>
+                  {{ auth()->user()->follows_status($user) }}
+               </h5>
+               <h3>
+                  {{ $user->name }}
+               </h3>
+               <h5>
+                  {{ $user->tweets()->count() }} tweets
+               </h5>
             </div>
          </div>
       </div>

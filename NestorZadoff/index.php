@@ -22,9 +22,19 @@
         $contador = intval(fgets($fp));
         fclose($fp);
 
+        $record = 
+            date('d.m.Y') .
+            ": " . $contador .
+            " => " . ($contador + 1) .
+            "  [" . $_SERVER['REMOTE_ADDR'] . "]\n";
+
+        $fp = fopen('history.txt', 'a');
+        fwrite($fp, $record);
+        fclose($fp);
+
         ++$contador;
 
-        $fp = fopen($archivo,"w+");
+        $fp = fopen($archivo,"w");
         fwrite($fp, $contador);
         fclose($fp);
     }
