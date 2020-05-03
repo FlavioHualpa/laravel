@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.gallery {
+	padding: 10px;
+	margin: 30px auto;
+	border-radius: 10px;
+	box-shadow: 0 0 8px #808080;
+}
+
+.gallery-title {
+	text-align: center;
+}
+
+.gallery-images {
+	margin: 20px auto 0;
+	background-color: #e0e0e0;
+	overflow: hidden;
+	position: relative;
+}
+
+.gallery-images img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	position: absolute;
+}
+
+.gallery-dots {
+	padding: 10px;
+	text-align: center;
+}
+
+.gallery-dot {
+	width: 16px;
+	height: 6px;
+	border-radius: 100px;
+	background-color: rgba(0, 192, 192, 0.2);
+	padding: 0 4px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.gallery-dot:hover {
+	background-color: rgba(0, 192, 192, 0.4);
+}
+
+.text-center {
+	text-align: center;
+}
+
+.slideLeft {
+	animation-name: slideLeft;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.slideRight {
+	animation-name: slideRight;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slideLeft
+{
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes slideRight
+{
+	to {
+		transform: translateX(100%);
+	}
+}

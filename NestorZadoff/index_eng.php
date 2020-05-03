@@ -37,7 +37,12 @@
                     <br />
                     <div id="boton_curric" class="div_selector_on" onclick="CambiarPagina('curric')">CURRICULUM</div>
                     <div id="boton_transc" class="div_selector_off" onclick="CambiarPagina('transc')">TRANSCRIPTIONS</div>
-                    <div id="boton_articulos" class="div_selector_off" onclick="CambiarPagina('articulos')">MUSICOLOGICAL ARTICLES</div>
+                    <div id="boton_articulos" class="div_selector_off green_highlight tooltip" onclick="CambiarPagina('articulos')">
+                        MUSICOLOGICAL ARTICLES
+                        <div class="tooltip-text">
+                            New Publication
+                        </div>
+                    </div>
 					<div id="boton_arreglos1" class="div_selector_off green_highlight tooltip" onclick="CambiarPagina('arreglos1')">
                         CHORAL ARRANGEMENTS (FREE OF CHARGE)
                         <div class="tooltip-text">
@@ -295,14 +300,19 @@
                     <br />
                     <p class="titulo_panel"><u>MUSICOLOGICAL ARTICLES</u></p><br /><br />
                     <ul id="obras_artmus">
+                        <li class="link_panel" name="pdfnz" publicado="5/2/2020"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Comprehensive Analysis of Two Emblematic Renaissance Choral Works.pdf">Comprehensive Analysis of Two Emblematic Renaissance Choral Works</a></li>
+                        <li class="link_panel" name="pdfnz" publicado="5/2/2020"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Text underlay in 16th century vocal music.pdf">Text underlay in 16th century vocal music</a></li>
+                        <li class="link_panel" name="pdfnz" publicado="5/2/2020"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Musica Ficta in 16th century vocal works.pdf">Musica Ficta in 16th century vocal works</a></li>
                         <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Josquin des Pres (english).pdf">Josquin Desprez - Musicological info</a> (Part I)</li>
                         <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Los estilos de Josquin (english).pdf">The different styles in Josquin Desprez chansons</a> (Part II)</li>
                         <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Damus Nro 433.pdf">Entre dos mansos arroyos, spanish madrigal from the beginnings of XVII century, Damus-UNA digital magazine No 433, 2012</a></li>
 						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Cantata 1994.pdf">Approaching Palestrina and Lassus, Cantata magazine, 1994</a></li>
                         <li>&nbsp;</li>
-                        <li class="texto_panel">Coming soon:</li>
-                        <li class="texto_panel">• Placement of the text in 16th century works: problems and solutions</li>
-                        <li class="texto_panel">• Unwritten sensibilisations in 16th century originals: which ones and under what circumstances to apply them?</li>
+                        <li class="texto_panel">References:</li>
+                        <li>&nbsp;</li>
+                        <li class="texto_panel"><img src="img/art-ref-icon.png" class="icono-pdf" />• Placement of the text in 16th century works: problems and solutions<br><span class="referencia_art">See <em>Text underlay in 16th century vocal music</em></span></li>
+                        <li>&nbsp;</li>
+                        <li class="texto_panel"><img src="img/art-ref-icon.png" class="icono-pdf" />• Unwritten sensibilisations in 16th century originals: which ones and under what circumstances to apply them?<br><span class="referencia_art">See <em>Musica Ficta in 16th century vocal works</em></span></li>
                     </ul>
                     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
