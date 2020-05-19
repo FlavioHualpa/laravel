@@ -1,6 +1,6 @@
 window.onload = function() {
 	let gal = new Gallery('frutas', 256, 256)
-	gal.slideDir = 'right'
+	gal.slideDir = 'left'
 	gal.slide()
 }
 
@@ -11,12 +11,16 @@ function Gallery(galleryId, sWidth, sHeight)
 			slideDir == 'right' ? slideRight() : slideLeft()
 		}, 2000)
 	}
-	
+
+	const NEXT = -1
+	const PREVIOUS = -2
+
 	let slides = null
 	let slidesIndexes = null
 	let slideWidth = null
 	let slideHeight = null
 	let slideDir = 'left'
+	let activeSlide = 0
 	let thisInstance = this
 
 	Object.defineProperty(this, 'slideWidth', {
@@ -39,6 +43,7 @@ function Gallery(galleryId, sWidth, sHeight)
 
 	let galleryDiv = document.querySelector(`#${galleryId}`)
 	let slidesDiv = galleryDiv.querySelector('.gallery-images')
+	let dotsDiv = galleryDiv.querySelector('.gallery-dots')
 
 	slides = slidesDiv.querySelectorAll('img')
 	slidesIndexes = []
@@ -60,10 +65,27 @@ function Gallery(galleryId, sWidth, sHeight)
 			adjustImagesOffsets
 		)
 
+	addGalleryDots(dotsDiv)
+
 
 	//
 	// funciones de apoyo
 	//
+
+	function addGalleryDots()
+	{
+		let n = slides.length
+
+		for (let i = 0; i < n; i++)
+		{
+			let dot = document.createElement('span')
+			dot.classList.add('gallery-dot')
+			if (i == 0)
+				dot.classList.add('active')
+			dot.setAttribute('data-image-id', i)
+			dotsDiv.appendChild(dot)
+		}
+	}
 
 	function slideLeft()
 	{
@@ -104,8 +126,32 @@ function Gallery(galleryId, sWidth, sHeight)
 			}
 		})
 
-		if (slideDir == 'left')
+		if (slideDir == 'left') {
+			toggleActiveDot(NEXT)
 			moveHead()
+		}
+		else {
+			toggleActiveDot(PREVIOUS)
+		}
+	}
+
+	function toggleActiveDot(index)
+	{
+		let next
+
+		if (index === NEXT) {
+			next = (activeSlide + 1) % slides.length
+		}
+		else if (index === PREVIOUS) {
+			next = (activeSlide + slides.length - 1) % slides.length
+		}
+		else {
+			next = index
+		}
+
+		dotsDiv.children[activeSlide].classList.remove('active')
+		dotsDiv.children[next].classList.add('active')
+		activeSlide = next
 	}
 
 	function moveTail()

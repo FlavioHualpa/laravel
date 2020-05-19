@@ -19,3 +19,39 @@
    background-color: #f0f0f0;
    border-radius: 5px;
 }
+
+.tab-component {
+   
+}
+
+.tab-stops {
+   display: flex;
+   align-items: flex-start;
+}
+
+.tab-stop {
+   font-size: 20px;
+   font-weight: bold;
+   color: rgb(64, 42, 0);
+   padding: 12px 30px;
+   border-top: 1px solid orange;
+   border-left: 1px solid orange;
+   border-right: 1px solid orange;
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+   background-image: linear-gradient(rgb(250, 244, 233), rgb(250, 214, 148));
+   margin-right: -10px;
+   cursor: pointer;
+}
+
+.tab-stop:hover {
+   background-image: linear-gradient(hsl(39, 63%, 88%), hsl(39, 91%, 66%));
+}
+
+.tab-page {
+   height: 100px;
+   border-left: 1px solid orange;
+   border-right: 1px solid orange;
+   border-bottom: 1px solid orange;
+   background-color: rgb(250, 214, 148);
+}

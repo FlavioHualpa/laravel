@@ -45,12 +45,13 @@
 	height: 6px;
 	border-radius: 100px;
 	background-color: rgba(0, 192, 192, 0.2);
-	padding: 0 4px;
+	margin: 0 2px;
 	display: inline-block;
 	cursor: pointer;
 }
 
-.gallery-dot:hover {
+.gallery-dot:hover,
+.gallery-dot.active {
 	background-color: rgba(0, 192, 192, 0.4);
 }
 

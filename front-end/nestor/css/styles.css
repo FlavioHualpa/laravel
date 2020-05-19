@@ -15,6 +15,15 @@ p {
    margin-bottom: 18px;
 }
 
+a {
+   text-decoration: none;
+   color: #800000;
+}
+
+a:hover {
+   color: #bb7024;
+}
+
 .banner {
    height: 170px;
    background-image: url('../img/hd_bkg.jpg');
@@ -56,12 +65,12 @@ p {
 }
 
 .navigator .menu .slider {
-   width: 1000px;
+   width: 2000px;
 }
 
 .navigator .menu .slider ul {
    list-style-type: none;
-   overflow: hidden;
+   overflow: clip;
 }
 
 .navigator .menu .slider ul li {
@@ -69,7 +78,8 @@ p {
    font-size: 20px;
    text-transform: uppercase;
    cursor: pointer;
-   float: left;
+   display: inline-block;
+   position: relative;
 }
 
 .navigator .menu .slider ul li:hover {
@@ -79,6 +89,16 @@ p {
 .navigator .menu .slider ul li a {
    color: #800000;
    text-decoration: none;
+}
+
+.navigator .menu .slider .submenu {
+   position: absolute;
+   top: 50%;
+}
+
+.navigator .menu .slider .submenu li {
+   display: block;
+   padding: 12px 0;
 }
 
 .navigator .drop-down-menu {

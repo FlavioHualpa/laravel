@@ -1,18 +1,29 @@
 <?php
 
 return [
-   // menú
+
+   //=================
+   // MENU
+   //=================
+
    'menu.opt.curric' => 'curriculum',
    'menu.opt.trans' => 'transcripciones',
    'menu.opt.art' => 'artículos',
    'menu.opt.arr' => 'arreglos',
+   'menu.opt.free' => 'gratuitos',
+   'menu.opt.published' => 'publicados',
    'menu.opt.perf' => 'conciertos',
    'menu.opt.contact' => 'contacto',
+   'menu.opt.lang' => 'idioma',
    'menu.opt.esp' => 'español',
    'menu.opt.eng' => 'inglés',
    'menu.opt.fra' => 'francés',
 
-   // curriculum
+
+   //=================
+   // CURRICULUM
+   //=================
+
    'curric.text.1' => 'Nació en Buenos Aires, Argentina, en 1952.',
 
    'curric.text.2' => 'Es <strong>Profesor Nacional de Música</strong> egresado del Conservatorio Nacional y <strong>Licenciado en Artes Musicales</strong> (Universidad Nacional de las Artes Departamento de Artes Musicales, UNA-DAMUS, www.artesmusicales.org).<br>Estudió Armonía con Erwin Leuchter y Dirección Coral con Antonio Russo en el Conservatrio J.J.Castro (La Lucila). Entre 1976-1979 fue becado por el Gobierno Francés.<br>Estudió con Jean-Michel Vaccaro, y obtuvo en 1979 el título de <strong>Doctor en Letras y Ciencias Humanas, especialidad Musicología</strong> en la <em>Université François Rabelais</em> de Tours.<br>Regresó ese año a Argentina, y se reinsertó en el medio musical al frente de coros y conjuntos de cámara.',
