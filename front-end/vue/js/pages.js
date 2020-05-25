@@ -36,15 +36,21 @@ window.onload = function () {
       },
 
       mounted() {
-         console.log(this.tabStops.length)
+         for (index = 0, z = 10; index < this.totalTabs; index++, z--) {
+            this.tabStops[index].index = index;
+            this.tabStops[index].z = z;
+         }
       },
 
-      methods: {
-         zIndex(index) {
+      methods:
+      {
+         zIndex(index)
+         {
             return `z-index: ${index};`
          },
 
-         changeToTab(index) {
+         changeToTab(index)
+         {
             let z = 10
 
             this.tabStops[index].z = z
@@ -60,6 +66,8 @@ window.onload = function () {
                z--
                this.tabStops[i].z = z
             }
+
+            this.activeTab = index
          }
       },
 

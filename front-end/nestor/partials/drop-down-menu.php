@@ -17,6 +17,8 @@
                   <ul class="submenu">
                      <li>
                         <a href="#"><?= lang('menu.opt.free') ?></a>
+                     </li>
+                     <li>
                         <a href="#"><?= lang('menu.opt.published') ?></a>
                      </li>
                   </ul>
@@ -32,6 +34,17 @@
                <li>
                   <i class="fas fa-angle-double-right drop-down-only"></i>
                   <a href="#"><?= lang('menu.opt.lang') ?></a>
+                  <ul class="submenu">
+                     <li>
+                        <a href="#"><?= lang('menu.opt.esp') ?></a>
+                     </li>
+                     <li>
+                        <a href="#"><?= lang('menu.opt.eng') ?></a>
+                     </li>
+                     <li>
+                        <a href="#"><?= lang('menu.opt.fra') ?></a>
+                     </li>
+                  </ul>
                </li>
                <!-- <li class="drop-down-only">
                </li>

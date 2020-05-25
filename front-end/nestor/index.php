@@ -14,6 +14,9 @@
    <div class="container">
       <img src="img\retrato2018.png" alt="Néstor Zadoff" class="portrait">
       <section class="text">
+         <h2 class="title">
+            Néstor Zadoff
+         </h2>
          <p>
             <?= lang('curric.text.1') ?>
          </p>

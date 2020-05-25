@@ -7,6 +7,7 @@
    <link rel="stylesheet" href="css/main.css">
    <link rel="stylesheet" href="css/ui.css">
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+   <script src="https://kit.fontawesome.com/487b4db8ef.js" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body style="background-color: #f2f2f2">
@@ -15,6 +16,7 @@
          <div class="tab-stops">
             <span v-for="tabStop in tabStops"
                class="tab-stop"
+               :class="{ selected: activeTab == tabStop.index }"
                :style="zIndex(tabStop.z)"
                v-text="tabStop.title"
                @click="changeToTab(tabStop.index)"
@@ -23,6 +25,12 @@
          </div>
          <div class="tab-pages">
             <div class="tab-page">
+               <!-- <div class="list-row">
+                  <list title="Todas" filter=""></list>
+                  <list title="Incompletas" filter="incomplete"></list>
+                  <list title="Completas" filter="complete"></list>
+               </div> -->
+               <list-panel></list-panel>
             </div>
          </div>
       </div>
@@ -41,6 +49,9 @@
       </div>
    </div>
 
+   <p class="my-4"> </p>
+
    <script src="js/pages.js"></script>
+   <script src="js/lists.js"></script>
 </body>
 </html>

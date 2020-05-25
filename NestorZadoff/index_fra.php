@@ -7,10 +7,10 @@
 
 <link href="style_00.css" rel="stylesheet" type="text/css">
 <link href="style_01.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 
 <body>
-    <script type="text/javascript" src="acciones.js"></script>
 
 	<?php
 
@@ -164,17 +164,17 @@
                     <ul id="obras_despres" style="display: none;">
                     <span class="esp_lista">&lt;&lt; Pour voir les articles concernant Josquin aller à ARTICLES MUSICOLOGIQUES</span>
 						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\portada_josquin.png">Couverture originale de l'édition</a></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=42">Cueur langoreux</a> à 5 (SATTB) - <em>(7* livre des chansons, Susato, Anvers, 1545)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=47">En non saichant</a> à 5 (SATTB) - <em>(7* livre des chansons, Susato, Anvers, 1545, attribution douteuse)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=41">Ie me complains</a> à 5 (SATTB) - <em>(7* livre des chansons, Susato, Anvers, 1545)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=27">Parfons regretz</a> à 5 (SSATB) - <em>(7* livre des chansons, Susato, Anvers, 1545)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=56">Regretz sans fin</a> à 6 (SATTTB) - <em>(7* livre des chansons, Susato, Anvers, 1545, version dans le ton d'origine)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=43">Regretz sans fin</a> à 6 (SSAATB) - <em>(7* livre des chansons, Susato, Anvers, 1545, version transposée pour choeur mixte)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=64">Cueurs desolez</a> à 5 (SATTB) - <em>(36* Livre, XXX Chansons musicales, P. Attaingnant, Paris, 1549)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=48">Je ne me puis tenir d'aimer</a> à 5 (SATTB) - <em>(36* Livre, XXX Chansons musicales, P. Attaingnant, Paris, 1549)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=69">Plus nulz regretz</a> à 4 (ATTB) - <em>(36* Livre, XXX Chansons musicales, P. Attaingnant, Paris, 1549)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=52">Cueurs desolez</a> à 4 (STTB) - <em>(attribué à Josquin et/ou Benedictus Appenzeller dans diverses sources d'époque, y compris Attaingnant, 1534, Paris, version dans le ton d'origine)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=53">Cueurs desolez</a> à 4 (SATB) - <em>(attribué à Josquin et/ou Benedictus Appenzeller dans diverses sources d'époque, y compris Attaingnant, 1534, Paris, version transposée pour choeur mixte)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=42">Cueur langoreux</a> à 5 (SATTB) - <em>(7* livre des chansons, Susato, Anvers, 1545)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=47">En non saichant</a> à 5 (SATTB) - <em>(7* livre des chansons, Susato, Anvers, 1545, attribution douteuse)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=41">Ie me complains</a> à 5 (SATTB) - <em>(7* livre des chansons, Susato, Anvers, 1545)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=27">Parfons regretz</a> à 5 (SSATB) - <em>(7* livre des chansons, Susato, Anvers, 1545)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=56">Regretz sans fin</a> à 6 (SATTTB) - <em>(7* livre des chansons, Susato, Anvers, 1545, version dans le ton d'origine)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=43">Regretz sans fin</a> à 6 (SSAATB) - <em>(7* livre des chansons, Susato, Anvers, 1545, version transposée pour choeur mixte)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=64">Cueurs desolez</a> à 5 (SATTB) - <em>(36* Livre, XXX Chansons musicales, P. Attaingnant, Paris, 1549)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=48">Je ne me puis tenir d'aimer</a> à 5 (SATTB) - <em>(36* Livre, XXX Chansons musicales, P. Attaingnant, Paris, 1549)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=69">Plus nulz regretz</a> à 4 (ATTB) - <em>(36* Livre, XXX Chansons musicales, P. Attaingnant, Paris, 1549)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=52">Cueurs desolez</a> à 4 (STTB) - <em>(attribué à Josquin et/ou Benedictus Appenzeller dans diverses sources d'époque, y compris Attaingnant, 1534, Paris, version dans le ton d'origine)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=53">Cueurs desolez</a> à 4 (SATB) - <em>(attribué à Josquin et/ou Benedictus Appenzeller dans diverses sources d'époque, y compris Attaingnant, 1534, Paris, version transposée pour choeur mixte)</em></li>
                     </ul>
                     <br><br>
 
@@ -182,18 +182,18 @@
                     <ul id="obras_cornet" style="display: none;">
 						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Severin Cornet (français).pdf">Biographie</a></li>
 						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\portada_cornet.png">Couverture originale de l'édition</a></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=49">Che t'aggio fatto</a></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=07">Chaggio perduto</a></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=08">Che giova saettar</a></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=19">Hor va canzona</a></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=54">O Lucia (partie 1)</a></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=55">O Lucia (partie 2)</a></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=28">Parmi di star</a></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=30">Se per sentir</a></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=51">Sei tanto gratiosa</a></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=31">Signora Mia</a></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=32">Sio fosse certo</a></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=34">Tu m'arrobasti</a></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=49">Che t'aggio fatto</a></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=07">Chaggio perduto</a></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=08">Che giova saettar</a></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=19">Hor va canzona</a></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=54">O Lucia (partie 1)</a></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=55">O Lucia (partie 2)</a></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=28">Parmi di star</a></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=30">Se per sentir</a></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=51">Sei tanto gratiosa</a></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=31">Signora Mia</a></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=32">Sio fosse certo</a></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=34">Tu m'arrobasti</a></li>
                     </ul>
                     <br /><br />
 
@@ -201,63 +201,63 @@
                     <ul id="obras_danola" style="display: none;">
 						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Giovanni Domenico (français).pdf">Biographie et commentaires</a></li>
                         <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\portada_nola.png">Couverture originale de l'édition</a></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=09">Chi dirra</a> - <em>Canzon villanesca (ed. 1541)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=24">Medici nui siam</a> - <em>Canzon villanesca (ed. 1541)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=25">O dolce vita mia</a> - <em>Canzon villanesca (ed. 1541)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=26">Oyme dolente</a> - <em>Canzon villanesca (ed. 1541)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=09">Chi dirra</a> - <em>Canzon villanesca (ed. 1541)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=24">Medici nui siam</a> - <em>Canzon villanesca (ed. 1541)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=25">O dolce vita mia</a> - <em>Canzon villanesca (ed. 1541)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=26">Oyme dolente</a> - <em>Canzon villanesca (ed. 1541)</em></li>
                     </ul>
                     <br /><br />
 
                     <p class="titulo_panel">ORLANDE DE LASSUS (1532-1594)&nbsp;&nbsp;<img id="carpeta_lassus" src="img/carpeta.png" alt="carpeta" height="24" style="vertical-align: middle; cursor: pointer;" onclick="AlternarCarpeta('lassus')" /><!-- <img src="img/animated-arrow-image-0313.gif" alt="atención"><span class="etiqueta_nuevo">NOUVEAUX TÉLÉCHARGEMENTS</span> --></p><br />
                     <ul id="obras_lassus" style="display: none;">
 						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="pdfs\Portada Lassus.pdf">Couverture de la Mellange de Orlande de Lassus</a></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=02">Ave mater</a> - <em>(Motete, Magnum Opus Musicum, München, 1604)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=14">Dessus le marche</a> - <em>(Continuation du Mellange d'Orlande de Lassus, Le Roy & Ballard, 1584, Paris)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=92">Du cors absent</a> - <em>(Chanson, Mellange d'Orlande de Lassus, París, 1570, Le Roy & Ballard)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=16">En espoir vis</a> - <em>(Chanson, Mellange d'Orlande de Lassus, Paris, 1570, Le Roy & Ballard)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=21">La morre est jeu</a> - <em>(Chanson, Mellange d'Orlande de Lassus, Paris, 1570, Le Roy & Ballard)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=93">Un avocat dit a sa femme</a> - <em>(Chanson, Mellange d'Orlande de Lassus, París, 1570, Le Roy & Ballard)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="10/13/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=98">La cortesia</a> - <em>(Villanella, Le 14ème livre des chansons, ed. Susato, Anvers, 1555)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="10/13/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=94">Per pianto</a> - <em>(Madrigal, Le 14ème livre des chansons, ed. Susato, Anvers, 1555)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=35">Tu traditora</a> - <em>(Villanella, Le 14ème livre des chansons, ed. Susato, Anvers, 1555)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=02">Ave mater</a> - <em>(Motete, Magnum Opus Musicum, München, 1604)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=14">Dessus le marche</a> - <em>(Continuation du Mellange d'Orlande de Lassus, Le Roy & Ballard, 1584, Paris)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=92">Du cors absent</a> - <em>(Chanson, Mellange d'Orlande de Lassus, París, 1570, Le Roy & Ballard)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=16">En espoir vis</a> - <em>(Chanson, Mellange d'Orlande de Lassus, Paris, 1570, Le Roy & Ballard)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=21">La morre est jeu</a> - <em>(Chanson, Mellange d'Orlande de Lassus, Paris, 1570, Le Roy & Ballard)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=93">Un avocat dit a sa femme</a> - <em>(Chanson, Mellange d'Orlande de Lassus, París, 1570, Le Roy & Ballard)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="10/13/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=98">La cortesia</a> - <em>(Villanella, Le 14ème livre des chansons, ed. Susato, Anvers, 1555)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="10/13/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=94">Per pianto</a> - <em>(Madrigal, Le 14ème livre des chansons, ed. Susato, Anvers, 1555)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=35">Tu traditora</a> - <em>(Villanella, Le 14ème livre des chansons, ed. Susato, Anvers, 1555)</em></li>
                     </ul>
                     <br /><br />
 
                     <p class="titulo_panel">CHANSONS FRANÇAISES D'AUTEURS DIVERS&nbsp;&nbsp;<img id="carpeta_francesas" src="img/carpeta.png" alt="carpeta" height="24" style="vertical-align: middle; cursor: pointer;" onclick="AlternarCarpeta('francesas')" /><!-- <img src="img/animated-arrow-image-0313.gif" alt="atención"><span class="etiqueta_nuevo">NOUVEAUX TÉLÉCHARGEMENTS</span> --></p><br />
                     <ul id="obras_francesas" style="display: none;">
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=50">Avant l'aymer</a> - <em>(Pierre Sandrin -Pierre Regnault-, ed 18* livre des chansons, Attaingnant, Paris 1545)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=44">De trop aymer</a> - <em>(Anonyme, 27 chansons musicales, P. Attaingnant, Paris, 1534)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=46">Es tu bien malade</a> - <em>(Anonyme, 27 chansons musicales, P. Attaingnant, Paris, 1534)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=87">Fyez vous y si vous voulez</a> - <em>(Clement Janequin (ca. 1485-1558), 26 Chansons a 4 parties, Attaingnant 1534, Paris)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=89">Ie n'ay point plus</a> - <em>(Claudin de Sermisy, ed 18* livre des chansons, Attaingnant, Paris 1545)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=90">Il n'est que d'estre sur l'herbette</a> - <em>(Claude Gervaise, 16* livre des chansons, N. du Chemin, Paris 1550)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=91">Perdre le sens devant vous</a> - <em>(Claude le Jeune, Le Printemps, R. Ballard, Paris 1603)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=88">Rigueur me tient</a> - <em>(Claudin de Sermisy, ed 18* livre des chansons, Attaingnant, Paris 1545)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=36">Ventz hardis</a> - <em>(Clement Janequin (ca. 1485-1558), 1552, Paris, N. Du Chemin)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=38">Voulant honneur</a> - <em>(Pierre Sandrin -Pierre Regnault-, ed 18* livre des chansons, Attaingnant, Paris 1545)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=50">Avant l'aymer</a> - <em>(Pierre Sandrin -Pierre Regnault-, ed 18* livre des chansons, Attaingnant, Paris 1545)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=44">De trop aymer</a> - <em>(Anonyme, 27 chansons musicales, P. Attaingnant, Paris, 1534)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=46">Es tu bien malade</a> - <em>(Anonyme, 27 chansons musicales, P. Attaingnant, Paris, 1534)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=87">Fyez vous y si vous voulez</a> - <em>(Clement Janequin (ca. 1485-1558), 26 Chansons a 4 parties, Attaingnant 1534, Paris)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=89">Ie n'ay point plus</a> - <em>(Claudin de Sermisy, ed 18* livre des chansons, Attaingnant, Paris 1545)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=90">Il n'est que d'estre sur l'herbette</a> - <em>(Claude Gervaise, 16* livre des chansons, N. du Chemin, Paris 1550)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=91">Perdre le sens devant vous</a> - <em>(Claude le Jeune, Le Printemps, R. Ballard, Paris 1603)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=88">Rigueur me tient</a> - <em>(Claudin de Sermisy, ed 18* livre des chansons, Attaingnant, Paris 1545)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=36">Ventz hardis</a> - <em>(Clement Janequin (ca. 1485-1558), 1552, Paris, N. Du Chemin)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=38">Voulant honneur</a> - <em>(Pierre Sandrin -Pierre Regnault-, ed 18* livre des chansons, Attaingnant, Paris 1545)</em></li>
                     </ul>
                     <br /><br />
 
                     <p class="titulo_panel">MADRIGAUX ET VILLANELLES ITALIENNES D'AUTEURS DIFFÉRENTS&nbsp;&nbsp;<img id="carpeta_italianas" src="img/carpeta.png" alt="carpeta" height="24" style="vertical-align: middle; cursor: pointer;" onclick="AlternarCarpeta('italianas')" /><!-- <img src="img/animated-arrow-image-0313.gif" alt="atención"><span class="etiqueta_nuevo">NOUVEAUX TÉLÉCHARGEMENTS</span> --></p><br />
                     <ul id="obras_italianas" style="display: none;">
-                        <li class="link_panel" name="pdfnz" publicado="10/13/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=97">Gentil madonna</a> - <em>(Filippo Azzaiolo, Villotta, 1557)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="10/13/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=96">La piaga ch'ho nel core</a> - <em>(Claudio Monteverdi, IV livre de madrigaux, 1603)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="10/13/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=95">Mirate che mi fa</a> - <em>(Salomone Rossi, Canzonetta, 1589)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=57">Quando per mio destin</a> - <em>(Nicolo Vicentino, 5* livre de madrigaux, 1572)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=58">Vecchie letrose</a> - <em>(Adrian Willaert, Canzone villanesche, ed. A. Gardane, Venise, 1545)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="10/13/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=97">Gentil madonna</a> - <em>(Filippo Azzaiolo, Villotta, 1557)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="10/13/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=96">La piaga ch'ho nel core</a> - <em>(Claudio Monteverdi, IV livre de madrigaux, 1603)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="10/13/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=95">Mirate che mi fa</a> - <em>(Salomone Rossi, Canzonetta, 1589)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=57">Quando per mio destin</a> - <em>(Nicolo Vicentino, 5* livre de madrigaux, 1572)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=58">Vecchie letrose</a> - <em>(Adrian Willaert, Canzone villanesche, ed. A. Gardane, Venise, 1545)</em></li>
                     </ul>
                     <br /><br />
 
                     <p class="titulo_panel">MADRIGAUX ET VILLANELLES ESPAGNOLS D'AUTEURS DIFFÉRENTS&nbsp;&nbsp;<img id="carpeta_españolas" src="img/carpeta.png" alt="carpeta" height="24" style="vertical-align: middle; cursor: pointer;" onclick="AlternarCarpeta('españolas')" /><!-- <img src="img/animated-arrow-image-0313.gif" alt="atención"><span class="etiqueta_nuevo">NOUVEAUX TÉLÉCHARGEMENTS</span> --></p><br />
                     <ul id="obras_españolas" style="display: none;">
-						<li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=82">Corten espadas afiladas</a> - <em>(Anonyme, Cancionero de Medinaceli (ca. 1540-70))</em></li>
-						<li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=77">Gasajemonos de husía</a> - <em>(Juan del Encina, Cancionero Musical de Palacio (ca. 1470-1520))</em></li>
-						<li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=76">Las tristesas no me espantan</a> - <em>(Anonyme, Cancionero Musical de Palacio (ca. 1470-1520))</em></li>
-						<li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=81">Ojos garços a la niña</a> - <em>(Anonyme, Cancionero de Uppsala (ed. 1556))</em></li>
-						<li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=78">Quédate carillo adiós</a> - <em>(Juan del Encina, Cancionero Musical de Palacio (ca. 1470-1520))</em></li>
-						<li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=80">Si la noche haze escura</a> - <em>(Anonyme, Cancionero de Uppsala (ed. 1556))</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=75">Teresica hermana</a> - <em>(Attribué à Mateo Flecha, Cancionero de Uppsala (ed. 1556))</em></li>
-						<li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=79">Todo mi bien e perdido</a> - <em>(Juan Ponce, Cancionero Musical de Palacio (ca. 1470-1520))</em></li>
+						<li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=82">Corten espadas afiladas</a> - <em>(Anonyme, Cancionero de Medinaceli (ca. 1540-70))</em></li>
+						<li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=77">Gasajemonos de husía</a> - <em>(Juan del Encina, Cancionero Musical de Palacio (ca. 1470-1520))</em></li>
+						<li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=76">Las tristesas no me espantan</a> - <em>(Anonyme, Cancionero Musical de Palacio (ca. 1470-1520))</em></li>
+						<li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=81">Ojos garços a la niña</a> - <em>(Anonyme, Cancionero de Uppsala (ed. 1556))</em></li>
+						<li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=78">Quédate carillo adiós</a> - <em>(Juan del Encina, Cancionero Musical de Palacio (ca. 1470-1520))</em></li>
+						<li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=80">Si la noche haze escura</a> - <em>(Anonyme, Cancionero de Uppsala (ed. 1556))</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=75">Teresica hermana</a> - <em>(Attribué à Mateo Flecha, Cancionero de Uppsala (ed. 1556))</em></li>
+						<li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=79">Todo mi bien e perdido</a> - <em>(Juan Ponce, Cancionero Musical de Palacio (ca. 1470-1520))</em></li>
                     </ul>
                     <br /><br />
 
@@ -318,80 +318,80 @@
 
                     <p class="titulo_panel">ASTOR PIAZZOLLA</p><br>
                     <ul id="obras_piazzolla">
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=01">Años de soledad</a> - <em>SATB (Astor Piazzolla, 2012)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/15/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=105">Buenos Aires hora cero</a> - <em>SSAA (Astor Piazzolla, 2014)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=05">Buenos Aires hora cero</a> - <em>TTBB (Astor Piazzolla, 2005)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=10">Coral</a> - <em>SATB (Astor Piazzolla, 2000)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=37">Verano porteño</a> - <em>SATB (Astor Piazzolla, 1974)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=01">Años de soledad</a> - <em>SATB (Astor Piazzolla, 2012)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/15/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=105">Buenos Aires hora cero</a> - <em>SSAA (Astor Piazzolla, 2014)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=05">Buenos Aires hora cero</a> - <em>TTBB (Astor Piazzolla, 2005)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=10">Coral</a> - <em>SATB (Astor Piazzolla, 2000)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=37">Verano porteño</a> - <em>SATB (Astor Piazzolla, 1974)</em></li>
                     </ul>
                     <br><br>
                     
                     <p class="titulo_panel">MARÍA ELENA WALSH</p><br>
                     <ul id="obras_mewalsh">
-                        <li class="link_panel" name="pdfnz" publicado="4/21/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=106">Adivina adivinador</a> - <em>SA (M. E. Walsh, 2019)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=15">Canción de la vacuna (el brujito de Gulubú)</a> - <em>SATB (M. E. Walsh, 1982)</em> <img src="img/award-icon.png" class="icono-premio"></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=06">Canción del estornudo (el otro Mambrú)</a> - <em>SATB (M. E. Walsh, 1983)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="3/14/2020"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=108">Canción del jardinero</a> - <em>SA (M. E. Walsh, 1985/2020)</em> <img src="img/award-icon.png" class="icono-premio"></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/2/2020"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=109">Canción para tomar el té</a> - <em>SAB (M. E. Walsh, 2017)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=73">Como la cigarra</a> - <em>SATB (M. E. Walsh, 1982)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=71">La canción del Jacarandá</a> - <em>SA / chœur d'enfants (M. E. Walsh, 2018)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/2/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=104">La Pájara Pinta</a> - <em>SA (M. E. Walsh, 2017)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=70">La vaca estudiosa</a> - <em>SA / chœur d'enfants (M. E. Walsh, 2009)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=68">Manuelita la tortuga</a> - <em>SA / chœur d'enfants (M. E. Walsh, 2017)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=67">Serenata para la tierra de uno</a> - <em>SATB (M. E. Walsh, 1984)</em> <img src="img/award-icon.png" class="icono-premio"></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=40">Zamba para Pepe</a> - <em>SATB (M. E. Walsh, 1996)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/21/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=106">Adivina adivinador</a> - <em>SA (M. E. Walsh, 2019)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=15">Canción de la vacuna (el brujito de Gulubú)</a> - <em>SATB (M. E. Walsh, 1982)</em> <img src="img/award-icon.png" class="icono-premio"></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=06">Canción del estornudo (el otro Mambrú)</a> - <em>SATB (M. E. Walsh, 1983)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="3/14/2020"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=108">Canción del jardinero</a> - <em>SA (M. E. Walsh, 1985/2020)</em> <img src="img/award-icon.png" class="icono-premio"></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/2/2020"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=109">Canción para tomar el té</a> - <em>SAB (M. E. Walsh, 2017)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=73">Como la cigarra</a> - <em>SATB (M. E. Walsh, 1982)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=71">La canción del Jacarandá</a> - <em>SA / chœur d'enfants (M. E. Walsh, 2018)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/2/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=104">La Pájara Pinta</a> - <em>SA (M. E. Walsh, 2017)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=70">La vaca estudiosa</a> - <em>SA / chœur d'enfants (M. E. Walsh, 2009)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=68">Manuelita la tortuga</a> - <em>SA / chœur d'enfants (M. E. Walsh, 2017)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=67">Serenata para la tierra de uno</a> - <em>SATB (M. E. Walsh, 1984)</em> <img src="img/award-icon.png" class="icono-premio"></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=40">Zamba para Pepe</a> - <em>SATB (M. E. Walsh, 1996)</em></li>
                     </ul>
                     <br><br>
 
                     <p class="titulo_panel">THE BEATLES - QUEEN</p><br>
                     <ul id="obras_beatles">
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=74">I wanna be your man</a> - <em>SATB et orchestre (Lennon-McCartney, 2007)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=03">I will</a> - <em>SATB (P. Mc Cartney, 2005)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=65">I will</a> - <em>SATB et orchestre (P. Mc Cartney, 2006)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=22">Lady Madonna</a> - <em>SATB et orchestre (Lennon-Mc Cartney, 2006)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="2/11/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=101">Love of my life</a> - <em>SATB (F. Mercury, 1992)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=23">Love of my life</a> - <em>SATB et orchestre (F. Mercury, 2006)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=04">Yesterday</a> - <em>SATB (P. Mc Cartney, 2005)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=66">Yesterday</a> - <em>SATB et orchestre (P. Mc Cartney, 2006)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=74">I wanna be your man</a> - <em>SATB et orchestre (Lennon-McCartney, 2007)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=03">I will</a> - <em>SATB (P. Mc Cartney, 2005)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=65">I will</a> - <em>SATB et orchestre (P. Mc Cartney, 2006)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=22">Lady Madonna</a> - <em>SATB et orchestre (Lennon-Mc Cartney, 2006)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="2/11/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=101">Love of my life</a> - <em>SATB (F. Mercury, 1992)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=23">Love of my life</a> - <em>SATB et orchestre (F. Mercury, 2006)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=04">Yesterday</a> - <em>SATB (P. Mc Cartney, 2005)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=66">Yesterday</a> - <em>SATB et orchestre (P. Mc Cartney, 2006)</em></li>
                     </ul>
                     <br><br>
 
                     <p class="titulo_panel">FOLKLORE</p><br>
                     <ul id="obras_folklore">
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=62">And so it goes</a> - <em>TTBB (Billy Joel, 1999)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=72">Atacama tierra mía</a> - <em>SATB (Iván Darrigrande, Stage d'arrangements choraux, Copiapó, Chili 2015)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="1/2/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=99">Carol of the bells</a> - <em>SSA (Mykola Leontovych, Peter Wilhousky, 2018)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="9/19/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=107">Coplas de carnaval</a> <strong>(version corrigée)</strong> - <em>SATB (Traditionnel du nord de l'Argentine, 2019)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=11">Cuando partí</a> - <em>SSAA (M. Alemán Mónico, 2001)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=12">Cuatro estrofas</a> - <em>SATB (A. Lerner, 1986)</em> <img src="img/award-icon.png" class="icono-premio"></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=63">Déjame que me vaya</a> - <em>SATB (Carabajal-Ternán, 2014)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=45">Despertar de mi tierra</a> - <em>SATB (G. Morales - S.O'Brian, Stage d'arrangements choraux, Copiapó, Chili 2015)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=86">El árbol ya fue plantado</a> - <em>SATB (E. Siro - D. Sánchez, 1991)</em> <img src="img/award-icon.png" class="icono-premio"></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=18">Guanuqueando</a> <strong>(version corrigée)</strong> - <em>SAB (R. Vilca, 2007)</em> <img src="img/award-icon.png" class="icono-premio"></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=20">Juana y José</a> - <em>SATB (Cruz F. Iriarte, Venezuela, 1986)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=60">Romance de la Luna sanjuanina</a> - <em>SATB (Gustavo Troncozo, 2013)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=83">Palito de tola</a> - <em>SATB (René Vargas Vera - Luis Sánchez Vera, 1996)</em></li>
-						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=59">San Juan por mi sangre</a> - <em>SATB (Ernesto Villavicencio, 2012)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=29">Sangena</a> - <em>SATB (Canto nupcial africano, 2012)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="3/13/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=102">Señora doña María</a> - <em>SATB (Chant de Noël chilien, 1997)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=33">Sobredosis de chamamé</a> - <em>SATB (A. Balestra, 2007)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="3/13/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=103">Tonada de la Quiaca</a> - <em>SSA (Traditionnel du nord de l'Argentine, 2014)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=39">Zamba del nuevo día</a> - <em>SATB (O. Cardozo Ocampo, 1992)</em> <img src="img/award-icon.png" class="icono-premio"></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=62">And so it goes</a> - <em>TTBB (Billy Joel, 1999)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=72">Atacama tierra mía</a> - <em>SATB (Iván Darrigrande, Stage d'arrangements choraux, Copiapó, Chili 2015)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="1/2/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=99">Carol of the bells</a> - <em>SSA (Mykola Leontovych, Peter Wilhousky, 2018)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="9/19/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=107">Coplas de carnaval</a> <strong>(version corrigée)</strong> - <em>SATB (Traditionnel du nord de l'Argentine, 2019)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=11">Cuando partí</a> - <em>SSAA (M. Alemán Mónico, 2001)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=12">Cuatro estrofas</a> - <em>SATB (A. Lerner, 1986)</em> <img src="img/award-icon.png" class="icono-premio"></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=63">Déjame que me vaya</a> - <em>SATB (Carabajal-Ternán, 2014)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=45">Despertar de mi tierra</a> - <em>SATB (G. Morales - S.O'Brian, Stage d'arrangements choraux, Copiapó, Chili 2015)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=86">El árbol ya fue plantado</a> - <em>SATB (E. Siro - D. Sánchez, 1991)</em> <img src="img/award-icon.png" class="icono-premio"></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=18">Guanuqueando</a> <strong>(version corrigée)</strong> - <em>SAB (R. Vilca, 2007)</em> <img src="img/award-icon.png" class="icono-premio"></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=20">Juana y José</a> - <em>SATB (Cruz F. Iriarte, Venezuela, 1986)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=60">Romance de la Luna sanjuanina</a> - <em>SATB (Gustavo Troncozo, 2013)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="9/3/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=83">Palito de tola</a> - <em>SATB (René Vargas Vera - Luis Sánchez Vera, 1996)</em></li>
+						<li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=59">San Juan por mi sangre</a> - <em>SATB (Ernesto Villavicencio, 2012)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=29">Sangena</a> - <em>SATB (Canto nupcial africano, 2012)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="3/13/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=102">Señora doña María</a> - <em>SATB (Chant de Noël chilien, 1997)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=33">Sobredosis de chamamé</a> - <em>SATB (A. Balestra, 2007)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="3/13/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=103">Tonada de la Quiaca</a> - <em>SSA (Traditionnel du nord de l'Argentine, 2014)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=39">Zamba del nuevo día</a> - <em>SATB (O. Cardozo Ocampo, 1992)</em> <img src="img/award-icon.png" class="icono-premio"></li>
                     </ul>
                     <br><br>
                     
                     <p class="titulo_panel">SPIRITUALS</p><br>
                     <ul id="obras_spirituals">
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=61">Can't you live humble</a> - <em>SSATB (Spiritual, 1995)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=84">Mary had a baby</a> - <em>SATB (Spiritual, 2000)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=85">Oh yes</a> - <em>Soliste SATB et SATB (Spiritual, 1982)</em></li>
-                        <li class="link_panel" name="pdfnz" publicado="2/5/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=100">Spiritual's Ode</a> - <em>Soliste et SATB (N. Zadoff, œuvre originale, 1998)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=61">Can't you live humble</a> - <em>SSATB (Spiritual, 1995)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=84">Mary had a baby</a> - <em>SATB (Spiritual, 2000)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="9/8/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=85">Oh yes</a> - <em>Soliste SATB et SATB (Spiritual, 1982)</em></li>
+                        <li class="link_panel" name="pdfnz" publicado="2/5/2019"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=100">Spiritual's Ode</a> - <em>Soliste et SATB (N. Zadoff, œuvre originale, 1998)</em></li>
                     </ul>
                     <br><br>
 
                     <p class="titulo_panel">AUTRES</p><br>
                     <ul id="obras_otras">
-                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a target="_blank" href="displaypdf.php?id=17">Exaudiat te Dominus</a> - <em>SATB (N. Zadoff, œuvre originale, 2009)</em> <img src="img/award-icon.png" class="icono-premio"></li>
+                        <li class="link_panel" name="pdfnz" publicado="4/30/2018"><img src="img/acrobat_icon.png" class="icono-pdf" /><a href="#" data-link="displaypdf.php?id=17">Exaudiat te Dominus</a> - <em>SATB (N. Zadoff, œuvre originale, 2009)</em> <img src="img/award-icon.png" class="icono-premio"></li>
                     </ul>
                     <br><br>
                 </div>
@@ -471,6 +471,15 @@
             </td>
         </tr>
     </table>
-    <script>AgregarEtiquetasNuevo('NOUVEAUTÉ');</script>
+
+    <script type="text/javascript" src="acciones.js"></script>
+
+    <script>
+        questionText = 'Confirmez-vous le téléchargement?'
+        okBtnText = 'Oui'
+        cancelBtnText = 'Non'
+        AgregarEtiquetasNuevo('NOUVEAU')
+    </script>
+
 </body>
 </html>

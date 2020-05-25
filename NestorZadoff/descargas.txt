@@ -1,6 +1,6 @@
 ﻿106:Adivina adivinador.pdf:128
 62:And so it goes.pdf:114
-01:Años de soledad.pdf:207
+01:Años de soledad.pdf:213
 72:Atacama tierra mía.pdf:67
 50:Avant laymer.pdf:70
 02:Ave mater.pdf:81
@@ -26,7 +26,7 @@
 82:Corten espadas.pdf:90
 11:Cuando partí.pdf:122
 12:Cuatro estrofas.pdf:129
-42:Cueur langoreux.pdf:219
+42:Cueur langoreux.pdf:220
 53:Cueurs desolez (en sol).pdf:75
 52:Cueurs desolez.pdf:80
 64:Cueurs desolez a 5.pdf:88

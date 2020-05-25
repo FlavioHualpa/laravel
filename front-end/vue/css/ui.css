@@ -21,7 +21,7 @@
 }
 
 .tab-component {
-   
+   /*  */
 }
 
 .tab-stops {
@@ -39,19 +39,50 @@
    border-right: 1px solid orange;
    border-top-left-radius: 8px;
    border-top-right-radius: 8px;
-   background-image: linear-gradient(rgb(250, 244, 233), rgb(250, 214, 148));
+   background-image: linear-gradient(hsl(39, 63%, 88%), hsl(39, 91%, 66%));
    margin-right: -10px;
    cursor: pointer;
 }
 
-.tab-stop:hover {
-   background-image: linear-gradient(hsl(39, 63%, 88%), hsl(39, 91%, 66%));
+.tab-stop:hover,
+.tab-stop.selected {
+   background-image: linear-gradient(rgb(250, 244, 233), rgb(250, 214, 148));
 }
 
 .tab-page {
-   height: 100px;
+   /* height: 100px; */
    border-left: 1px solid orange;
    border-right: 1px solid orange;
    border-bottom: 1px solid orange;
    background-color: rgb(250, 214, 148);
+   padding: 20px;
+}
+
+.list-row {
+   display: flex;
+}
+
+.list-col {
+   width: 250px;
+}
+
+.list-col h3 {
+   margin-bottom: 10px;
+}
+
+.list-col ul li {
+   margin-left: 18px;
+   margin-bottom: 3px;
+}
+
+.list-col ul li i.fa-check-circle {
+   color: green;
+}
+
+.list-col ul li i.fa-circle {
+   color: #d00000;
+}
+
+.list-col ul li i {
+   cursor: pointer;
 }
