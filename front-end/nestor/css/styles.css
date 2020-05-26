@@ -14,10 +14,13 @@ html {
 body {
    background-color: #E5E5B8;
    overflow-x: hidden;
+   max-width: 1200px;
+   margin: 0 auto;
 }
 
 p {
    margin-bottom: 18px;
+   line-height: 1.5em;
 }
 
 a {
@@ -101,6 +104,7 @@ a:hover {
 .navigator .menu .slider .submenu {
    position: absolute;
    background-color: #F0CE8C;
+   box-shadow: 2px 2px 2px #686868;
    top: 100%;
    left: 0;
    display: none;
@@ -125,7 +129,7 @@ a:hover {
 }
 
 .navigator .drop-down-menu ul li {
-   padding: 12px 16px;
+   padding: 12px 20px 12px 6px;
    font-size: 20px;
    text-transform: uppercase;
    cursor: pointer;
@@ -154,11 +158,19 @@ a:hover {
    margin-right: 6px;
 }
 
+.navigator .drop-down-menu .submenu {
+   padding-left: 50px;
+}
+
+.navigator .drop-down-menu .submenu li {
+   padding-left: 30px;
+}
+
 .container {
    margin: 20px;
 }
 
-.container img {
+.container .portrait {
    width: 80%;
    margin: 20px auto;
    border-radius: 5px;
@@ -171,6 +183,61 @@ a:hover {
 
 .container .text .title {
    padding: 16px 0;
+}
+
+.container .text ul {
+   margin-left: 20px;
+}
+
+.container .text ul li {
+   line-height: 1.5em;
+   margin-bottom: 0.8em;
+}
+
+.container .text .tactus1,
+.container .text .tactus2,
+.container .text .tactus3 {
+   vertical-align: middle;
+}
+
+.container .text .tactus1 {
+   width: 18.5px;
+   height: 21px;
+}
+
+.container .text .tactus2 {
+   width: 18.5px;
+   height: 32px;
+}
+
+.container .text .tactus3 {
+   width: 17px;
+   height: 20px;
+}
+
+.container .links-group h3 {
+   margin: 40px 0 20px 0;
+   color: #800000;
+}
+
+.container .links-group ul {
+   margin-left: 20px;
+}
+
+.container .links-group ul li {
+   list-style-type: none;
+   line-height: 1.5em;
+   margin-bottom: 0.4em;
+}
+
+.container .links-group .pdf-icon {
+   width: 24px;
+   height: 24px;
+   margin-right: 6px;
+   vertical-align: middle;
+}
+
+.desktop-only {
    display: none;
 }
 
@@ -183,7 +250,7 @@ a:hover {
       background-size: cover;
    }
 
-   .container img {
+   .container .portrait {
       width: 40%;
       margin: 20px 30px;
       float: left;
@@ -202,7 +269,7 @@ a:hover {
       display: block;
    }
 
-   .container .text .title {
+   .desktop-only {
       display: block;
    }
 }

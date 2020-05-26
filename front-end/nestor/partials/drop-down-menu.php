@@ -1,15 +1,15 @@
             <ul>
                <li>
                   <i class="fas fa-angle-double-right drop-down-only"></i>
-                  <a href="#"><?= lang('menu.opt.curric') ?></a>
+                  <a href="index.php"><?= lang('menu.opt.curric') ?></a>
                </li>
                <li>
                   <i class="fas fa-angle-double-right drop-down-only"></i>
-                  <a href="#"><?= lang('menu.opt.trans') ?></a>
+                  <a href="transcriptions.php"><?= lang('menu.opt.trans') ?></a>
                </li>
                <li>
                   <i class="fas fa-angle-double-right drop-down-only"></i>
-                  <a href="#"><?= lang('menu.opt.art') ?></a>
+                  <a href="articles.php"><?= lang('menu.opt.art') ?></a>
                </li>
                <li>
                   <i class="fas fa-angle-double-right drop-down-only"></i>
@@ -36,24 +36,14 @@
                   <a href="#"><?= lang('menu.opt.lang') ?></a>
                   <ul class="submenu">
                      <li>
-                        <a href="#"><?= lang('menu.opt.esp') ?></a>
+                        <a href="lang/setlang.php?lang=es"><?= lang('menu.opt.esp') ?></a>
                      </li>
                      <li>
-                        <a href="#"><?= lang('menu.opt.eng') ?></a>
+                        <a href="lang/setlang.php?lang=en"><?= lang('menu.opt.eng') ?></a>
                      </li>
                      <li>
-                        <a href="#"><?= lang('menu.opt.fra') ?></a>
+                        <a href="lang/setlang.php?lang=fr"><?= lang('menu.opt.fra') ?></a>
                      </li>
                   </ul>
                </li>
-               <!-- <li class="drop-down-only">
-               </li>
-               <li class="drop-down-only">
-                  <img src="img/band_ing.png" alt="<?= lang('menu.opt.eng') ?>">
-                  <a href="#"><?= lang('menu.opt.eng') ?></a>
-               </li>
-               <li class="drop-down-only">
-                  <img src="img/band_fra.png" alt="<?= lang('menu.opt.fra') ?>">
-                  <a href="#"><?= lang('menu.opt.fra') ?></a>
-               </li> -->
             </ul>

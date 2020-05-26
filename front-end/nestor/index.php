@@ -1,20 +1,11 @@
 <?php require 'lang/lang.php' ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/styles.css">
-   <title>Néstor Zadoff</title>
-</head>
-<body>
 <?php require 'partials/header.php' ?>
 
    <div class="container">
       <img src="img\retrato2018.png" alt="Néstor Zadoff" class="portrait">
       <section class="text">
-         <h2 class="title">
+         <h2 class="title desktop-only">
             Néstor Zadoff
          </h2>
          <p>

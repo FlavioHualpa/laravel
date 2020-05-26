@@ -14,7 +14,19 @@ function get_language()
    return isset($_COOKIE['user-lang']) ? $_COOKIE['user-lang'] : 'es';
 }
 
-function lang($key) : string
+function set_language($language)
+{
+   $available = available_languages();
+   $setLang = 'es';
+
+   if (isset($available[$language])) {
+      $setLang = $language;
+   }
+
+   setcookie('user-lang', $language, time() + 60*60*24*30, "/");
+}
+
+function lang($key)
 {
    $lang = get_language();
    $available = available_languages();
