@@ -94,4 +94,14 @@ class HomeController extends Controller
 
       return redirect()->route('connections');
    }
+
+   public function downloadFile()
+   {
+      return response()->download('files/Queraltó - Canción 2.pdf');
+   }
+
+   public function viewFile()
+   {
+      return response()->file('files/Queraltó - Canción 2.pdf');
+   }
 }

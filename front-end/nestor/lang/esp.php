@@ -2,6 +2,12 @@
 
 return [
 
+   'new' => 'NUEVO',
+   'down.confirm' => 'Confirmas la descarga?',
+   'down.yes' => 'Sí',
+   'down.no' => 'No',
+
+
    //=================
    // MENU
    //=================
@@ -86,6 +92,12 @@ return [
       'Asimismo, en algunas obras hice una propuesta integral de indicaciones de interpretación, las que, por supuesto, no son originales. Está indicado claramente en cada caso.',
    ],
 
+   'transc.footnote' => '
+      &#x00A7;&nbsp;Música vocal francesa del XVI
+      <br>
+      &#x00B6;&nbsp;Música vocal italiana del XVI
+   ',
+
    //===================================
    // DESCARGAS AGRUPADAS POR AUTOR
    //===================================
@@ -94,79 +106,504 @@ return [
       
       [
          'name' => 'JOSQUIN DES PRES (ca. 1450/55-1521)',
-         'reference' => 'Ver en Artículos Musicológicos info sobre Josquin',
+         'reference' => 'Ver en <strong><a href="articles.php">Artículos Musicológicos</a></strong> info sobre Josquin',
          'files' => [
             [
                'name' => 'Portada original de la edición',
                'pdf_id' => null,
                'link' => './pdfs/portada_josquin.png',
                'info' => null,
+               'added_at' => '2018/04/30',
             ],
             [
                'name' => 'Cueur langoreux',
                'pdf_id' => 42,
                'link' => '#',
                'info' => 'a 5 (SATTB) - <em>(7* livre des chansons, Susato, Anvers, 1545)</em>',
+               'added_at' => '2018/04/30',
             ],
             [
                'name' => 'En non saichant',
                'pdf_id' => 47,
                'link' => '#',
                'info' => 'a 5 (SATTB) - <em>(7* livre des chansons, Susato, Anvers, 1545, atribución en duda)</em>',
+               'added_at' => '2018/04/30',
             ],
             [
                'name' => 'Ie me complains',
                'pdf_id' => 41,
                'link' => '#',
                'info' => 'a 5 (SATTB) - <em>(7* livre des chansons, Susato, Anvers, 1545)</em>',
+               'added_at' => '2018/04/30',
             ],
             [
                'name' => 'Parfons regretz',
                'pdf_id' => 27,
                'link' => '#',
                'info' => 'a 5 (SSATB) - <em>(7* livre des chansons, Susato, Anvers, 1545)</em>',
+               'added_at' => '2018/04/30',
             ],
             [
                'name' => 'Regretz sans fin',
                'pdf_id' => 56,
                'link' => '#',
                'info' => 'a 6 (SATTTB) - <em>(7* livre des chansons, Susato, Anvers, 1545, versión en el tono original)</em>',
+               'added_at' => '2018/04/30',
             ],
             [
                'name' => 'Regretz sans fin',
                'pdf_id' => 43,
                'link' => '#',
                'info' => 'a 6 (SSAATB) - <em>(7* livre des chansons, Susato, Anvers, 1545, versión transpuesta para coro mixto)</em>',
+               'added_at' => '2018/04/30',
             ],
             [
                'name' => 'Cueurs desolez',
                'pdf_id' => 64,
                'link' => '#',
                'info' => 'a 5 (SATTB) - <em>(36* Livre, XXX Chansons musicales, P. Attaingnant, Paris, 1549)</em>',
+               'added_at' => '2018/04/30',
             ],
             [
                'name' => 'Je ne me puis tenir d\'aimer',
                'pdf_id' => 48,
                'link' => '#',
                'info' => 'a 5 (SATTB) - <em>(36* Livre, XXX Chansons musicales, P. Attaingnant, Paris, 1549)</em>',
+               'added_at' => '2018/04/30',
             ],
             [
                'name' => 'Plus nulz regretz',
                'pdf_id' => 69,
                'link' => '#',
                'info' => 'a 4 (ATTB) - <em>(36* Livre, XXX Chansons musicales, P. Attaingnant, Paris, 1549)</em>',
+               'added_at' => '2018/04/30',
             ],
             [
                'name' => 'Cueurs desolez',
                'pdf_id' => 52,
                'link' => '#',
                'info' => 'a 4 (STTB) - <em>(atribuida a Josquin y/o a Benedictus Appenzeller en diversas fuentes de época, entre ellas Attaingnant, 1534, Paris, versión en el tono original)</em>',
+               'added_at' => '2018/04/30',
             ],
             [
                'name' => 'Cueurs desolez',
                'pdf_id' => 53,
                'link' => '#',
                'info' => 'a 4 (SATB) - <em>(atribuida a Josquin y/o a Benedictus Appenzeller en diversas fuentes de época, entre ellas Attaingnant, 1534, Paris, versión para coro mixto)</em>',
+               'added_at' => '2018/04/30',
+            ],
+         ],
+      ],
+
+      [
+         'name' => 'SEVERIN CORNET (ca. 1530-1582)',
+         'reference' => null,
+         'files' => [
+            [
+               'name' => 'Biografía',
+               'pdf_id' => null,
+               'link' => './pdfs/Severin Cornet.pdf',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Portada original de la edición',
+               'pdf_id' => null,
+               'link' => './pdfs/portada_cornet.png',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Che t\'aggio fatto',
+               'pdf_id' => 49,
+               'link' => '#',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Chaggio perduto',
+               'pdf_id' => 7,
+               'link' => '#',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Che giova saettar',
+               'pdf_id' => 8,
+               'link' => '#',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Hor va canzona',
+               'pdf_id' => 19,
+               'link' => '#',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'O Lucia (parte 1)',
+               'pdf_id' => 54,
+               'link' => '#',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'O Lucia (parte 2)',
+               'pdf_id' => 55,
+               'link' => '#',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Parmi di star',
+               'pdf_id' => 28,
+               'link' => '#',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Se per sentir',
+               'pdf_id' => 30,
+               'link' => '#',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Sei tanto gratiosa',
+               'pdf_id' => 51,
+               'link' => '#',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Signora Mia',
+               'pdf_id' => 31,
+               'link' => '#',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Sio fosse certo',
+               'pdf_id' => 32,
+               'link' => '#',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Tu m\'arrobasti',
+               'pdf_id' => 34,
+               'link' => '#',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+         ],
+      ],
+
+      [
+         'name' => 'GIOVANNI DA NOLA (ca. 1510-1592)',
+         'reference' => null,
+         'files' => [
+            [
+               'name' => 'Biografía y comentarios',
+               'pdf_id' => null,
+               'link' => './pdfs/Giovanni Domenico.pdf',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Portada original de la edición',
+               'pdf_id' => null,
+               'link' => './pdfs/portada_nola.png',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Chi dirra',
+               'pdf_id' => 9,
+               'link' => '#',
+               'info' => '- <em>Canzon villanesca (ed. 1541)</em>',
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Medici nui siam',
+               'pdf_id' => 24,
+               'link' => '#',
+               'info' => '- <em>Canzon villanesca (ed. 1541)</em>',
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'O dolce vita mia',
+               'pdf_id' => 25,
+               'link' => '#',
+               'info' => '- <em>Canzon villanesca (ed. 1541)</em>',
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Oyme dolente',
+               'pdf_id' => 26,
+               'link' => '#',
+               'info' => '- <em>Canzon villanesca (ed. 1541)</em>',
+               'added_at' => '2018/04/30',
+            ],
+         ],
+      ],
+
+      [
+         'name' => 'ORLANDE DE LASSUS (1532-1594)',
+         'reference' => 'Ver en <strong><a href="articles.php">Artículos Musicológicos</a></strong> info musicológica, traducción y sugerencias de interpretación',
+         'files' => [
+            [
+               'name' => 'Portada de la Mellange de Orlande de Lassus',
+               'pdf_id' => null,
+               'link' => './pdfs/Portada Lassus.pdf',
+               'info' => null,
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Ave mater',
+               'pdf_id' => 2,
+               'link' => '#',
+               'info' => '- <em>(Motete, Magnum Opus Musicum, München, 1604)</em>',
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Dessus le marche',
+               'pdf_id' => 14,
+               'link' => '#',
+               'info' => '- <em>(Continuation du Mellange d\'Orlande de Lassus, Le Roy & Ballard, 1584, París)</em>',
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Du cors absent',
+               'pdf_id' => 92,
+               'link' => '#',
+               'info' => '&#x00A7; - <em>(Chanson, Mellange d\'Orlande de Lassus, París, 1570, Le Roy & Ballard)</em>',
+               'added_at' => '2018/09/08',
+            ],
+            [
+               'name' => 'En espoir vis',
+               'pdf_id' => 16,
+               'link' => '#',
+               'info' => '- <em>(Chanson, Mellange d\'Orlande de Lassus, París, 1570, Le Roy & Ballard)</em>',
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'La morre est jeu',
+               'pdf_id' => 21,
+               'link' => '#',
+               'info' => '- <em>(Chanson, Mellange d\'Orlande de Lassus, París, 1570, Le Roy & Ballard)</em>',
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Un avocat dit a sa femme',
+               'pdf_id' => 93,
+               'link' => '#',
+               'info' => '&#x00A7; - <em>(Chanson, Mellange d\'Orlande de Lassus, París, 1570, Le Roy & Ballard)</em>',
+               'added_at' => '2018/09/08',
+            ],
+            [
+               'name' => 'La cortesia',
+               'pdf_id' => 98,
+               'link' => '#',
+               'info' => '&#x00B6; - <em>(Villanella, Le 14ème livre des chansons, ed. Susato, Anvers, 1555)</em>',
+               'added_at' => '2018/10/13',
+            ],
+            [
+               'name' => 'Per pianto',
+               'pdf_id' => 94,
+               'link' => '#',
+               'info' => '&#x00B6; - <em>(Madrigal, Le 14ème livre des chansons, ed. Susato, Anvers, 1555)</em>',
+               'added_at' => '2018/10/13',
+            ],
+            [
+               'name' => 'Tu traditora',
+               'pdf_id' => 35,
+               'link' => '#',
+               'info' => '&#x00B6; - <em>(Villanella, Le 14ème livre des chansons, ed. Susato, Anvers, 1555)</em>',
+               'added_at' => '2018/04/30',
+            ],
+         ],
+      ],
+
+      [
+         'name' => 'CHANSONS FRANCESAS DE DIVERSOS AUTORES',
+         'reference' => 'Ver en <strong><a href="articles.php">Artículos Musicológicos</a></strong> info musicológica, traducción y sugerencias de interpretación',
+         'files' => [
+            [
+               'name' => 'Avant l\'aymer',
+               'pdf_id' => 50,
+               'link' => '#',
+               'info' => '- <em>(Pierre Sandrin -Pierre Regnault-, ed 18* livre des chansons, Attaingnant, Paris 1545)</em>',
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'De trop aymer',
+               'pdf_id' => 44,
+               'link' => '#',
+               'info' => '- <em>(Anónimo, 27 chansons musicales, P. Attaingnant, Paris, 1534)</em>',
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Es tu bien malade',
+               'pdf_id' => 46,
+               'link' => '#',
+               'info' => '- <em>(Anónimo, 27 chansons musicales, P. Attaingnant, Paris, 1534)</em>',
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Fyez vous y si vous voulez',
+               'pdf_id' => 87,
+               'link' => '#',
+               'info' => '&#x00A7; - <em>(Clement Janequin (ca. 1485-1558), 26 Chansons a 4 parties, Attaingnant 1534, Paris)</em>',
+               'added_at' => '2018/09/08',
+            ],
+            [
+               'name' => 'Ie n\'ay point plus',
+               'pdf_id' => 89,
+               'link' => '#',
+               'info' => '&#x00A7; - <em>(Claudin de Sermisy, ed 18* livre des chansons, Attaingnant, Paris 1545)</em>',
+               'added_at' => '2018/09/08',
+            ],
+            [
+               'name' => 'Il n\'est que d\'estre sur l\'herbette',
+               'pdf_id' => 90,
+               'link' => '#',
+               'info' => '&#x00A7; - <em>(Claude Gervaise, 16* livre des chansons, N. du Chemin, Paris 1550)</em>',
+               'added_at' => '2018/09/08',
+            ],
+            [
+               'name' => 'Perdre le sens devant vous',
+               'pdf_id' => 91,
+               'link' => '#',
+               'info' => '&#x00A7; - <em>(Claude le Jeune, Le Printemps, R. Ballard, Paris 1603)</em>',
+               'added_at' => '2018/09/08',
+            ],
+            [
+               'name' => 'Rigueur me tient',
+               'pdf_id' => 88,
+               'link' => '#',
+               'info' => '&#x00A7; - <em>(Claudin de Sermisy, ed 18* livre des chansons, Attaingnant, Paris 1545)</em>',
+               'added_at' => '2018/09/08',
+            ],
+            [
+               'name' => 'Ventz hardis',
+               'pdf_id' => 36,
+               'link' => '#',
+               'info' => '- <em>(Clement Janequin (ca. 1485-1558), 1552, Paris, N. Du Chemin)</em>',
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Voulant honneur',
+               'pdf_id' => 38,
+               'link' => '#',
+               'info' => '- <em>(Pierre Sandrin -Pierre Regnault-, ed 18* livre des chansons, Attaingnant, Paris 1545)</em>',
+               'added_at' => '2018/04/30',
+            ],
+         ],
+      ],
+
+      [
+         'name' => 'MADRIGALES Y VILLANELLE ITALIANAS DE DIVERSOS AUTORES',
+         'reference' => 'Ver en <strong><a href="articles.php">Artículos Musicológicos</a></strong> info musicológica, traducción y sugerencias de interpretación',
+         'files' => [
+            [
+               'name' => 'Gentil madonna',
+               'pdf_id' => 97,
+               'link' => '#',
+               'info' => '&#x00B6; - <em>(Filippo Azzaiolo, Villotta, 1557)</em>',
+               'added_at' => '2018/10/13',
+            ],
+            [
+               'name' => 'La piaga ch\'ho nel core',
+               'pdf_id' => 96,
+               'link' => '#',
+               'info' => '&#x00B6; - <em>(Claudio Monteverdi, IV libro de madrigales, 1603)</em>',
+               'added_at' => '2018/10/13',
+            ],
+            [
+               'name' => 'Mirate che mi fa',
+               'pdf_id' => 95,
+               'link' => '#',
+               'info' => '&#x00B6; - <em>(Salomone Rossi, Canzonetta, 1589)</em>',
+               'added_at' => '2018/10/13',
+            ],
+            [
+               'name' => 'Quando per mio destin',
+               'pdf_id' => 57,
+               'link' => '#',
+               'info' => '- <em>(Nicolo Vicentino, 5* libro de madrigales, 1572)</em>',
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Vecchie letrose',
+               'pdf_id' => 58,
+               'link' => '#',
+               'info' => '- <em>(Adrian Willaert, Canzone villanesche, ed. A. Gardane, Venecia, 1545)</em>',
+               'added_at' => '2018/04/30',
+            ],
+         ],
+      ],
+
+      [
+         'name' => 'MADRIGALES Y VILLANCICOS ESPAÑOLES DE DIVERSOS AUTORES',
+         'reference' => 'Ver en <strong><a href="articles.php">Artículos Musicológicos</a></strong> info sobre las obras españolas aquí transcriptas',
+         'files' => [
+            [
+               'name' => 'Corten espadas afiladas',
+               'pdf_id' => 82,
+               'link' => '#',
+               'info' => '- <em>(Anónimo, Cancionero de Medinaceli (ca. 1540-70))</em>',
+               'added_at' => '2018/09/03',
+            ],
+            [
+               'name' => 'Gasajemonos de husía',
+               'pdf_id' => 77,
+               'link' => '#',
+               'info' => '- <em>(Juan del Encina, Cancionero Musical de Palacio (ca. 1470-1520))</em>',
+               'added_at' => '2018/09/03',
+            ],
+            [
+               'name' => 'Las tristesas no me espantan',
+               'pdf_id' => 76,
+               'link' => '#',
+               'info' => '- <em>(Anónimo, Cancionero Musical de Palacio (ca. 1470-1520))</em>',
+               'added_at' => '2018/09/03',
+            ],
+            [
+               'name' => 'Ojos garços a la niña',
+               'pdf_id' => 81,
+               'link' => '#',
+               'info' => '- <em>(Anónimo, Cancionero de Uppsala (ed. 1556))</em>',
+               'added_at' => '2018/09/03',
+            ],
+            [
+               'name' => 'Quédate carillo adiós',
+               'pdf_id' => 78,
+               'link' => '#',
+               'info' => '- <em>(Juan del Encina, Cancionero Musical de Palacio (ca. 1470-1520))</em>',
+               'added_at' => '2018/09/03',
+            ],
+            [
+               'name' => 'Si la noche haze escura',
+               'pdf_id' => 80,
+               'link' => '#',
+               'info' => '- <em>(Anónimo, Cancionero de Uppsala (ed. 1556))</em>',
+               'added_at' => '2018/09/03',
+            ],
+            [
+               'name' => 'Teresica hermana',
+               'pdf_id' => 75,
+               'link' => '#',
+               'info' => '- <em>(Atribuida a Mateo Flecha, Cancionero de Uppsala (ed. 1556))</em>',
+               'added_at' => '2018/04/30',
+            ],
+            [
+               'name' => 'Todo mi bien e perdido',
+               'pdf_id' => 79,
+               'link' => '#',
+               'info' => '- <em>(Juan Ponce, Cancionero Musical de Palacio (ca. 1470-1520))</em>',
+               'added_at' => '2018/09/03',
             ],
          ],
       ],

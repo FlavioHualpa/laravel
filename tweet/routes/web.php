@@ -19,6 +19,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::view('/responses', 'responses');
+Route::get('/file/download', 'HomeController@downloadFile')->name('file.download');
+Route::get('/file/view', 'HomeController@viewFile')->name('file.view');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/connections', 'HomeController@connections')->name('connections');
 Route::post('/follow/{user:username}', 'HomeController@follow')->name('follow');

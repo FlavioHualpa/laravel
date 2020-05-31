@@ -1,17 +1,17 @@
             <ul>
-               <li>
+               <li class="<?= $page == 'index' ? 'selected' : '' ?>">
                   <i class="fas fa-angle-double-right drop-down-only"></i>
                   <a href="index.php"><?= lang('menu.opt.curric') ?></a>
                </li>
-               <li>
+               <li class="<?= $page == 'transcriptions' ? 'selected' : '' ?>">
                   <i class="fas fa-angle-double-right drop-down-only"></i>
                   <a href="transcriptions.php"><?= lang('menu.opt.trans') ?></a>
                </li>
-               <li>
+               <li class="<?= $page == 'articles' ? 'selected' : '' ?>">
                   <i class="fas fa-angle-double-right drop-down-only"></i>
                   <a href="articles.php"><?= lang('menu.opt.art') ?></a>
                </li>
-               <li>
+               <li class="<?= $page == 'arrangements' ? 'selected' : '' ?>">
                   <i class="fas fa-angle-double-right drop-down-only"></i>
                   <a href="#"><?= lang('menu.opt.arr') ?></a>
                   <ul class="submenu">
@@ -23,11 +23,11 @@
                      </li>
                   </ul>
                </li>
-               <li>
+               <li class="<?= $page == 'performances' ? 'selected' : '' ?>">
                   <i class="fas fa-angle-double-right drop-down-only"></i>
                   <a href="#"><?= lang('menu.opt.perf') ?></a>
                </li>
-               <li>
+               <li class="<?= $page == 'contact' ? 'selected' : '' ?>">
                   <i class="fas fa-angle-double-right drop-down-only"></i>
                   <a href="#"><?= lang('menu.opt.contact') ?></a>
                </li>

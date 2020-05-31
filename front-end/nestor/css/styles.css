@@ -88,7 +88,8 @@ a:hover {
    position: relative;
 }
 
-.navigator .menu .slider ul li:hover {
+.navigator .menu .slider ul li:hover,
+.navigator .menu .slider ul li.selected {
    background-color: #FFAD59;
 }
 
@@ -140,7 +141,8 @@ a:hover {
    border-top: 1px solid  #bb7024;
 }
 
-.navigator .drop-down-menu ul li:hover {
+.navigator .drop-down-menu ul li:hover,
+.navigator .drop-down-menu ul li.selected {
    background-color: #FFAD59;
 }
 
@@ -235,6 +237,26 @@ a:hover {
    height: 24px;
    margin-right: 6px;
    vertical-align: middle;
+}
+
+.container .links-group .group-ref {
+   margin: 0 0 10px 20px;
+   padding: 6px 10px;
+   color: #800000;
+   background-color: rgba(0, 0, 0, 0.1);
+   border-radius: 4px;
+   line-height: 1.4em;
+   max-width: 500px;
+   display: inline-block;
+}
+
+.container .links-group .badge {
+   margin: 0 0 0 10px;
+   padding: 6px 10px;
+   color: #800000;
+   font-weight: bold;
+   background-color: rgba(0, 0, 0, 0.1);
+   border-radius: 4px;
 }
 
 .desktop-only {

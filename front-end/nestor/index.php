@@ -1,3 +1,5 @@
+<?php $page = "index" ?>
+
 <?php require 'lang/lang.php' ?>
 
 <?php require 'partials/header.php' ?>
