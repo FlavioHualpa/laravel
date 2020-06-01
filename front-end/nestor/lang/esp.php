@@ -22,8 +22,8 @@ return [
    'menu.opt.contact' => 'contacto',
    'menu.opt.lang' => 'idioma',
    'menu.opt.esp' => 'español',
-   'menu.opt.eng' => 'inglés',
-   'menu.opt.fra' => 'francés',
+   'menu.opt.eng' => 'english',
+   'menu.opt.fra' => 'français',
 
 
    //=================
@@ -55,7 +55,7 @@ return [
    <br>
    Habrá aquí transcripciones a notación moderna y con criterio musicológico actualizado de <em>chansons francesas</em>, <em>villanesche italianas</em> y <em>madrigales españoles</em> compuestas durante el XVI y comienzos del XVII.
    <br>
-   Es mi deseo que estos aportes permitan el renacimiento de estas obras a través de grupos de cámara y coros de cualquier nacionalidad.',
+   Es mi deseo que estos aportes permitan el <em>renacimiento</em> de estas obras a través de grupos de cámara y coros de cualquier nacionalidad.',
 
    'transc.title.2' => '<u>PRINCIPIOS DE TRANSCRIPCIÓN</u>',
 
@@ -608,5 +608,98 @@ return [
          ],
       ],
    ],
-   
+
+
+   //=================
+   // ARTÍCULOS
+   //=================
+
+   'articles.title.1' => '<u>ARTÍCULOS MUSICOLÓGICOS</u>',
+   'articles.title.2' => '<u>Referencias</u>:',
+
+   'articles.files' => [
+      [
+         'name' => 'Análisis de obras corales renacentistas',
+         'pdf_id' => 110,
+         'link' => '#',
+         'info' => null,
+         'added_at' => '2020/03/11',
+      ],
+      [
+         'name' => 'Análisis y guía de interpretación de una obra española de comienzos del siglo XVI',
+         'pdf_id' => 111,
+         'link' => '#',
+         'info' => null,
+         'added_at' => '2020/05/02',
+      ],
+      [
+         'name' => 'Análisis y guía de interpretación del madrigal <em>La piaga</em> de Claudio Monteverdi',
+         'pdf_id' => 112,
+         'link' => '#',
+         'info' => null,
+         'added_at' => '2020/05/02',
+      ],
+      [
+         'name' => 'Josquin Desprez - Comentario musicológico',
+         'pdf_id' => null,
+         'link' => 'pdfs\Josquin des Pres.pdf',
+         'info' => '(Parte 1)',
+         'added_at' => '2018/04/30',
+      ],
+      [
+         'name' => 'Los estilos de las chansons de Josquin Desprez',
+         'pdf_id' => null,
+         'link' => 'pdfs\Los estilos de Josquin.pdf',
+         'info' => '(Parte 2)',
+         'added_at' => '2018/04/30',
+      ],
+      [
+         'name' => 'Entre dos mansos arroyos, madrigal español de comienzos del XVII, revista digital 433 del Damus-UNA, 2012',
+         'pdf_id' => null,
+         'link' => 'pdfs\Damus Nro 433.pdf',
+         'info' => null,
+         'added_at' => '2018/04/30',
+      ],
+      [
+         'name' => 'Acercándonos a Palestrina y Lassus, revista Cantata, 1994',
+         'pdf_id' => null,
+         'link' => 'pdfs\Cantata 1994.pdf',
+         'info' => null,
+         'added_at' => '2018/04/30',
+      ],
+      [
+         'name' => 'Info musicológica de transcripciones de obras españolas de esta web',
+         'pdf_id' => null,
+         'link' => 'pdfs\Música vocal española del XVI.pdf',
+         'info' => null,
+         'added_at' => '2018/11/28',
+      ],
+      [
+         'name' => 'Info musicológica de transcripciones de obras francesas de esta web',
+         'pdf_id' => null,
+         'link' => 'pdfs\Música vocal francesa del XVI.pdf',
+         'info' => null,
+         'added_at' => '2018/12/24',
+      ],
+      [
+         'name' => 'Info musicológica de transcripciones de obras italianas de esta web',
+         'pdf_id' => null,
+         'link' => 'pdfs\Música vocal italiana del XVI.pdf',
+         'info' => null,
+         'added_at' => '2018/12/24',
+      ],
+   ],
+
+   'articles.references' => [
+      'Ubicación del texto en obras del XVI: problemática y soluciones
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <small><strong><em>Ver en Análisis de obras corales renacentistas, páginas 27 a 38</em></strong></small>',
+
+      'Sensibilizaciones no escritas en originales del XVI: cuáles y en qué circunstancias aplicarlas?
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <small><strong><em>Ver en Análisis de obras corales renacentistas, páginas 39 a 54</em></strong></small>',
+   ],
+
 ];

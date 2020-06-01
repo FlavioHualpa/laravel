@@ -21,9 +21,9 @@ return [
    'menu.opt.perf' => 'performances',
    'menu.opt.contact' => 'contact',
    'menu.opt.lang' => 'language',
-   'menu.opt.esp' => 'spanish',
+   'menu.opt.esp' => 'español',
    'menu.opt.eng' => 'english',
-   'menu.opt.fra' => 'french',
+   'menu.opt.fra' => 'français',
 
 
    //=================
@@ -619,6 +619,78 @@ return [
             ],
          ],
       ],
+   ],
+
+
+   //=================
+   // ARTÍCULOS
+   //=================
+
+   'articles.title.1' => '<u>MUSICOLOGICAL ARTICLES</u>',
+   'articles.title.2' => '<u>References</u>:',
+
+   'articles.files' => [
+      [
+         'name' => 'Comprehensive Analysis of Two Emblematic Renaissance Choral Works',
+         'pdf_id' => 113,
+         'link' => '#',
+         'info' => null,
+         'added_at' => '2020/05/02',
+      ],
+      [
+         'name' => 'Text underlay in 16th century vocal music',
+         'pdf_id' => 114,
+         'link' => '#',
+         'info' => null,
+         'added_at' => '2020/05/02',
+      ],
+      [
+         'name' => 'Musica Ficta in 16th century vocal works',
+         'pdf_id' => 115,
+         'link' => '#',
+         'info' => null,
+         'added_at' => '2020/05/02',
+      ],
+      [
+         'name' => 'Josquin Desprez - Musicological info',
+         'pdf_id' => null,
+         'link' => 'pdfs\Josquin des Pres (english).pdf',
+         'info' => '(Part 1)',
+         'added_at' => '2018/04/30',
+      ],
+      [
+         'name' => 'The different styles in Josquin Desprez chansons',
+         'pdf_id' => null,
+         'link' => 'pdfs\Los estilos de Josquin (english).pdf',
+         'info' => '(Part 2)',
+         'added_at' => '2018/04/30',
+      ],
+      [
+         'name' => 'Entre dos mansos arroyos, spanish madrigal from the beginnings of XVII century, Damus-UNA digital magazine No 433, 2012',
+         'pdf_id' => null,
+         'link' => 'pdfs\Damus Nro 433.pdf',
+         'info' => null,
+         'added_at' => '2018/04/30',
+      ],
+      [
+         'name' => 'Approaching Palestrina and Lassus, Cantata magazine, 1994',
+         'pdf_id' => null,
+         'link' => 'pdfs\Cantata 1994.pdf',
+         'info' => null,
+         'added_at' => '2018/04/30',
+      ],
+   ],
+
+   'articles.references' => [
+      'Placement of the text in 16th century works: problems and solutions
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <small><strong><em>See Text underlay in 16th century vocal music</em></strong></small>',
+
+      'Unwritten sensibilisations in 16th century originals: which ones and under what circumstances to apply them?
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <small><strong><em>See Musica Ficta in 16th century vocal works</em></strong></small>',
    ],
    
 ];

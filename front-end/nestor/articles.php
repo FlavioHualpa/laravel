@@ -1,45 +1,22 @@
-<?php $page = 'transcriptions' ?>
+<?php $page = 'articles' ?>
 
 <?php require 'lang/lang.php' ?>
 
 <?php require 'partials/header.php' ?>
 
-<?php $today = new DateTime() ?>
+<?php $today = new DateTime()?>
 
    <div class="container">
       <section class="text">
          <h2 class="title">
-            <?=lang('transc.title.1')?>
+            <?=lang('articles.title.1')?>
          </h2>
-         <p>
-            <?=lang('transc.parag.1')?>
-         </p>
 
-         <h2 class="title">
-            <?=lang('transc.title.2')?>
-         </h2>
-         <ul>
-            <?php foreach (lang('transc.parag.2') as $item) : ?>
-            <li>
-               <?= $item ?>
-            </li>
-            <?php endforeach ?>
-         </ul>
+         <br>
 
-         <?php foreach(lang('transc.groups') as $group) : ?>
-         <article class="links-group">
-            <h3>
-               <?=$group['name']?>
-            </h3>
-
-            <?php if ($group['reference']) : ?>
-            <span class="group-ref">
-               <?=$group['reference']?>
-            </span>
-            <?php endif ?>
-
+         <div class="links-group">
             <ul>
-               <?php foreach($group['files'] as $file) : ?>
+               <?php foreach(lang('articles.files') as $file) : ?>
                <li>
                   <img src="img/acrobat_icon.png" class="pdf-icon">
                   <a href="<?= $file['link'] ?>"
@@ -69,14 +46,25 @@
                </li>
                <?php endforeach ?>
             </ul>
-         </article>
-         <?php endforeach ?>
+         </div>
 
-         <p>&nbsp;</p>
+         <br>
 
-         <p>
-            <?=lang('transc.footnote')?>
-         </p>
+         <p><?=lang('articles.title.2')?></p>
+
+         <div class="links-group">
+            <ul>
+               <?php foreach(lang('articles.references') as $ref) : ?>
+               <li>
+                  <img src="img/art-ref-icon.png" class="pdf-icon">
+                  <?= $ref ?>
+               </li>
+               <?php endforeach ?>
+            </ul>
+         </div>
+
+         <br>
+
       </section>
    </div>
 
