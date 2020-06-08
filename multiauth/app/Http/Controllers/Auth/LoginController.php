@@ -57,7 +57,22 @@ class LoginController extends Controller
             return $this->sendLockoutResponse($request);
         }
 
-        if ($this->attemptLogin($request)) {
+        // Obtengo un array con todos los tipos de usuario
+        // con el email ingresado
+        $profiles = $this->findProfiles($request);
+
+        if (count($profiles) > 1) {
+            return view('auth.chooseProfile')
+                ->with('profiles', $profiles)
+                ->withInput($request->all());
+        }
+
+        return $this->loginResponse($request);
+    }
+
+    protected function loginResponse(Request $request, $guard = null)
+    {
+        if ($this->attemptLogin($request, $guard)) {
             return $this->sendLoginResponse($request);
         }
 
@@ -67,6 +82,19 @@ class LoginController extends Controller
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
+    }
+
+    protected function loginWithProfile(Request $request)
+    {
+        $request->validate([
+            'profile' => 'required'
+        ], [
+            'required' => 'Debe seleccionar un perfil'
+        ]);
+
+        $guard = $this->findGuard($request);
+
+        return $this->loginResponse($request, $guard);
     }
 
     protected function validateLogin(Request $request)
@@ -80,10 +108,54 @@ class LoginController extends Controller
         ]);
     }
 
-    protected function attemptLogin(Request $request)
+    protected function findProfiles(Request $request)
+    {
+        $profiles = [];
+
+        foreach (config('auth.providers') as $provider)
+        {
+            $model = $provider['model'];
+
+            if ($profile = $model::where('email', $request->email)->first())
+            {
+                $profiles[] = $profile;
+            }
+        }
+
+        return $profiles;
+    }
+
+    protected function findGuard(Request $request)
+    {
+        $model = $request->profile;
+
+        $provider = $this->find_key($model, 'model', config('auth.providers'));
+        $guard = $this->find_key($provider, 'provider', config('auth.guards'));
+
+        return $guard;
+    }
+
+    private function find_key($value, $subKey, $array)
+    {
+        foreach ($array as $key => $subArray)
+        {
+            if ($subArray[$subKey] == $value)
+                return $key;
+        }
+
+        return false;
+    }
+
+    protected function attemptLogin(Request $request, $guard = null)
     {
         $credentials = $request->only('email', 'password');
-        $guards = ['user', 'delegate', 'supervisor', 'admin'];
+
+        if ($guard) {
+            $guards = [ $guard ];
+        }
+        else {
+            $guards = ['user', 'delegate', 'supervisor', 'admin'];
+        }
 
         foreach ($guards as $guard)
 

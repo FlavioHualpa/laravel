@@ -702,4 +702,315 @@ return [
       <small><strong><em>Ver en Análisis de obras corales renacentistas, páginas 39 a 54</em></strong></small>',
    ],
 
+
+   //=================
+   // ARREGLOS
+   //=================
+
+   'published.title.1' => '<u>ARREGLOS CORALES EDITADOS</u>',
+   'published.parag.1' => 'Mis siguientes arreglos están editados desde hace varios años y están disponibles en las editoriales respectivas:',
+
+   'published.editors' => [
+      [
+         'name' => '<strong>Ediciones GCC (Argentina)</strong>',
+         'contact' => 'Contacto: <a href="mailto:edicionesgcc@gmail.com">edicionesgcc@gmail.com</a>',
+         'publications' => [
+            'Allá lejos y hace tiempo - <em>SATB (Ariel Ramírez, 1991)</em>',
+            'Balada para mi muerte - <em>SATB (Astor Piazzolla, 1992)</em>',
+            'Buenos Aires hora cero - <em>SATB (Astor Piazzolla, 2000)</em>',
+            'Dos canciones tradicionales españolas - <em>SA (Anónimo, 1991)</em>',
+            'El gordo triste - <em>SAB (Astor Piazzolla, 2000)</em>',
+            'La muerte del ángel - <em>SATB (Astor Piazzolla, 1991)</em>',
+            'Jacinto Chiclana - <em>SATB (Astor Piazzolla, 1982)</em>',
+         ],
+      ],
+      [
+         'name' => '<strong>Editions A Coeur Joie (Francia)</strong>',
+         'contact' => 'Contacto: <a href="mailto:daudibert@choralies.org">daudibert@choralies.org</a>',
+         'publications' => [
+            'Adiós Nonino - <em>SATB (Astor Piazzolla, 1981)</em>',
+            'Berimbau - <em>SATB (Vinicius-Powell, 2000)</em>',
+            'Canten señores cantores - <em>Canon a 2 y 3 (Tradicional)</em>',
+            'Huachito torito - <em>SAB (Tradicional, 1999)</em>',
+            'La Puerca - <em>SAB (1999)</em>',
+            'Plantita de alhelí - <em>SAB (Tradicional, 2003)</em>',
+            'Tonada de La Quiaca - <em>SAB (Tradicional, 2006)</em>',
+         ],
+      ],
+   ],
+
+   'free.title.1' => '<u>ARREGLOS CORALES DE MÚSICA POPULAR</u>',
+
+   'free.paragraphs' => [
+      'He decidido incorporar a esta plataforma varios de mis arreglos corales <strong>nunca editados.</strong>',
+      'Empecé a escribir arreglos para coro desde muy joven en 1972, casi siempre para ser cantados por los coros que dirigí en más de 45 años en la actividad.',
+      'Muchos de mis arreglos corales han sido editados desde hace años en Argentina (Ediciones GCC), Francia (Editions A Coeur Joie) y Estados Unidos (Kjos), y deben consultar a las editoriales para conseguirlos.',
+      'Más adelante voy a detallar el listado completo de mis arreglos (son más de 100), así como el orgánico coral para el que han sido escritos.',
+      'Aquí encontrarán arreglos corales de obras de Astor Piazzolla, María Elena Walsh, Beatles, negro spirituals, y de varios autores argentinos y latinoamericanos.
+      <br>
+      Pueden descargarse desde aquí de manera gratuita.',
+      'De todos mis arreglos corales, 11 han sido premiados en concursos en Argentina.
+      <br>
+      Los indicados con <img src="img/award-icon.png" class="award-icon"> están aquí disponibles:',
+   ],
+
+   'free.awarded' => [
+      'Canción del Jardinero (SA) I Premio categoría voces iguales (Nacional 1985) <img src="img/award-icon.png" class="award-icon">',
+      'Jacinto Chiclana (SATB) III Premio Tango-Milonga (Nacional 1985)',
+      'Adiós nonino (SATB) IV Premio Tango-Milonga (Nacional 1985)',
+      'Serenata para la tierra de uno (SATB) III Premio Canción (Nacional 1985) <img src="img/award-icon.png" class="award-icon">',
+      'El árbol ya fue plantado (SATB) IV Premio Canción (Nacional 1985) <img src="img/award-icon.png" class="award-icon">',
+      'Cuatro estrofas (SATB) I Premio (Municipal 1986) <img src="img/award-icon.png" class="award-icon">',
+      'Zamba del nuevo día (SATB) I Premio (Esiteddfod 1992) <img src="img/award-icon.png" class="award-icon">',
+      'Tonada de La Quiaca (SAB) I Mención (Fondo de las Artes 2007)',
+      'Guanuqueando (SAB) II Mención (Fondo de las Artes 2007) <img src="img/award-icon.png" class="award-icon">',
+      'Exaudiat (obra original) (SATB) Mención (Ars Nova de Rosario 2012) <img src="img/award-icon.png" class="award-icon">',
+      'Canción de la vacuna (SATB) III Premio (AAMCANT 2015) <img src="img/award-icon.png" class="award-icon">',
+   ],
+
+   //===================================
+   // ARREGLOS AGRUPADOS POR AUTOR
+   //===================================
+
+   'free.groups' => [
+      
+      [
+         'name' => 'ASTOR PIAZZOLLA',
+         'reference' => null,
+         'files' => [
+            [
+               'name' => 'Años de soledad',
+               'pdf_id' => 1,
+               'link' => '#',
+               'info' => ' - <em>SATB (Astor Piazzolla, 2012)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Buenos Aires hora cero',
+               'pdf_id' => 105,
+               'link' => '#',
+               'info' => ' - <em>SSAA (Astor Piazzolla, 2014)</em>',
+               'added_at' => '2019/04/15',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Buenos Aires hora cero',
+               'pdf_id' => 5,
+               'link' => '#',
+               'info' => ' - <em>TTBB (Astor Piazzolla, 2005)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Coral',
+               'pdf_id' => 10,
+               'link' => '#',
+               'info' => ' - <em>SATB (Astor Piazzolla, 2000)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Verano porteño',
+               'pdf_id' => 37,
+               'link' => '#',
+               'info' => ' - <em>SATB (Astor Piazzolla, 1974)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+         ],
+      ],
+
+      [
+         'name' => 'MARÍA ELENA WALSH',
+         'reference' => null,
+         'files' => [
+            [
+               'name' => 'Adivina adivinador',
+               'pdf_id' => 106,
+               'link' => '#',
+               'info' => ' - <em>SA (M. E. Walsh, 2019)</em>',
+               'added_at' => '2019/04/21',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Canción de la vacuna (el brujito de Gulubú)',
+               'pdf_id' => 15,
+               'link' => '#',
+               'info' => ' - <em>SATB (M. E. Walsh, 1982)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => true,
+            ],
+            [
+               'name' => 'Canción del estornudo (el otro Mambrú)',
+               'pdf_id' => 6,
+               'link' => '#',
+               'info' => ' - <em>SATB (M. E. Walsh, 1983)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Canción del jardinero',
+               'pdf_id' => 108,
+               'link' => '#',
+               'info' => ' - <em>SA (M. E. Walsh, 1985/2020)</em>',
+               'added_at' => '2020/03/14',
+               'awarded' => true,
+            ],
+            [
+               'name' => 'Canción para tomar el té',
+               'pdf_id' => 109,
+               'link' => '#',
+               'info' => ' - <em>SAB (M. E. Walsh, 2017)</em>',
+               'added_at' => '2020/04/02',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Como la cigarra',
+               'pdf_id' => 73,
+               'link' => '#',
+               'info' => ' - <em>SATB (M. E. Walsh, 1982)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'El Señor Juan Sebastián',
+               'pdf_id' => 116,
+               'link' => '#',
+               'info' => ' - <em>SAB (M. E. Walsh, 2020)</em>',
+               'added_at' => '2020/05/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'La canción del Jacarandá',
+               'pdf_id' => 71,
+               'link' => '#',
+               'info' => ' - <em>SA / coro de niños (M. E. Walsh, 2018)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'La Pájara Pinta',
+               'pdf_id' => 104,
+               'link' => '#',
+               'info' => ' - <em>SA (M. E. Walsh, 2017)</em>',
+               'added_at' => '2019/04/02',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'La vaca estudiosa',
+               'pdf_id' => 70,
+               'link' => '#',
+               'info' => ' - <em>SA / coro de niños (M. E. Walsh, 2009)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Manuelita la tortuga',
+               'pdf_id' => 68,
+               'link' => '#',
+               'info' => ' - <em>SA / coro de niños (M. E. Walsh, 2017)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Serenata para la tierra de uno',
+               'pdf_id' => 67,
+               'link' => '#',
+               'info' => ' - <em>SATB (M. E. Walsh, 1984)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => true,
+            ],
+            [
+               'name' => 'Zamba para Pepe',
+               'pdf_id' => 40,
+               'link' => '#',
+               'info' => ' - <em>SATB (M. E. Walsh, 1996)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+         ],
+      ],
+
+      [
+         'name' => 'THE BEATLES & QUEEN',
+         'reference' => null,
+         'files' => [
+            [
+               'name' => 'I wanna be your man',
+               'pdf_id' => 74,
+               'link' => '#',
+               'info' => ' - <em>SATB y orquesta (Lennon-McCartney, 2007)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'I will',
+               'pdf_id' => 3,
+               'link' => '#',
+               'info' => ' - <em>SATB (P. Mc Cartney, 2005)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'I will',
+               'pdf_id' => 65,
+               'link' => '#',
+               'info' => ' - <em>SATB y orquesta (P. Mc Cartney, 2006)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Lady Madonna',
+               'pdf_id' => 22,
+               'link' => '#',
+               'info' => ' - <em>SATB y orquesta (Lennon-Mc Cartney, 2006)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Love of my life',
+               'pdf_id' => 101,
+               'link' => '#',
+               'info' => ' - <em>SATB (F. Mercury, 1992)</em>',
+               'added_at' => '2019/02/11',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Love of my life',
+               'pdf_id' => 23,
+               'link' => '#',
+               'info' => ' - <em>SATB y orquesta (F. Mercury, 2006)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Yesterday',
+               'pdf_id' => 4,
+               'link' => '#',
+               'info' => ' - <em>SATB (P. Mc Cartney, 2005)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Yesterday',
+               'pdf_id' => 66,
+               'link' => '#',
+               'info' => ' - <em>SATB y orquesta (P. Mc Cartney, 2006)</em>',
+               'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+         ],
+      ],
+   ],
+
+
+   //=================
+   // ERROR 404
+   //=================
+
+   'notfound.text.1' => 'Disculpá, no encontramos la página que estás buscando',
+   'notfound.text.2' => 'Revisá la dirección que escribiste o el link que te pasaron',
+   'notfound.text.3' => 'O si preferís te podemos llevar a',
+   'notfound.text.4' => 'la página de inicio',
 ];

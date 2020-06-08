@@ -217,6 +217,12 @@ a:hover {
    height: 20px;
 }
 
+.container .text .award-icon {
+   width: 24px;
+   height: 24px;
+   vertical-align: middle;
+}
+
 .container .links-group h3 {
    margin: 40px 0 20px 0;
    color: #800000;
@@ -259,8 +265,44 @@ a:hover {
    border-radius: 4px;
 }
 
+.container .editors-group p {
+   margin-bottom: 0;
+   line-height: 1.4em;
+}
+
+.container .editors-group ul,
+.container .awarded-group ul {
+   margin-left: 40px;
+}
+
+.container .editors-group ul li,
+.container .awarded-group ul li {
+   margin-bottom: 0.3em;
+   line-height: 1.3em;
+}
+
 .desktop-only {
    display: none;
+}
+
+.error-404 {
+   width: 60%;
+   margin: 40px auto;
+   text-align: center;
+}
+
+.error-404 h1 {
+   font-size: 60px;
+   margin: 30px;
+}
+
+.error-404 h3 {
+   font-size: 20px;
+   margin: 10px;
+}
+
+.error-404 p {
+   font-size: 18px;
 }
 
 

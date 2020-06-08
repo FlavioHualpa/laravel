@@ -692,5 +692,42 @@ return [
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <small><strong><em>See Musica Ficta in 16th century vocal works</em></strong></small>',
    ],
-   
+
+
+   //=================
+   // ARREGLOS
+   //=================
+
+   'published.title.1' => '<u>PUBLISHED CHORAL ARRANGEMENTS</u>',
+   'published.parag.1' => 'The following arrangements are available from their publishers as follows:',
+
+   'published.editors' => [
+      [
+         'name' => '<strong>Ediciones GCC (Argentine)</strong>',
+         'contact' => 'Contact: <a href="mailto:edicionesgcc@gmail.com">edicionesgcc@gmail.com</a>',
+         'publications' => [
+            'Allá lejos y hace tiempo - <em>SATB (Ariel Ramírez, 1991)</em>',
+            'Balada para mi muerte - <em>SATB (Astor Piazzolla, 1992)</em>',
+            'Buenos Aires hora cero - <em>SATB (Astor Piazzolla, 2000)</em>',
+            'Two traditional spanish songs - <em>SA (Anonymous, 1991)</em>',
+            'El gordo triste - <em>SAB (Astor Piazzolla, 2000)</em>',
+            'La muerte del ángel - <em>SATB (Astor Piazzolla, 1991)</em>',
+            'Jacinto Chiclana - <em>SATB (Astor Piazzolla, 1982)</em>',
+         ],
+      ],
+      [
+         'name' => '<strong>Editions A Coeur Joie (France)</strong>',
+         'contact' => 'Contact: <a href="mailto:daudibert@choralies.org">daudibert@choralies.org</a>',
+         'publications' => [
+            'Adiós Nonino - <em>SATB (Astor Piazzolla, 1981)</em>',
+            'Berimbau - <em>SATB (Vinicius-Powell, 2000)</em>',
+            'Canten señores cantores - <em>Canon in 2 and 3 (Traditional)</em>',
+            'Huachito torito - <em>SAB (Traditional, 1999)</em>',
+            'La Puerca - <em>SAB (1999)</em>',
+            'Plantita de alhelí - <em>SAB (Traditional, 2003)</em>',
+            'Tonada de La Quiaca - <em>SAB (Traditional, 2006)</em>',
+         ],
+      ],
+   ]
+
 ];

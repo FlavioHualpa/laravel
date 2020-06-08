@@ -16,10 +16,10 @@
                   <a href="#"><?= lang('menu.opt.arr') ?></a>
                   <ul class="submenu">
                      <li>
-                        <a href="#"><?= lang('menu.opt.free') ?></a>
+                        <a href="arrangements.php?type=free"><?= lang('menu.opt.free') ?></a>
                      </li>
                      <li>
-                        <a href="#"><?= lang('menu.opt.published') ?></a>
+                        <a href="arrangements.php?type=published"><?= lang('menu.opt.published') ?></a>
                      </li>
                   </ul>
                </li>

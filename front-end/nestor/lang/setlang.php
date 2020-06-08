@@ -7,5 +7,7 @@ if (isset($_GET['lang']))
    $lang = $_GET['lang'];
    set_language($lang);
 
-   header('location: ../index.php');
+   $previous_url = $_SERVER['HTTP_REFERER'];
+
+   header('location:' . $previous_url);
 }

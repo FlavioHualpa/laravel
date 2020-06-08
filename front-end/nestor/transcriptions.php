@@ -45,8 +45,7 @@
                   <a href="<?= $file['link'] ?>"
                      <?= $file['pdf_id'] ?
                      'data-link="./src/displaypdf.php?id='
-                     . $file['pdf_id']
-                     . '"'
+                     . $file['pdf_id'] . '"'
                      : ''
                      ?>
                   >

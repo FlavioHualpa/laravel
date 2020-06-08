@@ -666,4 +666,40 @@ return [
       'Les sensibilisations pas écrites dans les originaux du XVI: où, quand et pourquoi devraient-elles être appliquées?',
    ],
 
+
+   //=================
+   // ARREGLOS
+   //=================
+
+   'published.title.1' => '<u>ARRANGEMENTS CHORALES ÉDITÉS</u>',
+   'published.parag.1' => 'Mes arrangements suivants sont édités dés quelques années et sont disponibles dans ces maisons d\'édition:',
+
+   'published.editors' => [
+      [
+         'name' => '<strong>Ediciones GCC (Argentine)</strong>',
+         'contact' => 'Contact: <a href="mailto:edicionesgcc@gmail.com">edicionesgcc@gmail.com</a>',
+         'publications' => [
+            'Allá lejos y hace tiempo - <em>SATB (Ariel Ramírez, 1991)</em>',
+            'Balada para mi muerte - <em>SATB (Astor Piazzolla, 1992)</em>',
+            'Buenos Aires hora cero - <em>SATB (Astor Piazzolla, 2000)</em>',
+            'Deux chansons traditionnelles espagnoles - <em>SA (Anonyme, 1991)</em>',
+            'El gordo triste - <em>SAB (Astor Piazzolla, 2000)</em>',
+            'La muerte del ángel - <em>SATB (Astor Piazzolla, 1991)</em>',
+            'Jacinto Chiclana - <em>SATB (Astor Piazzolla, 1982)</em>',
+         ],
+      ],
+      [
+         'name' => '<strong>Editions A Coeur Joie (France)</strong>',
+         'contact' => 'Contact: <a href="mailto:daudibert@choralies.org">daudibert@choralies.org</a>',
+         'publications' => [
+            'Adiós Nonino - <em>SATB (Astor Piazzolla, 1981)</em>',
+            'Berimbau - <em>SATB (Vinicius-Powell, 2000)</em>',
+            'Canten señores cantores - <em>Canon in 2 et 3 (Traditionnel)</em>',
+            'Huachito torito - <em>SAB (Traditionnel, 1999)</em>',
+            'La Puerca - <em>SAB (1999)</em>',
+            'Plantita de alhelí - <em>SAB (Traditionnel, 2003)</em>',
+            'Tonada de La Quiaca - <em>SAB (Traditionnel, 2006)</em>',
+         ],
+      ],
+   ]
 ];

@@ -19,4 +19,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('/login/chooseProfile', 'Auth\LoginController@loginWithProfile')->name('loginWithProfile');
+
 Route::get('/home', 'HomeController@index')->name('home');
