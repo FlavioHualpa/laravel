@@ -2,7 +2,8 @@ let okBtnText
 let cancelBtnText
 let questionText
 
-const prepareLinks = function () {
+const prepareLinks = function ()
+{
    let downloads = document.querySelectorAll('a[data-link]')
 
    downloads.forEach(el => {

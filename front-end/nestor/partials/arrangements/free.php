@@ -4,6 +4,8 @@
             <?=lang('free.title.1')?>
          </h2>
 
+         <br>
+
          <?php foreach (lang('free.paragraphs') as $parag) : ?>
          <p>
             <?= $parag ?>
