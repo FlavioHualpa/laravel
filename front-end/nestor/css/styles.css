@@ -223,6 +223,60 @@ a:hover {
    vertical-align: middle;
 }
 
+.container .text .contact-form {
+   max-width: 500px;
+   background-color: rgba(255, 255, 255, 40%);
+   border: 1px solid olive;
+   border-radius: 6px;
+   padding: 30px;
+   margin: 50px auto;
+   text-align: center;
+}
+
+.container .text .contact-form label {
+   font-size: 14px;
+   color: #800000;
+   display: block;
+   margin-left: 12px;
+   margin-bottom: 2px;
+   text-align: left;
+   text-transform: uppercase;
+}
+
+.container .text .contact-form input,
+.container .text .contact-form textarea {
+   font-size: 18px;
+   outline: none;
+   background-color: white;
+   border: 1px solid #a8d6ab;
+   border-radius: 4px;
+   padding: 8px 12px;
+   margin-bottom: 20px;
+   width: 100%;
+}
+
+.container .text .contact-form .error {
+   color: #d00000;
+   margin-left: 12px;
+   margin-top: -16px;
+   text-align: left;
+}
+
+.container .text .contact-form button {
+   font-size: 18px;
+   color: #800000;
+   background-color: #F0CE8C;
+   border: none;
+   border-radius: 6px;
+   padding: 8px 20px;
+   cursor: pointer;
+   transition: 0.2s;
+}
+
+.container .text .contact-form button:hover {
+   background-color: #FFAD59;
+}
+
 .container .links-group h3 {
    margin: 40px 0 20px 0;
    color: #800000;

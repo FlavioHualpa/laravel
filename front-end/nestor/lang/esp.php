@@ -1219,6 +1219,21 @@ return [
 
 
    //=================
+   // CONTACTO
+   //=================
+
+   'contact.title.1' => '<u>ENVIAME TU CONSULTA</u>',
+   'contact.label.1' => 'nombre',
+   'contact.label.2' => 'email',
+   'contact.label.3' => 'consulta',
+   'contact.label.4' => 'Enviar',
+   'contact.error.1' => 'Por favor ingresá tu nombre',
+   'contact.error.2' => 'Por favor ingresá tu email',
+   'contact.error.3' => 'El email no tiene un formato válido',
+   'contact.error.4' => 'Por favor escribí una consulta',
+
+
+   //=================
    // ERROR 400 / 500
    //=================
 

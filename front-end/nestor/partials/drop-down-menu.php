@@ -29,7 +29,7 @@
                </li>
                <li class="<?= $page == 'contact' ? 'selected' : '' ?>">
                   <i class="fas fa-angle-double-right drop-down-only"></i>
-                  <a href="#"><?= lang('menu.opt.contact') ?></a>
+                  <a href="contact.php"><?= lang('menu.opt.contact') ?></a>
                </li>
                <li>
                   <i class="fas fa-angle-double-right drop-down-only"></i>
