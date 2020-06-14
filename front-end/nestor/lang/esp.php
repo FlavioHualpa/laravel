@@ -1231,7 +1231,14 @@ return [
    'contact.error.2' => 'Por favor ingresá tu email',
    'contact.error.3' => 'El email no tiene un formato válido',
    'contact.error.4' => 'Por favor escribí una consulta',
-
+   'contact.thanks.1' => 'Gracias por tu consulta, ',
+   'contact.thanks.2' => 'Recibirás una copia en tu cuenta de email.',
+   'contact.thanks.3' => 'Otra consulta',
+   'contact.thanks.4' => 'Ir al inicio',
+   'contact.thanks.5' => 'Gracias por enviarme tu consulta, ',
+   'contact.thanks.6' => 'Te responderé a la brevedad.',
+   'contact.thanks.7' => 'Escribiste:',
+   'contact.thanks.8' => 'Tu consulta a Néstor Zadoff',
 
    //=================
    // ERROR 400 / 500

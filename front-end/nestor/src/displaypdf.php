@@ -1,36 +1,36 @@
 <?php
 
-require 'params.php';
+require 'geoapi.php';
+require_once 'File.php';
+require_once 'Download.php';
 
-try
-{
-   $pdo = new PDO($dsn, $user, $pass);
-   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$source = new MySql();
 
-   $sql = 'SELECT id, nombre_pdf FROM pdfs WHERE id = :id';
-   $stmt = $pdo->prepare($sql);
-   $stmt->bindParam('id', $id, PDO::PARAM_STR);
-   $stmt->execute();
+$file = new File($source);
 
-   $result = $stmt->fetch(PDO::FETCH_ASSOC);
-}
-catch (Exception $e)
-{
-   header('location:/error/500.php');
-   exit();
-}
+$result = $file->find($id);
 
 if (empty($result)) {
    header('location:/error/404f.php');
    exit();
 }
 
-echo $result['nombre_pdf'];
-echo '<br>';
-echo $country;
-echo '<br>';
-echo $city;
+$file->increment($id);
 
-// header("location:../../NestorZadoff/pdfs/" . $result['nombre_pdf']);
-//header('location:file://C:/wamp64/www/sites/NestorZadoff/pdfs/' . $result['nombre_pdf']);
+$download = new Download($source);
+
+$download->pdf_id = $id;
+$download->ip = $ip;
+$download->country = $country;
+$download->city = $city;
+$download->created_at = date('Y-m-d H:i:s');
+$download->save();
+
+// echo $result['nombre_pdf'];
+// echo '<br>';
+// echo $country;
+// echo '<br>';
+// echo $city;
+
+header("location:../pdfs/" . $result['nombre_pdf']);
 exit();

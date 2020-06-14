@@ -5,7 +5,7 @@ $type = $_GET['type'] ?? null;
 
 if ($type != 'free' && $type != 'published')
 {
-   header('location:/error/404.php');
+   header('location: error/404.php');
    exit;
 }
 ?>

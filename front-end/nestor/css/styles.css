@@ -224,12 +224,12 @@ a:hover {
 }
 
 .container .text .contact-form {
-   max-width: 500px;
+   max-width: 600px;
    background-color: rgba(255, 255, 255, 40%);
-   border: 1px solid olive;
+   border: 1px solid rgba(0, 0, 0, 20%);
    border-radius: 6px;
    padding: 30px;
-   margin: 50px auto;
+   margin: 30px auto;
    text-align: center;
 }
 
@@ -237,7 +237,7 @@ a:hover {
    font-size: 14px;
    color: #800000;
    display: block;
-   margin-left: 12px;
+   margin-left: 6px;
    margin-bottom: 2px;
    text-align: left;
    text-transform: uppercase;
@@ -248,7 +248,7 @@ a:hover {
    font-size: 18px;
    outline: none;
    background-color: white;
-   border: 1px solid #a8d6ab;
+   border: 1px solid #b9d6bb;
    border-radius: 4px;
    padding: 8px 12px;
    margin-bottom: 20px;
@@ -262,18 +262,28 @@ a:hover {
    text-align: left;
 }
 
-.container .text .contact-form button {
+.container .text .contact-form .flex {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.container .text .contact-form button,
+.container .text .contact-form .btn {
    font-size: 18px;
+   font-weight: bold;
    color: #800000;
    background-color: #F0CE8C;
    border: none;
    border-radius: 6px;
+   margin: 4px 0;
    padding: 8px 20px;
    cursor: pointer;
    transition: 0.2s;
 }
 
-.container .text .contact-form button:hover {
+.container .text .contact-form button:hover,
+.container .text .contact-form .btn:hover {
    background-color: #FFAD59;
 }
 
@@ -389,5 +399,10 @@ a:hover {
 
    .desktop-only {
       display: block;
+   }
+
+   .container .text .contact-form {
+      padding: 30px 80px;
+      margin: 50px auto;
    }
 }

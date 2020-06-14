@@ -1191,21 +1191,30 @@ return [
    'contact.error.2' => 'Veuillez saisir votre e-mail',
    'contact.error.3' => 'L\'e-mail n\'est pas dans un format valide',
    'contact.error.4' => 'Veuillez écrire une demande',
+   'contact.thanks.1' => 'Merci pour votre demande, ',
+   'contact.thanks.2' => 'Vous recevrez une copie dans votre compte de e-mail.',
+   'contact.thanks.3' => 'Autre consultation',
+   'contact.thanks.4' => 'Aller à la page d\'accueil',
+   'contact.thanks.5' => 'Merci de m\'avoir envoyé votre demande, ',
+   'contact.thanks.6' => 'Je vous rappellerai dès que possible.',
+   'contact.thanks.7' => 'Vous avez écrit:',
+   'contact.thanks.8' => 'Votre demande à Nestor Zadoff',
 
 
    //=================
    // ERROR 400 / 500
    //=================
 
-   'notfound.text.1' => 'Sorry, we couldn\'t find the page you are looking for',
-   'notfound.text.2' => 'Please check the address you typed or the link that you used',
-   'notfound.text.3' => 'Or if you prefer we can take you to',
-   'notfound.text.4' => 'the home page',
+   'notfound.text.1' => 'Désolé, nous n\'avons pas pu trouver la page que vous recherchez',
+   'notfound.text.2' => 'Veuillez vérifier l\'adresse que vous avez tapée ou le lien que vous avez utilisé',
+   'notfound.text.3' => 'Ou si vous préférez, nous pouvons vous emmener à',
+   'notfound.text.4' => 'la page d\'accueil',
 
-   'notfound.text.5' => 'Sorry, that download is not available',
-   'notfound.text.6' => 'Click',
-   'notfound.text.7' => 'here',
-   'notfound.text.8' => 'to go back to the previous page',
+   'notfound.text.5' => 'Désolé, ce téléchargement n\'est pas disponible',
+   'notfound.text.6' => 'Cliquez',
+   'notfound.text.7' => 'ici',
+   'notfound.text.8' => 'pour revenir à la page précédente',
 
-   'notconn.text.1' => 'Sorry, we couldn\'t process your request',
+   'notconn.text.1' => 'Désolé, nous n\'avons pas pu traiter votre demande',
+   'notconn.text.2' => 'Appuyez sur F5 pour réessayer dans un instant',
 ];

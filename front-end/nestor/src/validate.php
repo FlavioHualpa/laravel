@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] != "POST")
 {
    return;
@@ -30,7 +32,9 @@ if (! isset($input['query']) || empty($query = trim($input['query'])))
 if (empty($errors))
 {
    sendmail($name, $email, $query);
-   header('location: /thanks.php');
+
+   $_SESSION['contact_name'] = $name;
+   header('location: thanks.php');
    exit;
 }
 
@@ -59,6 +63,12 @@ function old($field)
 
 function sendmail($name, $email, $query)
 {
+   sendNestorMail($name, $email, $query);
+   sendUserMail($name, $email, $query);
+}
+
+function sendNestorMail($name, $email, $query)
+{   
    $header = "From: " . $email . "\r\n";
    $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
    $header .= "Mime-Version: 1.0 \r\n";
@@ -68,8 +78,26 @@ function sendmail($name, $email, $query)
    $body .= $query;
 
    $to = 'info@nestorzadoff.com.ar';
-   $to = 'flaviohualpa@gmail.com';
+   $to = 'flaviohualpa@outlook.com';
    $subject = 'CONSULTA DESDE TU WEB';
+
+   mail($to, $subject, utf8_decode($body), $header);
+}
+
+function sendUserMail($name, $email, $query)
+{   
+   $header = "From: noreply@nestorzadoff.com.ar\r\n";
+   $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+   $header .= "Mime-Version: 1.0 \r\n";
+   $header .= "Content-Type: text/plain";
+
+   $body = lang('contact.thanks.5') . "$name.\r\n";
+   $body .= lang('contact.thanks.6') . "\r\n\r\n";
+   $body = lang('contact.thanks.7') . "\r\n\r\n";
+   $body .= $query;
+
+   $to = $email;
+   $subject = lang('contact.thanks.8');
 
    mail($to, $subject, utf8_decode($body), $header);
 }

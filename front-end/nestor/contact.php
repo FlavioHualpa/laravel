@@ -30,6 +30,7 @@
                      name="name"
                      id="name"
                      value="<?= old('name') ?>"
+                     autofocus
                   >
                   <?= error('name') ?>
                </div>
