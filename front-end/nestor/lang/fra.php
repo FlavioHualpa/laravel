@@ -6,6 +6,8 @@ return [
    'down.confirm' => 'Confirmez-vous le téléchargement?',
    'down.yes' => 'Oui',
    'down.no' => 'Non',
+   'visits' => 'Visites:',
+   'webmaster' => 'Webmaster Flavio Hualpa',
 
 
    //=================

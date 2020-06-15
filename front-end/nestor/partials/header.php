@@ -1,3 +1,5 @@
+<?php require 'log-visits.php' ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
