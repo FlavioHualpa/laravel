@@ -25,7 +25,7 @@
                </li>
                <li class="<?= $page == 'performances' ? 'selected' : '' ?>">
                   <i class="fas fa-angle-double-right drop-down-only"></i>
-                  <a href="#"><?= lang('menu.opt.perf') ?></a>
+                  <a href="performances.php"><?= lang('menu.opt.perf') ?></a>
                </li>
                <li class="<?= $page == 'contact' ? 'selected' : '' ?>">
                   <i class="fas fa-angle-double-right drop-down-only"></i>

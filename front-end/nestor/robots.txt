@@ -1,0 +1,20 @@
+User-agent: Googlebot
+Disallow: /js/
+Disallow: /pdfs/
+
+User-agent: Google
+Disallow: /js/
+Disallow: /pdfs/
+
+User-agent: bingbot
+Disallow: /js/
+Disallow: /pdfs/
+
+User-agent: Slurp
+Disallow: /js/
+Disallow: /pdfs/
+
+User-agent: *
+Disallow: /
+Disallow: /js/
+Disallow: /pdfs/

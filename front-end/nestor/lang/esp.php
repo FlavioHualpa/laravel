@@ -1221,6 +1221,29 @@ return [
 
 
    //=================
+   // CONCIERTOS
+   //=================
+
+   'perf.title.1' => '<u>PRÓXIMOS CONCIERTOS DIRIGIDOS POR NÉSTOR ZADOFF</u>',
+
+   'perf.dates' => [
+      [
+         'month' => 'NOVIEMBRE/DICIEMBRE 2019',
+         'places' => [
+            [
+               'title' => '30/11/2019 - Santuario Jesús Sacramentado - CABA',
+               'imageUrl' => 'img/performances/Zelenka-Misa-Votiva-Sacramentado.jpg',
+            ],
+            [
+               'title' => '5/12/2019 - Catedral Metropolitana - CABA',
+               'imageUrl' => 'img/performances/Zelenka-Misa-Votiva-Catedral.jpg',
+            ],
+         ],
+      ],
+   ],
+
+
+   //=================
    // CONTACTO
    //=================
 
