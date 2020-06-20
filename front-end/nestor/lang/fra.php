@@ -26,6 +26,7 @@ return [
    'menu.opt.esp' => 'español',
    'menu.opt.eng' => 'english',
    'menu.opt.fra' => 'français',
+   'menu.tooltip.new' => 'nouvelle publication',
 
 
    //=================
@@ -1236,9 +1237,9 @@ return [
    'notfound.text.4' => 'la page d\'accueil',
 
    'notfound.text.5' => 'Désolé, ce téléchargement n\'est pas disponible',
-   'notfound.text.6' => 'Cliquez',
+   'notfound.text.6' => 'Veuillez m\'informer',
    'notfound.text.7' => 'ici',
-   'notfound.text.8' => 'pour revenir à la page précédente',
+   'notfound.text.8' => 'si vous pensez qu\'il s\'agit d\'une erreur',
 
    'notconn.text.1' => 'Désolé, nous n\'avons pas pu traiter votre demande',
    'notconn.text.2' => 'Appuyez sur F5 pour réessayer dans un instant',

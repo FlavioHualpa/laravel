@@ -26,6 +26,7 @@ return [
    'menu.opt.esp' => 'español',
    'menu.opt.eng' => 'english',
    'menu.opt.fra' => 'français',
+   'menu.tooltip.new' => 'new publication',
 
 
    //=================
@@ -1264,9 +1265,9 @@ return [
    'notfound.text.4' => 'the home page',
 
    'notfound.text.5' => 'Sorry, that download is not available',
-   'notfound.text.6' => 'Click',
+   'notfound.text.6' => 'Please notify me',
    'notfound.text.7' => 'here',
-   'notfound.text.8' => 'to go back to the previous page',
+   'notfound.text.8' => 'if you think that this is a mistake',
 
    'notconn.text.1' => 'Sorry, we couldn\'t process your request',
    'notconn.text.2' => 'Press F5 to try again in a moment',

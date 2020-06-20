@@ -1,6 +1,5 @@
 <?php
 
-require_once 'MySql.php';
 require_once 'Entity.php';
 
 class File extends Entity
@@ -11,7 +10,7 @@ class File extends Entity
       {
          $sql = 'SELECT id, nombre_pdf FROM pdfs WHERE id = :id';
          $stmt = $this->dbSource->conn->prepare($sql);
-         $stmt->bindParam('id', $id, PDO::PARAM_STR);
+         $stmt->bindParam('id', $id, PDO::PARAM_INT);
          $stmt->execute();
 
          return $stmt->fetch(PDO::FETCH_ASSOC);
@@ -29,7 +28,7 @@ class File extends Entity
       {
          $sql = 'UPDATE pdfs SET descargas = descargas + 1 WHERE id = :id';
          $stmt = $this->dbSource->conn->prepare($sql);
-         $stmt->bindParam('id', $id, PDO::PARAM_STR);
+         $stmt->bindParam('id', $id, PDO::PARAM_INT);
          $stmt->execute();
       }
       catch (Exception $e)

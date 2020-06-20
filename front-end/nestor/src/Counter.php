@@ -1,6 +1,5 @@
 <?php
 
-require_once 'MySql.php';
 require_once 'Entity.php';
 
 class Counter extends Entity

@@ -98,7 +98,15 @@ a:hover {
    text-decoration: none;
 }
 
-.navigator .menu .slider ul li:hover .submenu {
+.navigator .menu .slider ul li a.new,
+.navigator .drop-down-menu ul li a.new {
+   border: 1px solid #800000;
+   padding: 2px 6px;
+}
+
+.navigator .menu .slider ul li:hover .submenu,
+.navigator .menu .slider ul li:hover .new-tooltip,
+.navigator .drop-down-menu ul li:hover .new-tooltip {
    display: block;
 }
 
@@ -113,6 +121,52 @@ a:hover {
 
 .navigator .menu .slider .submenu li {
    padding: 12px;
+}
+
+.navigator .menu .slider .new-tooltip,
+.navigator .drop-down-menu .new-tooltip {
+   position: absolute;
+   background-color: #F0CE8C;
+   box-shadow: 2px 2px 2px #686868;
+   padding: 4px 6px 3px;
+   border-radius: 4px;
+   font-size: 14px;
+   font-weight: bold;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.navigator .menu .slider .new-tooltip {
+   bottom: calc(100% + 10px);
+   left: -15px;
+   width: 120%;
+   display: none;
+}
+
+.navigator .drop-down-menu .new-tooltip {
+   top: 12px;
+   right: -150px;
+   width: 80%;
+}
+
+.navigator .menu .slider .new-tooltip::after {
+   content: '';
+   position: absolute;
+   bottom: -8px;
+   left: calc(50% - 10px);
+   border-top: 8px solid #F0CE8C;
+   border-left: 8px solid transparent;
+   border-right: 8px solid transparent;
+}
+
+.navigator .drop-down-menu .new-tooltip::after {
+   content: '';
+   position: absolute;
+   bottom: calc(50% - 8px);
+   left: -8px;
+   border-top: 8px solid transparent;
+   border-right: 8px solid #F0CE8C;
+   border-bottom: 8px solid transparent;
 }
 
 .navigator .drop-down-menu {
@@ -130,6 +184,7 @@ a:hover {
 }
 
 .navigator .drop-down-menu ul li {
+   position: relative;
    padding: 12px 20px 12px 6px;
    font-size: 20px;
    text-transform: uppercase;

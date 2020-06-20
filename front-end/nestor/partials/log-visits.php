@@ -1,7 +1,7 @@
 <?php
 
-require_once 'src\Counter.php';
-require_once 'src\Visit.php';
+require_once 'src/Counter.php';
+require_once 'src/Visit.php';
 
 $source = new MySql();
 
@@ -11,15 +11,15 @@ $visits = $counter->find(1)['numero'];
 
 if (!empty($_SERVER['HTTP_CLIENT_IP']))
 {
-    $ip = $_SERVER['HTTP_CLIENT_IP'];
+   $ip = $_SERVER['HTTP_CLIENT_IP'];
 }
 elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
 {
-    $ip = explode(", ", $_SERVER['HTTP_X_FORWARDED_FOR'])[0];
+   $ip = explode(", ", $_SERVER['HTTP_X_FORWARDED_FOR'])[0];
 }
 else
 {
-    $ip = $_SERVER['REMOTE_ADDR'];
+   $ip = $_SERVER['REMOTE_ADDR'];
 }
 
 $visit = new Visit($source);
@@ -30,10 +30,14 @@ $timezone = new DateTimeZone('America/Buenos_Aires');
 
 if (empty($lastVisit))
 {
+   // si la ip del visitante es nueva
+   // le asigno 60 minutos desde su última visita
    $minutes = 60;
 }
 else
 {
+   // si no calculo los minutos desde su última visita
+
    $date1 = date_create("now", $timezone);
    $date2 = date_create($lastVisit['fecha'], $timezone);
 
@@ -45,6 +49,10 @@ else
       $diff->m * 30 * 24 * 60 +  //meses
       $diff->y * 12 * 30 * 24 * 60;  // años
 }
+
+// aumento el contador de visitas
+// si pasaron al menos 15 minutos
+// desde la última página vista
 
 if ($minutes >= 15) {
    $counter->increment(1);   // el counter con id = 1 es el de visitas

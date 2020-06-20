@@ -78,7 +78,6 @@ function sendNestorMail($name, $email, $query)
    $body .= $query;
 
    $to = 'info@nestorzadoff.com.ar';
-   $to = 'flaviohualpa@outlook.com';
    $subject = 'CONSULTA DESDE TU WEB';
 
    mail($to, $subject, utf8_decode($body), $header);
@@ -93,7 +92,7 @@ function sendUserMail($name, $email, $query)
 
    $body = lang('contact.thanks.5') . "$name.\r\n";
    $body .= lang('contact.thanks.6') . "\r\n\r\n";
-   $body = lang('contact.thanks.7') . "\r\n\r\n";
+   $body .= lang('contact.thanks.7') . "\r\n\r\n";
    $body .= $query;
 
    $to = $email;
