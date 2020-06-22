@@ -110,6 +110,14 @@ a:hover {
    display: block;
 }
 
+.navigator .menu .slider ul li .lang-icon,
+.navigator .drop-down-menu ul li .lang-icon {
+   width: 28px;
+   height: 19px;
+   margin-right: 8px;
+   transform: translateY(3px);
+}
+
 .navigator .menu .slider .submenu {
    position: absolute;
    background-color: #F0CE8C;
@@ -123,10 +131,21 @@ a:hover {
    padding: 12px;
 }
 
+.navigator .menu .slider .submenu li div {
+   width: 140px;
+}
+
+.navigator .menu .slider .submenu li div img,
+.navigator .drop-down-menu .submenu li div img {
+   width: 28px;
+   height: 20px;
+   margin-right: 4px;
+   transform: translateY(3px);
+}
+
 .navigator .menu .slider .new-tooltip,
 .navigator .drop-down-menu .new-tooltip {
    position: absolute;
-   background-color: #F0CE8C;
    box-shadow: 2px 2px 2px #686868;
    padding: 4px 6px 3px;
    border-radius: 4px;
@@ -137,6 +156,7 @@ a:hover {
 }
 
 .navigator .menu .slider .new-tooltip {
+   background-color: #F0CE8C;
    bottom: calc(100% + 10px);
    left: -15px;
    width: 120%;
@@ -144,6 +164,7 @@ a:hover {
 }
 
 .navigator .drop-down-menu .new-tooltip {
+   background-color: #EABD61;
    top: 12px;
    right: -150px;
    width: 80%;
@@ -165,7 +186,7 @@ a:hover {
    bottom: calc(50% - 8px);
    left: -8px;
    border-top: 8px solid transparent;
-   border-right: 8px solid #F0CE8C;
+   border-right: 8px solid #EABD61;
    border-bottom: 8px solid transparent;
 }
 

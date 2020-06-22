@@ -58,19 +58,37 @@
                   <a href="#"><?= lang('menu.opt.lang') ?></a>
                   <ul class="submenu">
                      <li>
-                        <a href="lang/setlang.php?lang=es">
-                           <?= lang('menu.opt.esp') ?>
-                        </a>
+                        <div>
+                           <a href="lang/setlang.php?lang=es">
+                              <img
+                                 src="img/band_esp.png"
+                                 alt="<?= lang('menu.opt.esp') ?>"
+                              >
+                              <?= lang('menu.opt.esp') ?>
+                           </a>
+                        </div>
                      </li>
                      <li>
-                        <a href="lang/setlang.php?lang=en">
-                           <?= lang('menu.opt.eng') ?>
-                        </a>
+                        <div>
+                           <a href="lang/setlang.php?lang=en">
+                              <img
+                                 src="img/band_ing.png"
+                                 alt="<?= lang('menu.opt.eng') ?>"
+                              >
+                              <?= lang('menu.opt.eng') ?>
+                           </a>
+                        </div>
                      </li>
                      <li>
-                        <a href="lang/setlang.php?lang=fr">
-                           <?= lang('menu.opt.fra') ?>
-                        </a>
+                        <div>
+                           <a href="lang/setlang.php?lang=fr">
+                              <img
+                                 src="img/band_fra.png"
+                                 alt="<?= lang('menu.opt.fra') ?>"
+                              >
+                              <?= lang('menu.opt.fra') ?>
+                           </a>
+                        </div>
                      </li>
                   </ul>
                </li>

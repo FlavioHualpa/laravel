@@ -17,12 +17,12 @@ return [
    'menu.opt.curric' => 'curriculum',
    'menu.opt.trans' => 'transcriptions',
    'menu.opt.art' => 'articles',
-   'menu.opt.arr' => 'arregements',
+   'menu.opt.arr' => 'arrangements',
    'menu.opt.free' => 'gratuite',
    'menu.opt.published' => 'publié',
    'menu.opt.perf' => 'performances',
    'menu.opt.contact' => 'contact',
-   'menu.opt.lang' => 'langue',
+   'menu.opt.lang' => '<img src="img/band_esp.png" class="lang-icon"><img src="img/band_ing.png" class="lang-icon"><img src="img/band_fra.png" class="lang-icon">',  // 'langue',
    'menu.opt.esp' => 'español',
    'menu.opt.eng' => 'english',
    'menu.opt.fra' => 'français',
@@ -55,7 +55,7 @@ return [
 
    'curric.text.6' => 'En France il a intervenu dans presque toutes les régions animant des stages chorales de musique latinoamericaine depuis 1997, aux Choralies 2010 il a été le résponsable du Chant Commun au Théatre Antique de Vaison la Romaine.
    <br>
-   Il a écrit plus de 100 arrangements chorales. Ses arrengements sont publiés en Argentine par les Ediciones GCC, en France par Editions A Coeur Joie et aux EEUU par Kjos.
+   Il a écrit plus de 100 arrangements chorales. Ses arrangements sont publiés en Argentine par les Ediciones GCC, en France par Editions A Coeur Joie et aux EEUU par Kjos.
    <br><br>
    En 1998 Mr. Zadoff a eu le <strong>Prix Konex</strong> en Direction Chorale pour son activité dans la décenie 89-99, et une 2º fois entre 99-09.',
 

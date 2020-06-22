@@ -22,7 +22,7 @@ return [
    'menu.opt.published' => 'publicados',
    'menu.opt.perf' => 'conciertos',
    'menu.opt.contact' => 'contacto',
-   'menu.opt.lang' => 'idioma',
+   'menu.opt.lang' => '<img src="img/band_esp.png" class="lang-icon"><img src="img/band_ing.png" class="lang-icon"><img src="img/band_fra.png" class="lang-icon">',  // 'idioma',
    'menu.opt.esp' => 'español',
    'menu.opt.eng' => 'english',
    'menu.opt.fra' => 'français',
