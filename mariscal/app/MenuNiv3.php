@@ -14,12 +14,12 @@ class MenuNiv3 extends Model
    
    public function subitems()
    {
-      return $this->hasMany(MenuNiv4::class, 'id_niv3');
+      return $this->hasMany(Producto::class, 'id_niv3');
    }
    
    public function publicSubitems()
    {
-      return $this->hasMany(MenuNiv4::class, 'id_niv3')
+      return $this->hasMany(Producto::class, 'id_niv3')
          ->where('privado', 0)
          ->orderBy('orden');
    }

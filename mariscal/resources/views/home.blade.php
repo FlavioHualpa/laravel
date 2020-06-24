@@ -1,23 +1,15 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+      <!-- Main Content Wrapper Start -->
+      <div id="content" class="main-content-wrapper">
 
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+         @foreach ($homeSections as $section)
+            @include($homeSectionsIncludes[$loop->index])
+         @endforeach
+
+      </div>
+      <!-- Main Content Wrapper End -->
+
 @endsection

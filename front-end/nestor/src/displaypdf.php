@@ -32,5 +32,5 @@ $download->save();
 // echo '<br>';
 // echo $city;
 
-header("location:../pdfs/" . $result['nombre_pdf']);
+header("location:../pdfs/" . utf8_encode($result['nombre_pdf']));
 exit();

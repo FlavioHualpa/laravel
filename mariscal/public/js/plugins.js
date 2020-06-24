@@ -59,7 +59,7 @@
         // callback: click a link that does not have a sub menu
         // el is the link element (li); ev is the event obj
         onLinkClick : function( el, ev ) { return false; },
-        backLabel: 'Back',
+        backLabel: 'Volver',
         // Change to "true" to use the active item as back link label.
         useActiveItemAsBackLabel: false,
         // Change to "true" to add a navigable link to the active item to its child

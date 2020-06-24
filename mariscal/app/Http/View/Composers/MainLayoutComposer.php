@@ -2,6 +2,7 @@
 
 namespace App\Http\View\Composers;
 
+use App\LinkFooter;
 use App\MenuNiv1;
 use Illuminate\View\View;
 
@@ -28,7 +29,12 @@ class MainLayoutComposer
          ->orderBy('orden')
          ->with('publicSubitems.publicSubitems')
          ->get();
+
+      $linksFooter = LinkFooter::orderBy('orden')->get();
       
-      $view->with('itemsNiv1', $itemsNiv1);
+      $view->with([
+         'itemsNiv1' => $itemsNiv1,
+         'linksFooter' => $linksFooter,
+      ]);
    }
 }

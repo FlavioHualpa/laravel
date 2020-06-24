@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Home;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $homeSections = Home::with('secciones')->get();
+
+        $homeSectionsIncludes = [
+            'layouts.partials.home-banner',
+            'layouts.partials.home-products',
+            'layouts.partials.home-new',
+        ];
+
+        return view('home')->
+            with([
+                'homeSections' => $homeSections,
+                'homeSectionsIncludes' => $homeSectionsIncludes,
+            ]);
     }
 }

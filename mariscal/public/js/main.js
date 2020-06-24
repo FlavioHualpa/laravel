@@ -321,20 +321,22 @@
 	    $(".quantity").append('<div class="dec qtybutton">-</div><div class="inc qtybutton">+</div>');
 
 	    $(".qtybutton").on("click", function () {
-	        var $button = $(this);
-			var oldValue = $button.parent().find("input").val();
+            var $button = $(this);
+            var $parent = $button.parent().find("input");
+            var oldValue = $parent.val();
+            var step = parseFloat($parent.attr("step"));
 			var newVal;
 	        if ($button.hasClass("inc")) {
-	            newVal = parseFloat(oldValue) + 1;
+	            newVal = parseFloat(oldValue) + step;
 	        } else {
 	            // Don't allow decrementing below zero
-	            if (oldValue > 1) {
-	                newVal = parseFloat(oldValue) - 1;
+	            if (oldValue > 0) {
+	                newVal = parseFloat(oldValue) - step;
 	            } else {
-	                newVal = 1;
+	                newVal = 0;
 	            }
 	        }
-	        $button.parent().find("input").val(newVal);
+	        $parent.val(newVal);
 	    });		
 	}
 
