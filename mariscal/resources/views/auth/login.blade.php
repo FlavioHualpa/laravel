@@ -1,73 +1,93 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+      <!-- Main Content Wrapper Start -->
+      <div id="content" class="main-content-wrapper">
+         <div class="page-content-inner">
+            <div class="container">
+               <div class="row pt--75 pt-md--55 pt-sm--35 pb--80 pb-md--60 pb-sm--40">
+                  <div class="col-md-6 offset-md-3 mb-sm--30">
+                     <div class="login-box">
+                        <h4 class="mb--35 mb-sm--20">Ingresar como usuario</h4>
+                        <form class="form form--login" method="post" action="{{ route('login') }}">
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                           @csrf
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                           <div class="form__group mb--20">
+                              <label class="form__label form__label--2" for="cuit">
+                                 CUIT
+                                 <span class="required">*</span>
+                              </label>
+                              <input
+                                 type="text"
+                                 class="form__input form__input--3 @error('cuit') is-invalid @enderror"
+                                 id="cuit"
+                                 name="cuit"
+                                 value="{{ old('cuit') }}"
+                                 required
+                                 autofocus
+                              >
+                              @error('cuit')
+                              <span class="invalid-feedback" role="alert">
+                                 <strong>{{ $message }}</strong>
+                              </span>
+                              @enderror                              
+                           </div>
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                           <div class="form__group mb--20">
+                              <label class="form__label form__label--2" for="password">
+                                 Contraseña
+                                 <span class="required">*</span>
+                              </label>
+                              <input
+                                 type="password"
+                                 class="form__input form__input--3 @error('password') is-invalid @enderror"
+                                 id="password"
+                                 name="password"
+                                 required
+                              >
+                              @error('password')
+                              <span class="invalid-feedback" role="alert">
+                                 <strong>{{ $message }}</strong>
+                              </span>
+                              @enderror                              
+                           </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                           <div class="d-flex align-items-center mb--20">
+                              <div class="form__group">
+                                 <input
+                                    type="submit"
+                                    value="Ingresar"
+                                    class="btn btn-submit btn-style-1"
+                                 >
+                              </div>
+                              <div class="form__group">
+                                 <label class="form__label checkbox-label" for="remember">
+                                    <input
+                                       type="checkbox"
+                                       id="remember"
+                                       name="remember"
+                                       style="transform: scale(1.5);"
+                                       {{ old('remember') ? 'checked' : '' }}
+                                    >
+                                    <span>Recordarme</span>
+                                 </label>
+                              </div>
+                           </div>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                           @if (Route::has('password.request'))
+                           <a class="forgot-pass" href="{{ route('password.request') }}">
+                              Olvidaste tu contraseña?
+                           </a>
+                           @endif
+                        </form>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-</div>
+         </div>
+      </div>
+      <!-- Main Content Wrapper Start -->
+
 @endsection

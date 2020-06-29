@@ -22,3 +22,6 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/cart', 'HomeController@index')->name('cart');
 Route::get('/productos/{categoria}', 'ProductController@index')->name('product.index');
+
+Route::get('/login/selectcustomer', 'Auth\CustomerController@selectCustomer')->name('select.customer');
+Route::post('/login/setcustomer', 'Auth\CustomerController@setCustomer')->name('set.customer');

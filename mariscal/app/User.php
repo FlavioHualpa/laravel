@@ -8,6 +8,9 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    CONST ROL_ADMIN = 'Administrador';
+    CONST ROL_VEND = 'Vendedor';
+
     use Notifiable;
 
     /**
@@ -40,16 +43,23 @@ class User extends Authenticatable
 
     public function lista_de_precios()
     {
-        return $this->hasOne(ListaDePrecio::class);
+        return $this->belongsTo(ListaDePrecio::class, 'id_lista');
     }
 
     public function rol()
     {
-        return $this->hasOne(Rol::class);
+        return $this->belongsTo(Rol::class, 'id_rol');
     }
 
     public function vendedor()
     {
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class, 'id_vendedor');
+    }
+
+    public function esAdminVendedor()
+    {
+        $rol = $this->rol->nombre;
+
+        return $rol == self::ROL_ADMIN || $rol == self::ROL_VEND;
     }
 }

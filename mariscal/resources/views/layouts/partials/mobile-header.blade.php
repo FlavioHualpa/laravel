@@ -14,13 +14,48 @@
                      <div class="col-8">
                         <ul class="header-toolbar text-right">
                            <li class="header-toolbar__item user-info-menu-btn">
-                              <a href="#">
+                              <a href="{{ route('login') }}">
                                  <i class="fa fa-user-circle-o"></i>
                               </a>
                               <ul class="user-info-menu">
+                                 @guest
                                  <li>
-                                    <a href="{{ route('login') }}">Ingresar</a>
+                                    <a href="{{ route('login') }}">
+                                       Ingresar
+                                    </a>
                                  </li>
+                                 @endguest
+
+                                 @auth
+                                 <li>
+                                    <a href="#">
+                                       {{ auth()->user()->razon_social }}
+                                    </a>
+                                 </li>
+
+                                 @if (session()->has(config('auth.session_customer_key')))
+                                 <li>
+                                    <a href="#">
+                                       {{ session(config('auth.session_customer_key'))->razon_social }}
+                                    </a>
+                                 </li>
+
+                                 <li>
+                                    <a href="{{ route('select.customer') }}">
+                                       Cambiar de cliente
+                                    </a>
+                                 </li>
+                                 @endif
+
+                                 <li>
+                                    <form action="{{ route('logout') }}" method="post" id="logout_form">
+                                       @csrf
+                                    </form>
+                                    <a href="#" onclick="event.preventDefault(); document.querySelector('#logout_form').submit();">
+                                       Salir
+                                    </a>
+                                 </li>
+                                 @endauth
                               </ul>
                            </li>
                            <li class="header-toolbar__item">

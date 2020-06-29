@@ -321,11 +321,11 @@
 	    $(".quantity").append('<div class="dec qtybutton">-</div><div class="inc qtybutton">+</div>');
 
 	    $(".qtybutton").on("click", function () {
-            var $button = $(this);
-            var $parent = $button.parent().find("input");
-            var oldValue = $parent.val();
-            var step = parseFloat($parent.attr("step"));
-			var newVal;
+				var $button = $(this);
+				var $parent = $button.parent().find("input");
+				var oldValue = $parent.val();
+				var step = parseFloat($parent.attr("step"));
+				var newVal;
 	        if ($button.hasClass("inc")) {
 	            newVal = parseFloat(oldValue) + step;
 	        } else {
@@ -336,8 +336,21 @@
 	                newVal = 0;
 	            }
 	        }
-	        $parent.val(newVal);
-	    });		
+			 $parent.val(newVal);
+
+			 const headingText = (newVal > 0) ?
+				 'Producto agregado!' :
+				 'Producto eliminado!';
+			 
+			 $.toast({
+				 heading: headingText,
+				 text: `${newVal} hojas`,
+				 showHideTransition: 'slide',
+				 icon: 'success',
+				 loader: false,
+				 position: 'bottom-right'
+			 })
+	    });
 	}
 
 

@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->unsignedBigInteger('cuit');
             $table->string('razon_social');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->unsignedBigInteger('id_lista');

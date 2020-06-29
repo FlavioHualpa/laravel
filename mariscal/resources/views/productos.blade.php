@@ -220,7 +220,7 @@
                                     <div class="product-inner">
                                        <figure class="product-image">
                                           <div class="product-image--holder">
-                                             <a href="product-details.html">
+                                             <a href="#" tabindex="-1">
                                                 <img src="{{ $item->urlImagen }}" alt="{{ $item->nombre }}" class="primary-image">
                                                 <img src="{{ $item->urlImagen }}" alt="{{ $item->nombre }}" class="secondary-image">
                                              </a>
@@ -264,8 +264,8 @@
                                        </div>
 
                                        <div class="product-info">
-                                          <p class="product-title-2">
-                                             <a href="#">
+                                          <p class="product-title-2" style="line-height: 0;">
+                                             <a href="#" tabindex="-1">
                                                 {{ $item->nombre }}
                                              </a>
                                           </p>

@@ -5,8 +5,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="description" content="mariscal,ajmechet,escolar,afiche,cartulina,crepe,seda,araña,lunares">
    
-   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-   <link rel="apple-touch-icon" href="favicon.ico">
+   <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+   <link rel="apple-touch-icon" href="{{ asset('favicon.ico') }}">
    
    <!-- CSRF Token -->
    <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -34,6 +34,9 @@
    
    <!-- Revoulation Slider CSS  -->
    <link rel="stylesheet" href="{{ asset('css/revoulation.css') }}">
+   
+   <!-- jQuery Toast CSS  -->
+   <link rel="stylesheet" href="{{ asset('css/jquery.toast.min.css') }}">
    
    <!-- style css -->
    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
@@ -66,6 +69,25 @@
       @yield('content')
 
       @include('layouts.partials.footer')
+      
+      <!-- Search from Start -->
+      <div class="searchform__popup" id="searchForm">
+         <a href="#" class="btn-close"><i class="dl-icon-close"></i></a>
+         <div class="searchform__body">
+            <p>Buscar productos</p>
+            <form class="searchform">
+               <input type="text" name="search" id="search" class="searchform__input" placeholder="Por color o categoría...">
+               <button type="submit" class="searchform__submit">
+                  <i class="dl-icon-search10"></i>
+               </button>
+            </form>
+         </div>
+      </div>
+      <!-- Search from End -->
+      
+      <!-- Global Overlay Start -->
+      <div class="ai-global-overlay"></div>
+      <!-- Global Overlay End -->
    
    </div>
    <!-- Main Wrapper End -->
@@ -74,6 +96,12 @@
    
    <!-- jQuery JS -->
    <script src="{{ asset('js/vendor/jquery.min.js') }}"></script>
+   
+   <!-- jQuery Toast JS -->
+   <script src="{{ asset('js/jquery.toast.min.js') }}"></script>
+   
+   <!-- Axios -->
+   <script src="{{ asset('js/axios.min.js') }}"></script>
    
    <!-- Bootstrap and Popper Bundle JS -->
    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>

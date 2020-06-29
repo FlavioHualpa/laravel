@@ -19,6 +19,6 @@ class ProductController extends Controller
          ]);
       }
 
-      return response(null, 404);
+      return abort(404);
    }
 }

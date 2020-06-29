@@ -23,4 +23,9 @@ class MenuNiv3 extends Model
          ->where('privado', 0)
          ->orderBy('orden');
    }
+
+   public function unidad()
+   {
+      return $this->belongsTo(Unidad::class, 'id_unidad');
+   }
 }
