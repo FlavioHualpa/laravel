@@ -114,11 +114,13 @@
    
    <!-- Main JS -->
    <script src="{{ asset('js/main.js') }}"></script>
-   
+
+   <!-- Custom JS -->
+   @stack('customjs')
    
    <!-- REVOLUTION JS FILES -->
-   <script src="{{ asset('js/revoulation/jquery.themepunch.tools.min') }}.js"></script>
-   <script src="{{ asset('js/revoulation/jquery.themepunch.revolution') }}.min.js"></script>    
+   <script src="{{ asset('js/revoulation/jquery.themepunch.tools.min.js') }}"></script>
+   <script src="{{ asset('js/revoulation/jquery.themepunch.revolution.min.js') }}"></script>    
    
    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
    <script src="{{ asset('js/revoulation/extensions/revolution.extension.actions.min.js') }}"></script>

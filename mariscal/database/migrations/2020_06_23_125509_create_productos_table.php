@@ -21,11 +21,15 @@ class CreateProductosTable extends Migration
             $table->boolean('privado')->default(false);
             $table->integer('multiplo');
             $table->integer('unidad');
-            $table->unsignedBigInteger('id_niv3')->references('id')->on('menu_niv3');
+            $table->unsignedBigInteger('id_niv3');
+            $table->unsignedBigInteger('id_grupo_precio');
             $table->string('codigo_erp');
             $table->string('codigo_access');
             $table->string('envasamiento_access');
             $table->timestamps();
+
+            $table->foreign('id_niv3')->references('id')->on('menu_niv3');
+            $table->foreign('id_grupo_precio')->references('id')->on('grupo_precios');
         });
     }
 

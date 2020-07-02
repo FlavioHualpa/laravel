@@ -25,3 +25,6 @@ Route::get('/productos/{categoria}', 'ProductController@index')->name('product.i
 
 Route::get('/login/selectcustomer', 'Auth\CustomerController@selectCustomer')->name('select.customer');
 Route::post('/login/setcustomer', 'Auth\CustomerController@setCustomer')->name('set.customer');
+
+Route::post('/app/pedido/agregar', 'PedidoController@addItem');
+Route::post('/app/pedido/quitar', 'PedidoController@removeItem');

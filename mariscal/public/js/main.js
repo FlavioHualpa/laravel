@@ -335,21 +335,10 @@
 	            } else {
 	                newVal = 0;
 	            }
-	        }
-			 $parent.val(newVal);
-
-			 const headingText = (newVal > 0) ?
-				 'Producto agregado!' :
-				 'Producto eliminado!';
+			  }
 			 
-			 $.toast({
-				 heading: headingText,
-				 text: `${newVal} hojas`,
-				 showHideTransition: 'slide',
-				 icon: 'success',
-				 loader: false,
-				 position: 'bottom-right'
-			 })
+			 $parent.val(newVal);
+			 $parent.trigger('change');
 	    });
 	}
 

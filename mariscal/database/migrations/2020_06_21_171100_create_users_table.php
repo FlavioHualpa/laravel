@@ -18,6 +18,11 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('cuit');
             $table->string('razon_social');
             $table->string('email');
+            $table->string('domicilio');
+            $table->string('localidad');
+            $table->string('codigo_postal');
+            $table->string('telefono');
+            $table->string('codigo_erp');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->unsignedBigInteger('id_lista');
