@@ -20,4 +20,14 @@ class Envasamiento extends Model
    {
       return $this->belongsTo(Unidad::class, 'id_unidad');
    }
+
+   public static function divisor($id_niv3, $id_unidad)
+   {
+      $env = self::where([
+         'id_niv3' => $id_niv3,
+         'id_unidad' => $id_unidad,
+      ])->first();
+
+      return $env ? $env->divisor : null;
+   }
 }

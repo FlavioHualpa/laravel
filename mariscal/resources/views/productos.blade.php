@@ -23,6 +23,7 @@
          class="main-content-wrapper"
          @if ($cliente)
          data-customer-id="{{ $cliente->id }}"
+         data-category-id="{{ $categoria->id }}"
          @endif
       >
          <div class="shop-page-wrapper">
@@ -266,6 +267,7 @@
                                        --}}
                                     </figure>
 
+                                    @auth
                                     <div class="quantity">
                                        <input
                                           type="number"
@@ -281,6 +283,7 @@
                                        <div class="inc qtybutton">+</div>
                                        --}}
                                     </div>
+                                    @endauth
 
                                     <div class="product-info">
                                        <p class="product-title-2" style="line-height: 0;">
@@ -319,6 +322,16 @@
       </div>
       <!-- Gallery Wrapper End -->
 
+      @auth
+      <div class="mariscal-totals-box">
+         <ul>
+            <li>Hojas: 1000</li>
+            <li>Paquetes: 100</li>
+            <li>Bultos: 10</li>
+         </ul>
+      </div>
+      @endauth
+
       {{--
       </div>
       <!-- Main Content Wrapper End -->
@@ -326,7 +339,12 @@
 
 @endsection
 
-<!-- Custom JS -->
-@push('customjs')
-<script src="{{ asset('js/product.js') }}"></script>
-@endpush
+@auth
+
+   <!-- Custom JS -->
+   @push('customjs')
+   <script src="{{ asset('js/product.js') }}"></script>
+   <script src="{{ asset('js/totalizador.js') }}"></script>
+   @endpush
+
+@endauth

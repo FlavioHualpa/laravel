@@ -16,4 +16,9 @@ class Unidad extends Model
    {
       return $this->hasMany(Envasamiento::class, 'id_unidad');
    }
+
+   public static function getIdByName($nombre)
+   {
+      return self::where('nombre', 'like', $nombre)->first()->id;
+   }
 }

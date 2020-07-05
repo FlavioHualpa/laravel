@@ -57,6 +57,23 @@ class User extends Authenticatable
    {
       return $this->belongsTo(User::class, 'id_vendedor');
    }
+
+   public function sucursales()
+   {
+      return $this->hasMany(Sucursal::class, 'id_usuario');
+   }
+
+   public function transportes()
+   {
+      return $this
+         ->belongsToMany(
+            Transporte::class,
+            'transporte_user',
+            'id_usuario',
+            'id_transporte')
+         ->orderBy('orden')
+         ->using(TransporteUser::class);
+   }
    
    public function esAdminVendedor()
    {

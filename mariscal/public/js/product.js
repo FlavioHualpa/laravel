@@ -35,6 +35,8 @@
             {
                toast('success', 'Éxito!', 'Producto eliminado del pedido')
                asyncRemoveItem(custId, prodId)
+               updateCategoryTotals()
+               updateOrderTotals()
             }
             else if (qtty % multiplo != 0)
             {
@@ -45,15 +47,10 @@
             {
                toast('success', 'Éxito!', 'Producto agregado al pedido')
                asyncAddItem(custId, prodId, qtty)
+               updateCategoryTotals()
+               updateOrderTotals()
             }
 
-            // ev.preventDefault()
-
-            // console.log(`Customer id: ${custId}`)
-            // console.log(`Product id: ${prodId}`)
-            // console.log(`Cantidad: ${qtty}`)
-            // console.log(`---------------------------`)
-         
          }
       )
          
@@ -73,6 +70,31 @@
 
             oldValue = $(ev.target).val();
 
+         }
+      )
+      
+   $('.product-remove a')
+
+      //=================================//
+      .on('click',
+         (ev) => {
+
+            ev.preventDefault()
+
+            let custId = $('#content')[0]
+               .getAttribute('data-customer-id')
+
+            let prodId = ev.target
+               .closest('tr')
+               .querySelector('.airi-product')
+               .getAttribute('data-product-id')
+            
+            toast('success', 'Éxito!', 'Producto eliminado del pedido')
+            asyncRemoveItem(custId, prodId)
+            updateOrderTotals()
+
+            ev.target.closest('tr').remove()
+         
          }
       )
 

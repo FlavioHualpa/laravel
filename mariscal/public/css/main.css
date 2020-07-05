@@ -17052,11 +17052,28 @@ a, button, img, input, span, .main-navigation .mainmenu__item.menu-item-has-chil
     .table tbody td.product-remove {
       width: 3rem;
       min-width: 3rem; }
+      .table tbody td.product-remove i {
+        font-size: 2rem;
+      }
     .table tbody td.product-thumbnail {
-      width: 9rem;
-      min-width: 9rem; }
+      width: 8rem;
+      min-width: 8rem;
+      padding: 0.8rem 0; }
     .table tbody td.product-name h3 {
-      font-size: 1.2rem; }
+      font-family: Roboto;
+      font-size: 1.5rem;
+      font-weight: normal;
+      padding-left: 12px;
+      color: #282828; }
+    .table tbody td.group-name {
+      text-align: left;
+      padding: 2.5rem 0 0.5rem;
+    }
+    .table tbody td.group-name h4 {
+      font-family: 'Roboto Slab';
+      font-size: 2rem;
+      font-weight: normal;
+    }
     .table tbody td.product-stock {
       display: table-cell;
       top: 0; }
@@ -17480,8 +17497,14 @@ a, button, img, input, span, .main-navigation .mainmenu__item.menu-item-has-chil
   background: #f9f9f9; }
 
 .cart-totals {
-  padding: 3rem 3rem 0;
+  padding: 3rem;
   margin-bottom: 1.5rem; }
+
+.cart-totals h5 {
+  font-family: 'Roboto Slab';
+  font-size: 2.4rem;
+  /* font-weight: normal; */
+}
 
 /*****************************
 03. Common
@@ -18882,4 +18905,31 @@ a:hover {
   width: 100%;
   font-size: 110%;
   color: #dc3545;
+}
+
+.titulo-carrito {
+  font-family: 'Roboto Slab';
+  text-align: center;
+}
+
+.select-transporte {
+  font-size: 1.6rem;
+  height: auto;
+}
+
+.mariscal-totals-box {
+  position: fixed;
+  top: 45%;
+  right: 30px;
+  background-color: #f4f4f4;
+  border: 1px solid #888888;
+  box-shadow: 0 0 4px 0px #707070;
+  padding: 12px 20px;
+  z-index: 1000;
+}
+
+.mariscal-totals-box ul li {
+  font-family: 'Roboto Slab';
+  font-size: 2rem;
+  padding: 4px 0;
 }

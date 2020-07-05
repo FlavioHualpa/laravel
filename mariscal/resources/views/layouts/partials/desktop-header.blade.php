@@ -14,7 +14,9 @@
                                     Teléfonos
                                  </span>
                                  <span>
-                                    (+54) 11 4854-8521 / 3901
+                                    <a href="tel:00541148548521">
+                                       (+54) 11 4854-8521 / 3901
+                                    </a>
                                  </span>
                               </div>
                               <div class="header-contact-info__item">
@@ -23,7 +25,9 @@
                                     WhatsApp
                                  </span>
                                  <span>
-                                    005491128663595
+                                    <a href="https://api.whatsapp.com/send?phone=005491128663595&text=Buenos%20días,">
+                                       005491128663595
+                                    </a>
                                  </span>
                               </div>
                            </div>

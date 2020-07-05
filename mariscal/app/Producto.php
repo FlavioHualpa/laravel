@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\GrupoPrecioLista;
 use Illuminate\Database\Eloquent\Model;
 
 class Producto extends Model
@@ -24,8 +25,8 @@ class Producto extends Model
       return $this->belongsToMany(
          Pedido::class,
          'pedido_producto',
-         'id_pedido',
-         'id_producto')
+         'id_producto',
+         'id_pedido')
          ->withPivot('cantidad')
          ->using(DetallePedido::class)
          ->as('detalle');
@@ -34,5 +35,16 @@ class Producto extends Model
    public function getUrlImagenAttribute()
    {
       return asset('img/' . $this->imagen . '.jpg');
+   }
+
+   public function precio($idLista)
+   {
+      $producto = GrupoPrecioLista::where([
+         [ 'id_lista', $idLista ],
+         [ 'id_grupo_precio', $this->id_grupo_precio ],
+      ])
+      ->first();
+      
+      return $producto ? $producto->precio : 0.0;
    }
 }

@@ -18,6 +18,8 @@ class CreatePedidosTable extends Migration
             $table->unsignedBigInteger('id_usuario');
             $table->unsignedBigInteger('id_cliente');
             $table->unsignedBigInteger('id_enviante')->nullable();
+            $table->unsignedBigInteger('id_sucursal')->nullable();
+            $table->unsignedBigInteger('id_transporte')->nullable();
             $table->unsignedBigInteger('id_estado');
             $table->unsignedBigInteger('numero');
             $table->string('mensaje')->nullable();
@@ -27,6 +29,8 @@ class CreatePedidosTable extends Migration
             $table->foreign('id_usuario')->references('id')->on('users');
             $table->foreign('id_cliente')->references('id')->on('users');
             $table->foreign('id_enviante')->references('id')->on('users');
+            $table->foreign('id_sucursal')->references('id')->on('sucursales');
+            $table->foreign('id_transporte')->references('id')->on('transportes');
             $table->foreign('id_estado')->references('id')->on('estado_pedidos');
         });
     }
