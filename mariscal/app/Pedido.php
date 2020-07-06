@@ -35,6 +35,16 @@ class Pedido extends Model
       return $this->belongsTo(User::class, 'id_enviante');
    }
 
+   public function sucursal()
+   {
+      return $this->belongsTo(Sucursal::class, 'id_sucursal');
+   }
+
+   public function transporte()
+   {
+      return $this->belongsTo(Transporte::class, 'id_transporte');
+   }
+
    public function estado()
    {
       return $this->belongsTo(EstadoPedido::class, 'id_estado');

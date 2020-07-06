@@ -140,7 +140,7 @@
                                     <tr>
                                        <td colspan="2">
                                           <select id="id_sucursal" class="form-control select-transporte">
-                                             <option>
+                                             <option value="">
                                                 (seleccioná la sucursal)
                                              </option>
                                              @foreach ($cliente->sucursales as $sucursal)
@@ -154,7 +154,7 @@
                                     <tr>
                                        <td colspan="2">
                                           <select id="id_transporte" class="form-control select-transporte">
-                                             <option>
+                                             <option value="">
                                                 (seleccioná el transporte)
                                              </option>
                                              @foreach ($cliente->transportes as $transporte)

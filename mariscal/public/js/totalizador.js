@@ -23,7 +23,12 @@
                confirmButtonText: 'Sí',
                cancelButtonText: 'No'
             })
-
+            .then( result => {
+               if (result.isConfirmed) {
+                  closeOrder()
+                  showConfirmation()
+               }
+            })
          }
       )
 })();
@@ -72,4 +77,29 @@ function updateOrderTotals()
       $('#totalPaquetes').text(resp.data.paquetes)
       $('#totalBultos').text(resp.data.bultos)
    })
+}
+
+function closeOrder()
+{
+   let token = $('[name=csrf-token]').attr('content')
+   let idSucursal = $('#id_sucursal').val()
+   let idTransporte = $('#id_transporte').val()
+   let mensaje = $('#mensaje').val()
+
+   axios({
+      'url': '/app/pedido/cerrar',
+      'method': 'post',
+      'data': {
+         'id_sucursal': idSucursal,
+         'id_transporte': idTransporte,
+         'mensaje': mensaje
+      },
+      'headers': { 'X-CSRF-TOKEN': token }
+   })
+   // .then (resp => { console.log(resp) })
+}
+
+function showConfirmation()
+{
+   document.location = '/pedido/enviado'
 }

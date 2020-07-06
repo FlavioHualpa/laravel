@@ -9,6 +9,7 @@ use App\MenuNiv3;
 use App\Unidad;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PedidoController extends Controller
 {
@@ -70,11 +71,8 @@ class PedidoController extends Controller
    {
       // obtengo los productos del pedido abierto
       // para el cliente de la sesión
-      $pedido = Pedido::where(
-         [ 'id_cliente' => session(config('auth.session_customer_key'))->id ],
-         [ 'id_estado' => EstadoPedido::getIdByName('abierto') ],
-      )->first();
-
+      $pedido = $this->getOpenOrder();
+      
       // si el cliente no tiene un pedido abierto
       // entonces devuelvo un array vacío
       $productos = $pedido ? $pedido->productos : collect([]);
@@ -106,10 +104,7 @@ class PedidoController extends Controller
    {
       // obtengo los productos del pedido abierto
       // para el cliente de la sesión
-      $pedido = Pedido::where(
-         [ 'id_cliente' => session(config('auth.session_customer_key'))->id ],
-         [ 'id_estado' => EstadoPedido::getIdByName('abierto') ],
-      )->first();
+      $pedido = $this->getOpenOrder();
 
       // si el cliente no tiene un pedido abierto
       // entonces devuelvo cero en los totales
@@ -165,10 +160,7 @@ class PedidoController extends Controller
       
       // obtengo los productos del pedido abierto
       // para el cliente de la sesión
-      $pedido = Pedido::where(
-         [ 'id_cliente' => session(config('auth.session_customer_key'))->id ],
-         [ 'id_estado' => EstadoPedido::getIdByName('abierto') ],
-      )->first();
+      $pedido = $this->getOpenOrder();
 
       // si el cliente no tiene un pedido abierto
       // entonces devuelvo cero en los totales
@@ -198,5 +190,76 @@ class PedidoController extends Controller
 
       // retorno el array
       return $totales;
+   }
+
+   public function closeOrder(Request $request)
+   {
+      // obtengo los productos del pedido abierto
+      // para el cliente de la sesión y completo
+      // los datos para proceder a cerrar
+      $pedido = $this->getOpenOrder();
+      $pedido->id_sucursal = $request->id_sucursal;
+      $pedido->id_transporte = $request->id_transporte;
+      $pedido->id_enviante = auth()->id();
+      $pedido->id_estado = EstadoPedido::getIdByName('cerrado');
+      $pedido->mensaje = $request->mensaje;
+      $pedido->sent_at = now();
+      $pedido->save();
+
+      return $this->sendMails($pedido);
+   }
+
+   private function sendMails(Pedido $pedido)
+   {
+      $encabezados = MenuNiv3::select('id', 'nombre')
+         ->whereIn('id', $pedido->productos()->pluck('id_niv3')->unique())
+         ->orderBy('nombre')
+         ->get();
+      
+      $mail = (new \App\Mail\NuevoPedidoEnviado($pedido, $encabezados))
+               ->subject('Pedido Enviado #' . $pedido->numero);
+      
+      // Enviamos mail a:
+      // 1. El que inicia el pedido
+      // 2. El que envía el pedido
+      // 3. info@ajmechet
+
+      $mariscal = User::where('cuit', '30500216111')->first();
+
+      Mail::to($pedido->usuario)
+         ->send($mail);
+      
+      // Mail::to() agrega destinatarios al array to[]
+      // de la clase Mailable, no la sobreescribe
+      // por eso la vacío antes de enviar a otro
+      // destinatario con la misma instancia de $mail
+      // si no envía el mail a todos en to[]
+      array_pop($mail->to);
+
+      if ($pedido->id_enviante != $pedido->id_usuario)
+         Mail::to($pedido->enviante)
+            ->send($mail);
+
+      array_pop($mail->to);
+
+      if ($mariscal->id != $pedido->id_usuario
+         && $mariscal->id != $pedido->id_enviante)
+         Mail::to($mariscal)
+            ->send($mail);
+      
+      return [ 'resultado' => 'Emails enviados!' ];
+   }
+
+   private function getOpenOrder()
+   {
+      return Pedido::where([
+         'id_cliente' => User::getCurrentCustomer()->id,
+         'id_estado' => EstadoPedido::getIdByName('abierto')
+      ])->first();
+   }
+
+   public function showConfirmation()
+   {
+      return view('enviado');
    }
 }

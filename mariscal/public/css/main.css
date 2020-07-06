@@ -18892,6 +18892,10 @@ a:hover {
   color: #242424;
 }
 
+.confirmation-text {
+  font-family: 'Roboto Slab';
+}
+
 .my-large {
   margin: 80px 0;
 }
@@ -18932,4 +18936,17 @@ a:hover {
   font-family: 'Roboto Slab';
   font-size: 2rem;
   padding: 4px 0;
+}
+
+.swal2-popup {
+  font-size: 1.6rem !important;
+}
+
+.swal2-title {
+  font-family: 'Roboto Slab' !important;
+  font-size: 1.8em !important;
+}
+
+.swal2-content {
+  font-size: 1.3em !important;
 }
