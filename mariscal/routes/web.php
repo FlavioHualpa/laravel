@@ -32,4 +32,5 @@ Route::post('/app/pedido/quitar', 'PedidoController@removeItem');
 Route::post('/app/pedido/totales', 'PedidoController@getOrderTotals');
 Route::post('/app/pedido/totalescategoria', 'PedidoController@getCategoryTotals');
 Route::post('/app/pedido/cerrar', 'PedidoController@closeOrder');
+Route::post('/app/pedido/eliminar', 'PedidoController@deleteOrder');
 Route::get('/pedido/enviado', 'PedidoController@showConfirmation');

@@ -86,10 +86,21 @@ class LoginController extends Controller
       );
    }
    
-   // protected function attemptLogin(Request $request)
-   // {
-   //     dd('attempt');
-   // }
+   protected function sendLoginResponse(Request $request)
+   {
+      $request->session()->regenerate();
+
+      $this->clearLoginAttempts($request);
+
+      // if ($response = $this->authenticated($request, $this->guard()->user())) {
+      //    return $response;
+      // }
+
+      return $request->wantsJson()
+                  ? new Response('', 204)
+                  : redirect($this->redirectTo());
+                  // : redirect()->intended($this->redirectPath());
+   }
    
    protected function redirectTo()
    {
@@ -98,7 +109,7 @@ class LoginController extends Controller
       if ($user->esAdminVendedor())
          return route('select.customer');
       
-      return route('home');
+      return redirect()->intended(route('home'))->getTargetUrl();
+      // return route('home');
    }
 }
-   

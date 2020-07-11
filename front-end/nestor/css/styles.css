@@ -410,6 +410,63 @@ footer a:hover {
    background-color: #FFAD59;
 }
 
+.container .table {
+   width: 92vw;
+}
+
+.container .table .titulo-tabla {
+   width: 100%;
+   background-color: rgb(210, 187, 140);
+   font-weight: bold;
+   border-top: 1px solid maroon;
+   padding: 3px 0px 1px;
+   text-align: center;
+   cursor: pointer;
+}
+
+.container .table .encabezado-tabla {
+   background-color: rgb(210, 187, 140);
+   font-weight: bold;
+   border-top: 1px solid maroon;
+   border-bottom: 1px solid maroon;
+   padding: 3px 0px 1px;
+   margin-bottom: 5px;
+   cursor: pointer;
+}
+
+.container .table .pie-tabla {
+   border-bottom: 1px solid maroon;
+   padding-bottom: 2px;
+   cursor: pointer;
+}
+
+.container .table .celda-tabla {
+   padding: 2px 0px;
+}
+
+.container .table .fila-tabla {
+   cursor: pointer;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.container .table .fila-tabla.medium-device {
+   display: none;
+}
+
+.container .table .fila-tabla.small-device {
+   display: flex;
+   margin-top: 10px;
+}
+
+.container .table .fila-tabla.small-device:nth-child(odd) {
+   background-color: rgba(0, 0, 0, 8%);
+}
+
+.container .table .resaltable:hover {
+   background-color: rgba(0, 0, 0, 0.1);
+}
+
 .container .links-group h3 {
    margin: 40px 0 20px 0;
    color: #800000;
@@ -612,7 +669,29 @@ footer a:hover {
       margin: 50px auto;
    }
 
+   .container .table {
+      width: 94vw;
+      font-size: 16px;
+   }
+
+   .container .table .fila-tabla.medium-device {
+      display: flex;
+   }
+
+   .container .table .fila-tabla.small-device {
+      display: none;
+   }
+
    .footer div {
       width: auto;
+   }
+}
+
+
+@media (min-width: 900px)
+{
+   .container .table {
+      width: 900px;
+      font-size: 18px
    }
 }

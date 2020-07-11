@@ -7,8 +7,10 @@ class Totals extends Entity
    private $desdeUnaSemana;
    private $desdeUnMes;
 
-   public function __construct()
+   public function __construct(MySql $dbSource)
    {
+      parent::__construct($dbSource);
+
       $this->desdeUnaSemana = date(
          "Y/m/d",
          mktime(0, 0, 0, date("m"), date("d") - 7, date("Y"))
@@ -24,7 +26,7 @@ class Totals extends Entity
    {
       $sql = 'SELECT id, nombre_pdf, (SELECT COUNT(ce_pdf) AS cantidad FROM descargas WHERE descargas.ce_pdf = pdfs.id AND descargas.fecha >= :desdeUnaSemana) AS ultimos7dias, (SELECT COUNT(ce_pdf) AS cantidad FROM descargas WHERE descargas.ce_pdf = pdfs.id AND descargas.fecha >= :desdeUnMes) AS ultimos30dias, pdfs.descargas AS todas FROM pdfs ORDER BY nombre_pdf';
 
-      $stmt = prepareAndExecute($sql);
+      $stmt = $this->prepareAndExecute($sql);
       return $stmt->fetchAll(PDO::FETCH_ASSOC);
    }
 
@@ -32,7 +34,22 @@ class Totals extends Entity
    {
       $sql = 'SELECT id, nombre_pdf, (SELECT COUNT(ce_pdf) AS cantidad FROM descargas WHERE descargas.ce_pdf = pdfs.id AND descargas.fecha >= :desdeUnaSemana) AS ultimos7dias, (SELECT COUNT(ce_pdf) AS cantidad FROM descargas WHERE descargas.ce_pdf = pdfs.id AND descargas.fecha >= :desdeUnMes) AS ultimos30dias, pdfs.descargas AS todas FROM pdfs ORDER BY todas DESC';
 
-      $stmt = prepareAndExecute($sql);
+      $stmt = $this->prepareAndExecute($sql);
+      return $stmt->fetchAll(PDO::FETCH_ASSOC);
+   }
+
+   public function byDate()
+   {
+      $sql = 'SELECT descargas.id,
+         date_format(fecha, "%d-%m-%y %H:%i") AS fechahora,
+         replace(nombre_pdf, ".pdf", "") AS nombre,
+         pais, ciudad
+         FROM descargas INNER JOIN pdfs
+         ON descargas.ce_pdf = pdfs.id
+         ORDER BY fecha DESC
+         LIMIT 20';
+      
+      $stmt = $this->prepareAndExecute($sql);
       return $stmt->fetchAll(PDO::FETCH_ASSOC);
    }
 
@@ -43,7 +60,7 @@ class Totals extends Entity
                GROUP BY pais
                ORDER BY todas DESC';
 
-      $stmt = prepareAndExecute($sql);
+      $stmt = $this->prepareAndExecute($sql);
       return $stmt->fetchAll(PDO::FETCH_ASSOC);
    }
 
@@ -56,13 +73,13 @@ class Totals extends Entity
          $stmt->bindParam(
             'desdeUnaSemana',
             $this->desdeUnaSemana,
-            PDO::PARAM_STRING
+            PDO::PARAM_STR
          );
 
          $stmt->bindParam(
             'desdeUnMes',
             $this->desdeUnMes,
-            PDO::PARAM_STRING
+            PDO::PARAM_STR
          );
 
          $stmt->execute();

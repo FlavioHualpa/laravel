@@ -63,6 +63,6 @@ class CustomerController extends Controller
          config('auth.session_customer_key') => User::findOrFail($request->id_cliente)
       ]);
       
-      return redirect()->route('home');
+      return redirect()->intended(route('home'));
    }
 }

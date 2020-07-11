@@ -12,6 +12,7 @@ class DetallePedido extends Pivot
       'id_pedido',
       'id_producto',
       'cantidad',
+      'precio'
    ];
 
    public function pedido()

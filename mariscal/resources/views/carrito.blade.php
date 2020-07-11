@@ -176,6 +176,9 @@
                            <a href="#" class="btn btn-fullwidth btn-style-1" id="sendButton">
                               Enviar el pedido
                            </a>
+                           <a href="#" class="btn btn-fullwidth btn-style-3 mt-3" id="deleteButton">
+                              Eliminar el pedido
+                           </a>
                         </div>
 
                      </div>

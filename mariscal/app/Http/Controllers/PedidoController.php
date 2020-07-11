@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Pedido;
+use App\Producto;
 use App\Envasamiento;
 use App\EstadoPedido;
 use App\MenuNiv3;
@@ -13,7 +14,7 @@ use Illuminate\Support\Facades\Mail;
 
 class PedidoController extends Controller
 {
-   public function __contruct()
+   public function __construct()
    {
       $this->middleware('auth');
    }
@@ -42,8 +43,14 @@ class PedidoController extends Controller
          ]
       );
 
+      $precio = Producto::find($request->id_producto)
+         ->precio($pedido->cliente->id_lista);
+
       $pedido->productos()->sync(
-         [ $request->id_producto => [ 'cantidad' => $request->cantidad ] ],
+         [ $request->id_producto => [
+            'cantidad' => $request->cantidad,
+            'precio' => $precio ]
+         ],
          false // false quiere decir no eliminar los demás productos
       );
 
@@ -57,14 +64,17 @@ class PedidoController extends Controller
          return ['respuesta' => 'Petición inválida'];
       }
 
-      $pedido = Pedido::where(
-         [
+      $pedido = Pedido::where([
             'id_cliente' => $request->id_cliente,
             'id_estado' => EstadoPedido::getIdByName('abierto')
-         ]
-      )->first();
+         ])->first();
 
       $pedido->productos()->detach($request->id_producto);
+
+      if ($pedido->productos()->count() == 0)
+         $pedido->delete();
+
+      return [ 'respuesta' => 'Pedido actualizado' ];
    }
 
    public function showCart()
@@ -162,30 +172,39 @@ class PedidoController extends Controller
       // para el cliente de la sesión
       $pedido = $this->getOpenOrder();
 
-      // si el cliente no tiene un pedido abierto
-      // entonces devuelvo cero en los totales
-      if (empty($pedido))
-         return [ 'respuesta' => 'El cliente no tiene un pedido abierto' ];
-      
-      // me interesan los productos de la categoría
-      // solicitada en request->id_niv3
-      $productos = $pedido
-         ->productos()
-         ->where('id_niv3', $request->id_niv3)
-         ->get();
-
-      $totales = [];
-      $totalUnidades = $productos->sum('detalle.cantidad');
-
       // solo los envasamientos para la categoría solicitada
       $envasamientos = Envasamiento::with('unidad')
          ->where('id_niv3', $request->id_niv3)
          ->get();
 
-      // calculo los totales de c/envasamiento
-      foreach ($envasamientos as $env)
+      $totales = [];
+
+      // si el cliente no tiene un pedido abierto
+      // entonces devuelvo cero en los totales
+      if (empty($pedido))
       {
-         $totales[$env->unidad->nombre] = $totalUnidades / $env->divisor;
+         // inicializo los totales de c/envasamiento
+         foreach ($envasamientos as $env)
+         {
+            $totales[$env->unidad->nombre] = 0;
+         }
+      }
+      else
+      {
+         // me interesan los productos de la categoría
+         // solicitada en request->id_niv3
+         $productos = $pedido
+            ->productos()
+            ->where('id_niv3', $request->id_niv3)
+            ->get();
+
+         $totalUnidades = $productos->sum('detalle.cantidad');
+
+         // calculo los totales de c/envasamiento
+         foreach ($envasamientos as $env)
+         {
+            $totales[$env->unidad->nombre] = $totalUnidades / $env->divisor;
+         }
       }
 
       // retorno el array
@@ -226,28 +245,34 @@ class PedidoController extends Controller
 
       $mariscal = User::where('cuit', '30500216111')->first();
 
-      Mail::to($pedido->usuario)
-         ->send($mail);
-      
-      // Mail::to() agrega destinatarios al array to[]
-      // de la clase Mailable, no la sobreescribe
-      // por eso la vacío antes de enviar a otro
-      // destinatario con la misma instancia de $mail
-      // si no envía el mail a todos en to[]
-      array_pop($mail->to);
+      $destinatario = $pedido->usuario;
+      $conCopia = [];
 
       if ($pedido->id_enviante != $pedido->id_usuario)
-         Mail::to($pedido->enviante)
-            ->send($mail);
-
-      array_pop($mail->to);
+         $conCopia[] = $pedido->enviante;
 
       if ($mariscal->id != $pedido->id_usuario
          && $mariscal->id != $pedido->id_enviante)
-         Mail::to($mariscal)
-            ->send($mail);
+         $conCopia[] = $mariscal;
+      
+      Mail::to($destinatario)
+         ->bcc($conCopia)
+         ->send($mail);
       
       return [ 'resultado' => 'Emails enviados!' ];
+   }
+
+   public function deleteOrder()
+   {
+      $pedido = $this->getOpenOrder();
+
+      if (empty($pedido))
+         return;
+      
+      $pedido->productos()->detach();
+      $pedido->delete();
+
+      return [ 'resultado' => 'Pedido eliminado!' ];
    }
 
    private function getOpenOrder()

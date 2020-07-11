@@ -12055,7 +12055,8 @@ a, button, img, input, span, .main-navigation .mainmenu__item.menu-item-has-chil
       background-color: #2e2e2e;
       color: #fff !important; }
   .btn-style-3 {
-    background-color: #cf987e;
+    /* background-color: #cf987e; */
+    background-color: #d00000;
     color: #fff; }
     .btn-style-3:hover {
       background-color: #444444;

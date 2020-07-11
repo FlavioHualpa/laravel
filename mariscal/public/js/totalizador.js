@@ -33,6 +33,34 @@
       )
 })();
 
+(function hookDeleteButtonHandler()
+{
+   if (! $('#deleteButton'))
+      return
+
+   $('#deleteButton')
+      .on('click',
+         (ev) => {
+            
+            ev.preventDefault()
+
+            Swal.fire({
+               title: 'Estás seguro que querés eliminar el pedido?',
+               text: 'Luego no se puede recuperar',
+               icon: 'question',
+               showCancelButton: true,
+               confirmButtonText: 'Sí',
+               cancelButtonText: 'No'
+            })
+            .then( result => {
+               if (result.isConfirmed) {
+                  deleteOrder()
+               }
+            })
+         }
+      )
+})();
+
 function updateCategoryTotals()
 {
    if (! $('.mariscal-totals-box'))
@@ -99,7 +127,24 @@ function closeOrder()
    // .then (resp => { console.log(resp) })
 }
 
+function deleteOrder()
+{
+   let token = $('[name=csrf-token]').attr('content')
+
+   axios({
+      'url': '/app/pedido/eliminar',
+      'method': 'post',
+      'headers': { 'X-CSRF-TOKEN': token }
+   })
+   .then (() => { reloadCart() })
+}
+
 function showConfirmation()
 {
    document.location = '/pedido/enviado'
+}
+
+function reloadCart()
+{
+   document.location = '/carrito'
 }

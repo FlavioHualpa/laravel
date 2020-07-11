@@ -18,6 +18,7 @@ class CreatePedidoProductoTable extends Migration
             $table->foreignId('id_pedido')->constrained('pedidos');
             $table->foreignId('id_producto')->constrained('productos');
             $table->unsignedInteger('cantidad');
+            $table->double('precio', 15, 4);
         });
     }
 
