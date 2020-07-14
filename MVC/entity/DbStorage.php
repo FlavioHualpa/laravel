@@ -6,6 +6,7 @@ require_once 'Connection.php';
 class DbStorage implements StorageInterface
 {
    private $host;
+   private $port;
    private $dbName;
    private $user;
    private $password;
@@ -18,6 +19,7 @@ class DbStorage implements StorageInterface
       $path = realpath(__DIR__ . '/../config/dbsrc.ini');
       $config = parse_ini_file($path);
       $this->host = $config['host'];
+      $this->port = $config['port'];
       $this->dbName = $config['dbName'];
       $this->user = $config['user'];
       $this->password = $config['password'];
@@ -31,6 +33,7 @@ class DbStorage implements StorageInterface
    public function connect() : bool {
       $this->db = Connection::get(
          $this->host,
+         $this->port,
          $this->dbName,
          $this->user,
          $this->password

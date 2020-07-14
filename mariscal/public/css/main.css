@@ -18951,3 +18951,39 @@ a:hover {
 .swal2-content {
   font-size: 1.3em !important;
 }
+
+.searchform-wrapper {
+  position: relative;
+}
+
+.results-box {
+  padding: 3px 0;
+  width: 400px;
+  background-color: #FFF3E0;
+  border: 1px solid #d9d9d9;
+  box-shadow: 2px 2px 3px #909090;
+  position: absolute;
+  left: 0;
+  top: -40px;
+  display: none;
+}
+
+.results-box ul li {
+  list-style-type: none;
+  padding: 5px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.results-box ul li:hover {
+  background-color: #cf987e;
+}
+
+.results-box ul li a {
+  text-decoration: none;
+  color: #282828;
+}
+
+.results-box ul li:hover a {
+  color: #f4f4f4;
+}

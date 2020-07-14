@@ -24,7 +24,7 @@ class Totals extends Entity
 
    public function byTitle()
    {
-      $sql = 'SELECT id, nombre_pdf, (SELECT COUNT(ce_pdf) AS cantidad FROM descargas WHERE descargas.ce_pdf = pdfs.id AND descargas.fecha >= :desdeUnaSemana) AS ultimos7dias, (SELECT COUNT(ce_pdf) AS cantidad FROM descargas WHERE descargas.ce_pdf = pdfs.id AND descargas.fecha >= :desdeUnMes) AS ultimos30dias, pdfs.descargas AS todas FROM pdfs ORDER BY nombre_pdf';
+      $sql = 'SELECT id, replace(nombre_pdf, ".pdf", "") AS nombre, (SELECT COUNT(ce_pdf) AS cantidad FROM descargas WHERE descargas.ce_pdf = pdfs.id AND descargas.fecha >= :desdeUnaSemana) AS ultimos7dias, (SELECT COUNT(ce_pdf) AS cantidad FROM descargas WHERE descargas.ce_pdf = pdfs.id AND descargas.fecha >= :desdeUnMes) AS ultimos30dias, pdfs.descargas AS todas FROM pdfs ORDER BY nombre';
 
       $stmt = $this->prepareAndExecute($sql);
       return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -32,7 +32,7 @@ class Totals extends Entity
 
    public function byDownloads()
    {
-      $sql = 'SELECT id, nombre_pdf, (SELECT COUNT(ce_pdf) AS cantidad FROM descargas WHERE descargas.ce_pdf = pdfs.id AND descargas.fecha >= :desdeUnaSemana) AS ultimos7dias, (SELECT COUNT(ce_pdf) AS cantidad FROM descargas WHERE descargas.ce_pdf = pdfs.id AND descargas.fecha >= :desdeUnMes) AS ultimos30dias, pdfs.descargas AS todas FROM pdfs ORDER BY todas DESC';
+      $sql = 'SELECT id, replace(nombre_pdf, ".pdf", "") AS nombre, (SELECT COUNT(ce_pdf) AS cantidad FROM descargas WHERE descargas.ce_pdf = pdfs.id AND descargas.fecha >= :desdeUnaSemana) AS ultimos7dias, (SELECT COUNT(ce_pdf) AS cantidad FROM descargas WHERE descargas.ce_pdf = pdfs.id AND descargas.fecha >= :desdeUnMes) AS ultimos30dias, pdfs.descargas AS todas FROM pdfs ORDER BY todas DESC';
 
       $stmt = $this->prepareAndExecute($sql);
       return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -53,12 +53,22 @@ class Totals extends Entity
       return $stmt->fetchAll(PDO::FETCH_ASSOC);
    }
 
+   public function byPeriod()
+   {
+      $sql = 'SELECT (SELECT COUNT(ce_pdf) AS cantidad FROM descargas WHERE descargas.fecha >= :desdeUnaSemana) AS ultimos7dias, (SELECT COUNT(ce_pdf) AS cantidad FROM descargas WHERE descargas.fecha >= :desdeUnMes) AS ultimos30dias, (SELECT SUM(descargas) AS cantidad FROM pdfs) AS todas';
+
+      $stmt = $this->prepareAndExecute($sql);
+      return $stmt->fetch(PDO::FETCH_ASSOC);
+   }
+
    public function byCountry()
    {
-      $sql = 'SELECT pais, COUNT(pais) AS todas
-               FROM descargas
-               GROUP BY pais
-               ORDER BY todas DESC';
+      $sql = 'SELECT des.pais,
+	      (SELECT COUNT(id) FROM descargas WHERE pais = des.pais AND fecha > :desdeUnaSemana) AS ultimos7dias,
+         (SELECT COUNT(id) FROM descargas WHERE pais = des.pais AND fecha > :desdeUnMes) AS ultimos30dias,
+         (SELECT COUNT(id) FROM descargas WHERE pais = des.pais) AS todas
+         FROM (SELECT DISTINCT pais FROM descargas WHERE pais IS NOT NULL) des
+         ORDER BY todas DESC';
 
       $stmt = $this->prepareAndExecute($sql);
       return $stmt->fetchAll(PDO::FETCH_ASSOC);

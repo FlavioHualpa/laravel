@@ -45,9 +45,13 @@
                               <div class="searchform-wrapper d-none d-lg-block">
                                  <form action="#" class="searchform searchform-2">
                                     <input type="text" class="searchform__input" id="search2" name="search" placeholder="Buscar...">
-                                    <button type="submit" class="searchform__submit">
-                                    </button>
+                                    {{-- <button type="submit" class="searchform__submit">
+                                    </button> --}}
                                  </form>
+                                 <div class="results-box">
+                                    <ul>
+                                    </ul>
+                                 </div>
                               </div>
                               <ul class="header-toolbar text-right">
                                  <li class="header-toolbar__item user-info-menu-btn">
