@@ -10,6 +10,8 @@ class Pedido extends Model
       'id_usuario',
       'id_cliente',
       'id_enviante',
+      'id_domicilio',
+      'id_transporte',
       'id_estado',
       'numero',
       'mensaje',
@@ -33,6 +35,11 @@ class Pedido extends Model
    public function enviante()
    {
       return $this->belongsTo(User::class, 'id_enviante');
+   }
+
+   public function domicilio()
+   {
+      return $this->belongsTo(Domicilio::class, 'id_domicilio');
    }
 
    public function sucursal()

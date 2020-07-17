@@ -29,7 +29,7 @@ class CreatePedidosTable extends Migration
             $table->foreign('id_usuario')->references('id')->on('users');
             $table->foreign('id_cliente')->references('id')->on('users');
             $table->foreign('id_enviante')->references('id')->on('users');
-            $table->foreign('id_sucursal')->references('id')->on('sucursales');
+            $table->foreign('id_domicilio')->references('id')->on('domicilios');
             $table->foreign('id_transporte')->references('id')->on('transportes');
             $table->foreign('id_estado')->references('id')->on('estado_pedidos');
         });

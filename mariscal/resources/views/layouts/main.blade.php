@@ -115,6 +115,9 @@
    <!-- Main JS -->
    <script src="{{ asset('js/main.js') }}"></script>
 
+   <!-- Search Box -->
+   <script src="{{ asset('js/busqueda.js') }}"></script>
+
    <!-- Custom JS -->
    @stack('customjs')
    

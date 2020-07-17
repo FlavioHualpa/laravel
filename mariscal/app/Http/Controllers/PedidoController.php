@@ -217,7 +217,7 @@ class PedidoController extends Controller
       // para el cliente de la sesión y completo
       // los datos para proceder a cerrar
       $pedido = $this->getOpenOrder();
-      $pedido->id_sucursal = $request->id_sucursal;
+      $pedido->id_domicilio = $request->id_domicilio;
       $pedido->id_transporte = $request->id_transporte;
       $pedido->id_enviante = auth()->id();
       $pedido->id_estado = EstadoPedido::getIdByName('cerrado');

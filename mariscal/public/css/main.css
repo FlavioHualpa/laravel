@@ -18939,6 +18939,12 @@ a:hover {
   padding: 4px 0;
 }
 
+.select-label {
+  margin-bottom: .3em;
+  font-size: 0.75em;
+  text-transform: none;
+}
+
 .swal2-popup {
   font-size: 1.6rem !important;
 }
@@ -18958,20 +18964,23 @@ a:hover {
 
 .results-box {
   padding: 3px 0;
-  width: 400px;
+  width: 500px;
+  height: 248px;
   background-color: #FFF3E0;
   border: 1px solid #d9d9d9;
   box-shadow: 2px 2px 3px #909090;
   position: absolute;
-  left: 0;
-  top: -40px;
+  left: -200px;
+  top: 40px;
+  overflow: auto;
   display: none;
+  z-index: 100;
 }
 
 .results-box ul li {
   list-style-type: none;
   padding: 5px 20px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
 }
 

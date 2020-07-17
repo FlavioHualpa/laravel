@@ -110,7 +110,7 @@ function updateOrderTotals()
 function closeOrder()
 {
    let token = $('[name=csrf-token]').attr('content')
-   let idSucursal = $('#id_sucursal').val()
+   let idDomicilio = $('#id_domicilio').val()
    let idTransporte = $('#id_transporte').val()
    let mensaje = $('#mensaje').val()
 
@@ -118,7 +118,7 @@ function closeOrder()
       'url': '/app/pedido/cerrar',
       'method': 'post',
       'data': {
-         'id_sucursal': idSucursal,
+         'id_domicilio': idDomicilio,
          'id_transporte': idTransporte,
          'mensaje': mensaje
       },

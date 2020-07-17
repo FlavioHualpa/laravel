@@ -63,6 +63,13 @@ class User extends Authenticatable
       return $this->hasMany(Sucursal::class, 'id_usuario');
    }
 
+   public function domicilios()
+   {
+      return $this->hasMany(Domicilio::class, 'id_usuario')
+         ->orderBy('es_central', 'desc')
+         ->orderBy('domicilio');
+   }
+
    public function transportes()
    {
       return $this

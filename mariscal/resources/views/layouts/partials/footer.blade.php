@@ -21,7 +21,7 @@
 
                         @foreach ($linksFooter as $link)
                            <li>
-                              <a href="{{ $link->url }}">
+                              <a href="{{ '/paginas/' . $link->url }}">
                                  {{ $link->titulo }}
                               </a>
                            </li>

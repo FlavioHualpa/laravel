@@ -138,30 +138,36 @@
                                        <td id="totalBultos">---</td>
                                     </tr>
                                     <tr>
-                                       <td colspan="2">
-                                          <select id="id_sucursal" class="form-control select-transporte">
-                                             <option value="">
-                                                (seleccioná la sucursal)
-                                             </option>
-                                             @foreach ($cliente->sucursales as $sucursal)
-                                                <option value="{{ $sucursal->id }}">
-                                                   {{ $sucursal->domicilio }}
+                                       <td colspan="2" class="pb-0">
+                                          <label for="id_domicilio" class="select-label">
+                                             Dirección de entrega
+                                          </label>
+                                          <select id="id_domicilio" class="form-control select-transporte">
+                                             @foreach ($cliente->domicilios as $domicilio)
+                                                <option value="{{ $domicilio->id }}">
+                                                   {{ $domicilio->domicilio }}
                                                 </option>
                                              @endforeach
+                                             <option value="">
+                                                OTRA (indicar en mensaje)
+                                             </option>
                                           </select>
                                        </td>
                                     </tr>
                                     <tr>
                                        <td colspan="2">
+                                          <label for="id_transporte" class="select-label">
+                                             Transporte
+                                          </label>
                                           <select id="id_transporte" class="form-control select-transporte">
-                                             <option value="">
-                                                (seleccioná el transporte)
-                                             </option>
                                              @foreach ($cliente->transportes as $transporte)
                                                 <option value="{{ $transporte->id }}">
                                                    {{ $transporte->nombre }}
                                                 </option>
                                              @endforeach
+                                             <option value="">
+                                                OTRO (indicar en mensaje)
+                                             </option>
                                           </select>
                                        </td>
                                     </tr>

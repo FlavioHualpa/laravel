@@ -122,11 +122,11 @@
            {{ $pedido->cliente->razon_social }}
          </p>
 
-         @isset($pedido->sucursal)
+         @isset($pedido->domicilio)
             <p>
-               Sucursal:
-               {{ $pedido->sucursal->domicilio }}
-               - {{ $pedido->sucursal->localidad }}
+               Dirección de entrega:
+               {{ $pedido->domicilio->domicilio }}
+               - {{ $pedido->domicilio->localidad }}
             </p>
          @endisset
 
