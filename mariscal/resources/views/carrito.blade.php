@@ -50,7 +50,7 @@
 
                                        @foreach ($encabezados as $enc)
 
-                                       <tr>
+                                       <tr data-group-id="{{ $enc->id }}">
                                           <td>
                                              &nbsp;
                                           </td>
@@ -63,7 +63,9 @@
                                           </td>
                                           <td class="group-name text-right">
                                              <h4>
-                                                {{ $productos->where('id_niv3', $enc->id)->sum('detalle.cantidad') }}
+                                                <span id="group-total">
+                                                   {{ $productos->where('id_niv3', $enc->id)->sum('detalle.cantidad') }}
+                                                </span>
                                                 {{ App\Envasamiento::where('id_niv3', $enc->id)->where('divisor', 1)->first()->unidad->nombre }}
                                              </h4>
                                           </td>
@@ -71,7 +73,7 @@
 
                                        @foreach ($productos->where('id_niv3', $enc->id) as $prod)
                                        
-                                       <tr>
+                                       <tr data-group-id="{{ $enc->id }}">
                                           <td class="product-remove text-left">
                                              <a href="">
                                                 <i class="dl-icon-close"></i>

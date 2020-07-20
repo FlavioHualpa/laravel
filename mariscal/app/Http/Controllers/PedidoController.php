@@ -287,4 +287,17 @@ class PedidoController extends Controller
    {
       return view('enviado');
    }
+
+   public function checkOpenOrder(Request $request)
+   {
+      $pedido = Pedido::findOrFail($request->id_pedido);
+      $hasOpenOrder = Pedido::where('id_cliente', $pedido->id_cliente)
+         ->where('id_estado', EstadoPedido::getIdByName('abierto'))
+         ->exists();
+
+      return [
+         'customerName' => $pedido->cliente->razon_social,
+         'hasOpenOrder' => $hasOpenOrder
+      ];
+   }
 }

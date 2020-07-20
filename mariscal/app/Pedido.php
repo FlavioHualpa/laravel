@@ -42,11 +42,6 @@ class Pedido extends Model
       return $this->belongsTo(Domicilio::class, 'id_domicilio');
    }
 
-   public function sucursal()
-   {
-      return $this->belongsTo(Sucursal::class, 'id_sucursal');
-   }
-
    public function transporte()
    {
       return $this->belongsTo(Transporte::class, 'id_transporte');

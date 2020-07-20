@@ -26,6 +26,8 @@ Route::get('/productos/{categoria}', 'ProductController@index')->name('product.i
 Route::get('/login/selectcustomer', 'Auth\CustomerController@selectCustomer')->name('select.customer');
 Route::post('/login/setcustomer', 'Auth\CustomerController@setCustomer')->name('set.customer');
 
+Route::get('/paginas/{nombre}', "PaginaController@index");
+
 Route::get('/carrito', 'PedidoController@showCart')->name('cart');
 Route::post('/app/pedido/agregar', 'PedidoController@addItem');
 Route::post('/app/pedido/quitar', 'PedidoController@removeItem');
@@ -33,6 +35,16 @@ Route::post('/app/pedido/totales', 'PedidoController@getOrderTotals');
 Route::post('/app/pedido/totalescategoria', 'PedidoController@getCategoryTotals');
 Route::post('/app/pedido/cerrar', 'PedidoController@closeOrder');
 Route::post('/app/pedido/eliminar', 'PedidoController@deleteOrder');
+Route::post('/app/pedido/clientetieneabierto', 'PedidoController@checkOpenOrder');
+Route::post('/app/pedido/repetir', 'PedidoController@repeatOrder');
 Route::get('/pedido/enviado', 'PedidoController@showConfirmation');
+Route::get('/pedido/historial', 'HistoryController@index')->name('order.history');
 
 Route::post('/search/products', 'SearchController@search');
+
+Route::get('/cambiar', function() {
+   return new \App\Mail\CambiarContraseña(
+      \App\User::find(276),
+      "asñdfjñaskdjfñasjdfñlkasjdfkjkasdfj"
+   );
+});

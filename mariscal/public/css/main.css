@@ -12001,7 +12001,8 @@ a, button, img, input, span, .main-navigation .mainmenu__item.menu-item-has-chil
   .btn-tiny {
     min-height: auto;
     line-height: 1.8;
-    padding: 5px 15px; }
+    padding: 5px 15px;
+    font-size: 1.1em; }
   .btn-transparent {
     background-color: rgba(46, 46, 46, 0.5); }
   .btn.newsletter-btn {
@@ -18995,4 +18996,44 @@ a:hover {
 
 .results-box ul li:hover a {
   color: #f4f4f4;
+}
+
+.table thead th.encabezado-listado {
+  font-weight: bold;
+  font-size: 1em;
+  color: #9a512f;
+}
+
+.table tbody td.dato-listado {
+  padding: 1rem 0;
+  font-size: 1.1em;
+  color: #606060;
+}
+
+.list-options {
+  display: flex;
+  align-items: center;
+}
+
+.list-options .text,
+.list-options .text-box,
+.list-options .select {
+  font-size: 1.1em;
+  margin: 0;
+  color: #606060;
+}
+
+.list-options .text-box,
+.list-options .select {
+  padding: 5px 10px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+
+.list-options .text-box {
+  width: 300px;
+}
+
+.list-options .select {
+  margin-left: 4px;
 }

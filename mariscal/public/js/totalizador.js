@@ -1,7 +1,6 @@
 (function initializeTotals()
 {
-   updateCategoryTotals()
-   updateOrderTotals()
+   updateTotals()
 })();
 
 (function hookSendButtonHandler()
@@ -61,11 +60,21 @@
       )
 })();
 
+function updateTotals(target)
+{
+   if ($('.mariscal-totals-box'))
+      updateCategoryTotals()
+
+   if ($('.cart-totals')) {
+      if (target)
+         updateGroupTotals(target)
+      
+      updateOrderTotals()
+   }
+}
+
 function updateCategoryTotals()
 {
-   if (! $('.mariscal-totals-box'))
-      return
-   
    let token = $('[name=csrf-token]').attr('content')
 
    let categId = $('#content')[0]
@@ -89,10 +98,29 @@ function updateCategoryTotals()
    })
 }
 
+function updateGroupTotals(target)
+{
+   // esta función es para actualizar los totales
+   // de la categoría correspondiente a target (input box)
+   
+   let groupId = target.closest('tr').attr('data-group-id')
+   let rows = target.closest('tbody').find(`[data-group-id="${groupId}"]`)
+   let totalSpan = rows[0].querySelector('#group-total')
+   let total = 0
+
+   rows.each( (index, row) => {
+      input = $(row).find('.quantity-input')
+      if (input.length)
+         total += parseInt(input.val())
+   })
+
+   totalSpan.innerText = total
+}
+
 function updateOrderTotals()
 {
-   if (! $('.cart-totals'))
-      return
+   // esta función es para actualizar los totales
+   // generales en el carrito del pedido
 
    let token = $('[name=csrf-token]').attr('content')
 

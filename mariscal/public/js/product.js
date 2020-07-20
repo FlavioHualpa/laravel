@@ -35,8 +35,7 @@
             {
                toast('success', 'Éxito!', 'Producto eliminado del pedido')
                asyncRemoveItem(custId, prodId)
-               updateCategoryTotals()
-               updateOrderTotals()
+               updateTotals(box)
             }
             else if (qtty % multiplo != 0)
             {
@@ -47,8 +46,7 @@
             {
                toast('success', 'Éxito!', 'Producto agregado al pedido')
                asyncAddItem(custId, prodId, qtty)
-               updateCategoryTotals()
-               updateOrderTotals()
+               updateTotals(box)
             }
 
          }
@@ -91,7 +89,7 @@
             
             toast('success', 'Éxito!', 'Producto eliminado del pedido')
             asyncRemoveItem(custId, prodId)
-            updateOrderTotals()
+            updateTotals($(ev.target))
 
             ev.target.closest('tr').remove()
          

@@ -1,47 +1,63 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+      <!-- Main Content Wrapper Start -->
+      <div id="content" class="main-content-wrapper">
+         <div class="page-content-inner">
+            <div class="container">
+               <div class="row pt--75 pt-md--55 pt-sm--35 pb--80 pb-md--60 pb-sm--40">
+                  <div class="col-md-6 offset-md-3 mb-sm--30">
+
+                     @if (session('status'))
+                        <div class="alert alert-success mb-5" role="alert">
+                           {{ session('status') }}
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ route('password.email') }}">
-                        @csrf
+                     <div class="login-box">
+                        <h4 class="mb--35 mb-sm--20">Cambio de contraseña</h4>
+                        <form class="form form--login" method="post" action="{{ route('password.email') }}">
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                           @csrf
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                           <div class="form__group mb--20">
+                              <label class="form__label form__label--2" for="cuit">
+                                 CUIT
+                                 <span class="required">*</span>
+                              </label>
+                              <input
+                                 type="text"
+                                 class="form__input form__input--3 @error('cuit') is-invalid @enderror"
+                                 id="cuit"
+                                 name="cuit"
+                                 value="{{ old('cuit') }}"
+                                 required
+                                 autofocus
+                              >
+                              @error('cuit')
+                              <span class="invalid-feedback" role="alert">
+                                 <strong>{{ $message }}</strong>
+                              </span>
+                              @enderror                              
+                           </div>
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                           <div class="d-flex align-items-center mb--20">
+                              <div class="form__group">
+                                 <input
+                                    type="submit"
+                                    value="Enviar mail"
+                                    class="btn btn-submit btn-style-1"
+                                 >
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-</div>
+         </div>
+      </div>
+      <!-- Main Content Wrapper Start -->
+
 @endsection

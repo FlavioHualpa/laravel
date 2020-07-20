@@ -89,6 +89,12 @@
                                        @endif
 
                                        <li>
+                                          <a href="{{ route('order.history') }}">
+                                             Historial de pedidos
+                                          </a>
+                                       </li>
+
+                                       <li>
                                           <form action="{{ route('logout') }}" method="post" id="logout_form">
                                              @csrf
                                           </form>
