@@ -26,6 +26,8 @@ Route::get('/productos/{categoria}', 'ProductController@index')->name('product.i
 Route::get('/login/selectcustomer', 'Auth\CustomerController@selectCustomer')->name('select.customer');
 Route::post('/login/setcustomer', 'Auth\CustomerController@setCustomer')->name('set.customer');
 
+Route::view('/password/changed', 'auth.passwords.reset-success');
+
 Route::get('/paginas/{nombre}', "PaginaController@index");
 
 Route::get('/carrito', 'PedidoController@showCart')->name('cart');

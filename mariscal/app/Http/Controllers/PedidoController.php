@@ -104,6 +104,7 @@ class PedidoController extends Controller
       $cliente = User::getCurrentCustomer();
 
       return view('carrito')->with([
+         'pedido' => $pedido,
          'productos' => $productos,
          'encabezados' => $encabezados,
          'cliente' => $cliente,
@@ -299,5 +300,35 @@ class PedidoController extends Controller
          'customerName' => $pedido->cliente->razon_social,
          'hasOpenOrder' => $hasOpenOrder
       ];
+   }
+
+   public function repeatOrder(Request $request)
+   {
+      $pedido = Pedido::findOrFail($request->id_pedido);
+      $user = auth()->user();
+
+      $nuevoPedido = new Pedido;
+      $nuevoPedido->id_usuario = auth()->id();
+      $nuevoPedido->id_cliente = $pedido->id_cliente;
+      $nuevoPedido->id_domicilio = $pedido->id_domicilio;
+      $nuevoPedido->id_transporte = $pedido->id_transporte;
+      $nuevoPedido->id_estado = EstadoPedido::getIdByName('abierto');
+      $nuevoPedido->numero = Pedido::max('numero') + 1;
+      $nuevoPedido->save();
+
+      $listaDePrecios = $pedido->cliente->id_lista;
+      $items = [];
+
+      foreach ($pedido->productos as $producto)
+      {
+         $items[$producto->id] = [
+            'cantidad' => $producto->detalle->cantidad,
+            'precio' => $producto->precio($listaDePrecios),
+         ];
+      }
+
+      $nuevoPedido->productos()->attach($items);
+
+      return [ 'newOrderNo' => $nuevoPedido->numero ];
    }
 }

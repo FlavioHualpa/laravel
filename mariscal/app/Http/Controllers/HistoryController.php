@@ -21,9 +21,10 @@ class HistoryController extends Controller
          'pedidos.numero',
          'users.razon_social',
          'pedidos.sent_at',
+         'pedidos.id_domicilio',
          'pedidos.id_estado')
          ->join('users', 'users.id', 'pedidos.id_cliente')
-         ->with('estado');
+         ->with(['domicilio', 'estado']);
       
       if ($request->filter)
       {

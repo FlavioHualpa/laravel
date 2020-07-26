@@ -33,9 +33,8 @@
                                  class="form__input form__input--3 @error('cuit') is-invalid @enderror"
                                  id="cuit"
                                  name="cuit"
-                                 value="{{ old('cuit', $email) }}"
+                                 value="{{ old('cuit', $cuit) }}"
                                  required
-                                 autofocus
                               >
                               @error('cuit')
                               <span class="invalid-feedback" role="alert">
@@ -55,6 +54,7 @@
                                  id="password"
                                  name="password"
                                  required
+                                 autofocus
                               >
                               @error('password')
                               <span class="invalid-feedback" role="alert">

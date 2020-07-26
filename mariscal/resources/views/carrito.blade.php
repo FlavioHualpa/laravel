@@ -146,7 +146,10 @@
                                           </label>
                                           <select id="id_domicilio" class="form-control select-transporte">
                                              @foreach ($cliente->domicilios as $domicilio)
-                                                <option value="{{ $domicilio->id }}">
+                                                <option
+                                                   value="{{ $domicilio->id }}"
+                                                   {{ $domicilio->id == $pedido->id_domicilio ? 'selected' : '' }}
+                                                >
                                                    {{ $domicilio->domicilio }}
                                                 </option>
                                              @endforeach
@@ -163,7 +166,10 @@
                                           </label>
                                           <select id="id_transporte" class="form-control select-transporte">
                                              @foreach ($cliente->transportes as $transporte)
-                                                <option value="{{ $transporte->id }}">
+                                                <option
+                                                   value="{{ $transporte->id }}"
+                                                   {{ $transporte->id == $pedido->id_transporte ? 'selected' : '' }}
+                                                >
                                                    {{ $transporte->nombre }}
                                                 </option>
                                              @endforeach

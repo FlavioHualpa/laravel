@@ -116,11 +116,20 @@
                                  </td>
 
                                  <td class="dato-listado">
-                                    {{ $pedido->razon_social }}
+                                    <span class="dato-destacado">
+                                       {{ $pedido->razon_social }}
+                                    </span>
+                                    @if ($pedido->domicilio)
+                                    <br>
+                                    {{ $pedido->domicilio->domicilio }} -
+                                    {{ $pedido->domicilio->localidad }}
+                                    @endif
                                  </td>
 
                                  <td class="dato-listado">
+                                    @if ($pedido->sent_at)
                                     {{ $pedido->sent_at->format('d/m/Y H:i') }}
+                                    @endif
                                  </td>
 
                                  <td class="dato-listado">
@@ -128,6 +137,7 @@
                                  </td>
 
                                  <td>
+                                    @if ($pedido->sent_at)
                                     <a
                                        href="#"
                                        class="btn btn-tiny"
@@ -136,6 +146,7 @@
                                     >
                                        REPETIR
                                     </a>
+                                    @endif
                                  </td>
                               </tr>
 

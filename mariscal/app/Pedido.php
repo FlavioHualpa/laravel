@@ -59,7 +59,7 @@ class Pedido extends Model
          'pedido_producto',
          'id_pedido',
          'id_producto')
-         ->withPivot('cantidad')
+         ->withPivot(['cantidad', 'precio'])
          ->using(DetallePedido::class)
          ->as('detalle');
    }
@@ -83,35 +83,5 @@ class Pedido extends Model
          return 0;
 
       return $item->detalle->cantidad;
-   }
-
-   public static function carrito()
-   {
-      $grupos = Pedido::first()
-         ->productos()
-         ->pluck('id_niv3')
-         ->unique();
-
-      $encabezados = MenuNiv3::select('id', 'nombre')
-         ->whereIn('id', $grupos)
-         ->orderBy('nombre')
-         ->get();
-
-      echo "\n";
-      
-      foreach ($encabezados as $enc)
-      {
-         echo $enc->nombre;
-         echo "\n";
-
-         foreach ($productos->where('id_niv3', $enc->id) as $prod)
-         {
-            echo "* " . $prod->nombre;
-            echo " ...... " . $prod->detalle->cantidad;
-            echo "\n";
-         }
-
-         echo "\n";
-      }
    }
 }

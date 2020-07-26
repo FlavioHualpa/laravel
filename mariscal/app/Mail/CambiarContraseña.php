@@ -24,7 +24,7 @@ class CambiarContraseña extends Mailable
    {
       $this->user = $user;
       $this->token = $token;
-      $this->link = "/password/reset/$token?email=$user->email";
+      $this->link = "/password/reset/$token?cuit=$user->cuit";
    }
    
    /**

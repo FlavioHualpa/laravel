@@ -995,7 +995,7 @@ return [
       ],
 
       [
-         'name' => 'FOLKLORE',
+         'name' => 'FOLKLORE / POP',
          'reference' => null,
          'files' => [
             [
@@ -1020,6 +1020,14 @@ return [
                'link' => '#',
                'info' => ' - <em>SSA (Mykola Leontovych, Peter Wilhousky, 2018)</em>',
                'added_at' => '2019/01/02',
+               'awarded' => false,
+            ],
+            [
+               'name' => 'Contigo en la distancia',
+               'pdf_id' => 117,
+               'link' => '#',
+               'info' => ' - <em>SATB (Portillo de la Luz, 1990)</em>',
+               'added_at' => '2020/07/25',
                'awarded' => false,
             ],
             [

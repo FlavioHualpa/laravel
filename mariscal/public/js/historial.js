@@ -1,6 +1,6 @@
 (function hookSendButtonHandler()
 {
-   $('a')
+   $('a.btn-tiny')
       .on('click',
          (ev) => {
 
@@ -31,8 +31,8 @@ async function tryToDuplicate(orderId)
    if (await customerHasOpenOrder(orderId))
       return
 
-   let newOrderId = await repeatOrder(orderId)
-   showConfirmation(newOrderId)
+   let newOrderNo = await repeatOrder(orderId)
+   showConfirmation(newOrderNo)
 }
 
 function customerHasOpenOrder(orderId)
@@ -65,14 +65,24 @@ function showOpenOrderWarning(customerName)
 
 function repeatOrder(orderId)
 {
-   return 99;
+   let token = $('[name=csrf-token]').attr('content')
+
+   return axios({
+      'url': '/app/pedido/repetir',
+      'method': 'post',
+      'data': { 'id_pedido': orderId },
+      'headers': { 'X-CSRF-TOKEN': token }
+   })
+   .then(resp => {
+      return resp.data.newOrderNo
+   })
 }
 
-function showConfirmation(orderId)
+function showConfirmation(orderNo)
 {
    Swal.fire({
       title: 'Éxito!',
-      text: `Se ha abierto el nuevo pedido #${orderId}.`,
+      text: `Se ha creado un nuevo pedido #${orderNo}.`,
       icon: 'success'
    })
 }
