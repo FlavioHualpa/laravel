@@ -50,3 +50,11 @@ Route::get('/cambiar', function() {
       "asñdfjñaskdjfñasjdfñlkasjdfkjkasdfj"
    );
 });
+
+//
+// ADMINISTRACIÓN
+//
+
+Route::get('/gestion/inicio', 'AdminController@index')->name('admin.home');
+Route::get('/gestion/pedidos', 'AdminController@manageOrders')->name('admin.orders');
+Route::get('/gestion/imprimir/{pedido}', 'AdminController@printOrder')->name('admin.print');

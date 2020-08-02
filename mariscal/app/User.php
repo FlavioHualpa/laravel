@@ -20,9 +20,8 @@ class User extends Authenticatable
    */
    protected $fillable = [
       'cuit', 'razon_social', 'email', 'password',
-      'id_lista', 'id_vendedor', 'id_rol',
-      'domicilio', 'localidad', 'codigo_postal',
-      'telefono', 'codigo_erp'
+      'id_domicilio', 'id_lista', 'id_vendedor', 'id_rol',
+      'codigo_erp', 'marca'
    ];
    
    /**
@@ -63,6 +62,11 @@ class User extends Authenticatable
       return $this->hasMany(Sucursal::class, 'id_usuario');
    }
 
+   public function domicilio()
+   {
+      return $this->belongsTo(Domicilio::class, 'id_domicilio');
+   }
+
    public function domicilios()
    {
       return $this->hasMany(Domicilio::class, 'id_usuario')
@@ -80,6 +84,11 @@ class User extends Authenticatable
             'id_transporte')
          ->orderBy('orden')
          ->using(TransporteUser::class);
+   }
+
+   public function esAdmin()
+   {
+      return $this->rol->nombre == self::ROL_ADMIN;
    }
    
    public function esAdminVendedor()

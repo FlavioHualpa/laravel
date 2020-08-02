@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSucursalesTable extends Migration
+class CreateCubitajesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateSucursalesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sucursales', function (Blueprint $table) {
+        Schema::create('cubitajes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_usuario');
-            $table->string('domicilio');
-            $table->string('localidad');
+            $table->unsignedBigInteger('id_grupo_precio');
+            $table->double('kilos', 15, 8);
+            $table->double('metros', 15, 8);
             $table->timestamps();
 
-            $table->foreign('id_usuario')->references('id')->on('users');
+            $table->foreign('id_grupo_precio')->references('id')->on('grupo_precios');
         });
     }
 
@@ -31,6 +31,6 @@ class CreateSucursalesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sucursales');
+        Schema::dropIfExists('cubitajes');
     }
 }

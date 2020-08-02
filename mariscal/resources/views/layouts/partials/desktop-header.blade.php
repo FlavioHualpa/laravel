@@ -140,13 +140,14 @@
                                     <ul class="sub-menu">
                                        
                                        @foreach ($itemNiv1->publicSubitems as $itemNiv2)
-                                       <li class="menu-item-has-children has-children">
-                                          <a href="#">
+                                       <li @if ($itemNiv2->subitems_count) class="menu-item-has-children has-children" @endif>
+                                          <a href="{{ $itemNiv2->url }}">
                                              <span class="mm-text">
                                                 {{ $itemNiv2->nombre}}
                                              </span>
                                           </a>
                                           
+                                          @if ($itemNiv2->subitems_count)
                                           <ul class="sub-menu">
                                              
                                              @foreach($itemNiv2->publicSubitems as $itemNiv3)
@@ -160,6 +161,8 @@
                                              @endforeach
                                              
                                           </ul>
+                                          @endif
+                                       
                                        </li>
                                        @endforeach
                                        

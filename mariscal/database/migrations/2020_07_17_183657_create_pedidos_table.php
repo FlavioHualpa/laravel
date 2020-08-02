@@ -18,7 +18,7 @@ class CreatePedidosTable extends Migration
             $table->unsignedBigInteger('id_usuario');
             $table->unsignedBigInteger('id_cliente');
             $table->unsignedBigInteger('id_enviante')->nullable();
-            $table->unsignedBigInteger('id_sucursal')->nullable();
+            $table->unsignedBigInteger('id_domicilio')->nullable();
             $table->unsignedBigInteger('id_transporte')->nullable();
             $table->unsignedBigInteger('id_estado');
             $table->unsignedBigInteger('numero');

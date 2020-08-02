@@ -18,6 +18,7 @@ class CreateMenuNiv1Table extends Migration
             $table->string('nombre');
             $table->integer('orden');
             $table->boolean('privado')->default(false);
+            $table->boolean('solo_admin')->default(false);
         });
     }
 

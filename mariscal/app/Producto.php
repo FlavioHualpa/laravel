@@ -19,6 +19,15 @@ class Producto extends Model
    {
       return $this->belongsTo(MenuNiv3::class, 'id_niv3');
    }
+
+   public function cubitaje()
+   {
+      return $this->belongsTo(
+         Cubitaje::class,
+         'id_grupo_precio',
+         'id_grupo_precio'
+      );
+   }
    
    public function pedidos()
    {
@@ -35,6 +44,16 @@ class Producto extends Model
    public function getUrlImagenAttribute()
    {
       return asset('img/' . $this->imagen . '.jpg');
+   }
+
+   public function getDivisorBultoAttribute()
+   {
+      return ($env = $this->nivel3
+         ->envasamientos()
+         ->where('bulto', 1)
+         ->first())
+         ? $env->divisor
+         : 1;
    }
 
    public function precio($idLista)

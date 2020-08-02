@@ -18,19 +18,22 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('cuit');
             $table->string('razon_social');
             $table->string('email');
-            $table->string('domicilio');
-            $table->string('localidad');
-            $table->string('codigo_postal');
-            $table->string('telefono');
-            $table->string('codigo_erp');
+            // $table->string('domicilio');
+            // $table->string('localidad');
+            // $table->string('codigo_postal');
+            // $table->string('telefono');
+            $table->string('codigo_erp', 10);
+            $table->string('marca', 10);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->unsignedBigInteger('id_domicilio');
             $table->unsignedBigInteger('id_lista');
             $table->unsignedBigInteger('id_vendedor')->nullable();
             $table->unsignedBigInteger('id_rol');
             $table->rememberToken();
             $table->timestamps();
 
+            $table->foreign('id_domicilio')->references('id')->on('domicilios');
             $table->foreign('id_lista')->references('id')->on('listas_de_precios');
             $table->foreign('id_vendedor')->references('id')->on('users');
             $table->foreign('id_rol')->references('id')->on('roles');

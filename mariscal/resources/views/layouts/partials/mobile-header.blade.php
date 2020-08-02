@@ -97,9 +97,11 @@
 
                                     @foreach ($itemNiv1->publicSubitems as $itemNiv2)
                                     <li>
-                                       <a {{-- class="megamenu-title" --}} href="#">
+                                       <a {{-- class="megamenu-title" --}} href="{{ $itemNiv2->url }}">
                                           {{ $itemNiv2->nombre }}
                                        </a>
+
+                                       @if ($itemNiv2->subitems_count)
                                        <ul class="dl-submenu">
 
                                           @foreach ($itemNiv2->publicSubitems as $itemNiv3)
@@ -111,6 +113,8 @@
                                           @endforeach
                                        
                                        </ul>
+                                       @endif
+                                    
                                     </li>
                                     @endforeach
 

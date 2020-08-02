@@ -19,6 +19,7 @@ class CreateMenuNiv2Table extends Migration
             $table->integer('orden');
             $table->boolean('privado')->default(false);
             $table->unsignedBigInteger('id_niv1')->references('id')->on('menu_niv1');
+            $table->string('url')->default('#');
         });
     }
 

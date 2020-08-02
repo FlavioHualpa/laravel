@@ -9,7 +9,7 @@ class MenuNiv2 extends Model
     protected $table = "menu_niv2";
 
     protected $fillable = [
-        'nombre', 'orden', 'privado', 'id_niv1'
+        'nombre', 'orden', 'privado', 'id_niv1', 'url'
     ];
 
     public function subitems()

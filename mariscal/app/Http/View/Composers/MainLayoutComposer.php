@@ -26,8 +26,13 @@ class MainLayoutComposer
    public function compose(View $view)
    {
       $itemsNiv1 = MenuNiv1::where('privado', 0)
+         ->when(! (auth()->check() && auth()->user()->esAdmin()),
+         function ($query) {
+            $query->where('solo_admin', '!=', 1);
+         })
          ->orderBy('orden')
          ->with('publicSubitems.publicSubitems')
+         ->withCount('subitems')
          ->get();
 
       $linksFooter = LinkFooter::orderBy('orden')->get();

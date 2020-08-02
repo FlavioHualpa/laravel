@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Roboto';
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'Roboto Slab';
+   margin-bottom: 0.6em;
+}
+
+h1 {
+   font-size: 2em;
+}
+
+h2 {
+   font-size: 1.6em;
+}
+
+
+h3 {
+   font-size: 1.4em;
+}
+
+h4 {
+   font-size: 1.2em;
+}
+
+h5 {
+   font-size: 1em;
+}
+
+h6 {
+   font-size: 0.8em;
+}
+
+.container {
+   width: 19cm;
+   margin: 0 auto;
+   background-color: white;
+}
+
+.separator {
+   border-bottom: 1px solid #404040;
+   margin-bottom: 1.2em;
+}
+
+.stand-out {
+   font-size: 1.3em;
+}
+
+.stand-less {
+   font-size: 0.8em;
+}
+
+.mt-4 {
+   margin-top: 1.2em;
+}
+
+.bt-2 {
+   border-top: 2px solid #404040;
+}
+
+table {
+   border-collapse: collapse;
+}
+
+table tr td {
+   border: 1px solid #404040;
+   padding: 6px 10px;
+}
+
+table.products tr td {
+   text-align: center;
+}
+
+table.products tr td div {
+   display: inline-block;
+   margin-right: 10px;
+   margin-bottom: 4px;
+}
+
+table.products tr td i.fa-square-o {
+   font-size: 1.6em;
+   margin-right: 3px;
+   transform: translateY(4px);
+}

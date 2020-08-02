@@ -24,6 +24,11 @@ class MenuNiv3 extends Model
          ->orderBy('orden');
    }
 
+   public function envasamientos()
+   {
+      return $this->hasMany(Envasamiento::class, 'id_niv3');
+   }
+
    public function unidad()
    {
       return $this->belongsTo(Unidad::class, 'id_unidad');

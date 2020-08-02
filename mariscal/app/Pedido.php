@@ -84,4 +84,22 @@ class Pedido extends Model
 
       return $item->detalle->cantidad;
    }
+
+   public function getTotalNetoAttribute()
+   {
+      return $this->productos->sum(
+         function ($item) {
+            return $item->detalle->cantidad * $item->detalle->precio;
+         }
+      );
+   }
+
+   public function getTotalBultosAttribute()
+   {
+      return $this->productos->sum(
+         function ($item) {
+            return $item->detalle->cantidad / $item->divisorBulto;
+         }
+      );
+   }
 }
