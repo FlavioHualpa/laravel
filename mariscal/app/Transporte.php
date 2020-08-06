@@ -8,7 +8,9 @@ class Transporte extends Model
 {
    protected $fillable = [
       'codigo_erp',
-      'nombre'
+      'nombre',
+      'domicilio',
+      'localidad',
    ];
    
    public function usuarios()

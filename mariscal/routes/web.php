@@ -39,6 +39,7 @@ Route::post('/app/pedido/cerrar', 'PedidoController@closeOrder');
 Route::post('/app/pedido/eliminar', 'PedidoController@deleteOrder');
 Route::post('/app/pedido/clientetieneabierto', 'PedidoController@checkOpenOrder');
 Route::post('/app/pedido/repetir', 'PedidoController@repeatOrder');
+Route::post('/app/pedido/cambiarestado', 'PedidoController@changeOrderState');
 Route::get('/pedido/enviado', 'PedidoController@showConfirmation');
 Route::get('/pedido/historial', 'HistoryController@index')->name('order.history');
 

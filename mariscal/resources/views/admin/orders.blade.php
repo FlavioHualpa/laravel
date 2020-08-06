@@ -93,27 +93,27 @@
                      <nav>
                         <ul class="page-tabs">
                            <li @if ($activePage == '1') class="active" @endif>
-                              <a href="{{ str_replace("tab=$activePage", "tab=1", route('admin.orders', request()->getQueryString())) }}">
+                              <a href="{{ route('admin.orders', request()->merge(['tab' => 1])->all()) }}">
                                  cerrados
                               </a>
                            </li>
                            <li @if ($activePage == '2') class="active" @endif>
-                              <a href="{{ str_replace("tab=$activePage", "tab=2", route('admin.orders', request()->getQueryString())) }}">
+                              <a href="{{ route('admin.orders', request()->merge(['tab' => 2])->all()) }}">
                                  en preparación
                               </a>
                            </li>
                            <li @if ($activePage == '3') class="active" @endif>
-                              <a href="{{ str_replace("tab=$activePage", "tab=3", route('admin.orders', request()->getQueryString())) }}">
+                              <a href="{{ route('admin.orders', request()->merge(['tab' => 3])->all()) }}">
                                  facturados
                               </a>
                            </li>
                            <li @if ($activePage == '4') class="active" @endif>
-                              <a href="{{ str_replace("tab=$activePage", "tab=4", route('admin.orders', request()->getQueryString())) }}">
+                              <a href="{{ route('admin.orders', request()->merge(['tab' => 4])->all()) }}">
                                  despachados
                               </a>
                            </li>
                            <li @if ($activePage == '5') class="active" @endif>
-                              <a href="{{ str_replace("tab=$activePage", "tab=5", route('admin.orders', request()->getQueryString())) }}">
+                              <a href="{{ route('admin.orders', request()->merge(['tab' => 5])->all()) }}">
                                  cancelados
                               </a>
                            </li>
@@ -186,7 +186,7 @@
                                  </td>
 
                                  <td class="dato-listado">
-                                    <a href="{{ route('admin.print', $pedido->id) }}">
+                                    <a href="{{ route('admin.print', $pedido->id) }}" target="pedido_{{$pedido->id}}">
                                        <i
                                           class="fa fa-print"
                                           aria-hidden="true"
@@ -201,13 +201,17 @@
                                        title="Modificar"
                                     >
                                     </i>
-                                    <i
-                                       class="fa fa-step-forward"
-                                       aria-hidden="true"
-                                       data-order-id="{{ $pedido->id }}"
-                                       title="Cambiar Estado"
-                                    >
-                                    </i>
+                                    <a href="#" data-rol="state">
+                                       <i
+                                          class="fa fa-step-forward"
+                                          aria-hidden="true"
+                                          data-order-no="{{ $pedido->numero }}"
+                                          data-order-id="{{ $pedido->id }}"
+                                          data-state="{{ $pedido->estado->nombre }}"
+                                          title="Cambiar Estado"
+                                       >
+                                       </i>
+                                    </a>
                                  </td>
                               </tr>
 
@@ -235,10 +239,8 @@
 
 @endsection
 
-{{--
 <!-- Custom JS -->
 @push('customjs')
-<script src="{{ asset('js/historial.js') }}"></script>
+<script src="{{ asset('js/manage.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 @endpush
---}}

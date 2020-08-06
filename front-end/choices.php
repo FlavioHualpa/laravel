@@ -103,9 +103,12 @@ if (isset($input['choice'])) :
    <!-- <iframe src="https://maps.google.com/maps/embed/v1/directions?key=AIzaSyBwa69-a43uuujfbQ6dQQiNH0SIVo8d3ec&origin=Acevedo+320,Buenos+Aires&waypoints=Serrano+560,Buenos+Aires&destination=Darwin+1109,Buenos+Aires" width="800" height="480" style="border: none;">
    </iframe> -->
 
+   <iframe src="https://maps.google.com/maps/embed/v1/place?key=AIzaSyBwa69-a43uuujfbQ6dQQiNH0SIVo8d3ec&q=Acevedo+320,Buenos+Aires&zoom=6" width="800" height="480" style="border: none;">
+   </iframe>
+
    <!--The div element for the map-->
-   <div id="map">
-   </div>
+   <!-- <div id="map">
+   </div> -->
 
    <script>
       // Initialize and add the map

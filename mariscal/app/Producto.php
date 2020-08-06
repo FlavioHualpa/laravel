@@ -56,6 +56,16 @@ class Producto extends Model
          : 1;
    }
 
+   public function getPesoAttribute()
+   {
+      return $this->cubitaje->kilos;
+   }
+
+   public function getVolumentAttribute()
+   {
+      return $this->cubitaje->metros;
+   }
+
    public function precio($idLista)
    {
       $producto = GrupoPrecioLista::where([

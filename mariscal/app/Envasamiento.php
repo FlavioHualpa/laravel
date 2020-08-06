@@ -8,7 +8,8 @@ class Envasamiento extends Model
 {
    protected $fillable = [
       'id_niv3', 'id_unidad',
-      'divisor', 'orden', 'bulto'
+      'divisor', 'orden',
+      'bulto', 'es_interno'
    ];
 
    public function menu_nivel_3()

@@ -16,6 +16,16 @@ class LocalFormatter
 
    public static function roundUp($value)
    {
-      return self::number($value, 0);
+      return number_format(ceil($value), 0, ',', '.');
+   }
+
+   public static function datetime($date)
+   {
+      return $date->format('d/m/Y h:i');
+   }
+
+   public static function date($date)
+   {
+      return $date->format('d/m/Y');
    }
 }

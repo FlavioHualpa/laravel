@@ -85,6 +85,19 @@
                         </form>
                      </div>
 
+                     @if ($pedidos->total())
+                     <div class="page-links">
+                        <div>
+                           <span class="shown-results mr-5">
+                              Mostrando resultados {{ $pedidos->firstItem()}} a {{ $pedidos->lastItem() }} de {{ $pedidos->total() }}
+                           </span>
+                        </div>
+                        <div>
+                           {{ $pedidos->withQueryString()->links('pagination.links') }}
+                        </div>
+                     </div>
+                     @endif
+
                      <div class="table-content table-responsive">
                         <table class="table text-center">
                            <thead>

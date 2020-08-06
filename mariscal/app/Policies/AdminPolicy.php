@@ -21,6 +21,6 @@ class AdminPolicy
 
    public function manage(User $user)
    {
-      return $user->rol->nombre == 'Administrador';
+      return $user->rol->nombre == User::ROL_ADMIN; // 'Administrador';
    }
 }

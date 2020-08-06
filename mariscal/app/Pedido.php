@@ -96,9 +96,42 @@ class Pedido extends Model
 
    public function getTotalBultosAttribute()
    {
+      $categorias = $this->productos()->pluck('id_niv3')->unique();
+      $totalBultos = 0;
+
+      foreach ($categorias as $categoria)
+      {
+         $env = Envasamiento::where([
+               'id_niv3' => $categoria,
+               'bulto' => 1,
+            ])->first();
+         
+         $divisor = ($env ? $env->divisor : 1);
+
+         $totalUnidades = $this->productos()
+            ->where('id_niv3', $categoria)
+            ->sum('cantidad');
+         
+         $totalBultos += ceil($totalUnidades / $divisor);
+      }
+
+      return $totalBultos;
+   }
+
+   public function getTotalKilosAttribute()
+   {
       return $this->productos->sum(
          function ($item) {
-            return $item->detalle->cantidad / $item->divisorBulto;
+            return $item->detalle->cantidad * $item->peso;
+         }
+      );
+   }
+
+   public function getTotalMetrosAttribute()
+   {
+      return $this->productos->sum(
+         function ($item) {
+            return $item->detalle->cantidad * $item->volumen;
          }
       );
    }

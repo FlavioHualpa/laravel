@@ -15,11 +15,12 @@ class CreateEnvasamientosTable extends Migration
     {
         Schema::create('envasamientos', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_niv3')->references('id')->on('menu_niv3');
-            $table->unsignedBigInteger('id_unidad')->references('id')->on('unidades');
+            $table->foreignId('id_niv3')->constrained('menu_niv3');
+            $table->foreignId('id_unidad')->constrained('unidades');
             $table->double('divisor', 15, 6);
             $table->integer('orden');
-            $table->integer('bulto');
+            $table->boolean('bulto')->default(false);
+            $table->boolean('es_interno')->default(false);
             $table->timestamps();
         });
     }

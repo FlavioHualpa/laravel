@@ -148,13 +148,11 @@ class PedidoController extends Controller
 
          // acumulo el total de paquetes
          $divisor = Envasamiento::divisor($id_grupo, $id_paquetes);
-         if ($divisor)
-            $totalPaquetes += $totalUnidades / $divisor;
+         $totalPaquetes += $totalUnidades / ($divisor ?? 1);
 
          // acumulo el total de bultos
          $divisor = Envasamiento::divisor($id_grupo, $id_bultos);
-         if ($divisor)
-            $totalBultos += $totalUnidades / $divisor;
+         $totalBultos += $totalUnidades / ($divisor ?? 1);
       }
 
       // devuelvo los totales en formato json
@@ -173,9 +171,12 @@ class PedidoController extends Controller
       // para el cliente de la sesión
       $pedido = $this->getOpenOrder();
 
-      // solo los envasamientos para la categoría solicitada
+      // solo los envasamientos para la categoría solicitada,
+      // no mostramos el envasamiento interno de la empresa
+      // a los usuarios de la web
       $envasamientos = Envasamiento::with('unidad')
          ->where('id_niv3', $request->id_niv3)
+         ->where('es_interno', false)
          ->get();
 
       $totales = [];
@@ -330,5 +331,14 @@ class PedidoController extends Controller
       $nuevoPedido->productos()->attach($items);
 
       return [ 'newOrderNo' => $nuevoPedido->numero ];
+   }
+
+   public function changeOrderState(Request $request)
+   {
+      $pedido = Pedido::findOrFail($request->id_pedido);
+      $pedido->id_estado = EstadoPedido::getIdByName($request->nuevo_estado);
+      $pedido->save();
+
+      return [ 'resultado' => 'Estado del pedido cambiado a ' . $request->nuevo_estado ];
    }
 }

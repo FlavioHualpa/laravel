@@ -68,13 +68,14 @@ class AdminController extends Controller
    {
       $usuario = auth()->user();
 
-      $pedidos = Pedido::select('id', 'numero',
-         'id_cliente', 'id_domicilio',
-         'id_estado', 'sent_at')
-         ->addSelect([
-            'razon_social' => User::select('razon_social')
-               ->whereColumn('pedidos.id_cliente', 'users.id')
-               ->limit(1)])
+      $pedidos = Pedido::select('pedidos.id', 'numero',
+         'id_cliente', 'pedidos.id_domicilio',
+         'id_estado', 'sent_at', 'razon_social')
+         ->join('users', 'pedidos.id_cliente', 'users.id')
+         // ->addSelect([
+         //    'razon_social' => User::select('razon_social')
+         //       ->whereColumn('pedidos.id_cliente', 'users.id')
+         //       ->limit(1)])
          ->with(['cliente', 'domicilio', 'estado']);
       
       if ($request->filter)
@@ -182,12 +183,20 @@ class AdminController extends Controller
          $secciones[] = [
             'encabezado' => MenuNiv3::find($nivel)->nombre,
             'grupos' => $grupos,
+            'totales' => $this->totalesSeccion($grupos),
          ];
       }
+
+      $totalesGenerales = [
+         'bultos' => ceil($pedido->totalBultos),
+         'kilos' => round($pedido->totalKilos, 0),
+         'metros' => round($pedido->totalMetros, 0),
+      ];
 
       return view('admin.print', [
          'pedido' => $pedido,
          'secciones' => $secciones,
+         'totalesGenerales' => $totalesGenerales,
       ]);
    }
 
@@ -219,13 +228,9 @@ class AdminController extends Controller
 
          $grupos[] = [
 
-            'cerrados' => $bultosCerrados,
+            'totalUnidadesGrupo' => $cantidad * $productos->count(),
 
-            'sobrante' => $sobrante,
-
-            'unidades' => $cantidad,  // el total de unidades por articulo
-
-            'cantidad' => $productos->count(),  // cuántos artículos distintos
+            'divisor' => $divisor,
 
             'bultos' => "$bultosCerrados B" . ($sobrante ? " + $sobrante U" : "") . " c/u",
 
@@ -237,5 +242,45 @@ class AdminController extends Controller
       }
 
       return $grupos;
+   }
+
+   public function totalesSeccion($grupos)
+   {
+      $totalUnidades = 0;
+      $divisor = $grupos[0]['divisor'];
+      $checkBox = '<i class="fa fa-square-o" aria-hidden="true"></i>';
+
+      foreach ($grupos as $grupo)
+         $totalUnidades += $grupo['totalUnidadesGrupo'];
+
+      $bultos = floor($totalUnidades / $divisor);
+      $sobrante = $totalUnidades % $divisor;
+      $totalBultos = $bultos + ($sobrante ? 1 : 0);
+
+      return ($sobrante
+         ? "Total Sección: $bultos bultos + $sobrante unidades. Totaliza: $checkBox $totalBultos bultos = $totalUnidades unidades."
+         : "Total Sección: $checkBox $totalBultos bultos = $totalUnidades unidades."
+      );
+   }
+
+   public function totalesGenerales($secciones)
+   {
+      $totalUnidades = 0;
+      $totalBultos = 0;
+      $i = 0;
+
+      foreach ($secciones as $seccion)
+      {
+         foreach ($seccion['grupos'] as $grupo)
+         {
+            $totalUnidades += $grupo['totalUnidadesGrupo'];
+         }
+
+         $divisor = $grupos[i]['divisor'];
+         $totalBultos += floor($totalUnidades / $divisor)
+            + ($totalUnidades % $divisor ? 1 : 0);
+
+         $i++;
+      }
    }
 }

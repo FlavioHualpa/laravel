@@ -67,6 +67,11 @@ h6 {
    border-top: 2px solid #404040;
 }
 
+.flex-between {
+   display: flex;
+   justify-content: space-between;
+}
+
 table {
    border-collapse: collapse;
 }

@@ -11,7 +11,10 @@
 <body>
    <div class="container">
       <h5>S. Ajmechet e Hijos S.A.</h5>
-      <h3>NOTA DE PEDIDO</h3>
+      <div class="flex-between">
+         <h3>NOTA DE PEDIDO</h3>
+         <h4>{{ \App\LocalFormatter::date($pedido->sent_at) }}</h4>
+      </div>
 
       <div class="separator"></div>
 
@@ -100,7 +103,7 @@
                </td>
                <td class="stand-less">
                   <strong>
-                     A.B.C.
+                     {{ $pedido->cliente->marca }}
                   </strong>
                </td>
             </tr>
@@ -162,9 +165,34 @@
                </td>
             </tr>
             @endforeach
+            <tr>
+               <td colspan="3">
+                  {!! $seccion['totales'] !!}
+               </td>
+            </tr>
             @endforeach
          </tbody>
       </table>
+
+      <section class="totales">
+         <h5 class="mt-4">
+            <u>TOTALES:</u>
+         </h5>
+         <p class="mt-4">
+            BULTOS = {{ $totalesGenerales['bultos'] }}
+            Preparado: ________
+         </p>
+         <p>
+            PESO = {{ $totalesGenerales['kilos'] }}
+         </p>
+         <p>
+            VOLUMEN = {{ $totalesGenerales['metros'] }}
+         </p>
+         <h5 class="mt-4">
+            Nombre Responsable ___________________________
+            Control ___________________________
+         </h5>
+      </section>
    </div>
 </body>
 </html>

@@ -23,8 +23,8 @@ class CreateProductosTable extends Migration
             $table->integer('unidad');
             $table->unsignedBigInteger('id_niv3');
             $table->unsignedBigInteger('id_grupo_precio');
-            $table->string('codigo_erp');
-            $table->string('codigo_access');
+            $table->string('codigo_erp', 20);
+            $table->string('codigo_access', 20);
             $table->string('envasamiento_access');
             $table->timestamps();
 

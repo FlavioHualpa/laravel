@@ -15,8 +15,10 @@ class CreateTransportesTable extends Migration
     {
         Schema::create('transportes', function (Blueprint $table) {
             $table->id();
-            $table->string('codigo_erp');
-            $table->string('nombre');
+            $table->string('codigo_erp', 10);
+            $table->string('nombre', 100);
+            $table->string('domicilio', 100);
+            $table->string('localidad', 100);
             $table->timestamps();
         });
     }
