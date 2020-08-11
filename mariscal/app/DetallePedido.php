@@ -24,4 +24,9 @@ class DetallePedido extends Pivot
    {
       return $this->belongsTo(Producto::class, 'id_producto');
    }
+
+   public function modificaciones()
+   {
+      return $this->hasMany(ModificacionDetallePedido::class, 'id_pedido_producto');
+   }
 }

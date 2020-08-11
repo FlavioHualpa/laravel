@@ -19055,6 +19055,15 @@ a:hover {
   margin-left: 4px;
 }
 
+.mariscal-input {
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+  padding: 5px 12px;
+  font-size: 1.4em;
+  width: 5em;
+  text-align: center;
+}
+
 .page-links {
   display: flex;
   justify-content: center;

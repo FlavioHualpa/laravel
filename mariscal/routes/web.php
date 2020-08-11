@@ -59,3 +59,4 @@ Route::get('/cambiar', function() {
 Route::get('/gestion/inicio', 'AdminController@index')->name('admin.home');
 Route::get('/gestion/pedidos', 'AdminController@manageOrders')->name('admin.orders');
 Route::get('/gestion/imprimir/{pedido}', 'AdminController@printOrder')->name('admin.print');
+Route::get('/gestion/modificar/{pedido}', 'AdminController@modifyOrder')->name('admin.modify');

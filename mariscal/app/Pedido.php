@@ -135,4 +135,10 @@ class Pedido extends Model
          }
       );
    }
+
+   public function getSePuedeModificarAttribute()
+   {
+      return $this->id_estado == EstadoPedido::getIdByName('cerrado')
+         || $this->id_estado == EstadoPedido::getIdByName('en preparación');
+   }
 }

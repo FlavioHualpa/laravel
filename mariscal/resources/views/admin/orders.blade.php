@@ -194,13 +194,17 @@
                                        >
                                        </i>
                                     </a>
-                                    <i
-                                       class="fa fa-pencil-square-o"
-                                       aria-hidden="true"
-                                       data-order-id="{{ $pedido->id }}"
-                                       title="Modificar"
-                                    >
-                                    </i>
+                                    @if ($pedido->sePuedeModificar)
+                                    <a href="{{ route('admin.modify', $pedido->id) }}" target="pedido_{{$pedido->id}}">
+                                       <i
+                                          class="fa fa-pencil-square-o"
+                                          aria-hidden="true"
+                                          data-order-id="{{ $pedido->id }}"
+                                          title="Modificar"
+                                       >
+                                       </i>
+                                    </a>
+                                    @endif
                                     <a href="#" data-rol="state">
                                        <i
                                           class="fa fa-step-forward"

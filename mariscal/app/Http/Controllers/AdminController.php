@@ -283,4 +283,29 @@ class AdminController extends Controller
          $i++;
       }
    }
+
+   public function modifyOrder(Request $request, Pedido $pedido)
+   {
+      $pedido->load('cliente');
+      $pedido->load('productos');
+
+      // extraigo el id de las categorías (nivel 3)
+      // de los productos (valores sin repetir)
+      $grupos = $pedido->productos
+         ->pluck('id_niv3')
+         ->unique();
+
+      // finalmente obtengo la colección de las categorías
+      // ordenadas por nombre, que van a ser los títulos
+      // para agrupar los productos en el carrito
+      $encabezados = MenuNiv3::select('id', 'nombre', 'url')
+         ->whereIn('id', $grupos)
+         ->orderBy('nombre')
+         ->get();
+
+      return view('admin.modify', [
+         'encabezados' => $encabezados,
+         'pedido' => $pedido,
+      ]);
+   }
 }
