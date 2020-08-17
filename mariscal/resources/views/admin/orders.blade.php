@@ -186,33 +186,30 @@
                                  </td>
 
                                  <td class="dato-listado">
-                                    <a href="{{ route('admin.print', $pedido->id) }}" target="pedido_{{$pedido->id}}">
+                                    <a href="{{ route('admin.print', $pedido->id) }}" target="pedido_{{$pedido->id}}" data-toggle="tooltip" data-original-title="Imprimir">
                                        <i
                                           class="fa fa-print"
                                           aria-hidden="true"
-                                          title="Imprimir"
                                        >
                                        </i>
                                     </a>
                                     @if ($pedido->sePuedeModificar)
-                                    <a href="{{ route('admin.modify', $pedido->id) }}" target="pedido_{{$pedido->id}}">
+                                    <a href="{{ route('admin.modify', $pedido->id) }}" target="pedido_{{$pedido->id}}" data-toggle="tooltip" data-original-title="Modificar">
                                        <i
                                           class="fa fa-pencil-square-o"
                                           aria-hidden="true"
                                           data-order-id="{{ $pedido->id }}"
-                                          title="Modificar"
                                        >
                                        </i>
                                     </a>
                                     @endif
-                                    <a href="#" data-rol="state">
+                                    <a href="#" data-rol="state" data-toggle="tooltip" data-original-title="Cambiar Estado">
                                        <i
                                           class="fa fa-step-forward"
                                           aria-hidden="true"
                                           data-order-no="{{ $pedido->numero }}"
                                           data-order-id="{{ $pedido->id }}"
                                           data-state="{{ $pedido->estado->nombre }}"
-                                          title="Cambiar Estado"
                                        >
                                        </i>
                                     </a>

@@ -7,18 +7,18 @@
                </li>
                <li class="<?= $page == 'transcriptions' ? 'selected' : '' ?>">
                   <i class="fas fa-angle-double-right drop-down-only"></i>
-                  <a href="transcriptions.php">
+                  <a href="transcriptions.php" class="new">
                      <?= lang('menu.opt.trans') ?>
-                  </a>
-               </li>
-               <li class="<?= $page == 'articles' ? 'selected' : '' ?>">
-                  <i class="fas fa-angle-double-right drop-down-only"></i>
-                  <a href="articles.php" class="new">
-                     <?= lang('menu.opt.art') ?>
                   </a>
                   <div class="new-tooltip">
                      <?= lang('menu.tooltip.new') ?>
                   </div>
+               </li>
+               <li class="<?= $page == 'articles' ? 'selected' : '' ?>">
+                  <i class="fas fa-angle-double-right drop-down-only"></i>
+                  <a href="articles.php">
+                     <?= lang('menu.opt.art') ?>
+                  </a>
                </li>
                <li class="<?= $page == 'arrangements' ? 'selected' : '' ?>">
                   <i class="fas fa-angle-double-right drop-down-only"></i>

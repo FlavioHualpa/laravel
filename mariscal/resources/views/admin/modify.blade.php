@@ -127,12 +127,21 @@
                                           >
                                              <div>
                                                 <input
-                                                   type="number"
+                                                   type="text"
                                                    class="mariscal-input"
                                                    value="{{ $prod->detalle->cantidad }}"
                                                    min="0"
                                                    step="{{ $prod->multiplo }}"
+                                                   readonly
                                                 >
+                                                <a href="#" data-toggle="tooltip" data-original-title="Modificar Cantidad">
+                                                   <i
+                                                      class="fa fa-pencil-square-o fa-2x"
+                                                      aria-hidden="true"
+                                                      data-order-id="{{ $prod->detalle->id }}"
+                                                   >
+                                                   </i>
+                                                </a>
                                              </div>
                                           </div>
                                        </td>
@@ -144,7 +153,16 @@
                                                    type="text"
                                                    class="mariscal-input"
                                                    value="{{ $prod->detalle->precio }}"
+                                                   readonly
                                                 >
+                                                <a href="#" data-toggle="tooltip" data-original-title="Modificar Precio">
+                                                   <i
+                                                      class="fa fa-pencil-square-o fa-2x"
+                                                      aria-hidden="true"
+                                                      data-order-id="{{ $prod->detalle->id }}"
+                                                   >
+                                                   </i>
+                                                </a>
                                              </div>
                                           </div>
                                        </td>

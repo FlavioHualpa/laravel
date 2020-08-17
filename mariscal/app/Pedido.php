@@ -59,7 +59,7 @@ class Pedido extends Model
          'pedido_producto',
          'id_pedido',
          'id_producto')
-         ->withPivot(['cantidad', 'precio'])
+         ->withPivot(['id', 'cantidad', 'precio'])
          ->using(DetallePedido::class)
          ->as('detalle');
    }

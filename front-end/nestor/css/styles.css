@@ -129,6 +129,7 @@ a:hover {
 
 .navigator .menu .slider .submenu li {
    padding: 12px;
+   white-space: nowrap;
 }
 
 .navigator .menu .slider .submenu li div {
