@@ -90,6 +90,8 @@ return [
 
       'If it\'d happen that within a same work we find binary and ternary metric indications, their metric relationship must keep the tactus unchanged. This would mean that in ternary passages the subdivision shall be faster than in the binary ones (3 against 2). We can find a good exemple in <em><u>Chaggio perduto</u></em> by de Severin Cornet. Likewise the 3 metric markings are also present in the late spanish madrigal <em><u>Entre dos mansos arroyos</u></em>, by Mateo Romero (Mathieu Romarin, 1575-1647), which I suggest to observe closely.',
 
+      'In several transcriptions you will notice the use of brackets over the notes. This is for two different reasons, but they have a common meaning: <u>regarding the correct accentuation of the words</u>.<br>1) In TERNARY passages I have placed brackets before the clear presence of <em>hemiolas</em> (anticipatory of the Baroque period), which are not always given at the same time in different voices. You can see examples in <em>Teresica hermana</em>, <em>Gasajemonos de husia</em>, <em>Quédate carillo adios</em>.<br>2) In BINARIAN works, in the presence of passages of irregular metrics (succession of phrases 3-3-2 or 3-2-3) generating differentiated metrics between the different voices. Examples in <em>Pues no te duele mi muerte</em>, <em>Serviros y bien amaros</em> and <em>Pelayo tan buen esfuerzo</em>.',
+
       'Editorial accidentals are suggested only for the specific pitches in question.',
 
       'Passages in which the text is confusing in the original score will be expressed between [ ] indicating that they are editorial suggestions.

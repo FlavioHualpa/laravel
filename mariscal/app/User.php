@@ -126,4 +126,13 @@ class User extends Authenticatable
       
       return $customer;
    }
+
+   public static function vendedoresPorNombre()
+   {
+      $id_rol_vend = Rol::getIdByName(self::ROL_VEND);
+      
+      return self::where('id_rol', $id_rol_vend)
+         ->orderBy('razon_social')
+         ->get();
+   }
 }

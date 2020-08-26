@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Envasamiento;
 use App\EstadoPedido;
+use App\ListaDePrecio;
 use App\MenuNiv3;
 use App\Pedido;
+use App\Transporte;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -48,7 +50,7 @@ class AdminController extends Controller
       $pedidos = $this->getOrders($request);
       $activePage = $this->getTabFromQueryString($request);
 
-      return view('admin.orders', [
+      return view('admin.orders.history', [
          'pedidos' => $pedidos,
          'titulo' => 'Administración de pedidos',
          'activePage' => $activePage,
@@ -303,9 +305,24 @@ class AdminController extends Controller
          ->orderBy('nombre')
          ->get();
 
-      return view('admin.modify', [
+      return view('admin.orders.modify', [
          'encabezados' => $encabezados,
          'pedido' => $pedido,
+      ]);
+   }
+
+   public function createCustomer(Request $request)
+   {
+      return view('admin.customers.create', [
+         'condiciones' => [
+            [ 'id' => 1, 'nombre' => 'Inscripto' ],
+            [ 'id' => 2, 'nombre' => 'Monotributista' ],
+         ],
+         'vendedores' => User::vendedoresPorNombre(),
+         'listas' => ListaDePrecio::all(),
+         'transportes' => Transporte::orderBy('nombre')->get(),
+         'dom_list' => session('address_list') ?? [],
+         'trans_list' => session('carrier_list') ?? [],
       ]);
    }
 }

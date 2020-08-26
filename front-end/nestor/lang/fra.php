@@ -90,6 +90,8 @@ return [
 
       'Dans les cas où l\'on trouverait des passages de métriques différentes (binaire et ternaire) dans la même pièce, le tactus doit rester sans variation; donc, aux passages ternaires leurs subdivisions seront plus rapides que chez les binaires, avec une relation 3 contre 2. <u><em>Chaggio perduto</em></u> de Cornet nous en fourni un bon exemple. De même, les 3 indications métriques sont présentes au madrigal <u><em>Entre dos mansos arroyos</em></u>, de Mateo Romero (Mathieu Romarin, 1575-1647), dont je propose de l\'observer en détail.',
 
+      'Dans plusieurs transcriptions, vous remarquerez l\'utilisation de crochets au-dessus des notes. Cela pour deux raisons différentes, mais qui ont un sens commun: <u>le respect de l\'accentuation correcte des mots</u>.<br>1) Dans les passages TERNAIRES, j\'ai mis des crochets a cause la présence évidente des <em>hémioles</em> (anticipation de la période baroque), qui ne sont pas toujours données en même temps à des voix différentes. Vous pouvez voir des exemples dans <em>Teresica hermana</em>, <em>Gasajemonos de husia</em>, <em>Quédate Carillo adios</em>.<br>2) Dans les œuvres de métrique BINAIRE, en présence de passages de métriques irréguliers (phrasé 3-3-2 ou 3-2-3) générant des métriques différenciées entre les différentes voix. Exemples dans Pues no te duele mi muerte, Serviros y bien amaros, <em>Pelayo tan buen esfuerzo</em>.',
+
       'Les sensibilisations éditoriales sont suggérées sur la note en question.',
 
       'Les passages où la place du texte est confuse dans l\'original seront indiqués entre [ ] signifiant qu\'il s\'agit de propositions éditoriales.

@@ -76,6 +76,8 @@ return [
 
       'En caso de aparecer en diferentes pasajes de la misma obra las indicaciones métricas de tactus binario y ternario, la relación métrica entre ellos debe resolverse manteniendo la unidad de medida invariable; ello significará que en los pasajes ternarios las subdivisiones serán más rápidas que en el binario, con una relación 3 a 2. Tenemos un ejemplo clarificador en <u><em>Chaggio perduto</em></u> de Severin Cornet. Asimismo, las 3 indicaciones métricas están presentes en el tardío madrigal español <u><em>Entre dos mansos arroyos</em></u>, de Mateo Romero (Mathieu Romarin, 1575-1647), que sugiero observar con detenimiento.',
 
+      'En varias transcripciones se va a observar el uso de corchetes sobre las notas. Ello obedece a 2 razones diferentes, pero que tienen un sentido en común: <u>el respeto por la correcta acentuación de las palabras</u>.<br>1) En pasajes TERNARIOS he colocado corchetes ante la clara presencia de <em>hemiolas</em> (anticipatorias del período Barroco), las que no siempre se dan al mismo tiempo en diferentes voces. Podrán ver ejemplos en <em>Teresica hermana</em>, <em>Gasajemonos de husia</em>, <em>Quédate carillo adios</em>.<br>2) En obras BINARIAS, ante la presencia de pasajes de métrica irregular (sucesión de fraseos 3-3-2 o 3-2-3) generando métricas diferenciadas (polimetrías) entre las diferentes voces. Ejemplos en <em>Pues no te duele mi muerte</em>, <em>Serviros y bien amaros</em> y <em>Pelayo tan buen esfuerzo</em>.',
+
       'Las sensibilizaciones editoriales están sugeridas sobre la nota en cuestión a la que solamente se refieren.',
 
       'Los pasajes en los que el texto es confuso en el original estarán entre [ ] indicando que son sugerencia editorial.
