@@ -114,6 +114,20 @@ return [
          'reference' => 'Ver en <strong><a href="articles.php">Artículos Musicológicos</a></strong> info sobre Josquin',
          'files' => [
             [
+               'name' => 'Tenor de Magnus es tu Domine',
+               'pdf_id' => 122,
+               'link' => '#',
+               'info' => ' - <em>(ed. Petrucci Motetti C, Venezia, 1504)</em>',
+               'added_at' => '2020/08/31',
+            ],
+            [
+               'name' => 'Magnus es tu Domine/Tu pauperum refugium',
+               'pdf_id' => 121,
+               'link' => '#',
+               'info' => 'a 4 (SATB) - <em>(ed. Petrucci Motetti C, Venezia, 1504)</em>',
+               'added_at' => '2020/08/31',
+            ],
+            [
                'name' => 'Portada original de la edición',
                'pdf_id' => null,
                'link' => './pdfs/portada_josquin.png',

@@ -126,6 +126,20 @@ return [
          'reference' => 'Pour voir les articles concernant Josquin aller à <strong><a href="articles.php">Articles Musicologiques</a></strong>',
          'files' => [
             [
+               'name' => 'Particella de ténor de Magnus es tu Domine',
+               'pdf_id' => 122,
+               'link' => '#',
+               'info' => ' - <em>(ed. Petrucci Motetti C, Venezia, 1504)</em>',
+               'added_at' => '2020/08/31',
+            ],
+            [
+               'name' => 'Magnus es tu Domine/Tu pauperum refugium',
+               'pdf_id' => 121,
+               'link' => '#',
+               'info' => 'a 4 (SATB) - <em>(ed. Petrucci Motetti C, Venezia, 1504)</em>',
+               'added_at' => '2020/08/31',
+            ],
+            [
                'name' => 'Couverture originale de l\'édition',
                'pdf_id' => null,
                'link' => './pdfs/portada_josquin.png',

@@ -18,12 +18,13 @@ if (empty($result)) {
 $file->increment($id);
 
 $download = new Download($source);
+$now = new DateTime(null, new DateTimeZone('America/Buenos_Aires'));
 
 $download->pdf_id = $id;
 $download->ip = $ip;
 $download->country = $country;
 $download->city = $city;
-$download->created_at = date('Y-m-d H:i:s');
+$download->created_at = $now->format('Y-m-d H:i:s');
 $download->save();
 
 // echo $result['nombre_pdf'];
