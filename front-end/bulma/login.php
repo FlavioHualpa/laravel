@@ -58,7 +58,7 @@ $title =  'Iniciar Sesión';
                </div>
 
                <div class="block">
-                  <a href="resetPassword.php">
+                  <a href="requestResetLink.php">
                      Olvidaste tu contraseña?
                   </a>
                </div>
