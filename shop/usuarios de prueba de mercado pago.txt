@@ -1,0 +1,28 @@
+4509 9535 6623 3704
+
+5031 7557 3453 0604
+
+5895 6278 2345 3005
+
+usuario vendedor de prueba
+[
+     "id" => 702614932,
+     "nickname" => "TETE4287719",
+     "password" => "qatest1331",
+     "site_status" => "active",
+     "email" => "test_user_55025972@testuser.com",
+     "public_key" => "TEST-5ebd3686-83a4-475d-9060-9c77b5bd9ef3",
+     "access_token" => "TEST-5460362129762039-011700-3d03f6456dd4887bec345208a62080c8-702614932",
+]
+
+usuario comprador de prueba
+[
+     "id" => 702617107,
+     "nickname" => "TETE5354248",
+     "password" => "qatest5159",
+     "site_status" => "active",
+     "email" => "test_user_76607174@testuser.com",
+     "nombre" => "Luisito",
+     "public_key" => "TEST-4728bb89-7919-4731-ab9e-2ae48891020b",
+     "access_token" => "TEST-8295265261332640-011717-57aa782f30b7e13147e40cddaa531fc5-702617107",
+]
