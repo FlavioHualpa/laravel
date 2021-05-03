@@ -14,8 +14,10 @@
 
 <body class="bg-gray-100">
 
+   <main class="container mx-auto">
    @yield('header')
    @yield('content')
+   </main>
 
    @stack('scripts')
 

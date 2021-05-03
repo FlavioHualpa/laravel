@@ -1,34 +1,22 @@
-   <header class="flex justify-between items-center px-20 py-4">
-      {{-- Sección izquierda --}}
-      <img src="{{ asset('img/EquizLogo.jpg') }}" alt="Equiz" class="w-32">
+   <header class="flex justify-center items-center px-20 bg-green-100">
 
-      {{-- Sección media --}}
-      <div class="text-3xl text-teal-600 font-weight-700">BIENVENIDO</div>
-
-      {{-- Sección derecha --}}
-      <div>
-         @guest
-            <a href="{{ route('login') }}" class="bg-teal-500 hover:bg-teal-400 text-white px-4 py-3 rounded-md transition duration-200">
-               Iniciar Sesión
-            </a>
-         @else
-            <div class="flex items-center">
-               <img
-                  src="{{ auth()->user()->profile_photo_url }}"
-                  alt="{{ auth()->user()->name }}"
-                  class="rounded-full w-8 mr-1 shadow-sm"
-               >
-               <span class="text-lg">
-                  {{ auth()->user()->name }}
-               </span>
-               
-               <form action="{{ route('logout') }}" method="post" id="logoutForm" class="ml-6 mb-0">
-                  @csrf
-                  <button type="submit" class="bg-red-500 hover:bg-red-400 text-white px-5 py-2 rounded-md transition duration-200 focus:outline-none" onclick="event.preventDefault(); document.querySelector('#logoutForm').submit();">
-                     Cerrar Sesión
-                  </button>
-               </form>
-            </div>
-         @endguest
+      <div class="px-6 py-4 border-green-{{request()->route()->uri == '/' ? '600' : '100'}} border-b-2 hover:bg-green-200 transition duration-200">
+         <a href="{{route('home')}}">CANALES</a>
       </div>
+      <div class="px-6 py-4 border-green-{{request()->route()->uri == 'chat' ? '600' : '100'}} border-b-2 hover:bg-green-200 transition duration-200">
+         <a href="{{route('chat')}}">CHAT</a>
+      </div>
+      <div class="px-6 py-4 border-green-100 border-b-2 hover:bg-green-200 transition duration-200">
+         <form action="{{ route('logout') }}" method="post" id="logoutForm">
+            @csrf
+            <button type="submit" onclick="event.preventDefault(); document.querySelector('#logoutForm').submit();">
+               SALIR
+            </button>
+         </form>
+      </div>
+      <div class="px-6 py-4 border-green-100 border-b-2 hover:bg-green-200 transition duration-200 cursor-pointer">
+         <i class="fas fa-user-circle"></i>
+         <a>{{ Auth::user()->name }}</a>
+      </div>
+
    </header>
