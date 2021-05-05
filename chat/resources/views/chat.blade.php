@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-   <div class="w-1/3 mt-6 mx-auto p-8 bg-white rounded shadow">
+   <div class="md:w-2/3 lg:w-1/2 xl:w-2/5 mt-6 mx-auto p-8 bg-white rounded shadow">
       <h1 class="text-xl text-center mb-6">
          {{ Auth::user()->name }},
          estás en el canal
@@ -13,7 +13,7 @@
       </h1>
 
       <div class="p-2 bg-gray-200 border border-gray-400 rounded">
-         <div class="h-96 p-2 bg-white border border-gray-300 rounded flex flex-col justify-end overflow-y-scroll" id="messagesList">
+         <div class="h-96 p-2 bg-white border border-gray-300 rounded flex flex-col justify-end overflow-y-auto" id="messagesList">
             @foreach ($messages as $message)
             <div class="border-t border-gray-300 p-3">
                <div class="flex justify-between">

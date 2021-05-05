@@ -85,5 +85,10 @@ function toShortDate(dateString)
 {
    const date = new Date(dateString)
 
-   return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`
+   return `${toN2(date.getDate())}/${toN2(date.getMonth() + 1)}/${date.getFullYear()} ${toN2(date.getHours())}:${toN2(date.getMinutes())}`
+}
+
+function toN2(number)
+{
+   return number.toString().padStart(2, '0')
 }
