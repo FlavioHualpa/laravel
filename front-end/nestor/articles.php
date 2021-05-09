@@ -16,6 +16,23 @@
 
          <div class="links-group">
             <ul>
+
+               <!-- Especial destacado -->
+               <li class="featured">
+                  <img src="img/acrobat_icon.png" class="pdf-icon">
+                  <a href="#" data-link="./src/displaypdf.php?id=124">
+                     <?= lang('articles.special.1') ?>
+                  </a>
+                  <span class="badge">
+                     <?=lang('new')?>
+                  </span>
+               </li>
+               <br>
+               <p class="featured-footer">
+                  <?= lang('articles.special.2') ?>
+               </p>
+               <!-- Fin especial destacado -->
+
                <?php foreach(lang('articles.files') as $file) : ?>
                <li>
                   <img src="img/acrobat_icon.png" class="pdf-icon">

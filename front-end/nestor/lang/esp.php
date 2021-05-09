@@ -33,6 +33,9 @@ return [
    // CURRICULUM
    //=================
 
+   'curric.announcement.1' => '500 Aniversario del genial Josquin des Prez',
+   'curric.announcement.2' => 'ver en <a href="articles.php">Artículos Musicológicos</a>',
+
    'curric.text.1' => 'Nació en Buenos Aires, Argentina, en 1952.',
 
    'curric.text.2' => 'Es <strong>Profesor Nacional de Música</strong> egresado del Conservatorio Nacional y <strong>Licenciado en Artes Musicales</strong> (Universidad Nacional de las Artes Departamento de Artes Musicales, UNA-DAMUS, www.artesmusicales.org).<br>Estudió Armonía con Erwin Leuchter y Dirección Coral con Antonio Russo en el Conservatorio J.J.Castro (La Lucila). Entre 1976-1979 fue becado por el Gobierno Francés.<br>Estudió con Jean-Michel Vaccaro, y obtuvo en 1979 el título de <strong>Doctor en Letras y Ciencias Humanas, especialidad Musicología</strong> en la <em>Université François Rabelais</em> de Tours.<br>Regresó ese año a Argentina, y se reinsertó en el medio musical al frente de coros y conjuntos de cámara.',
@@ -656,6 +659,8 @@ return [
 
    'articles.title.1' => '<u>ARTÍCULOS MUSICOLÓGICOS</u>',
    'articles.title.2' => '<u>Referencias</u>:',
+   'articles.special.1' => '500 Aniversario de Josquin des Prez',
+   'articles.special.2' => '* Las obras citadas se encuentran en <a href="transcriptions.php">Transcripciones</a> en esta web',
 
    'articles.files' => [
       [

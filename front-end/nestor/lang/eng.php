@@ -33,6 +33,9 @@ return [
    // CURRICULUM
    //=================
 
+   'curric.announcement.1' => '500th Anniversary of the great Josquin des Prez',
+   'curric.announcement.2' => 'read in <a href="articles.php">Musicological Articles</a>',
+
    'curric.text.1' => 'Néstor Zadoff was born in Buenos Aires, Argentina, in 1952.',
 
    'curric.text.2' => 'He graduated from the National Conservatory of Music with a degree in <strong>Music Education</strong>, and from the National University of Arts (Department of Musical Arts) with the degree of <strong>Licentiate of Musical Arts</strong> (UNA-DAMUS).
@@ -668,6 +671,8 @@ return [
 
    'articles.title.1' => '<u>MUSICOLOGICAL ARTICLES</u>',
    'articles.title.2' => '<u>References</u>:',
+   'articles.special.1' => '500th anniversary of Josquin des Prez',
+   'articles.special.2' => '* The mentioned works can be found in <a href="transcriptions.php">Transcriptions</a> in this web site',
 
    'articles.files' => [
       [

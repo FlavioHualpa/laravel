@@ -33,6 +33,9 @@ return [
    // CURRICULUM
    //=================
 
+   'curric.announcement.1' => '500ème Anniversaire du grand Josquin des Prez',
+   'curric.announcement.2' => 'lire dans <a href="articles.php">Articles Musicologiques</a>',
+
    'curric.text.1' => 'Né en 1952 à Buenos Aires, Argentine.',
 
    'curric.text.2' => 'Il est <strong>Professeur Nat. de Musique</strong>, et <strong>Lic. en Arts Musicaux</strong>, spétialisation Direction Chorale.
@@ -668,6 +671,8 @@ return [
 
    'articles.title.1' => '<u>ARTICLES MUSICOLOGIQUES</u>',
    'articles.title.2' => '<u>Prochainement</u>:',
+   'articles.special.1' => '500ème Anniversaire de Josquin des Prez',
+   'articles.special.2' => '* Les œuvres citées se trouvent dans <a href="transcriptions.php">Transcriptions</a> sur ce site',
 
    'articles.files' => [
       [

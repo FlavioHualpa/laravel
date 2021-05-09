@@ -307,6 +307,29 @@ footer a:hover {
    font-size: 18px;
 }
 
+.container .announcement {
+   font-size: 18px;
+   text-align: center;
+}
+
+.container .announcement .featured {
+   margin: 30px auto;
+   padding: 10px 20px;
+   font-weight: bold;
+   border: 2px dashed #800000;
+   display: inline-block;
+}
+
+.container .announcement .featured .image {
+   margin: 0 auto 6px;
+   display: block;
+   width: 50%;
+}
+
+.container .announcement .featured .mb-0 {
+   margin-bottom: 0;
+}
+
 .container .text .title {
    padding: 16px 0;
 }
@@ -509,6 +532,18 @@ footer a:hover {
    font-weight: bold;
    background-color: rgba(0, 0, 0, 0.2);
    border-radius: 4px;
+}
+
+.container .links-group .featured {
+   margin: 0;
+   padding: 10px;
+   font-weight: bold;
+   border: 2px dashed #800000;
+   display: inline-block;
+}
+
+.container .links-group .featured-footer {
+   margin-top: 5px;
 }
 
 .container .editors-group p {

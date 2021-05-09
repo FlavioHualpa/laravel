@@ -45,4 +45,9 @@ class User extends Authenticatable
    {
       return $this->hasMany(Message::class);
    }
+
+   public function api_keys()
+   {
+      return $this->hasMany(ApiKey::class);
+   }
 }

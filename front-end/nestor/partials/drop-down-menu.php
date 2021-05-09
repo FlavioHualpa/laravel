@@ -16,9 +16,12 @@
                </li>
                <li class="<?= $page == 'articles' ? 'selected' : '' ?>">
                   <i class="fas fa-angle-double-right drop-down-only"></i>
-                  <a href="articles.php">
+                  <a href="articles.php" class="new">
                      <?= lang('menu.opt.art') ?>
                   </a>
+                  <div class="new-tooltip">
+                     <?= lang('menu.tooltip.new') ?>
+                  </div>
                </li>
                <li class="<?= $page == 'arrangements' ? 'selected' : '' ?>">
                   <i class="fas fa-angle-double-right drop-down-only"></i>
