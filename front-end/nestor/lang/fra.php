@@ -33,7 +33,7 @@ return [
    // CURRICULUM
    //=================
 
-   'curric.announcement.1' => '500ème Anniversaire du grand Josquin des Prez',
+   'curric.announcement.1' => '500ème Anniversaire du génial Josquin des Prez',
    'curric.announcement.2' => 'lire dans <a href="articles.php">Articles Musicologiques</a>',
 
    'curric.text.1' => 'Né en 1952 à Buenos Aires, Argentine.',

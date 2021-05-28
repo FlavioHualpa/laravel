@@ -1,0 +1,51 @@
+Room::whereNotIn('id', Reservation::selectRaw('DISTINCT room_id')
+   ->whereDate('check_out', '>', '2019-10-05')
+   ->whereDate('check_in', '<', '2019-10-10')
+   ->get()
+)->get();
+
+$taken["before"] = Reservation::whereDate('check_out', '<', '2019-10-10')
+   ->orderBy('room_id')
+   ->orderBy('check_out', 'desc')
+   ->take(5)->get()->all();
+
+$taken["after"] = Reservation::whereDate('check_out', '>', '2019-10-10')
+   ->orderBy('room_id')
+   ->orderBy('check_out')
+   ->take(5)->get()->all();
+
+SET @from := '2019-10-05';
+SET @to := '2019-10-10';
+
+USE reservations;
+
+SELECT *
+FROM Reservations
+WHERE check_out > @to AND check_out < adddate(@to, INTERVAL 1 MONTH)
+UNION SELECT *
+FROM Reservations
+WHERE check_out < @to AND check_out > adddate(@to, INTERVAL -1 MONTH)
+ORDER BY room_id, check_out;
+
+function makeGroupOfAltenateDates(EloquentCollection $reservations)
+{
+   $alternatives = [];
+
+   foreach ($reservations as $reservation)
+   {
+      if ($reservation->room_id != $last_room_id)
+      {
+         $last_room_id = $reservation->room_id;
+         $last_check_out = $reservation->check_out;
+      }
+      else if ($reservation->check_in->diffInDays($last_check_out) > 0)
+      {
+         $alternatives[$last_room_id] = [
+            'check_in' => $last_check_out;
+            'check_out' => $reservation->check_in;
+         ];
+      }
+   }
+
+   return $alternatives;
+}
