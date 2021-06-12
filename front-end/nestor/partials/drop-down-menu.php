@@ -1,7 +1,13 @@
             <ul>
-               <li class="<?= $page == 'index' ? 'selected' : '' ?>">
+               <li class="<?= $page == 'news' ? 'selected' : '' ?>">
                   <i class="fas fa-angle-double-right drop-down-only"></i>
                   <a href="index.php">
+                     <?= lang('menu.opt.news') ?>
+                  </a>
+               </li>
+               <li class="<?= $page == 'curric' ? 'selected' : '' ?>">
+                  <i class="fas fa-angle-double-right drop-down-only"></i>
+                  <a href="curriculum.php">
                      <?= lang('menu.opt.curric') ?>
                   </a>
                </li>

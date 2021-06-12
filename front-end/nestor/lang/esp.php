@@ -14,6 +14,7 @@ return [
    // MENU
    //=================
 
+   'menu.opt.news' => 'novedades',
    'menu.opt.curric' => 'curriculum',
    'menu.opt.trans' => 'transcripciones',
    'menu.opt.art' => 'artículos',
@@ -30,11 +31,23 @@ return [
 
 
    //=================
-   // CURRICULUM
+   // NOVEDADES
    //=================
 
-   'curric.announcement.1' => '500 Aniversario del genial Josquin des Prez',
-   'curric.announcement.2' => 'ver en <a href="articles.php">Artículos Musicológicos</a>',
+   'news.title.1' => 'Hola, bienvenida/o a mi web personal',
+   'news.subtitle.1' => 'Novedades en',
+   'news.paragraph.1' => 'Vas a encontrar aquí más de 50 <a href="transcriptions.php">Transcripciones</a> de obras de los siglos XV-XVI con criterio musicológico actual, así como muchos de mis <a href="arrangements.php?type=free">Arreglos Corales</a> (no editados) sobre obras populares de diversos estilos.',
+   'news.paragraph.2' => 'Asimismo en la <a href="articles.php">Sección Artículos</a> hay varios trabajos de investigación sobre Música Antigua. Todo el material que aquí ofrezco lo pueden descargar gratuitamente.',
+   'news.paragraph.3' => 'Y si querés podés enviarme un mensaje a través de <a href="contact.php">Contacto</a>',
+   'news.paragraph.4' => '¡Gracias por tu visita!',
+   'news.announcement.1' => '500 Aniversario del genial Josquin des Prez',
+   'news.announcement.2' => 'ver en <a href="articles.php">Artículos Musicológicos</a>',
+   'news.announcement.3' => 'Con gran alegría puedo decir que entre arreglos y artículos musicológicos se han superado las ¡13000 descargas!',
+
+
+   //=================
+   // CURRICULUM
+   //=================
 
    'curric.text.1' => 'Nació en Buenos Aires, Argentina, en 1952.',
 

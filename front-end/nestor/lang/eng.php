@@ -14,6 +14,7 @@ return [
    // MENU
    //=================
 
+   'menu.opt.news' => 'news',
    'menu.opt.curric' => 'curriculum',
    'menu.opt.trans' => 'transcriptions',
    'menu.opt.art' => 'articles',
@@ -30,11 +31,23 @@ return [
 
 
    //=================
-   // CURRICULUM
+   // NOVEDADES
    //=================
 
-   'curric.announcement.1' => '500th Anniversary of the great Josquin des Prez',
-   'curric.announcement.2' => 'read in <a href="articles.php">Musicological Articles</a>',
+   'news.title.1' => 'Hi, welcome to mi personal website',
+   'news.subtitle.1' => 'What\'s new in',
+   'news.paragraph.1' => 'You\'ll find here over 50 <a href="transcriptions.php">Transcriptions</a> of works from the XV-XVI centuries with current musicological criterium, as well as many of my <a href="arrangements.php?type=free">Choral Arrangements</a> (not published) on popular works of various styles.',
+   'news.paragraph.2' => 'Also in the <a href="articles.php">Articles Section</a> there are available several research papers on Early Music. All the material that I hereby offer can be freely downloaded.',
+   'news.paragraph.3' => 'And if you like you can send me a message through the <a href="contact.php">Contact Form</a>',
+   'news.paragraph.4' => '¡Thank you for your visit!',
+   'news.announcement.1' => '500th Anniversary of the great Josquin des Prez',
+   'news.announcement.2' => 'read in <a href="articles.php">Musicological Articles</a>',
+   'news.announcement.3' => 'It is with great joy that I can say that between arrangements and musicological articles we have exceeded 13000 downloads!',
+
+
+   //=================
+   // CURRICULUM
+   //=================
 
    'curric.text.1' => 'Néstor Zadoff was born in Buenos Aires, Argentina, in 1952.',
 

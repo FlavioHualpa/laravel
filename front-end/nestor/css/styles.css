@@ -310,10 +310,12 @@ footer a:hover {
 .container .announcement {
    font-size: 18px;
    text-align: center;
+   max-width: 500px;
+   margin: 30px auto;
 }
 
 .container .announcement .featured {
-   margin: 30px auto;
+   margin: 20px auto;
    padding: 10px 20px;
    font-weight: bold;
    border: 2px dashed #800000;

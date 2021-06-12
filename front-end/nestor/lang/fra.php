@@ -14,6 +14,7 @@ return [
    // MENU
    //=================
 
+   'menu.opt.news' => 'nouvelles',
    'menu.opt.curric' => 'curriculum',
    'menu.opt.trans' => 'transcriptions',
    'menu.opt.art' => 'articles',
@@ -27,6 +28,21 @@ return [
    'menu.opt.eng' => 'english',
    'menu.opt.fra' => 'français',
    'menu.tooltip.new' => 'nouvelle publication',
+
+
+   //=================
+   // NOVEDADES
+   //=================
+
+   'news.title.1' => 'Bonjour, bienvenue sur mon site personnel',
+   'news.subtitle.1' => 'Quoi de neuf en',
+   'news.paragraph.1' => 'Vous trouverez ici plus de 50 <a href="transcriptions.php">Transcriptions</a> d\'œuvres des XV-XVIe siècles avec des critères musicologiques actuels, ainsi que plusieurs de mes <a href="arrangements.php?type=free">Arrangements Choraux</a> (non édités) sur des œuvres populaires de différents styles.',
+   'news.paragraph.2' => 'Dans la <a href="articles.php">Section Articles</a>, vous trouverez également plusieurs travaux de recherche sur la musique ancienne. Tout le matériel que je propose ici peut être téléchargé gratuitement.',
+   'news.paragraph.3' => 'Et si vous voulez, vous pouvez m\'envoyer un message via <a href="contact.php">Contact</a>',
+   'news.paragraph.4' => '¡Merci de votre visite!',
+   'news.announcement.1' => '500ème Anniversaire du génial Josquin des Prez',
+   'news.announcement.2' => 'lire dans <a href="articles.php">Articles Musicologiques</a>',
+   'news.announcement.3' => 'C\'est avec une grande joie que je peux dire qu\'entre les arrangements et les articles musicologiques, nous avons dépassé les 13000 téléchargements!',
 
 
    //=================

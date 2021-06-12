@@ -18,6 +18,11 @@
       <ul>
          <li>
             <a href="index.php">
+               <?= lang('menu.opt.news') ?>
+            </a>
+         </li>
+         <li>
+            <a href="curriculum.php">
                <?= lang('menu.opt.curric') ?>
             </a>
          </li>

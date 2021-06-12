@@ -1,5 +1,7 @@
 <?php $page = 'contact' ?>
 
+<?php require 'src/ipblock.php' ?>
+
 <?php require 'lang/lang.php' ?>
 
 <?php require 'src/validate.php' ?>
