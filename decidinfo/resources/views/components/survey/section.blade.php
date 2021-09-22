@@ -22,14 +22,14 @@
          </h1>
       </div>
       <div>
-         <x-survey.submit wire:click="addSection({{$currentSection}})">
+         <x-survey.submit wire:click="addSection({{$currentSection}})" :compact="true">
             <i class="far fa-caret-square-up"></i>
          </x-survey.submit>
-         <x-survey.submit wire:click="addSection({{$currentSection + 1}})">
+         <x-survey.submit wire:click="addSection({{$currentSection + 1}})" :compact="true">
             <i class="far fa-caret-square-down"></i>
          </x-survey.submit>
          @unless ($currentSection == 0 && $isCurrentSectionLast)
-         <x-survey.submit color="red" wire:click="deleteSection({{$currentSection}})">
+         <x-survey.submit color="red" wire:click="deleteSection({{$currentSection}})" :compact="true">
             <i class="far fa-minus-square"></i>
          </x-survey.submit>
          @endunless
@@ -64,14 +64,14 @@
             </h2>
          </div>
          <div>
-            <x-survey.submit wire:click="addQuestion({{$loop->index}})" class="py-1 px-3">
+            <x-survey.submit wire:click="addQuestion({{$loop->index}})" :compact="true">
                <i class="far fa-caret-square-up"></i>
             </x-survey.submit>
-            <x-survey.submit wire:click="addQuestion({{$loop->iteration}})">
+            <x-survey.submit wire:click="addQuestion({{$loop->iteration}})" :compact="true">
                <i class="far fa-caret-square-down"></i>
             </x-survey.submit>
             @unless ($loop->count == 1)
-            <x-survey.submit color="red" wire:click="deleteQuestion({{$loop->index}})">
+            <x-survey.submit color="red" wire:click="deleteQuestion({{$loop->index}})" :compact="true">
                <i class="far fa-minus-square"></i>
             </x-survey.submit>
             @endunless
@@ -177,18 +177,18 @@
 @endforeach
 
 <div class="mt-6">
-   <x-survey.submit wire:click="gotoPrevSection">
+   <x-survey.submit wire:click="validateAndGotoPrev">
       <i class="fas fa-chevron-left mr-2"></i>
       Anterior
    </x-survey.submit>
 
    @if ($isCurrentSectionLast)
-      <x-survey.submit wire:click="saveSurvey">
+      <x-survey.submit wire:click="store">
          Finalizar
          <i class="fas fa-chevron-right ml-2"></i>
       </x-survey.button>
    @else
-      <x-survey.submit wire:click="gotoNextSection">
+      <x-survey.submit wire:click="validateAndGotoNext">
          Siguiente
          <i class="fas fa-chevron-right ml-2"></i>
       </x-survey.button>

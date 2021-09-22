@@ -23,7 +23,7 @@
 </x-survey.card>
 
 <div class="mt-6">
-   <x-survey.submit wire:click="gotoNextSection">
+   <x-survey.submit wire:click="validateAndGotoNext">
       Siguiente
       <i class="fas fa-chevron-right ml-2"></i>
    </x-survey.submit>

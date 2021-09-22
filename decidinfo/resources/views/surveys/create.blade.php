@@ -3,6 +3,6 @@
 @section('content')
 
    <x-survey.banner />
-   @livewire('survey')
+   @livewire('create-survey')
 
 @endsection

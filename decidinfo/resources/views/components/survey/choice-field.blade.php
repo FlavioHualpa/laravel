@@ -17,7 +17,7 @@
    wire:model.lazy="{{ $dotName }}"
    name="{{ $arrayName }}"
    id="{{ $dotName }}"
-   {{ $attributes->merge(["class" => "ml-2 border-b-2 bg-transparent" . ($errors->has($dotName) ? ' border-red-400 ' : ' border-gray-400 focus:border-blue-500 ') . "text-lg outline-none duration-200"]) }}
+   {{ $attributes->merge(["class" => "ml-2 border-b-2 bg-transparent" . ($errors->has($dotName) ? ' border-red-400 ' : ' border-gray-400 focus:border-blue-500 ') . "text-lg outline-none rounded-none duration-200"]) }}
 >
 
 <i wire:click="{{$addBeforeAction}}"
