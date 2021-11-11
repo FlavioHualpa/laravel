@@ -800,6 +800,14 @@ return [
          'reference' => null,
          'files' => [
             [
+               'name' => 'Tres minutos con la realidad',
+               'pdf_id' => 126,
+               'link' => '#',
+               'info' => ' - <em>SATB et bandoneón (Astor Piazzolla, 2021)</em>',
+               'added_at' => '2021/11/10',
+               'awarded' => false,
+            ],
+            [
                'name' => 'Años de soledad',
                'pdf_id' => 1,
                'link' => '#',
@@ -948,6 +956,21 @@ return [
                'link' => '#',
                'info' => ' - <em>SATB (M. E. Walsh, 1996)</em>',
                'added_at' => '2018/04/30',
+               'awarded' => false,
+            ],
+         ],
+      ],
+
+      [
+         'name' => 'NOUVEAUX ARRANGEMENTS 2021',
+         'reference' => null,
+         'files' => [
+            [
+               'name' => 'Me miro en el espejo',
+               'pdf_id' => 125,
+               'link' => '#',
+               'info' => ' - <em>SAB (H. Midón - C. Gianni, 2021)<br>(de la comédie musicale "Vivitos y Coleando 1")</em>',
+               'added_at' => '2021/11/05',
                'awarded' => false,
             ],
          ],
