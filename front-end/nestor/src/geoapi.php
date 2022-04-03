@@ -14,8 +14,13 @@ if (! empty($_SERVER['HTTP_CLIENT_IP'])) {
    $ip = $_SERVER['REMOTE_ADDR'];
 }
 
-$api_key = 'a2a17aa9edfcc9b0a5f7e7bc7a7d8898';
-$url = "http://api.ipstack.com/$ip?access_key=$api_key";
+// antigua llamada a ipstack api
+// la descontinúo porque el límite
+// de consultas por mes es de 100
+// $api_key = 'a2a17aa9edfcc9b0a5f7e7bc7a7d8898';
+// $url = "http://api.ipstack.com/$ip?access_key=$api_key";
+
+$url = "https://ipwhois.app/json/$ip?lang=es";
 $info = json_decode(file_get_contents($url), true);
 $country = $info['country_code'];
 $city = $info['city'];

@@ -42,7 +42,9 @@ return [
    'news.paragraph.4' => '¡Gracias por tu visita!',
    'news.announcement.1' => '500 Aniversario del genial Josquin des Prez',
    'news.announcement.2' => 'ver en <a href="articles.php">Artículos Musicológicos</a>',
-   'news.announcement.3' => 'Con gran alegría puedo decir que entre arreglos y artículos musicológicos se han superado las ¡13000 descargas!',
+   'news.announcement.3' => '¡Hemos superado las 15000 descargas de arreglos y transcripciones de música antigua, desde más de 50 países!<br>Las más solicitadas son los arreglos de tango de <em>Ástor Piazzola</em>, las canciones de <em>María Elena Walsh</em> y las tradicionales del folclore argentino.<br>Y aquí les dejo una sugerencia: el muy reciente arreglo a 3 voces de <strong style="background-color: rgba(0,0,0,0.2); padding: 3px 8px; border-radius: 4px;">Me miro en el espejo</strong>, con percusiones corporales y hermosas líneas melódicas.<br>¡Un gran abrazo a todos!',
+   'news.announcement.4' => 'img\\15000_esp.png',
+   'news.announcement.5' => '¡Hemos superado las 15000 descargas!',
 
 
    //=================

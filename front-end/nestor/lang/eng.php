@@ -42,7 +42,9 @@ return [
    'news.paragraph.4' => '¡Thank you for your visit!',
    'news.announcement.1' => '500th Anniversary of the great Josquin des Prez',
    'news.announcement.2' => 'read in <a href="articles.php">Musicological Articles</a>',
-   'news.announcement.3' => 'It is with great joy that I can say that between arrangements and musicological articles we have exceeded 13000 downloads!',
+   'news.announcement.3' => 'We have exceeded 15000 downloads of arrangements and transcriptions of early music, from more than 50 countries!<br>The most requested are <em>Ástor Piazzola\'s</em> tango arrangements, the songs of <em>María Elena Walsh</em> and the traditional songs of Argentine folklore.<br>And let me give you a suggestion: the very recent 3-voice arrangement of <strong style="background-color: rgba(0,0,0,0.2); padding: 3px 8px; border-radius: 4px;">Me miro en el espejo</strong>, which features body percussions and beautiful melodic lines.<br>A big hug to all of you!',
+   'news.announcement.4' => 'img\\15000_ing.png',
+   'news.announcement.5' => 'We have exceeded 15000 downloads!',
 
 
    //=================

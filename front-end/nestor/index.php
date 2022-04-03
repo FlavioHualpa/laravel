@@ -29,12 +29,20 @@
          </h3>
 
          <span class="featured">
-            <img src="img\josquindesprez.png" alt="Josquin des Prez" class="image">
+            <img
+               src="img\josquindesprez.png"
+               alt="Josquin des Prez" class="image"
+            >
             <p class="mb-0"><?= lang('news.announcement.1') ?></p>
             <p class="mb-0"><?= lang('news.announcement.2') ?></p>
          </span>
 
          <span class="featured">
+            <img
+               src="<?= lang('news.announcement.4') ?>"
+               alt="<?= lang('news.announcement.5') ?>"
+               class="image"
+            >
             <p class="mb-0"><?= lang('news.announcement.3') ?></p>
          </span>
       </div>

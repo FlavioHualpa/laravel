@@ -42,7 +42,9 @@ return [
    'news.paragraph.4' => '¡Merci de votre visite!',
    'news.announcement.1' => '500ème Anniversaire du génial Josquin des Prez',
    'news.announcement.2' => 'lire dans <a href="articles.php">Articles Musicologiques</a>',
-   'news.announcement.3' => 'C\'est avec une grande joie que je peux dire qu\'entre les arrangements et les articles musicologiques, nous avons dépassé les 13000 téléchargements!',
+   'news.announcement.3' => 'On a dépassé les 15 000 téléchargements de mes arrangements et transcriptions de musique ancienne, provenant de plus de 50 pays!<br>Les plus demandés sont les arrangements des tangos d\'<em>Astor Piazzola</em>, des chansons de <em>María Elena Walsh</em> et des mélodies traditionnelles du folklore argentin.<br>Et voici une suggestion: le très récent arrangement à 3 voix de <strong style="background-color: rgba(0,0,0,0.2); padding: 3px 8px; border-radius: 4px;">Me miro en el espejo</strong>, avec des percussions corporelles et de belles lignes mélodiques.<br>Avec mes sentiments pour vous tous!',
+   'news.announcement.4' => 'img\\15000_fra.png',
+   'news.announcement.5' => 'On a dépassé les 15 000 téléchargements!',
 
 
    //=================
