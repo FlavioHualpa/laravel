@@ -973,7 +973,7 @@ return [
                'name' => 'Serenata para la tierra de uno',
                'pdf_id' => 67,
                'link' => '#',
-               'info' => ' - <em>SATB (M. E. Walsh, 1984)</em>',
+               'info' => ' <strong>(revised version)</strong> - <em>SATB (M. E. Walsh, 1984)</em>',
                'added_at' => '2018/04/30',
                'awarded' => true,
             ],
